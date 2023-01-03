@@ -304,7 +304,7 @@ int main (void){
  1cc:	90 e0       	ldi	r25, 0x00	; 0
 	
 	while (1){
-		if (millis() - prev_cycle_time >= 20){    
+		if (millis() - prev_cycle_time >= 200){    
  1ce:	81 d0       	rcall	.+258    	; 0x2d2 <uart_init>
  1d0:	a9 df       	rcall	.-174    	; 0x124 <millis>
  1d2:	00 91 00 02 	lds	r16, 0x0200	; 0x800200 <__DATA_REGION_ORIGIN__>
@@ -319,7 +319,7 @@ int main (void){
  1ec:	f3 0a       	sbc	r15, r19
  1ee:	97 01       	movw	r18, r14
  1f0:	86 01       	movw	r16, r12
- 1f2:	04 31       	cpi	r16, 0x14	; 20
+ 1f2:	08 3c       	cpi	r16, 0xC8	; 200
  1f4:	11 05       	cpc	r17, r1
  1f6:	21 05       	cpc	r18, r1
  1f8:	31 05       	cpc	r19, r1

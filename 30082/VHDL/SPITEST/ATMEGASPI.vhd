@@ -38,7 +38,10 @@ entity ATMEGASPI is
            MISO : OUT  STD_LOGIC;
            SCK : in  STD_LOGIC;
            SS : IN std_logic;
-           test_data : out std_logic;
+           BTN1 : out std_logic;
+           BTN2 : out std_logic;
+           BTN3 : out std_logic;
+           BTN4 : out std_logic;
   SHIFTREG_out: out std_logic_vector(7 downto 0) );
 end ATMEGASPI;
 
@@ -70,13 +73,22 @@ END IF;
   SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
   if rising_edge (SS) then
     if (shiftreg = x"C3" ) then
-        test_data <= '1';
-    else 
-        test_data <= '0';
+        BTN1 <= '1';
+        BTN4 <= '0';
+    elsif (shiftreg = x"50") then
+        BTN2 <= '1';
+        BTN4 <= '0';
+    elsif (shiftreg = x"87") then
+        BTN3 <= '1';
+        BTN4 <= '0';
+    elsif (shiftreg = x"FE") then
+        BTN4 <= '1'; 
+        BTN1 <= '0'; 
+        BTN2 <= '0';
+        BTN3 <= '0';
     END IF;
   END IF;
    END PROCESS;
        
 
 end Behavioral;
-

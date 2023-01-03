@@ -67,7 +67,7 @@ int main (void){
 	uart_init(19200);
 	
 	while (1){
-		if (millis() - prev_cycle_time >= 20){    
+		if (millis() - prev_cycle_time >= 200){    
 				prev_cycle_time = millis();
 				
 				SPI_write(0xC3);

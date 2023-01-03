@@ -13,11 +13,12 @@
 # Define IO-pin voltage level
 set_property IOSTANDARD LVCMOS33 [get_ports *]
 
-set_property CLOCK_DEDICATED_ROUTE FALSE 
-
+#set_property CLOCK_DEDICATED_ROUTE FALSE 
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {SCK_IBUF}]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {SS_IBUF}]
 ## Clock signal
-set_property PACKAGE_PIN W5 [get_ports clk]							
-create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
+#set_property PACKAGE_PIN W5 [get_ports clk]							
+#create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
 
 ## Switches
 #set_property PACKAGE_PIN V17 [get_ports {Right}]					
@@ -49,12 +50,12 @@ set_property PACKAGE_PIN U14 [get_ports {SHIFTREG_out[1]}]
 set_property PACKAGE_PIN V14 [get_ports {SHIFTREG_out[0]}]					
 ##set_property PACKAGE_PIN V13 [get_ports {led[8]}]					
 #set_property PACKAGE_PIN V3  [get_ports {led[9]}]					
-#set_property PACKAGE_PIN W3  [get_ports {led[10]}]					
-#set_property PACKAGE_PIN U3  [get_ports {led[11]}]					
-#set_property PACKAGE_PIN P3  [get_ports {led[12]}]					
-#set_property PACKAGE_PIN N3  [get_ports {led[13]}]					
-#set_property PACKAGE_PIN P1  [get_ports {r_clk}]					
-set_property PACKAGE_PIN L1  [get_ports {test_data}]					
+set_property PACKAGE_PIN W3  [get_ports {test_data}]					
+set_property PACKAGE_PIN U3  [get_ports {BTN5}]					
+set_property PACKAGE_PIN P3  [get_ports {BTN1}]					
+set_property PACKAGE_PIN N3  [get_ports {BTN2}]					
+set_property PACKAGE_PIN P1  [get_ports {BTN3}]					
+set_property PACKAGE_PIN L1  [get_ports {BTN4}]					
 	
 	
 ##Buttons
@@ -110,10 +111,10 @@ set_property PACKAGE_PIN L1  [get_ports {test_data}]
 
 
 ##Pmod Header JA
-set_property PACKAGE_PIN J1 [get_ports {MOSI}]					
-set_property PACKAGE_PIN L2 [get_ports {MISO}]					
-set_property PACKAGE_PIN J2 [get_ports {SCK}]					
-set_property PACKAGE_PIN G2 [get_ports {SS}]					
+#set_property PACKAGE_PIN J1 [get_ports {MOSI}]					
+#set_property PACKAGE_PIN L2 [get_ports {MISO}]					
+#set_property PACKAGE_PIN J2 [get_ports {SCK}]					
+#set_property PACKAGE_PIN G2 [get_ports {SS}]					
 #set_property PACKAGE_PIN H1 [get_ports {JA[4]}]					
 #set_property PACKAGE_PIN K2 [get_ports {JA[5]}]					
 #set_property PACKAGE_PIN H2 [get_ports {JA[6]}]					
@@ -121,10 +122,10 @@ set_property PACKAGE_PIN G2 [get_ports {SS}]
 
 
 ##Pmod Header JB
-#set_property PACKAGE_PIN A14 [get_ports {JB[0]}]					
-#set_property PACKAGE_PIN A16 [get_ports {JB[1]}]					
-#set_property PACKAGE_PIN B15 [get_ports {JB[2]}]					
-#set_property PACKAGE_PIN B16 [get_ports {JB[3]}]					
+set_property PACKAGE_PIN A14 [get_ports {MOSI}]					
+set_property PACKAGE_PIN A16 [get_ports {MISO}]					
+set_property PACKAGE_PIN B15 [get_ports {SCK}]					
+set_property PACKAGE_PIN B16 [get_ports {SS}]					
 #set_property PACKAGE_PIN A15 [get_ports {JB[4]}]					
 #set_property PACKAGE_PIN A17 [get_ports {JB[5]}]					
 #set_property PACKAGE_PIN C15 [get_ports {Res}]					
