@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Jan  3 22:50:14 2023
+# Process ID: 34464
+# Current directory: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST/SPI_TEST.runs/synth_1
+# Command line: vivado.exe -log ATMEGASPI.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ATMEGASPI.tcl
+# Log file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST/SPI_TEST.runs/synth_1/ATMEGASPI.vds
+# Journal file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST/SPI_TEST.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ATMEGASPI.tcl -notrace

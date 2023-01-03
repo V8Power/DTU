@@ -25,6 +25,7 @@
 #include "uart.h"
 
 
+uint8_t a = 0;
 uint32_t milli = 0;
 
 
@@ -62,13 +63,16 @@ void init(){
 int main (void){
 	
 	init();
-	//SPI_init_master(0,0);
+	SPI_init_master(0,0);
 	uart_init(19200);
 	
 	while (1){
-		if ((millis() - prev_cycle_time >= cycle_time){    //true when blink time is reached, in ms
-			
+		if (millis() - prev_cycle_time >= 20){    
+				prev_cycle_time = millis();
 				
+				SPI_write(0xC3);
+				SPI_write(a);
+				a++;
 			}
 			
 			

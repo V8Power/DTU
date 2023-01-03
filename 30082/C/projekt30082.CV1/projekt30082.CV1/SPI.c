@@ -9,6 +9,7 @@ void SPI_init_master(bool CPOLc, bool CPHAc){
 	SPCR = 0;
 	SPCR|= (0 << SPIE) | ( 1 << MSTR) | ( 1 << SPR1) | (0<< SPR0) | (1 << SPE) | (CPOLc <<CPOL | CPHAc << CPHA) ;
 	SPDR = 0;
+	//SPSR |= (1 << SPI2X);
 	
 }
 void SPI_init_slave(){
@@ -23,12 +24,12 @@ void SPI_init_slave(){
 
 
 unsigned char SPI_read(){
-	//PORTB &= ~(1 << PB0);
+	PORTB &= ~(1 << PB0);
 	SPDR = 0;
 	while(!(SPSR &(1<<SPIF))) ; 
 	unsigned char data = SPDR;
 	return data;
-	//PORTB |= (1 << PB0);
+	PORTB |= (1 << PB0);
 	
 	
 	

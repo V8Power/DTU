@@ -22,20 +22,61 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+
+
+
 entity ATMEGASPI is
+    Port ( MOSI : IN  STD_LOGIC;
+           MISO : OUT  STD_LOGIC;
+           SCK : in  STD_LOGIC;
+           SS : IN std_logic;
+           test_data : out std_logic;
+  SHIFTREG_out: out std_logic_vector(7 downto 0) );
 end ATMEGASPI;
 
 architecture Behavioral of ATMEGASPI is
 
+
+signal SHIFTREG: std_logic_vector(7 downto 0);
+signal SHIFTREG_tmp: std_logic_vector(7 downto 0);
+--SIGNAL SS : STD_LOGIC;
+
 begin
 
+PROCESS (SCK, MOSI, SS)
+
+BEGIN
+IF (SS = '0') THEN
+if rising_edge(SCK)then
+    SHIFTREG <= SHIFTREG(6 downto 0) & '0';
+    --shift_left(SHIFTREG,1);
+    --if (MOSI = '0') THEN
+   SHIFTREG(0) <= MOSI;
+   --END IF;
+   --SHIFTREG(7 downto 0) <= x"F9";
+   --SHIFTREG(0) <= '1';
+   SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
+END IF;
+ --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
+  END IF;
+  SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
+  if rising_edge (SS) then
+    if (shiftreg = x"C3" ) then
+        test_data <= '1';
+    else 
+        test_data <= '0';
+    END IF;
+  END IF;
+   END PROCESS;
+       
 
 end Behavioral;
 
