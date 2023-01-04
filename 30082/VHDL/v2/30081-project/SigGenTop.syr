@@ -1,0 +1,841 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: SigGenTop.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SigGenTop.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SigGenTop"
+Output Format                      : NGC
+Target Device                      : xc7a350t-1-fbg484
+
+---- Source Options
+Top Module Name                    : SigGenTop
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\30081-project\ipcore_dir\sinusLUT.vhd" into library work
+Parsing entity <sinusLUT>.
+Parsing architecture <sinusLUT_a> of entity <sinuslut>.
+Parsing VHDL file "C:\Users\s182892\Downloads\BTNdb.vhd" into library work
+Parsing entity <BTNdb>.
+Parsing architecture <Behavioral> of entity <btndb>.
+Parsing VHDL file "C:\Users\s182892\Downloads\SigGenDatapath.vhd" into library work
+Parsing entity <SigGenDatapath>.
+Parsing architecture <Behavioral> of entity <siggendatapath>.
+Parsing VHDL file "C:\Users\s182892\Downloads\SigGenControl.vhd" into library work
+Parsing entity <SigGenControl>.
+Parsing architecture <Behavioral> of entity <siggencontrol>.
+Parsing VHDL file "C:\Users\s182892\Downloads\SevenSeg5.vhd" into library work
+Parsing entity <SevenSeg5>.
+Parsing architecture <SevenSeg_arch> of entity <sevenseg5>.
+Parsing VHDL file "C:\Users\s182892\Downloads\DivClk.vhd" into library work
+Parsing entity <DivClk>.
+Parsing architecture <DivClk_arch> of entity <divclk>.
+Parsing VHDL file "C:\Users\s182892\Downloads\SigGenTop.vhd" into library work
+Parsing entity <SigGenTop>.
+Parsing architecture <Behavioral> of entity <siggentop>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SigGenTop> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <DivClk> (architecture <DivClk_arch>) from library <work>.
+
+Elaborating entity <SigGenControl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <BTNdb> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <SigGenDatapath> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <sinusLUT> (architecture <sinusLUT_a>) from library <work>.
+
+Elaborating entity <SevenSeg5> (architecture <SevenSeg_arch>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SigGenTop>.
+    Related source file is "C:\Users\s182892\Downloads\SigGenTop.vhd".
+    Summary:
+	no macro.
+Unit <SigGenTop> synthesized.
+
+Synthesizing Unit <DivClk>.
+    Related source file is "C:\Users\s182892\Downloads\DivClk.vhd".
+    Found 1-bit register for signal <Clk1_D>.
+    Found 25-bit register for signal <Cnt1>.
+    Found 31-bit adder for signal <TimeP[31]_GND_6_o_add_0_OUT> created at line 36.
+    Found 25-bit adder for signal <Cnt1[24]_GND_6_o_add_2_OUT> created at line 47.
+    Found 31-bit comparator equal for signal <Clear1> created at line 36
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <DivClk> synthesized.
+
+Synthesizing Unit <SigGenControl>.
+    Related source file is "C:\Users\s182892\Downloads\SigGenControl.vhd".
+    Found 8-bit register for signal <Ampl>.
+    Found 8-bit register for signal <Freq>.
+    Found 8-bit register for signal <Shape>.
+    Found 2-bit register for signal <State>.
+    Found finite state machine <FSM_0> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 5                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | shapes                                         |
+    | Power Up State     | shapes                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 20-bit 4-to-1 multiplexer for signal <Disp> created at line 32.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <SigGenControl> synthesized.
+
+Synthesizing Unit <BTNdb>.
+    Related source file is "C:\Users\s182892\Downloads\BTNdb.vhd".
+    Found 12-bit register for signal <count>.
+    Found 2-bit register for signal <State>.
+    Found finite state machine <FSM_1> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | btnup                                          |
+    | Power Up State     | btnup                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 12-bit adder for signal <count[11]_GND_66_o_add_9_OUT> created at line 105.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <BTNdb> synthesized.
+
+Synthesizing Unit <SigGenDatapath>.
+    Related source file is "C:\Users\s182892\Downloads\SigGenDatapath.vhd".
+        PWMinc = "0000001"
+    Found 8-bit register for signal <PWMcount.PWMcntvar>.
+    Found 12-bit register for signal <SigCnt>.
+    Found 12-bit adder for signal <nSigCnt> created at line 48.
+    Found 8-bit adder for signal <PWMcount.PWMcntvar[7]_GND_67_o_add_4_OUT> created at line 68.
+    Found 16-bit adder for signal <GND_67_o_GND_67_o_add_21_OUT> created at line 97.
+    Found 16-bit adder for signal <GND_67_o_GND_67_o_add_23_OUT> created at line 97.
+    Found 16-bit adder for signal <GND_67_o_GND_67_o_add_25_OUT> created at line 97.
+    Found 16-bit adder for signal <GND_67_o_GND_67_o_add_27_OUT> created at line 97.
+    Found 16-bit adder for signal <GND_67_o_GND_67_o_add_29_OUT> created at line 97.
+    Found 16-bit adder for signal <GND_67_o_GND_67_o_add_31_OUT> created at line 97.
+    Found 16-bit adder for signal <GND_67_o_GND_67_o_add_33_OUT> created at line 97.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0118> created at line 39.
+    Found 8-bit comparator greater for signal <PWR_16_o_PWMcount.PWMcntvar[7]_LessThan_6_o> created at line 69
+    Found 12-bit comparator greater for signal <SigCnt[11]_PWR_16_o_LessThan_11_o> created at line 78
+    Found 7-bit comparator lessequal for signal <n0035> created at line 107
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  11 Multiplexer(s).
+Unit <SigGenDatapath> synthesized.
+
+Synthesizing Unit <SevenSeg5>.
+    Related source file is "C:\Users\s182892\Downloads\SevenSeg5.vhd".
+    Found 8-bit register for signal <cat>.
+    Found 4-bit register for signal <an>.
+    Found 2-bit register for signal <DispCount>.
+    Found 2-bit adder for signal <DispCount[1]_GND_69_o_add_1_OUT> created at line 30.
+    Found 5-bit adder for signal <GND_69_o_PWR_18_o_add_8_OUT> created at line 90.
+    Found 4x4-bit Read Only RAM for signal <AnInt>
+    Found 1-bit 20-to-1 multiplexer for signal <GND_69_o_X_11_o_Mux_9_o> created at line 90.
+    Found 1-bit 4-to-1 multiplexer for signal <DataN<3>> created at line 52.
+    Found 1-bit 4-to-1 multiplexer for signal <DataN<2>> created at line 52.
+    Found 1-bit 4-to-1 multiplexer for signal <DataN<1>> created at line 52.
+    Found 1-bit 4-to-1 multiplexer for signal <DataN<0>> created at line 52.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+Unit <SevenSeg5> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 17
+ 12-bit adder                                          : 3
+ 16-bit adder                                          : 7
+ 2-bit adder                                           : 1
+ 25-bit adder                                          : 2
+ 31-bit adder                                          : 2
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 14
+ 1-bit register                                        : 2
+ 12-bit register                                       : 3
+ 2-bit register                                        : 1
+ 25-bit register                                       : 2
+ 4-bit register                                        : 1
+ 8-bit register                                        : 5
+# Comparators                                          : 5
+ 12-bit comparator greater                             : 1
+ 31-bit comparator equal                               : 2
+ 7-bit comparator lessequal                            : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 28
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 20-to-1 multiplexer                             : 1
+ 1-bit 4-to-1 multiplexer                              : 4
+ 12-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 8
+ 2-bit 2-to-1 multiplexer                              : 1
+ 20-bit 4-to-1 multiplexer                             : 1
+ 25-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+ 8-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/sinusLUT.ngc>.
+Loading core <sinusLUT> for timing and area information for instance <SinusDec>.
+
+Synthesizing (advanced) Unit <BTNdb>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <BTNdb> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DivClk>.
+The following registers are absorbed into counter <Cnt1>: 1 register on signal <Cnt1>.
+Unit <DivClk> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SevenSeg5>.
+INFO:Xst:3217 - HDL ADVISOR - Register <an> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_AnInt> for implementation on block RAM resources if you made this reset synchronous instead.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <DispCount>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <AnInt>         |          |
+    -----------------------------------------------------------------------
+Unit <SevenSeg5> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SigGenDatapath>.
+The following registers are absorbed into accumulator <SigCnt>: 1 register on signal <SigCnt>.
+Unit <SigGenDatapath> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 12
+ 16-bit adder                                          : 7
+ 2-bit adder                                           : 1
+ 31-bit adder                                          : 2
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 4
+ 12-bit up counter                                     : 2
+ 25-bit up counter                                     : 2
+# Accumulators                                         : 1
+ 12-bit up accumulator                                 : 1
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+# Comparators                                          : 5
+ 12-bit comparator greater                             : 1
+ 31-bit comparator equal                               : 2
+ 7-bit comparator lessequal                            : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 23
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 20-to-1 multiplexer                             : 1
+ 1-bit 4-to-1 multiplexer                              : 4
+ 16-bit 2-to-1 multiplexer                             : 8
+ 20-bit 4-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+ 8-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <U1/FSM_1> on signal <State[1:2]> with gray encoding.
+Optimizing FSM <U1/FSM_1> on signal <State[1:2]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ btnup    | 00
+ wbtnup   | 01
+ btndown  | 11
+ wbtndown | 10
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <U1/FSM_0> on signal <State[1:2]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ shapes | 00
+ ampls  | 01
+ freqs  | 10
+ runs   | 11
+--------------------
+
+Optimizing unit <SigGenTop> ...
+
+Optimizing unit <SigGenControl> ...
+
+Optimizing unit <SigGenDatapath> ...
+
+Optimizing unit <SevenSeg5> ...
+WARNING:Xst:1293 - FF/Latch <U0/Cnt1_23> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_22> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_24> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_21> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_20> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_19> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_18> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_16> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_15> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_17> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_14> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_13> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_12> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_11> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_9> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_8> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_10> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_7> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_6> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_5> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_4> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_2> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <U0/Cnt1_3> has a constant value of 0 in block <SigGenTop>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <U4/Cnt1_0> in Unit <SigGenTop> is equivalent to the following FF/Latch, which will be removed : <U0/Cnt1_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SigGenTop, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 116
+ Flip-Flops                                            : 116
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SigGenTop.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 516
+#      GND                         : 3
+#      INV                         : 6
+#      LUT1                        : 4
+#      LUT2                        : 56
+#      LUT3                        : 48
+#      LUT4                        : 42
+#      LUT5                        : 48
+#      LUT6                        : 61
+#      MUXCY                       : 126
+#      MUXF7                       : 3
+#      VCC                         : 3
+#      XORCY                       : 116
+# FlipFlops/Latches                : 116
+#      FDC                         : 77
+#      FDCE                        : 38
+#      FDP                         : 1
+# RAMS                             : 1
+#      RAMB36E1                    : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 26
+#      IBUF                        : 12
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a350tfbg484-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             115  out of  450000     0%  
+ Number of Slice LUTs:                  265  out of  225000     0%  
+    Number used as Logic:               265  out of  225000     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    277
+   Number with an unused Flip Flop:     162  out of    277    58%  
+   Number with an unused LUT:            12  out of    277     4%  
+   Number of fully used LUT-FF pairs:   103  out of    277    37%  
+   Number of unique control sets:         9
+
+IO Utilization: 
+ Number of IOs:                          27
+ Number of bonded IOBs:                  27  out of    285     9%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    515     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 28    |
+U0/Clk1_D                          | BUFG                   | 75    |
+U4/Clk1_D                          | NONE(U3/an_3)          | 14    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                | Buffer(FF name)                                                                                                                      | Load  |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+-------+
+U2/SinusDec/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(U2/SinusDec/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(U2/SinusDec/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/SP.SIMPLE_PRIM36.ram)| 2     |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.517ns (Maximum Frequency: 221.377MHz)
+   Minimum input arrival time before clock: 1.439ns
+   Maximum output required time after clock: 19.821ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 4.517ns (frequency: 221.377MHz)
+  Total number of paths / destination ports: 9112 / 30
+-------------------------------------------------------------------------
+Delay:               4.517ns (Levels of Logic = 32)
+  Source:            U4/Cnt1_5 (FF)
+  Destination:       U4/Cnt1_24 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: U4/Cnt1_5 to U4/Cnt1_24
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.478   0.945  U4/Cnt1_5 (U4/Cnt1_5)
+     LUT6:I0->O            1   0.124   0.000  U4/Mcompar_Clear1_lut<0> (U4/Mcompar_Clear1_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  U4/Mcompar_Clear1_cy<0> (U4/Mcompar_Clear1_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcompar_Clear1_cy<1> (U4/Mcompar_Clear1_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcompar_Clear1_cy<2> (U4/Mcompar_Clear1_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcompar_Clear1_cy<3> (U4/Mcompar_Clear1_cy<3>)
+     MUXCY:CI->O          27   0.029   0.572  U4/Mcompar_Clear1_cy<4> (U4/Clear1)
+     LUT2:I1->O            1   0.124   0.000  U4/Mcount_Cnt1_lut<0> (U4/Mcount_Cnt1_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  U4/Mcount_Cnt1_cy<0> (U4/Mcount_Cnt1_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<1> (U4/Mcount_Cnt1_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<2> (U4/Mcount_Cnt1_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<3> (U4/Mcount_Cnt1_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<4> (U4/Mcount_Cnt1_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<5> (U4/Mcount_Cnt1_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<6> (U4/Mcount_Cnt1_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<7> (U4/Mcount_Cnt1_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<8> (U4/Mcount_Cnt1_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<9> (U4/Mcount_Cnt1_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<10> (U4/Mcount_Cnt1_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<11> (U4/Mcount_Cnt1_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<12> (U4/Mcount_Cnt1_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<13> (U4/Mcount_Cnt1_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<14> (U4/Mcount_Cnt1_cy<14>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<15> (U4/Mcount_Cnt1_cy<15>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<16> (U4/Mcount_Cnt1_cy<16>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<17> (U4/Mcount_Cnt1_cy<17>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<18> (U4/Mcount_Cnt1_cy<18>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<19> (U4/Mcount_Cnt1_cy<19>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<20> (U4/Mcount_Cnt1_cy<20>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<21> (U4/Mcount_Cnt1_cy<21>)
+     MUXCY:CI->O           1   0.029   0.000  U4/Mcount_Cnt1_cy<22> (U4/Mcount_Cnt1_cy<22>)
+     MUXCY:CI->O           0   0.029   0.000  U4/Mcount_Cnt1_cy<23> (U4/Mcount_Cnt1_cy<23>)
+     XORCY:CI->O           1   0.510   0.000  U4/Mcount_Cnt1_xor<24> (U4/Mcount_Cnt124)
+     FDC:D                     0.030          U4/Cnt1_24
+    ----------------------------------------
+    Total                      4.517ns (3.000ns logic, 1.517ns route)
+                                       (66.4% logic, 33.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U0/Clk1_D'
+  Clock period: 3.521ns (frequency: 284.010MHz)
+  Total number of paths / destination ports: 1000 / 86
+-------------------------------------------------------------------------
+Delay:               3.521ns (Levels of Logic = 3)
+  Source:            U2/PWMcount.PWMcntvar_4 (FF)
+  Destination:       U2/PWMcount.PWMcntvar_7 (FF)
+  Source Clock:      U0/Clk1_D rising
+  Destination Clock: U0/Clk1_D rising
+
+  Data Path: U2/PWMcount.PWMcntvar_4 to U2/PWMcount.PWMcntvar_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.478   0.946  U2/PWMcount.PWMcntvar_4 (U2/PWMcount.PWMcntvar_4)
+     LUT5:I0->O            4   0.124   0.736  U2/Mmux_PWMcount.PWMcntvar[7]_GND_67_o_mux_6_OUT611 (U2/Mmux_PWMcount.PWMcntvar[7]_GND_67_o_mux_6_OUT61)
+     LUT4:I1->O            4   0.124   0.959  U2/Madd_PWMcount.PWMcntvar[7]_GND_67_o_add_4_OUT_xor<7>11 (U2/PWMcount.PWMcntvar[7]_GND_67_o_add_4_OUT<7>)
+     LUT6:I0->O            1   0.124   0.000  U2/Mmux_PWMcount.PWMcntvar[7]_GND_67_o_mux_6_OUT51 (U2/PWMcount.PWMcntvar[7]_GND_67_o_mux_6_OUT<4>)
+     FDC:D                     0.030          U2/PWMcount.PWMcntvar_4
+    ----------------------------------------
+    Total                      3.521ns (0.880ns logic, 2.641ns route)
+                                       (25.0% logic, 75.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U4/Clk1_D'
+  Clock period: 3.091ns (frequency: 323.520MHz)
+  Total number of paths / destination ports: 95 / 13
+-------------------------------------------------------------------------
+Delay:               3.091ns (Levels of Logic = 3)
+  Source:            U3/DispCount_1 (FF)
+  Destination:       U3/cat_6 (FF)
+  Source Clock:      U4/Clk1_D rising
+  Destination Clock: U4/Clk1_D rising
+
+  Data Path: U3/DispCount_1 to U3/cat_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             12   0.478   1.011  U3/DispCount_1 (U3/DispCount_1)
+     LUT6:I0->O            1   0.124   0.000  U3/Mmux_DataN<0>13_F (N11)
+     MUXF7:I0->O           7   0.365   0.959  U3/Mmux_DataN<0>13 (U3/DataN<0>)
+     LUT5:I0->O            1   0.124   0.000  U3/Mmux_CatInt11 (U3/CatInt<0>)
+     FDC:D                     0.030          U3/cat_0
+    ----------------------------------------
+    Total                      3.091ns (1.121ns logic, 1.970ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 28 / 28
+-------------------------------------------------------------------------
+Offset:              1.065ns (Levels of Logic = 1)
+  Source:            BTN3 (PAD)
+  Destination:       U4/Clk1_D (FF)
+  Destination Clock: Clk rising
+
+  Data Path: BTN3 to U4/Clk1_D
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           116   0.001   0.570  BTN3_IBUF (BTN3_IBUF)
+     FDCE:CLR                  0.494          U4/Clk1_D
+    ----------------------------------------
+    Total                      1.065ns (0.495ns logic, 0.570ns route)
+                                       (46.5% logic, 53.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U0/Clk1_D'
+  Total number of paths / destination ports: 124 / 124
+-------------------------------------------------------------------------
+Offset:              1.439ns (Levels of Logic = 2)
+  Source:            BTN0 (PAD)
+  Destination:       U1/Ampl_7 (FF)
+  Destination Clock: U0/Clk1_D rising
+
+  Data Path: BTN0 to U1/Ampl_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.001   0.730  BTN0_IBUF (BTN0_IBUF)
+     LUT3:I0->O            8   0.124   0.445  U1/Mmux_AmplEN11 (U1/AmplEN)
+     FDCE:CE                   0.139          U1/Ampl_0
+    ----------------------------------------
+    Total                      1.439ns (0.264ns logic, 1.175ns route)
+                                       (18.3% logic, 81.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U4/Clk1_D'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              1.065ns (Levels of Logic = 1)
+  Source:            BTN3 (PAD)
+  Destination:       U3/an_3 (FF)
+  Destination Clock: U4/Clk1_D rising
+
+  Data Path: BTN3 to U3/an_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           116   0.001   0.570  BTN3_IBUF (BTN3_IBUF)
+     FDC:CLR                   0.494          U3/DispCount_0
+    ----------------------------------------
+    Total                      1.065ns (0.495ns logic, 0.570ns route)
+                                       (46.5% logic, 53.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U4/Clk1_D'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            U3/an_3 (FF)
+  Destination:       An<3> (PAD)
+  Source Clock:      U4/Clk1_D rising
+
+  Data Path: U3/an_3 to An<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.478   0.399  U3/an_3 (U3/an_3)
+     OBUF:I->O                 0.000          An_3_OBUF (An<3>)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U0/Clk1_D'
+  Total number of paths / destination ports: 863726458 / 2
+-------------------------------------------------------------------------
+Offset:              19.821ns (Levels of Logic = 26)
+  Source:            U1/Shape_3 (FF)
+  Destination:       LD (PAD)
+  Source Clock:      U0/Clk1_D rising
+
+  Data Path: U1/Shape_3 to LD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.478   0.945  U1/Shape_3 (U1/Shape_3)
+     LUT6:I0->O           30   0.124   1.071  U2/_n0119<7>1 (U2/_n0119)
+     LUT6:I1->O            4   0.124   0.419  U2/n0090<7>_mand11 (U2/n0090<7>_mand1)
+     MUXCY:DI->O           1   0.456   0.000  U2/Madd_GND_67_o_GND_67_o_add_21_OUT_cy<7> (U2/Madd_GND_67_o_GND_67_o_add_21_OUT_cy<7>)
+     XORCY:CI->O           5   0.510   0.803  U2/Madd_GND_67_o_GND_67_o_add_21_OUT_xor<8> (U2/n0093<8>_mand)
+     LUT5:I1->O            1   0.124   0.000  U2/Madd_GND_67_o_GND_67_o_add_23_OUT_lut<8> (U2/Madd_GND_67_o_GND_67_o_add_23_OUT_lut<8>)
+     MUXCY:S->O            1   0.472   0.000  U2/Madd_GND_67_o_GND_67_o_add_23_OUT_cy<8> (U2/Madd_GND_67_o_GND_67_o_add_23_OUT_cy<8>)
+     XORCY:CI->O           3   0.510   0.730  U2/Madd_GND_67_o_GND_67_o_add_23_OUT_xor<9> (U2/GND_67_o_GND_67_o_add_23_OUT<9>)
+     LUT4:I1->O            3   0.124   0.413  U2/Mmux_n0096161 (U2/n0096<9>)
+     MUXCY:DI->O           1   0.456   0.000  U2/Madd_GND_67_o_GND_67_o_add_25_OUT_cy<9> (U2/Madd_GND_67_o_GND_67_o_add_25_OUT_cy<9>)
+     XORCY:CI->O           3   0.510   0.730  U2/Madd_GND_67_o_GND_67_o_add_25_OUT_xor<10> (U2/GND_67_o_GND_67_o_add_25_OUT<10>)
+     LUT4:I1->O            3   0.124   0.413  U2/Mmux_n009921 (U2/n0099<10>)
+     MUXCY:DI->O           1   0.456   0.000  U2/Madd_GND_67_o_GND_67_o_add_27_OUT_cy<10> (U2/Madd_GND_67_o_GND_67_o_add_27_OUT_cy<10>)
+     XORCY:CI->O           3   0.510   0.730  U2/Madd_GND_67_o_GND_67_o_add_27_OUT_xor<11> (U2/GND_67_o_GND_67_o_add_27_OUT<11>)
+     LUT4:I1->O            3   0.124   0.413  U2/Mmux_n010231 (U2/n0102<11>)
+     MUXCY:DI->O           1   0.456   0.000  U2/Madd_GND_67_o_GND_67_o_add_29_OUT_cy<11> (U2/Madd_GND_67_o_GND_67_o_add_29_OUT_cy<11>)
+     XORCY:CI->O           3   0.510   0.730  U2/Madd_GND_67_o_GND_67_o_add_29_OUT_xor<12> (U2/GND_67_o_GND_67_o_add_29_OUT<12>)
+     LUT4:I1->O            1   0.124   0.399  U2/Mmux_n010541 (U2/n0105<12>)
+     MUXCY:DI->O           1   0.456   0.000  U2/Madd_GND_67_o_GND_67_o_add_31_OUT_cy<12> (U2/Madd_GND_67_o_GND_67_o_add_31_OUT_cy<12>)
+     XORCY:CI->O           2   0.510   0.722  U2/Madd_GND_67_o_GND_67_o_add_31_OUT_xor<13> (U2/GND_67_o_GND_67_o_add_31_OUT<13>)
+     LUT4:I1->O            1   0.124   0.399  U2/Mmux_n010851 (U2/n0108<13>)
+     MUXCY:DI->O           1   0.456   0.000  U2/Madd_GND_67_o_GND_67_o_add_33_OUT_cy<13> (U2/Madd_GND_67_o_GND_67_o_add_33_OUT_cy<13>)
+     XORCY:CI->O           1   0.510   0.919  U2/Madd_GND_67_o_GND_67_o_add_33_OUT_xor<14> (U2/GND_67_o_GND_67_o_add_33_OUT<14>)
+     LUT5:I0->O            1   0.124   0.000  U2/PWM1_G (N14)
+     MUXF7:I1->O           1   0.368   0.716  U2/PWM1 (U2/PWM2)
+     LUT6:I3->O            2   0.124   0.405  U2/Mmux_PWMOut11 (PWMOut_OBUF)
+     OBUF:I->O                 0.000          PWMOut_OBUF (PWMOut)
+    ----------------------------------------
+    Total                     19.821ns (8.864ns logic, 10.957ns route)
+                                       (44.7% logic, 55.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    4.517|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U0/Clk1_D
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U0/Clk1_D      |    3.521|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U4/Clk1_D
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U0/Clk1_D      |    3.646|         |         |         |
+U4/Clk1_D      |    3.091|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.80 secs
+ 
+--> 
+
+Total memory usage is 4614888 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
