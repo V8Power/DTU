@@ -1,0 +1,173 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 8756
+License: Customer
+
+Current time: 	Wed Jan 04 10:45:38 CET 2023
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	felix
+User home directory: C:/Users/felix
+User working directory: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2020.1
+RDI_DATADIR: D:/Vivado/2020.1/data
+RDI_BINDIR: D:/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/felix/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/felix/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/felix/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	D:/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST/vivado.log
+Vivado journal file location: 	C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST/vivado.jou
+Engine tmp dir: 	C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST/.Xil/Vivado-8756-DESKTOP-MKAFNHE
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: D:/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/2020.1
+XILINX_VIVADO: D:/Vivado/2020.1
+XILINX_VIVADO_HLS: D:/Vivado/2020.1
+
+
+GUI allocated memory:	159 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,002 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 93 MB (+94839kb) [00:00:07]
+// [Engine Memory]: 1,002 MB (+899033kb) [00:00:07]
+// HOptionPane Warning: 'This project was created with a future version of Vivado. It will be opened in read-only mode for the protection of unrecognized data.  Please use 'File | Save Project As...' if you need to alter a copy of this project. The project may or may not open reliably with this version of Vivado. OK to proceed and open the project? (Future Project Version)'
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 67 MB. Current time: 1/4/23, 10:45:39 AM CET
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\felix\Documents\DTU\30082_project_jan_23\Git\DTU\30082\VHDL\SPITEST\SPI_TEST\SPI_TEST.xpr. Version: Vivado v2022.2 
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST/SPI_TEST.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 113 MB (+16026kb) [00:00:19]
+// [GUI Memory]: 127 MB (+8914kb) [00:00:20]
+// WARNING: HEventQueue.dispatchEvent() is taking  2138 ms.
+// Tcl Message: open_project C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST/SPI_TEST.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2020.1/data/ip'. 
+// Project name: SPI_TEST; location: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/SPI_TEST; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1024.211 ; gain = 0.000 
+dismissDialog("Open Project"); // bz (cs)
+// z (cs): Project is Read-Only: addNotify
+// a (cs): Critical Messages: addNotify
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceOtoP.Project_SAVE_PROJECT_AS, "Save Project As..."); // a (z)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_PROJECT_AS
+// aD (cs): Save Project As: addNotify
+dismissDialog("Project is Read-Only"); // z (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aD)
+// 'o' command handler elapsed time: 6 seconds
+// TclEventType: PROJECT_RENAME
+dismissDialog("Save Project As"); // aD (cs)
+dismissDialog("Critical Messages"); // a (cs)
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// bz (cs):  Save Project As : addNotify
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: save_project_as project_1 C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/project_1 -force 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/project_1' 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PROJECT_RENAME
+// bz (cs):  Save Constraints : addNotify
+dismissDialog("Save Constraints"); // bz (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ATMEGASPI(Behavioral) (ATMEGASPI.vhd)]", 1, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ATMEGASPI(Behavioral) (ATMEGASPI.vhd)]", 1, false, false, false, false, false, true); // B (F, cs) - Double Click
+// [GUI Memory]: 138 MB (+5045kb) [00:00:39]
+// Elapsed time: 20 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, lab3top.xdc]", 4, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, lab3top.xdc]", 4, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// f (cs): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_MODIFY
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: RUN_LAUNCH
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: [Wed Jan  4 10:46:58 2023] Launched synth_1... Run output will be captured here: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/project_1/project_1.runs/synth_1/runme.log [Wed Jan  4 10:46:59 2023] Launched impl_1... Run output will be captured here: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/project_1/project_1.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 122 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ag)
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ATMEGASPI.vhd", 1); // m (l, cs)
+// Elapsed time: 118 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lab3top.xdc", 2); // m (l, cs)

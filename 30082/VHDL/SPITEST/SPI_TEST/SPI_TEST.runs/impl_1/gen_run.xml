@@ -1,85 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1672787047">
-  <File Type="ROUTE-PWR" Name="ATMEGASPI_power_routed.rpt"/>
   <File Type="PA-TCL" Name="ATMEGASPI.tcl"/>
-  <File Type="BITSTR-MMI" Name="ATMEGASPI.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="ATMEGASPI_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="ATMEGASPI_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="ATMEGASPI_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="ATMEGASPI_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="ATMEGASPI_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="ATMEGASPI_opt.dcp"/>
-  <File Type="OPT-DRC" Name="ATMEGASPI_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="ATMEGASPI.hwdef"/>
-  <File Type="PWROPT-DCP" Name="ATMEGASPI_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="ATMEGASPI_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="ATMEGASPI_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="ATMEGASPI_placed.dcp"/>
-  <File Type="PLACE-IO" Name="ATMEGASPI_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="ATMEGASPI_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="ATMEGASPI_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="ATMEGASPI_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="ATMEGASPI_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="ATMEGASPI_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="ATMEGASPI_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="ATMEGASPI.bin"/>
-  <File Type="PLACE-TIMING" Name="ATMEGASPI_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="ATMEGASPI_postplace_pwropt.dcp"/>
   <File Type="BITSTR-MSK" Name="ATMEGASPI.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="ATMEGASPI_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="ATMEGASPI_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="ATMEGASPI_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="ATMEGASPI.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="ATMEGASPI_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="ATMEGASPI_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="ATMEGASPI_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="ATMEGASPI_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="ATMEGASPI_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="ATMEGASPI_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="ATMEGASPI_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="ATMEGASPI_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ATMEGASPI_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ATMEGASPI_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="ATMEGASPI_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="ATMEGASPI_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="ATMEGASPI_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="ATMEGASPI_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="ATMEGASPI_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="ATMEGASPI_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="ATMEGASPI_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="ATMEGASPI_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="ATMEGASPI_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="ATMEGASPI_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="ATMEGASPI_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ATMEGASPI_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ATMEGASPI_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ATMEGASPI_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ATMEGASPI_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ATMEGASPI_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ATMEGASPI_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="ATMEGASPI.vdi"/>
   <File Type="BG-BIT" Name="ATMEGASPI.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ATMEGASPI_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ATMEGASPI_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-DRC" Name="ATMEGASPI.drc"/>
+  <File Type="BG-BGN" Name="ATMEGASPI.bgn"/>
+  <File Type="BG-BIN" Name="ATMEGASPI.bin"/>
+  <File Type="BITSTR-RBT" Name="ATMEGASPI.rbt"/>
   <File Type="BITSTR-NKY" Name="ATMEGASPI.nky"/>
   <File Type="BITSTR-BMM" Name="ATMEGASPI_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="ATMEGASPI.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="ATMEGASPI.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="ATMEGASPI.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-HWDEF" Name="ATMEGASPI.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ATMEGASPI_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="ATMEGASPI_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ATMEGASPI_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ATMEGASPI_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="ATMEGASPI_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="ATMEGASPI_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="ATMEGASPI_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="ATMEGASPI_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ATMEGASPI_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="ATMEGASPI_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ATMEGASPI_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ATMEGASPI_postroute_physopt_bb.dcp"/>
   <File Type="PDI-FILE" Name="ATMEGASPI.pdi"/>
   <File Type="RCFI_FILE" Name="ATMEGASPI.rcfi"/>
   <File Type="CFI_FILE" Name="ATMEGASPI.cfi"/>
   <File Type="RNPI_FILE" Name="ATMEGASPI.rnpi"/>
   <File Type="NPI_FILE" Name="ATMEGASPI.npi"/>
   <File Type="RBD_FILE" Name="ATMEGASPI.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="ATMEGASPI.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="ATMEGASPI.sysdef"/>
-  <File Type="BG-BGN" Name="ATMEGASPI.bgn"/>
-  <File Type="BG-DRC" Name="ATMEGASPI.drc"/>
-  <File Type="RDI-RDI" Name="ATMEGASPI.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="ROUTE-RQS" Name="ATMEGASPI_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="ATMEGASPI_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
-  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PSRCDIR/sources_1">
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../ATMEGASPI.vhd">
       <FileInfo>
@@ -123,5 +79,6 @@
     <Step Id="write_bitstream">
       <Option Id="BinFile">1</Option>
     </Step>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
