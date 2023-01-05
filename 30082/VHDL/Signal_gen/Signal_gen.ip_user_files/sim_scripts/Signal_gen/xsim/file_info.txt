@@ -1,0 +1,2 @@
+sinusLUT.v,verilog,xil_defaultlib,../../../../sim/sinusLUT.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

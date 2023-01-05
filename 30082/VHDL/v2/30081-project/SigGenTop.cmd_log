@@ -1,0 +1,28 @@
+xst -intstyle ise -ifn "M:/Signalgenerato/SigGenTop.xst" -ofn "M:/Signalgenerato/SigGenTop.syr" 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc C:/Users/s182892/Downloads/siggentop.ucf -p xa7a100t-csg324-2I SigGenTop.ngc SigGenTop.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o SigGenTop_map.ncd SigGenTop.ngd SigGenTop.pcf 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc C:/Users/s182892/Downloads/siggentop.ucf -p xa7a100t-csg324-2I SigGenTop.ngc SigGenTop.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o SigGenTop_map.ncd SigGenTop.ngd SigGenTop.pcf 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc C:/Users/s182892/Downloads/siggentop.ucf -p xa7a100t-csg324-2I SigGenTop.ngc SigGenTop.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o SigGenTop_map.ncd SigGenTop.ngd SigGenTop.pcf 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc C:/Users/s182892/Downloads/siggentop.ucf -p xa7a100t-csg324-2I SigGenTop.ngc SigGenTop.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o SigGenTop_map.ncd SigGenTop.ngd SigGenTop.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc C:/Users/s182892/Downloads/siggentop.ucf -p xa7a100t-csg324-2I SigGenTop.ngc SigGenTop.ngd  
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc C:/Users/s182892/Downloads/siggentop.ucf -p xa7a100t-csg324-2I SigGenTop.ngc SigGenTop.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc C:/Users/s182892/Downloads/siggentop.ucf -p xa7a100t-csg324-2I SigGenTop.ngc SigGenTop.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o SigGenTop_map.ncd SigGenTop.ngd SigGenTop.pcf 
+xst -intstyle ise -ifn "C:/30081-project/SigGenTop.xst" -ofn "C:/30081-project/SigGenTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc C:/Users/s182892/Downloads/siggentop.ucf -p xc7a350t-fbg484-1 SigGenTop.ngc SigGenTop.ngd  
+map -intstyle ise -p xc7a350t-fbg484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o SigGenTop_map.ncd SigGenTop.ngd SigGenTop.pcf 

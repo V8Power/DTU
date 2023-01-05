@@ -1,0 +1,7 @@
+vhdl work "ipcore_dir/sinusLUT.vhd"
+vhdl work "../Users/s182892/Downloads/BTNdb.vhd"
+vhdl work "../Users/s182892/Downloads/SigGenDatapath.vhd"
+vhdl work "../Users/s182892/Downloads/SigGenControl.vhd"
+vhdl work "../Users/s182892/Downloads/SevenSeg5.vhd"
+vhdl work "../Users/s182892/Downloads/DivClk.vhd"
+vhdl work "../Users/s182892/Downloads/SigGenTop.vhd"

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jan  4 14:13:13 2023
+# Process ID: 28680
+# Current directory: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen/Signal_gen.runs/synth_1
+# Command line: vivado.exe -log SigGenTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SigGenTop.tcl
+# Log file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen/Signal_gen.runs/synth_1/SigGenTop.vds
+# Journal file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen/Signal_gen.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source SigGenTop.tcl -notrace
