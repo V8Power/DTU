@@ -193,12 +193,6 @@ Disassembly of section .text:
  122:	6e cf       	rjmp	.-292    	; 0x0 <__vectors>
 
 00000124 <checksumCalc>:
-
-int checksumCalc(unsigned char *bufferpointer, int Datalength)
-{
-	unsigned int LRC = 0;
-	
-	for (int i=0; i < (Datalength); i++)
  124:	16 16       	cp	r1, r22
  126:	17 06       	cpc	r1, r23
  128:	5c f4       	brge	.+22     	; 0x140 <checksumCalc+0x1c>
@@ -207,62 +201,29 @@ int checksumCalc(unsigned char *bufferpointer, int Datalength)
  12e:	79 1f       	adc	r23, r25
  130:	80 e0       	ldi	r24, 0x00	; 0
  132:	90 e0       	ldi	r25, 0x00	; 0
-	{
-		LRC ^= bufferpointer[i];
  134:	21 91       	ld	r18, Z+
  136:	82 27       	eor	r24, r18
-
-int checksumCalc(unsigned char *bufferpointer, int Datalength)
-{
-	unsigned int LRC = 0;
-	
-	for (int i=0; i < (Datalength); i++)
  138:	e6 17       	cp	r30, r22
  13a:	f7 07       	cpc	r31, r23
  13c:	d9 f7       	brne	.-10     	; 0x134 <checksumCalc+0x10>
  13e:	08 95       	ret
- */ 
-
-
-int checksumCalc(unsigned char *bufferpointer, int Datalength)
-{
-	unsigned int LRC = 0;
  140:	80 e0       	ldi	r24, 0x00	; 0
  142:	90 e0       	ldi	r25, 0x00	; 0
-	{
-		LRC ^= bufferpointer[i];
-	}
-	
-	return LRC;
-}
  144:	08 95       	ret
 
 00000146 <checksumCheck>:
-
-int checksumCheck(unsigned char checksum, unsigned int pack, unsigned char * ARR)
-{
  146:	cf 93       	push	r28
  148:	c8 2f       	mov	r28, r24
  14a:	ca 01       	movw	r24, r20
-
-	checksum ^= checksumCalc(ARR,(pack-2));
  14c:	62 50       	subi	r22, 0x02	; 2
  14e:	71 09       	sbc	r23, r1
  150:	e9 df       	rcall	.-46     	; 0x124 <checksumCalc>
  152:	8c 27       	eor	r24, r28
-	
-	return checksum;
  154:	90 e0       	ldi	r25, 0x00	; 0
  156:	cf 91       	pop	r28
  158:	08 95       	ret
 
 0000015a <initTimer>:
-	TX_GenBUFFER[9]=0x00;
-	TX_GenBUFFER[10]= checksumCalc(TX_GenBUFFER, 9);
-	sendStringUART0(TX_GenBUFFER,(TX_GenBUFFER[3]));
-} 
-void bodePlotUpdate()
-{
  15a:	e1 e8       	ldi	r30, 0x81	; 129
  15c:	f0 e0       	ldi	r31, 0x00	; 0
  15e:	80 81       	ld	r24, Z
@@ -635,12 +596,6 @@ void bodePlotUpdate()
  498:	d0 cf       	rjmp	.-96     	; 0x43a <main+0x16>
 
 0000049a <__vector_29>:
-	
-}
-
-///////////////////////////////////////////////////////// I S R ///////////////////////////////////////////////////////////////////////
-ISR (ADC_vect)
-{
  49a:	1f 92       	push	r1
  49c:	0f 92       	push	r0
  49e:	0f b6       	in	r0, 0x3f	; 63
@@ -656,16 +611,11 @@ ISR (ADC_vect)
  4b2:	9f 93       	push	r25
  4b4:	ef 93       	push	r30
  4b6:	ff 93       	push	r31
-	static unsigned int index_counter = 0;
-		
-	if( ADC_Active_Buffer == 0)
  4b8:	20 91 11 02 	lds	r18, 0x0211	; 0x800211 <ADC_Active_Buffer>
  4bc:	30 91 12 02 	lds	r19, 0x0212	; 0x800212 <ADC_Active_Buffer+0x1>
  4c0:	21 15       	cp	r18, r1
  4c2:	31 05       	cpc	r19, r1
  4c4:	51 f4       	brne	.+20     	; 0x4da <__vector_29+0x40>
-	{
-		ADC_BUFFER0[index_counter]= ADCH;
  4c6:	80 91 79 00 	lds	r24, 0x0079	; 0x800079 <__TEXT_REGION_LENGTH__+0x700079>
  4ca:	e0 91 06 02 	lds	r30, 0x0206	; 0x800206 <index_counter.1711>
  4ce:	f0 91 07 02 	lds	r31, 0x0207	; 0x800207 <index_counter.1711+0x1>
@@ -673,48 +623,32 @@ ISR (ADC_vect)
  4d4:	f9 4f       	sbci	r31, 0xF9	; 249
  4d6:	80 83       	st	Z, r24
  4d8:	09 c0       	rjmp	.+18     	; 0x4ec <__vector_29+0x52>
-	}
-	else
-	{
-		ADC_BUFFER1[index_counter] = ADCH;
  4da:	80 91 79 00 	lds	r24, 0x0079	; 0x800079 <__TEXT_REGION_LENGTH__+0x700079>
  4de:	e0 91 06 02 	lds	r30, 0x0206	; 0x800206 <index_counter.1711>
  4e2:	f0 91 07 02 	lds	r31, 0x0207	; 0x800207 <index_counter.1711+0x1>
  4e6:	e9 5f       	subi	r30, 0xF9	; 249
  4e8:	f5 4f       	sbci	r31, 0xF5	; 245
  4ea:	80 83       	st	Z, r24
-	}
-	
-	index_counter++;
  4ec:	80 91 06 02 	lds	r24, 0x0206	; 0x800206 <index_counter.1711>
  4f0:	90 91 07 02 	lds	r25, 0x0207	; 0x800207 <index_counter.1711+0x1>
  4f4:	01 96       	adiw	r24, 0x01	; 1
  4f6:	90 93 07 02 	sts	0x0207, r25	; 0x800207 <index_counter.1711+0x1>
  4fa:	80 93 06 02 	sts	0x0206, r24	; 0x800206 <index_counter.1711>
-	
-	//ADC: INDEX NULSTIL/BUFFER SKIFT OG ADC_PACKET_READY
-	if (index_counter == Record_Length)
  4fe:	40 91 00 02 	lds	r20, 0x0200	; 0x800200 <__DATA_REGION_ORIGIN__>
  502:	50 91 01 02 	lds	r21, 0x0201	; 0x800201 <__DATA_REGION_ORIGIN__+0x1>
  506:	84 17       	cp	r24, r20
  508:	95 07       	cpc	r25, r21
  50a:	81 f4       	brne	.+32     	; 0x52c <__vector_29+0x92>
-	{ 
-		ADC_Active_Buffer ^= 1;
  50c:	81 e0       	ldi	r24, 0x01	; 1
  50e:	28 27       	eor	r18, r24
  510:	30 93 12 02 	sts	0x0212, r19	; 0x800212 <ADC_Active_Buffer+0x1>
  514:	20 93 11 02 	sts	0x0211, r18	; 0x800211 <ADC_Active_Buffer>
-		ADC_Packet_Ready = 1; 
  518:	81 e0       	ldi	r24, 0x01	; 1
  51a:	90 e0       	ldi	r25, 0x00	; 0
  51c:	90 93 10 02 	sts	0x0210, r25	; 0x800210 <ADC_Packet_Ready+0x1>
  520:	80 93 0f 02 	sts	0x020F, r24	; 0x80020f <ADC_Packet_Ready>
-		index_counter = 0;
  524:	10 92 07 02 	sts	0x0207, r1	; 0x800207 <index_counter.1711+0x1>
  528:	10 92 06 02 	sts	0x0206, r1	; 0x800206 <index_counter.1711>
-	}
-}
  52c:	ff 91       	pop	r31
  52e:	ef 91       	pop	r30
  530:	9f 91       	pop	r25
@@ -732,15 +666,11 @@ ISR (ADC_vect)
  548:	18 95       	reti
 
 0000054a <__vector_18>:
-ISR (TIMER1_COMPB_vect)
-{
  54a:	1f 92       	push	r1
  54c:	0f 92       	push	r0
  54e:	0f b6       	in	r0, 0x3f	; 63
  550:	0f 92       	push	r0
  552:	11 24       	eor	r1, r1
-	
-}
  554:	0f 90       	pop	r0
  556:	0f be       	out	0x3f, r0	; 63
  558:	0f 90       	pop	r0
@@ -748,8 +678,6 @@ ISR (TIMER1_COMPB_vect)
  55c:	18 95       	reti
 
 0000055e <__vector_25>:
-ISR (USART0_RX_vect)
-{
  55e:	1f 92       	push	r1
  560:	0f 92       	push	r0
  562:	0f b6       	in	r0, 0x3f	; 63
@@ -764,9 +692,6 @@ ISR (USART0_RX_vect)
  574:	9f 93       	push	r25
  576:	ef 93       	push	r30
  578:	ff 93       	push	r31
-	static unsigned int index_counter = 0;
-		
-	RX_BUFFER0[index_counter]= UDR0;
  57a:	80 91 04 02 	lds	r24, 0x0204	; 0x800204 <__data_end>
  57e:	90 91 05 02 	lds	r25, 0x0205	; 0x800205 <__data_end+0x1>
  582:	20 91 c6 00 	lds	r18, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
@@ -774,8 +699,6 @@ ISR (USART0_RX_vect)
  588:	e4 50       	subi	r30, 0x04	; 4
  58a:	f6 4f       	sbci	r31, 0xF6	; 246
  58c:	20 83       	st	Z, r18
-			
-	if ((RX_BUFFER0[0] == 0x55) && (RX_BUFFER0[1] == 0xAA) && (index_counter == RX_BUFFER0[3]))
  58e:	20 91 fc 09 	lds	r18, 0x09FC	; 0x8009fc <RX_BUFFER0>
  592:	25 35       	cpi	r18, 0x55	; 85
  594:	d1 f4       	brne	.+52     	; 0x5ca <__vector_25+0x6c>
@@ -788,34 +711,23 @@ ISR (USART0_RX_vect)
  5a6:	84 17       	cp	r24, r20
  5a8:	95 07       	cpc	r25, r21
  5aa:	69 f4       	brne	.+26     	; 0x5c6 <__vector_25+0x68>
-	{		
-		PacketLength = RX_BUFFER0[3];
  5ac:	20 93 0c 02 	sts	0x020C, r18	; 0x80020c <PacketLength>
-		RX_Packet_Ready = 1; 
  5b0:	81 e0       	ldi	r24, 0x01	; 1
  5b2:	90 e0       	ldi	r25, 0x00	; 0
  5b4:	90 93 0e 02 	sts	0x020E, r25	; 0x80020e <RX_Packet_Ready+0x1>
  5b8:	80 93 0d 02 	sts	0x020D, r24	; 0x80020d <RX_Packet_Ready>
-		index_counter = 0;
  5bc:	10 92 05 02 	sts	0x0205, r1	; 0x800205 <__data_end+0x1>
  5c0:	10 92 04 02 	sts	0x0204, r1	; 0x800204 <__data_end>
  5c4:	06 c0       	rjmp	.+12     	; 0x5d2 <__vector_25+0x74>
- 	}
-else if((RX_BUFFER0[0]!=0x55) || (index_counter == 0x0b))
  5c6:	0b 97       	sbiw	r24, 0x0b	; 11
  5c8:	21 f4       	brne	.+8      	; 0x5d2 <__vector_25+0x74>
-	{
-		index_counter = 0;
  5ca:	10 92 05 02 	sts	0x0205, r1	; 0x800205 <__data_end+0x1>
  5ce:	10 92 04 02 	sts	0x0204, r1	; 0x800204 <__data_end>
-	}
-	index_counter++; 
  5d2:	80 91 04 02 	lds	r24, 0x0204	; 0x800204 <__data_end>
  5d6:	90 91 05 02 	lds	r25, 0x0205	; 0x800205 <__data_end+0x1>
  5da:	01 96       	adiw	r24, 0x01	; 1
  5dc:	90 93 05 02 	sts	0x0205, r25	; 0x800205 <__data_end+0x1>
  5e0:	80 93 04 02 	sts	0x0204, r24	; 0x800204 <__data_end>
-}
  5e4:	ff 91       	pop	r31
  5e6:	ef 91       	pop	r30
  5e8:	9f 91       	pop	r25
@@ -832,127 +744,72 @@ else if((RX_BUFFER0[0]!=0x55) || (index_counter == 0x0b))
  5fe:	18 95       	reti
 
 00000600 <sendStringSPI>:
-}
-
-void sendStringSPI(unsigned char * SPI_TX_ARR, int PacketLengthSPI)
-{
-
-	for(int i=0;i<PacketLengthSPI;i++)
  600:	16 16       	cp	r1, r22
  602:	17 06       	cpc	r1, r23
  604:	84 f4       	brge	.+32     	; 0x626 <sendStringSPI+0x26>
  606:	fc 01       	movw	r30, r24
  608:	68 0f       	add	r22, r24
  60a:	79 1f       	adc	r23, r25
-	{
-		PORTB &=~ (1<<PB0); // SS sat lav
-		SPDR = SPI_TX_ARR[i];
-		while(!(SPSR&(1<<SPIF)));
-		PORTB ^= (1<<PB0); // SS sat høj
  60c:	81 e0       	ldi	r24, 0x01	; 1
-void sendStringSPI(unsigned char * SPI_TX_ARR, int PacketLengthSPI)
-{
-
-	for(int i=0;i<PacketLengthSPI;i++)
-	{
-		PORTB &=~ (1<<PB0); // SS sat lav
  60e:	28 98       	cbi	0x05, 0	; 5
-		SPDR = SPI_TX_ARR[i];
  610:	91 91       	ld	r25, Z+
  612:	9e bd       	out	0x2e, r25	; 46
-		while(!(SPSR&(1<<SPIF)));
  614:	0d b4       	in	r0, 0x2d	; 45
  616:	07 fe       	sbrs	r0, 7
  618:	fd cf       	rjmp	.-6      	; 0x614 <sendStringSPI+0x14>
-		PORTB ^= (1<<PB0); // SS sat høj
  61a:	95 b1       	in	r25, 0x05	; 5
  61c:	98 27       	eor	r25, r24
  61e:	95 b9       	out	0x05, r25	; 5
-}
-
-void sendStringSPI(unsigned char * SPI_TX_ARR, int PacketLengthSPI)
-{
-
-	for(int i=0;i<PacketLengthSPI;i++)
  620:	e6 17       	cp	r30, r22
  622:	f7 07       	cpc	r31, r23
  624:	a1 f7       	brne	.-24     	; 0x60e <sendStringSPI+0xe>
  626:	08 95       	ret
 
 00000628 <spiUpdate>:
-	}
-	
-}
-
-void spiUpdate(unsigned char ldbtn, unsigned char swVal)
-{
  628:	cf 93       	push	r28
  62a:	df 93       	push	r29
-	SPI_ARR[0] = 0xAA;
  62c:	c0 ef       	ldi	r28, 0xF0	; 240
  62e:	dd e0       	ldi	r29, 0x0D	; 13
  630:	9a ea       	ldi	r25, 0xAA	; 170
  632:	98 83       	st	Y, r25
-	SPI_ARR[1] = ldbtn;
  634:	89 83       	std	Y+1, r24	; 0x01
-	SPI_ARR[2] = swVal;
  636:	6a 83       	std	Y+2, r22	; 0x02
-	SPI_ARR[3] = checksumCalc(SPI_ARR,3);
  638:	63 e0       	ldi	r22, 0x03	; 3
  63a:	70 e0       	ldi	r23, 0x00	; 0
  63c:	ce 01       	movw	r24, r28
  63e:	72 dd       	rcall	.-1308   	; 0x124 <checksumCalc>
  640:	8b 83       	std	Y+3, r24	; 0x03
-	
-	sendStringSPI(SPI_ARR,3);
  642:	63 e0       	ldi	r22, 0x03	; 3
  644:	70 e0       	ldi	r23, 0x00	; 0
  646:	ce 01       	movw	r24, r28
  648:	db df       	rcall	.-74     	; 0x600 <sendStringSPI>
-}
  64a:	df 91       	pop	r29
  64c:	cf 91       	pop	r28
  64e:	08 95       	ret
 
 00000650 <SPI_START_STOP>:
-
-void SPI_START_STOP(unsigned char addr) // sæt adresse på ønskede handling
-{
  650:	cf 93       	push	r28
  652:	df 93       	push	r29
-	SPI_ARR2[0] = 0xAA;
  654:	c7 ef       	ldi	r28, 0xF7	; 247
  656:	d9 e0       	ldi	r29, 0x09	; 9
  658:	9a ea       	ldi	r25, 0xAA	; 170
  65a:	98 83       	st	Y, r25
-	SPI_ARR2[1] = addr;
  65c:	89 83       	std	Y+1, r24	; 0x01
-	SPI_ARR2[2] = 0x00;
  65e:	1a 82       	std	Y+2, r1	; 0x02
-	SPI_ARR2[3] = checksumCalc(SPI_ARR2,4);
  660:	64 e0       	ldi	r22, 0x04	; 4
  662:	70 e0       	ldi	r23, 0x00	; 0
  664:	ce 01       	movw	r24, r28
  666:	5e dd       	rcall	.-1348   	; 0x124 <checksumCalc>
  668:	8b 83       	std	Y+3, r24	; 0x03
-	
-	sendStringSPI(SPI_ARR2,3);
  66a:	63 e0       	ldi	r22, 0x03	; 3
  66c:	70 e0       	ldi	r23, 0x00	; 0
  66e:	ce 01       	movw	r24, r28
  670:	c7 df       	rcall	.-114    	; 0x600 <sendStringSPI>
-}
  672:	df 91       	pop	r29
  674:	cf 91       	pop	r28
  676:	08 95       	ret
 
 00000678 <initUART0>:
-}
-
-
-void sendCharUART0 (char tx)//done
-{
-	while(!(UCSR0A & (1<< UDRE0)))
  678:	e1 ec       	ldi	r30, 0xC1	; 193
  67a:	f0 e0       	ldi	r31, 0x00	; 0
  67c:	20 81       	ld	r18, Z
@@ -973,56 +830,26 @@ void sendCharUART0 (char tx)//done
  6a0:	08 95       	ret
 
 000006a2 <sendStringUART0>:
-	{
-		UDR0 = tx;
-	}
-}
-void sendStringUART0(unsigned char *cx,int Index) //Pakkelængde på index plads
-{
  6a2:	cf 93       	push	r28
  6a4:	df 93       	push	r29
-	int i=0;
-
-	for(i=0;i<Index;i++)
  6a6:	16 16       	cp	r1, r22
  6a8:	17 06       	cpc	r1, r23
  6aa:	7c f4       	brge	.+30     	; 0x6ca <sendStringUART0+0x28>
  6ac:	dc 01       	movw	r26, r24
  6ae:	68 0f       	add	r22, r24
  6b0:	79 1f       	adc	r23, r25
-	{
-		while(!(UCSR0A&(1<<UDRE0)));
  6b2:	e0 ec       	ldi	r30, 0xC0	; 192
  6b4:	f0 e0       	ldi	r31, 0x00	; 0
-		UDR0 = cx[i];
  6b6:	c6 ec       	ldi	r28, 0xC6	; 198
  6b8:	d0 e0       	ldi	r29, 0x00	; 0
-{
-	int i=0;
-
-	for(i=0;i<Index;i++)
-	{
-		while(!(UCSR0A&(1<<UDRE0)));
  6ba:	90 81       	ld	r25, Z
  6bc:	95 ff       	sbrs	r25, 5
  6be:	fd cf       	rjmp	.-6      	; 0x6ba <sendStringUART0+0x18>
-		UDR0 = cx[i];
  6c0:	9d 91       	ld	r25, X+
  6c2:	98 83       	st	Y, r25
-}
-void sendStringUART0(unsigned char *cx,int Index) //Pakkelængde på index plads
-{
-	int i=0;
-
-	for(i=0;i<Index;i++)
  6c4:	a6 17       	cp	r26, r22
  6c6:	b7 07       	cpc	r27, r23
  6c8:	c1 f7       	brne	.-16     	; 0x6ba <sendStringUART0+0x18>
-	{
-		while(!(UCSR0A&(1<<UDRE0)));
-		UDR0 = cx[i];
-	}
-}
  6ca:	df 91       	pop	r29
  6cc:	cf 91       	pop	r28
  6ce:	08 95       	ret

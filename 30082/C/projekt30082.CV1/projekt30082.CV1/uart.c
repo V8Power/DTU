@@ -5,7 +5,6 @@
 
 char uart0_in [20];
 uint8_t i = 0;
-//volatile char char_dat;
 uint8_t uart0_full = 0;
 
 ISR(USART0_RX_vect){      //rx interrupt
@@ -41,9 +40,9 @@ void uart_send_char(char data){
 	UDR0 = data;                //then send data
 	
 }
-char uart_receive(uint8_t pos){       //read char in specific buffer position
+char uart_receive(uint8_t bufferpos){       //read char in specific buffer position
 	i = 0;                     //clear buffer index
-	return uart0_in[pos];
+	return uart0_in[bufferpos];
 	
 	
 }
@@ -54,7 +53,7 @@ void uart_send(char *str){                //send a string by sending each char
 	str++;
 	}
 }   
- void uart_clear(){                       //clear uasrt buffer
+ void uart_clear(){                       //clear uasart buffer
 	 for(int b =0; b < 20; b++){
 	 uart0_in[b] = 0;
 	 }

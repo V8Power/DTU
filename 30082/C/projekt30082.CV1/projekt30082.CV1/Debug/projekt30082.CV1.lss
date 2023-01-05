@@ -13,21 +13,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000418  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 000000b8  00000000  00000000  00000458  2**0
+  5 .debug_aranges 000000d0  00000000  00000000  00000458  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00001060  00000000  00000000  00000510  2**0
+  6 .debug_info   00001222  00000000  00000000  00000528  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000e1e  00000000  00000000  00001570  2**0
+  7 .debug_abbrev 00000e72  00000000  00000000  0000174a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000649  00000000  00000000  0000238e  2**0
+  8 .debug_line   000006e5  00000000  00000000  000025bc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000174  00000000  00000000  000029d8  2**2
+  9 .debug_frame  00000188  00000000  00000000  00002ca4  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000653  00000000  00000000  00002b4c  2**0
+ 10 .debug_str    000006f0  00000000  00000000  00002e2c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000215  00000000  00000000  0000319f  2**0
+ 11 .debug_loc    00000215  00000000  00000000  0000351c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000088  00000000  00000000  000033b4  2**0
+ 12 .debug_ranges 00000090  00000000  00000000  00003731  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -186,27 +186,32 @@ Disassembly of section .text:
  118:	af 31       	cpi	r26, 0x1F	; 31
  11a:	b2 07       	cpc	r27, r18
  11c:	e1 f7       	brne	.-8      	; 0x116 <.do_clear_bss_loop>
- 11e:	4f d0       	rcall	.+158    	; 0x1be <main>
+ 11e:	34 d0       	rcall	.+104    	; 0x188 <main>
  120:	26 c1       	rjmp	.+588    	; 0x36e <_exit>
 
 00000122 <__bad_interrupt>:
  122:	6e cf       	rjmp	.-292    	; 0x0 <__vectors>
 
-00000124 <millis>:
+00000124 <micros>:
 //timers
 uint16_t cycle_time = 1;
 uint32_t prev_cycle_time = 0;
 
-uint32_t millis(){
-	return milli;
- 124:	60 91 04 02 	lds	r22, 0x0204	; 0x800204 <milli>
- 128:	70 91 05 02 	lds	r23, 0x0205	; 0x800205 <milli+0x1>
- 12c:	80 91 06 02 	lds	r24, 0x0206	; 0x800206 <milli+0x2>
- 130:	90 91 07 02 	lds	r25, 0x0207	; 0x800207 <milli+0x3>
+uint32_t micros(){
+	return micro;
+ 124:	60 91 04 02 	lds	r22, 0x0204	; 0x800204 <micro>
+ 128:	70 91 05 02 	lds	r23, 0x0205	; 0x800205 <micro+0x1>
+ 12c:	80 91 06 02 	lds	r24, 0x0206	; 0x800206 <micro+0x2>
+ 130:	90 91 07 02 	lds	r25, 0x0207	; 0x800207 <micro+0x3>
 }
  134:	08 95       	ret
 
 00000136 <__vector_17>:
+
+
+
+
+// (Timer Interrupt)
 ISR(TIMER1_COMPA_vect){     //interrupt every 1ms, set through timer prescale and counter compare
  136:	1f 92       	push	r1
  138:	0f 92       	push	r0
@@ -217,23 +222,21 @@ ISR(TIMER1_COMPA_vect){     //interrupt every 1ms, set through timer prescale an
  142:	9f 93       	push	r25
  144:	af 93       	push	r26
  146:	bf 93       	push	r27
-	
-	milli++;           
- 148:	80 91 04 02 	lds	r24, 0x0204	; 0x800204 <milli>
- 14c:	90 91 05 02 	lds	r25, 0x0205	; 0x800205 <milli+0x1>
- 150:	a0 91 06 02 	lds	r26, 0x0206	; 0x800206 <milli+0x2>
- 154:	b0 91 07 02 	lds	r27, 0x0207	; 0x800207 <milli+0x3>
+	micro++;           
+ 148:	80 91 04 02 	lds	r24, 0x0204	; 0x800204 <micro>
+ 14c:	90 91 05 02 	lds	r25, 0x0205	; 0x800205 <micro+0x1>
+ 150:	a0 91 06 02 	lds	r26, 0x0206	; 0x800206 <micro+0x2>
+ 154:	b0 91 07 02 	lds	r27, 0x0207	; 0x800207 <micro+0x3>
  158:	01 96       	adiw	r24, 0x01	; 1
  15a:	a1 1d       	adc	r26, r1
  15c:	b1 1d       	adc	r27, r1
- 15e:	80 93 04 02 	sts	0x0204, r24	; 0x800204 <milli>
- 162:	90 93 05 02 	sts	0x0205, r25	; 0x800205 <milli+0x1>
- 166:	a0 93 06 02 	sts	0x0206, r26	; 0x800206 <milli+0x2>
- 16a:	b0 93 07 02 	sts	0x0207, r27	; 0x800207 <milli+0x3>
+ 15e:	80 93 04 02 	sts	0x0204, r24	; 0x800204 <micro>
+ 162:	90 93 05 02 	sts	0x0205, r25	; 0x800205 <micro+0x1>
+ 166:	a0 93 06 02 	sts	0x0206, r26	; 0x800206 <micro+0x2>
+ 16a:	b0 93 07 02 	sts	0x0207, r27	; 0x800207 <micro+0x3>
 	TCNT1 = 0x0000;   // reset counter for next COMPA event
  16e:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7c0085>
  172:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7c0084>
-	//PORTB ^= (1 << PB7);
 }
  176:	bf 91       	pop	r27
  178:	af 91       	pop	r26
@@ -245,171 +248,169 @@ ISR(TIMER1_COMPA_vect){     //interrupt every 1ms, set through timer prescale an
  184:	1f 90       	pop	r1
  186:	18 95       	reti
 
-00000188 <init>:
+00000188 <main>:
+	
+	
 
-
-void init(){
-	DDRB |= (1 << PB7);  
- 188:	84 b1       	in	r24, 0x04	; 4
- 18a:	80 68       	ori	r24, 0x80	; 128
- 18c:	84 b9       	out	0x04, r24	; 4
-	
-	
-	
-	TCNT1 = 0x0000; // timer1 counter reset
- 18e:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7c0085>
- 192:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7c0084>
-	TCCR1B |= (1 << CS11) | (1 << CS10); // clk/64
- 196:	e1 e8       	ldi	r30, 0x81	; 129
- 198:	f0 e0       	ldi	r31, 0x00	; 0
- 19a:	80 81       	ld	r24, Z
- 19c:	83 60       	ori	r24, 0x03	; 3
- 19e:	80 83       	st	Z, r24
-	TCCR1B |= (1 << WGM12); // CTC  operation mode
- 1a0:	80 81       	ld	r24, Z
- 1a2:	88 60       	ori	r24, 0x08	; 8
- 1a4:	80 83       	st	Z, r24
-	TIMSK1 |= (1 << OCIE1A);
- 1a6:	ef e6       	ldi	r30, 0x6F	; 111
- 1a8:	f0 e0       	ldi	r31, 0x00	; 0
- 1aa:	80 81       	ld	r24, Z
- 1ac:	82 60       	ori	r24, 0x02	; 2
- 1ae:	80 83       	st	Z, r24
-	
-	OCR1AH = 0x00;
- 1b0:	10 92 89 00 	sts	0x0089, r1	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
-	OCR1AL = 0xFA; // 250    247   250 is theoretical val, 247 is checked with oscilloscope
- 1b4:	8a ef       	ldi	r24, 0xFA	; 250
- 1b6:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
-	
-	
-	sei();
- 1ba:	78 94       	sei
- 1bc:	08 95       	ret
-
-000001be <main>:
-}
 int main (void){
 	
-	init();
- 1be:	e4 df       	rcall	.-56     	; 0x188 <init>
 	SPI_init_master(0,0);
- 1c0:	60 e0       	ldi	r22, 0x00	; 0
- 1c2:	80 e0       	ldi	r24, 0x00	; 0
- 1c4:	2e d0       	rcall	.+92     	; 0x222 <SPI_init_master>
-	uart_init(19200);
- 1c6:	60 e0       	ldi	r22, 0x00	; 0
- 1c8:	7b e4       	ldi	r23, 0x4B	; 75
- 1ca:	80 e0       	ldi	r24, 0x00	; 0
- 1cc:	90 e0       	ldi	r25, 0x00	; 0
+ 188:	60 e0       	ldi	r22, 0x00	; 0
+ 18a:	80 e0       	ldi	r24, 0x00	; 0
+ 18c:	2f d0       	rcall	.+94     	; 0x1ec <SPI_init_master>
+	uart_init(115200);
+ 18e:	60 e0       	ldi	r22, 0x00	; 0
+ 190:	72 ec       	ldi	r23, 0xC2	; 194
+ 192:	81 e0       	ldi	r24, 0x01	; 1
+ 194:	90 e0       	ldi	r25, 0x00	; 0
+	timerinit();
+ 196:	9d d0       	rcall	.+314    	; 0x2d2 <uart_init>
+ 198:	55 d0       	rcall	.+170    	; 0x244 <timerinit>
 	
 	while (1){
-		if (millis() - prev_cycle_time >= 200){    
- 1ce:	81 d0       	rcall	.+258    	; 0x2d2 <uart_init>
- 1d0:	a9 df       	rcall	.-174    	; 0x124 <millis>
- 1d2:	00 91 00 02 	lds	r16, 0x0200	; 0x800200 <__DATA_REGION_ORIGIN__>
- 1d6:	10 91 01 02 	lds	r17, 0x0201	; 0x800201 <__DATA_REGION_ORIGIN__+0x1>
- 1da:	20 91 02 02 	lds	r18, 0x0202	; 0x800202 <__DATA_REGION_ORIGIN__+0x2>
- 1de:	30 91 03 02 	lds	r19, 0x0203	; 0x800203 <__DATA_REGION_ORIGIN__+0x3>
- 1e2:	6b 01       	movw	r12, r22
- 1e4:	7c 01       	movw	r14, r24
- 1e6:	c0 1a       	sub	r12, r16
- 1e8:	d1 0a       	sbc	r13, r17
- 1ea:	e2 0a       	sbc	r14, r18
- 1ec:	f3 0a       	sbc	r15, r19
- 1ee:	97 01       	movw	r18, r14
- 1f0:	86 01       	movw	r16, r12
- 1f2:	08 3c       	cpi	r16, 0xC8	; 200
- 1f4:	11 05       	cpc	r17, r1
- 1f6:	21 05       	cpc	r18, r1
- 1f8:	31 05       	cpc	r19, r1
- 1fa:	50 f3       	brcs	.-44     	; 0x1d0 <main+0x12>
-				prev_cycle_time = millis();
- 1fc:	60 93 00 02 	sts	0x0200, r22	; 0x800200 <__DATA_REGION_ORIGIN__>
- 200:	70 93 01 02 	sts	0x0201, r23	; 0x800201 <__DATA_REGION_ORIGIN__+0x1>
- 204:	80 93 02 02 	sts	0x0202, r24	; 0x800202 <__DATA_REGION_ORIGIN__+0x2>
- 208:	90 93 03 02 	sts	0x0203, r25	; 0x800203 <__DATA_REGION_ORIGIN__+0x3>
+		if (micros() - prev_cycle_time >= 200){    
+ 19a:	c4 df       	rcall	.-120    	; 0x124 <micros>
+ 19c:	00 91 00 02 	lds	r16, 0x0200	; 0x800200 <__DATA_REGION_ORIGIN__>
+ 1a0:	10 91 01 02 	lds	r17, 0x0201	; 0x800201 <__DATA_REGION_ORIGIN__+0x1>
+ 1a4:	20 91 02 02 	lds	r18, 0x0202	; 0x800202 <__DATA_REGION_ORIGIN__+0x2>
+ 1a8:	30 91 03 02 	lds	r19, 0x0203	; 0x800203 <__DATA_REGION_ORIGIN__+0x3>
+ 1ac:	6b 01       	movw	r12, r22
+ 1ae:	7c 01       	movw	r14, r24
+ 1b0:	c0 1a       	sub	r12, r16
+ 1b2:	d1 0a       	sbc	r13, r17
+ 1b4:	e2 0a       	sbc	r14, r18
+ 1b6:	f3 0a       	sbc	r15, r19
+ 1b8:	97 01       	movw	r18, r14
+ 1ba:	86 01       	movw	r16, r12
+ 1bc:	08 3c       	cpi	r16, 0xC8	; 200
+ 1be:	11 05       	cpc	r17, r1
+ 1c0:	21 05       	cpc	r18, r1
+ 1c2:	31 05       	cpc	r19, r1
+ 1c4:	50 f3       	brcs	.-44     	; 0x19a <main+0x12>
+ 1c6:	60 93 00 02 	sts	0x0200, r22	; 0x800200 <__DATA_REGION_ORIGIN__>
+				prev_cycle_time = micros();
+ 1ca:	70 93 01 02 	sts	0x0201, r23	; 0x800201 <__DATA_REGION_ORIGIN__+0x1>
+ 1ce:	80 93 02 02 	sts	0x0202, r24	; 0x800202 <__DATA_REGION_ORIGIN__+0x2>
+ 1d2:	90 93 03 02 	sts	0x0203, r25	; 0x800203 <__DATA_REGION_ORIGIN__+0x3>
 				
 				SPI_write(0xC3);
- 20c:	83 ec       	ldi	r24, 0xC3	; 195
+ 1d6:	83 ec       	ldi	r24, 0xC3	; 195
+ 1d8:	2a d0       	rcall	.+84     	; 0x22e <SPI_write>
 				SPI_write(a);
- 20e:	2a d0       	rcall	.+84     	; 0x264 <SPI_write>
- 210:	80 91 08 02 	lds	r24, 0x0208	; 0x800208 <a>
- 214:	27 d0       	rcall	.+78     	; 0x264 <SPI_write>
+ 1da:	80 91 08 02 	lds	r24, 0x0208	; 0x800208 <a>
+ 1de:	27 d0       	rcall	.+78     	; 0x22e <SPI_write>
+ 1e0:	80 91 08 02 	lds	r24, 0x0208	; 0x800208 <a>
 				a++;
- 216:	80 91 08 02 	lds	r24, 0x0208	; 0x800208 <a>
- 21a:	8f 5f       	subi	r24, 0xFF	; 255
- 21c:	80 93 08 02 	sts	0x0208, r24	; 0x800208 <a>
- 220:	d7 cf       	rjmp	.-82     	; 0x1d0 <main+0x12>
+ 1e4:	8f 5f       	subi	r24, 0xFF	; 255
+ 1e6:	80 93 08 02 	sts	0x0208, r24	; 0x800208 <a>
+ 1ea:	d7 cf       	rjmp	.-82     	; 0x19a <main+0x12>
 
-00000222 <SPI_init_master>:
+000001ec <SPI_init_master>:
+ 1ec:	96 2f       	mov	r25, r22
 	return data;
 	PORTB |= (1 << PB0);
 	
 	
 	
 }
- 222:	96 2f       	mov	r25, r22
- 224:	24 b1       	in	r18, 0x04	; 4
- 226:	27 60       	ori	r18, 0x07	; 7
- 228:	24 b9       	out	0x04, r18	; 4
- 22a:	25 b1       	in	r18, 0x05	; 5
- 22c:	2e 7f       	andi	r18, 0xFE	; 254
- 22e:	25 b9       	out	0x05, r18	; 5
- 230:	25 b1       	in	r18, 0x05	; 5
- 232:	28 60       	ori	r18, 0x08	; 8
- 234:	25 b9       	out	0x05, r18	; 5
- 236:	1c bc       	out	0x2c, r1	; 44
- 238:	2c b5       	in	r18, 0x2c	; 44
- 23a:	68 2f       	mov	r22, r24
- 23c:	70 e0       	ldi	r23, 0x00	; 0
- 23e:	ab 01       	movw	r20, r22
- 240:	44 0f       	add	r20, r20
- 242:	55 1f       	adc	r21, r21
- 244:	44 0f       	add	r20, r20
- 246:	55 1f       	adc	r21, r21
- 248:	44 0f       	add	r20, r20
- 24a:	55 1f       	adc	r21, r21
- 24c:	69 2f       	mov	r22, r25
- 24e:	70 e0       	ldi	r23, 0x00	; 0
- 250:	66 0f       	add	r22, r22
- 252:	77 1f       	adc	r23, r23
- 254:	66 0f       	add	r22, r22
- 256:	77 1f       	adc	r23, r23
- 258:	64 2b       	or	r22, r20
- 25a:	62 2b       	or	r22, r18
- 25c:	62 65       	ori	r22, 0x52	; 82
- 25e:	6c bd       	out	0x2c, r22	; 44
- 260:	1e bc       	out	0x2e, r1	; 46
- 262:	08 95       	ret
+ 1ee:	24 b1       	in	r18, 0x04	; 4
+ 1f0:	27 60       	ori	r18, 0x07	; 7
+ 1f2:	24 b9       	out	0x04, r18	; 4
+ 1f4:	25 b1       	in	r18, 0x05	; 5
+ 1f6:	2e 7f       	andi	r18, 0xFE	; 254
+ 1f8:	25 b9       	out	0x05, r18	; 5
+ 1fa:	25 b1       	in	r18, 0x05	; 5
+ 1fc:	28 60       	ori	r18, 0x08	; 8
+ 1fe:	25 b9       	out	0x05, r18	; 5
+ 200:	1c bc       	out	0x2c, r1	; 44
+ 202:	2c b5       	in	r18, 0x2c	; 44
+ 204:	68 2f       	mov	r22, r24
+ 206:	70 e0       	ldi	r23, 0x00	; 0
+ 208:	ab 01       	movw	r20, r22
+ 20a:	44 0f       	add	r20, r20
+ 20c:	55 1f       	adc	r21, r21
+ 20e:	44 0f       	add	r20, r20
+ 210:	55 1f       	adc	r21, r21
+ 212:	44 0f       	add	r20, r20
+ 214:	55 1f       	adc	r21, r21
+ 216:	69 2f       	mov	r22, r25
+ 218:	70 e0       	ldi	r23, 0x00	; 0
+ 21a:	66 0f       	add	r22, r22
+ 21c:	77 1f       	adc	r23, r23
+ 21e:	66 0f       	add	r22, r22
+ 220:	77 1f       	adc	r23, r23
+ 222:	64 2b       	or	r22, r20
+ 224:	62 2b       	or	r22, r18
+ 226:	62 65       	ori	r22, 0x52	; 82
+ 228:	6c bd       	out	0x2c, r22	; 44
+ 22a:	1e bc       	out	0x2e, r1	; 46
+ 22c:	08 95       	ret
 
-00000264 <SPI_write>:
+0000022e <SPI_write>:
 
 
 
 void SPI_write(unsigned char data){
 	
 	PORTB &= ~(1 << PB0);
- 264:	95 b1       	in	r25, 0x05	; 5
- 266:	9e 7f       	andi	r25, 0xFE	; 254
- 268:	95 b9       	out	0x05, r25	; 5
+ 22e:	95 b1       	in	r25, 0x05	; 5
+ 230:	9e 7f       	andi	r25, 0xFE	; 254
+ 232:	95 b9       	out	0x05, r25	; 5
 	SPDR = data;
- 26a:	8e bd       	out	0x2e, r24	; 46
+ 234:	8e bd       	out	0x2e, r24	; 46
 	while(!(SPSR &(1<<SPIF))) ;
- 26c:	0d b4       	in	r0, 0x2d	; 45
- 26e:	07 fe       	sbrs	r0, 7
- 270:	fd cf       	rjmp	.-6      	; 0x26c <SPI_write+0x8>
+ 236:	0d b4       	in	r0, 0x2d	; 45
+ 238:	07 fe       	sbrs	r0, 7
+ 23a:	fd cf       	rjmp	.-6      	; 0x236 <SPI_write+0x8>
 	 
 	PORTB |= (1 << PB0);
- 272:	85 b1       	in	r24, 0x05	; 5
- 274:	81 60       	ori	r24, 0x01	; 1
- 276:	85 b9       	out	0x05, r24	; 5
+ 23c:	85 b1       	in	r24, 0x05	; 5
+ 23e:	81 60       	ori	r24, 0x01	; 1
+ 240:	85 b9       	out	0x05, r24	; 5
+ 242:	08 95       	ret
+
+00000244 <timerinit>:
+#define BAUD 115200
+#define UBRR ((F_CPU/8/BAUD)-1)
+
+
+void timerinit(){
+	DDRB |= (1 << PB7);
+ 244:	84 b1       	in	r24, 0x04	; 4
+ 246:	80 68       	ori	r24, 0x80	; 128
+ 248:	84 b9       	out	0x04, r24	; 4
+	TCNT1 = 0x0000; // timer1 counter reset
+ 24a:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7c0085>
+ 24e:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7c0084>
+	TCCR1B |= (1 << CS11) | (1 << CS10); // clk/64
+ 252:	e1 e8       	ldi	r30, 0x81	; 129
+ 254:	f0 e0       	ldi	r31, 0x00	; 0
+ 256:	80 81       	ld	r24, Z
+ 258:	83 60       	ori	r24, 0x03	; 3
+ 25a:	80 83       	st	Z, r24
+	TCCR1B |= (1 << WGM12); // CTC  operation mode
+ 25c:	80 81       	ld	r24, Z
+ 25e:	88 60       	ori	r24, 0x08	; 8
+ 260:	80 83       	st	Z, r24
+	TIMSK1 |= (1 << OCIE1A);
+ 262:	ef e6       	ldi	r30, 0x6F	; 111
+ 264:	f0 e0       	ldi	r31, 0x00	; 0
+ 266:	80 81       	ld	r24, Z
+ 268:	82 60       	ori	r24, 0x02	; 2
+ 26a:	80 83       	st	Z, r24
+	OCR1AH = 0x00;
+ 26c:	10 92 89 00 	sts	0x0089, r1	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+	OCR1AL = 0x18; // 250    247   250 is theoretical val, 247 is checked with oscilloscope
+ 270:	88 e1       	ldi	r24, 0x18	; 24
+ 272:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+	sei();
+ 276:	78 94       	sei
  278:	08 95       	ret
 
 0000027a <__vector_25>:
+
 char uart0_in [20];
 uint8_t i = 0;
-//volatile char char_dat;
 uint8_t uart0_full = 0;
 
 ISR(USART0_RX_vect){      //rx interrupt

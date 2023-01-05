@@ -12,17 +12,66 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 Allocating common symbols
 Common symbol       size              file
 
+RXBufffer           0xb               main.o
+TXgenrator          0xb               main.o
+ledval              0x2               main.o
 uart0_in            0x14              uart.o
+TXBuffer            0x3ef             main.o
+ADCBuffer2          0x3e9             main.o
+ADCBuffer           0x3e9             main.o
 
 Discarded input sections
 
  .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .text          0x00000000        0x0 ADC.o
+ .data          0x00000000        0x0 ADC.o
+ .bss           0x00000000        0x0 ADC.o
+ .text.ADCinit  0x00000000       0x20 ADC.o
+ .debug_info    0x00000000       0x89 ADC.o
+ .debug_abbrev  0x00000000       0x4f ADC.o
+ .debug_aranges
+                0x00000000       0x20 ADC.o
+ .debug_ranges  0x00000000       0x10 ADC.o
+ .debug_line    0x00000000       0xac ADC.o
+ .debug_str     0x00000000      0x193 ADC.o
+ .comment       0x00000000       0x31 ADC.o
+ .debug_frame   0x00000000       0x24 ADC.o
+ .text          0x00000000        0x0 Cheksum.o
+ .data          0x00000000        0x0 Cheksum.o
+ .bss           0x00000000        0x0 Cheksum.o
+ .text.checksumvalue
+                0x00000000       0x22 Cheksum.o
+ .text.checksum
+                0x00000000       0x16 Cheksum.o
+ .debug_info    0x00000000      0x111 Cheksum.o
+ .debug_abbrev  0x00000000       0xc5 Cheksum.o
+ .debug_loc     0x00000000      0x114 Cheksum.o
+ .debug_aranges
+                0x00000000       0x28 Cheksum.o
+ .debug_ranges  0x00000000       0x30 Cheksum.o
+ .debug_line    0x00000000       0x8e Cheksum.o
+ .debug_str     0x00000000      0x172 Cheksum.o
+ .comment       0x00000000       0x31 Cheksum.o
+ .debug_frame   0x00000000       0x3c Cheksum.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
  .data.cycle_time
                 0x00000000        0x2 main.o
+ .bss.switchval
+                0x00000000        0x1 main.o
+ .bss.buttonVal
+                0x00000000        0x1 main.o
+ .bss.Packets   0x00000000        0x1 main.o
+ .data.sample_length
+                0x00000000        0x2 main.o
+ .data.SampleRate
+                0x00000000        0x2 main.o
+ .bss.RXready   0x00000000        0x2 main.o
+ .bss.ADCready  0x00000000        0x2 main.o
+ .bss.ADCstart  0x00000000        0x2 main.o
+ COMMON         0x00000000      0xbd9 main.o
  .text          0x00000000        0x0 SPI.o
  .data          0x00000000        0x0 SPI.o
  .bss           0x00000000        0x0 SPI.o
@@ -30,6 +79,9 @@ Discarded input sections
                 0x00000000       0x16 SPI.o
  .text.SPI_read
                 0x00000000       0x12 SPI.o
+ .text          0x00000000        0x0 timerinit.o
+ .data          0x00000000        0x0 timerinit.o
+ .bss           0x00000000        0x0 timerinit.o
  .text          0x00000000        0x0 uart.o
  .data          0x00000000        0x0 uart.o
  .bss           0x00000000        0x0 uart.o
@@ -120,8 +172,11 @@ Linker script and memory map
 
 Address of section .data set to 0x800200
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
+LOAD ADC.o
+LOAD Cheksum.o
 LOAD main.o
 LOAD SPI.o
+LOAD timerinit.o
 LOAD uart.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a
@@ -348,21 +403,22 @@ END GROUP
                 0x00000122                __vector_42
                 0x00000124                . = ALIGN (0x2)
  *(.text.*)
- .text.millis   0x00000124       0x12 main.o
-                0x00000124                millis
+ .text.micros   0x00000124       0x12 main.o
+                0x00000124                micros
  .text.__vector_17
                 0x00000136       0x52 main.o
                 0x00000136                __vector_17
- .text.init     0x00000188       0x36 main.o
-                0x00000188                init
- .text.main     0x000001be       0x64 main.o
-                0x000001be                main
+ .text.main     0x00000188       0x64 main.o
+                0x00000188                main
  .text.SPI_init_master
-                0x00000222       0x42 SPI.o
-                0x00000222                SPI_init_master
+                0x000001ec       0x42 SPI.o
+                0x000001ec                SPI_init_master
  .text.SPI_write
-                0x00000264       0x16 SPI.o
-                0x00000264                SPI_write
+                0x0000022e       0x16 SPI.o
+                0x0000022e                SPI_write
+ .text.timerinit
+                0x00000244       0x36 timerinit.o
+                0x00000244                timerinit
  .text.__vector_25
                 0x0000027a       0x58 uart.o
                 0x0000027a                __vector_25
@@ -418,8 +474,8 @@ END GROUP
  .bss.prev_cycle_time
                 0x00800200        0x4 main.o
                 0x00800200                prev_cycle_time
- .bss.milli     0x00800204        0x4 main.o
-                0x00800204                milli
+ .bss.micro     0x00800204        0x4 main.o
+                0x00800204                micro
  .bss.a         0x00800208        0x1 main.o
                 0x00800208                a
  .bss.uart0_full
@@ -483,6 +539,7 @@ END GROUP
  .comment       0x00000000       0x30 main.o
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 SPI.o
+ .comment       0x00000030       0x31 timerinit.o
  .comment       0x00000030       0x31 uart.o
 
 .note.gnu.avr.deviceinfo
@@ -505,54 +562,62 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xb8
+.debug_aranges  0x00000000       0xd0
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x38 main.o
+                0x00000000       0x30 main.o
  .debug_aranges
-                0x00000038       0x38 SPI.o
+                0x00000030       0x38 SPI.o
  .debug_aranges
-                0x00000070       0x48 uart.o
+                0x00000068       0x20 timerinit.o
+ .debug_aranges
+                0x00000088       0x48 uart.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1060
+.debug_info     0x00000000     0x1222
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0xbbc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_info    0x00000bbc      0x1c2 main.o
- .debug_info    0x00000d7e      0x118 SPI.o
- .debug_info    0x00000e96      0x1ca uart.o
+ .debug_info    0x00000bbc      0x2f0 main.o
+ .debug_info    0x00000eac      0x118 SPI.o
+ .debug_info    0x00000fc4       0x94 timerinit.o
+ .debug_info    0x00001058      0x1ca uart.o
 
-.debug_abbrev   0x00000000      0xe1e
+.debug_abbrev   0x00000000      0xe72
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0xb1a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_abbrev  0x00000b1a       0xf6 main.o
- .debug_abbrev  0x00000c10       0xc8 SPI.o
- .debug_abbrev  0x00000cd8      0x146 uart.o
+ .debug_abbrev  0x00000b1a       0xfb main.o
+ .debug_abbrev  0x00000c15       0xc8 SPI.o
+ .debug_abbrev  0x00000cdd       0x4f timerinit.o
+ .debug_abbrev  0x00000d2c      0x146 uart.o
 
-.debug_line     0x00000000      0x649
+.debug_line     0x00000000      0x6e5
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1fa C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_line    0x000001fa      0x15c main.o
- .debug_line    0x00000356      0x142 SPI.o
- .debug_line    0x00000498      0x1b1 uart.o
+ .debug_line    0x000001fa      0x128 main.o
+ .debug_line    0x00000322      0x142 SPI.o
+ .debug_line    0x00000464       0xd0 timerinit.o
+ .debug_line    0x00000534      0x1b1 uart.o
 
-.debug_frame    0x00000000      0x174
+.debug_frame    0x00000000      0x188
  *(.debug_frame)
- .debug_frame   0x00000000       0x74 main.o
- .debug_frame   0x00000074       0x54 SPI.o
- .debug_frame   0x000000c8       0xac uart.o
+ .debug_frame   0x00000000       0x64 main.o
+ .debug_frame   0x00000064       0x54 SPI.o
+ .debug_frame   0x000000b8       0x24 timerinit.o
+ .debug_frame   0x000000dc       0xac uart.o
 
-.debug_str      0x00000000      0x653
+.debug_str      0x00000000      0x6f0
  *(.debug_str)
  .debug_str     0x00000000      0x3e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_str     0x000003e6      0x1c8 main.o
-                                0x211 (size before relaxing)
- .debug_str     0x000005ae       0x3a SPI.o
-                                0x1e5 (size before relaxing)
- .debug_str     0x000005e8       0x6b uart.o
-                                0x214 (size before relaxing)
+ .debug_str     0x000003e6      0x253 main.o
+                                0x297 (size before relaxing)
+ .debug_str     0x00000639       0x3a SPI.o
+                                0x1d4 (size before relaxing)
+ .debug_str     0x00000673       0x11 timerinit.o
+                                0x1a4 (size before relaxing)
+ .debug_str     0x00000684       0x6c uart.o
+                                0x20d (size before relaxing)
 
 .debug_loc      0x00000000      0x215
  *(.debug_loc)
@@ -578,11 +643,12 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0x88
+.debug_ranges   0x00000000       0x90
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x28 main.o
- .debug_ranges  0x00000028       0x28 SPI.o
- .debug_ranges  0x00000050       0x38 uart.o
+ .debug_ranges  0x00000000       0x20 main.o
+ .debug_ranges  0x00000020       0x28 SPI.o
+ .debug_ranges  0x00000048       0x10 timerinit.o
+ .debug_ranges  0x00000058       0x38 uart.o
 
 .debug_macro
  *(.debug_macro)
