@@ -40,21 +40,21 @@ set_property PACKAGE_PIN R2  [get_ports {sigEn}]
 
 
 ## LEDs
-#set_property PACKAGE_PIN U16 [get_ports {SHIFTREG_out[7]}]					
-#set_property PACKAGE_PIN E19 [get_ports {SHIFTREG_out[6]}]					
-#set_property PACKAGE_PIN U19 [get_ports {SHIFTREG_out[5]}]					
-#set_property PACKAGE_PIN V19 [get_ports {SHIFTREG_out[4]}]					
-#set_property PACKAGE_PIN W18 [get_ports {SHIFTREG_out[3]}]					
-#set_property PACKAGE_PIN U15 [get_ports {SHIFTREG_out[2]}]					
-#set_property PACKAGE_PIN U14 [get_ports {SHIFTREG_out[1]}]					
-#set_property PACKAGE_PIN V14 [get_ports {SHIFTREG_out[0]}]					
+set_property PACKAGE_PIN U16 [get_ports {SHIFTREG_out[7]}]					
+set_property PACKAGE_PIN E19 [get_ports {SHIFTREG_out[6]}]					
+set_property PACKAGE_PIN U19 [get_ports {SHIFTREG_out[5]}]					
+set_property PACKAGE_PIN V19 [get_ports {SHIFTREG_out[4]}]					
+set_property PACKAGE_PIN W18 [get_ports {SHIFTREG_out[3]}]					
+set_property PACKAGE_PIN U15 [get_ports {SHIFTREG_out[2]}]					
+set_property PACKAGE_PIN U14 [get_ports {SHIFTREG_out[1]}]					
+set_property PACKAGE_PIN V14 [get_ports {SHIFTREG_out[0]}]					
 set_property PACKAGE_PIN V13 [get_ports {LD}]					
 #set_property PACKAGE_PIN V3  [get_ports {led[9]}]					
 #set_property PACKAGE_PIN W3  [get_ports {test_data}]					
-#set_property PACKAGE_PIN U3  [get_ports {BTN5}]					
-#set_property PACKAGE_PIN P3  [get_ports {BTN1}]					
-#set_property PACKAGE_PIN N3  [get_ports {BTN2}]					
-#set_property PACKAGE_PIN P1  [get_ports {BTN3}]					
+set_property PACKAGE_PIN U3  [get_ports {Stat1}]					
+set_property PACKAGE_PIN P3  [get_ports {Stat2}]					
+set_property PACKAGE_PIN N3  [get_ports {Stat3}]					
+set_property PACKAGE_PIN P1  [get_ports {Stat4}]					
 #set_property PACKAGE_PIN L1  [get_ports {BTN4}]					
 	
 	
@@ -122,14 +122,14 @@ set_property PACKAGE_PIN G2 [get_ports {BTN3}]
 
 
 ##Pmod Header JB
-#set_property PACKAGE_PIN A14 [get_ports {MOSI}]					
-#set_property PACKAGE_PIN A16 [get_ports {MISO}]					
+set_property PACKAGE_PIN A14 [get_ports {MOSI}]					
+set_property PACKAGE_PIN A16 [get_ports {MISO}]					
 #set_property PACKAGE_PIN B15 [get_ports {SCK}]					
 #set_property PACKAGE_PIN B16 [get_ports {SS}]					
 #set_property PACKAGE_PIN A15 [get_ports {JB[4]}]					
 #set_property PACKAGE_PIN A17 [get_ports {JB[5]}]					
-#set_property PACKAGE_PIN C15 [get_ports {Res}]					
-#set_property PACKAGE_PIN C16 [get_ports {JB[7]]					
+set_property PACKAGE_PIN C15 [get_ports {SCK}]					
+set_property PACKAGE_PIN C16 [get_ports {SS}]					
  
 
 ##Pmod Header JC

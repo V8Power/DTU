@@ -33,7 +33,15 @@ entity SigGenControl is
          Shape  : inout std_logic_vector(7 downto 0);
          Ampl   : inout std_logic_vector(7 downto 0);
          Freq   : inout std_logic_vector(7 downto 0);
-         SigEn  : out std_logic);
+         SigEn  : out std_logic;
+         MOSI   : in std_logic;
+         SS     : in std_logic; 
+         SCK    : in std_logic;
+         SHIFTREG_out: out std_logic_vector(7 downto 0);
+         Stat1 : out std_logic;
+         Stat2 : out std_logic;
+         Stat3 : out std_logic;
+         Stat4 : out std_logic);
 end SigGenControl;
 
 architecture Behavioral of SigGenControl is
@@ -49,6 +57,17 @@ signal BTN1db, BTN2db, ShapeEN, AmplEN, FreqEN: std_logic;
 signal DispSel: std_logic_vector(1 downto 0);
 type StateType is (ShapeS, AmplS, FreqS, RunS);
 signal State, nState: StateType;  
+
+--SPI and SPI control signals
+signal SHIFTREG: std_logic_vector(7 downto 0);
+signal ID : std_logic_vector(7 downto 0);
+signal Amp_SPI : std_logic_vector(7 downto 0);
+signal Freg_SPI : std_logic_vector(7 downto 0);
+signal Shape_stat_SPI : std_logic_vector(7 downto 0);
+signal CheckSum : std_logic_vector(7 downto 0);
+signal Pack_count : std_logic_vector(5 downto 0);
+signal Check_ok : std_logic;
+signal ID_ok : std_logic;
 
 begin
 
@@ -156,8 +175,83 @@ begin
   end case;
 end process;
 
+
+
+PROCESS (SCK, MOSI, SS)
+
+BEGIN
+IF (SS = '0') THEN
+if rising_edge(SCK)then
+    SHIFTREG <= SHIFTREG(6 downto 0) & '0';
+    --shift_left(SHIFTREG,1);
+    --if (MOSI = '0') THEN
+   SHIFTREG(0) <= MOSI;
+   --END IF;
+   --SHIFTREG(7 downto 0) <= x"F9";
+   --SHIFTREG(0) <= '1';
+   --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
+END IF;
+ --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
+  END IF;
+  SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
+  if rising_edge (SS) then
+   --Pack_count <= Pack_count + 1;
+    if (SHIFTREG = x"5") then 
+        ID_ok <= '1';
+        ID <= Shiftreg;
+        Stat1 <= '1';
+        Pack_count <= Pack_count + 1;
+        Pack_count <= "000000";
+    END IF;
+   -- if (Pack_count > x"10") then
+   --     Pack_count <= "000000";
+   -- END IF;
+    if  (ID_ok = '1') then
+        
+        if (Pack_count = x"1") then
+            Amp_SPI <= SHIFTREG;
+            Stat2 <= '1';
+            Pack_count <= Pack_count + 1;
+        elsif (Pack_count = x"2") then
+            Freg_SPI <= Shiftreg;
+            Stat3 <= '1';
+            Pack_count <= Pack_count + 1;
+        elsif (Pack_count = x"3") then
+            Shape_stat_SPI <= Shiftreg;
+            Pack_count <= Pack_count + 1;
+        elsif (Pack_count >= x"4") then
+            if (SHIFTREG = (ID xor Amp_SPI xor Freg_SPI xor Shape_stat_SPI)) then
+                Check_ok <= '1';
+                Stat4 <= '1';
+                ID_ok <= '0';
+                Pack_count <= "000000";
+            END IF;
+        END IF;
+    else
+    Stat1 <= '0';
+    Stat2 <= '0';
+    Stat3 <= '0';
+    Stat4 <= '0';
+    Pack_count <= "000000";    
+        
+    END IF;
+     Stat1 <= ID_ok;
+     SHIFTREG_out(5 downto 0) <= Pack_count;
+  END IF;
+   END PROCESS;
+       
+
+
+
+
+
+
+
 Deb1: BTNdb port map (Reset => Reset, Clk => Clk, BTNin => BTN1, BTNout => BTN1db);
 
 Deb2: BTNdb port map (Reset => Reset, Clk => Clk, BTNin => BTN2, BTNout => BTN2db);
+
+
+
 
 end Behavioral;
