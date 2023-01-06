@@ -45,7 +45,8 @@ entity SigGenTop is
          Stat1 : out std_logic;
          Stat2 : out std_logic;
          Stat3 : out std_logic;
-         Stat4 : out std_logic);
+         Stat4 : out std_logic;
+         Stat5 : out std_logic);
 end SigGenTop;
 
 architecture Behavioral of SigGenTop is
@@ -63,7 +64,7 @@ U4: entity WORK.DivClk
     port map(Reset => BTN3, Clk => Clk, TimeP => 50e3, Clk1 => DispClk);
 
 U1: entity WORK.SigGenControl 
-    port map(Reset => BTN3, Clk => Mclk, BTN0 => BTN0, BTN1 => BTN1, BTN2 => BTN2, SW => SW,  Disp => Disp, Shape => Shape, Ampl => Ampl, Freq => Freq, SigEN=> SigEN, MOSI => MOSI, SS => SS, SCK => SCK, SHIFTREG_out => SHIFTREG_out, Stat1 => Stat1, Stat2 => Stat2, Stat3 => Stat3, Stat4 => Stat4);
+    port map(Reset => BTN3, Clk => Mclk, BTN0 => BTN0, BTN1 => BTN1, BTN2 => BTN2, SW => SW,  Disp => Disp, Shape => Shape, Ampl => Ampl, Freq => Freq, SigEN=> SigEN, MOSI => MOSI, SS => SS, SCK => SCK, SHIFTREG_out => SHIFTREG_out, Stat1 => Stat1, Stat2 => Stat2, Stat3 => Stat3, Stat4 => Stat4, Stat5 => Stat5);
 
 
 U2: entity WORK.SigGenDataPath generic map (PWMinc => "0000001") 

@@ -41,7 +41,8 @@ entity SigGenControl is
          Stat1 : out std_logic;
          Stat2 : out std_logic;
          Stat3 : out std_logic;
-         Stat4 : out std_logic);
+         Stat4 : out std_logic;
+         Stat5 : out std_logic);
 end SigGenControl;
 
 architecture Behavioral of SigGenControl is
@@ -208,6 +209,10 @@ END IF;
     ID_ok <= '1';
     ID <= ShIFTREG_data;
     Stat1 <= '1';
+    Stat2 <= '0';
+    Stat3 <= '0';
+    Stat4 <= '0';
+    Stat5 <= '0';
     
     
   elsif PACK_count = x"1" then
@@ -221,7 +226,12 @@ END IF;
     Stat4 <= '1';
   elsif PACK_count = x"4" then
     CheckSum <= SHIFTREG_data;
-    Pack_count <= "000000";
+    ID_ok <= '0';
+    if (CheckSum = (ID xor AMP_SPI xor FREQ_SPI xor Shape_stat_SPI)) then
+    
+        Stat5 <= '1';
+    END IF;
+    Stat1 <= '0';
     
   END IF;
   SHIFTREG_out (5 downto 0)<= Pack_count;

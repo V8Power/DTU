@@ -55,7 +55,7 @@ set_property PACKAGE_PIN U3  [get_ports {Stat1}]
 set_property PACKAGE_PIN P3  [get_ports {Stat2}]					
 set_property PACKAGE_PIN N3  [get_ports {Stat3}]					
 set_property PACKAGE_PIN P1  [get_ports {Stat4}]					
-#set_property PACKAGE_PIN L1  [get_ports {BTN4}]					
+set_property PACKAGE_PIN L1  [get_ports {Stat5}]					
 	
 	
 ##Buttons
