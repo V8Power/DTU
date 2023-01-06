@@ -60,9 +60,10 @@ signal State, nState: StateType;
 
 --SPI and SPI control signals
 signal SHIFTREG: std_logic_vector(7 downto 0);
+signal SHIFTREG_data: std_logic_vector(7 downto 0);
 signal ID : std_logic_vector(7 downto 0);
 signal Amp_SPI : std_logic_vector(7 downto 0);
-signal Freg_SPI : std_logic_vector(7 downto 0);
+signal Freq_SPI : std_logic_vector(7 downto 0);
 signal Shape_stat_SPI : std_logic_vector(7 downto 0);
 signal CheckSum : std_logic_vector(7 downto 0);
 signal Pack_count : std_logic_vector(5 downto 0);
@@ -193,51 +194,37 @@ if rising_edge(SCK)then
 END IF;
  --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
   END IF;
-  SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
+  --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
   if rising_edge (SS) then
-   --Pack_count <= Pack_count + 1;
-    if (SHIFTREG = x"5") then 
-        ID_ok <= '1';
-        ID <= Shiftreg;
-        Stat1 <= '1';
+    if ID_ok = '1' then
         Pack_count <= Pack_count + 1;
-        Pack_count <= "000000";
+    else 
+    Pack_count <= "000000";
     END IF;
-   -- if (Pack_count > x"10") then
-   --     Pack_count <= "000000";
-   -- END IF;
-    if  (ID_ok = '1') then
-        
-        if (Pack_count = x"1") then
-            Amp_SPI <= SHIFTREG;
-            Stat2 <= '1';
-            Pack_count <= Pack_count + 1;
-        elsif (Pack_count = x"2") then
-            Freg_SPI <= Shiftreg;
-            Stat3 <= '1';
-            Pack_count <= Pack_count + 1;
-        elsif (Pack_count = x"3") then
-            Shape_stat_SPI <= Shiftreg;
-            Pack_count <= Pack_count + 1;
-        elsif (Pack_count >= x"4") then
-            if (SHIFTREG = (ID xor Amp_SPI xor Freg_SPI xor Shape_stat_SPI)) then
-                Check_ok <= '1';
-                Stat4 <= '1';
-                ID_ok <= '0';
-                Pack_count <= "000000";
-            END IF;
-        END IF;
-    else
-    Stat1 <= '0';
-    Stat2 <= '0';
-    Stat3 <= '0';
-    Stat4 <= '0';
-    Pack_count <= "000000";    
-        
-    END IF;
-     Stat1 <= ID_ok;
-     SHIFTREG_out(5 downto 0) <= Pack_count;
+    SHIFTREG_data <= SHIFTREG; 
+    
   END IF;
+  if SHIFTREG_data = x"05" then
+    ID_ok <= '1';
+    ID <= ShIFTREG_data;
+    Stat1 <= '1';
+    
+    
+  elsif PACK_count = x"1" then
+    AMP_SPI <= SHIFTREG_data;
+    Stat2 <= '1';
+  elsif PACK_count = x"2" then
+    FREQ_SPI <= SHIFTREG_data;
+    Stat3 <= '1';
+  elsif PACK_count = x"3" then
+    Shape_stat_SPI <= SHIFTREG_data;
+    Stat4 <= '1';
+  elsif PACK_count = x"4" then
+    CheckSum <= SHIFTREG_data;
+    Pack_count <= "000000";
+    
+  END IF;
+  SHIFTREG_out (5 downto 0)<= Pack_count;
    END PROCESS;
        
 

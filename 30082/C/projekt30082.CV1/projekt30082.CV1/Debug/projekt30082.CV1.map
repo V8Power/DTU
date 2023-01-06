@@ -18,6 +18,44 @@ Discarded input sections
 
  .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .text          0x00000000        0x0 ADC.o
+ .data          0x00000000        0x0 ADC.o
+ .bss           0x00000000        0x0 ADC.o
+ .text.enable_ADC
+                0x00000000       0x16 ADC.o
+ .text.ADC_set_channel
+                0x00000000        0xc ADC.o
+ .text.ADC_get_result
+                0x00000000       0x12 ADC.o
+ .text.ADC_start_conversion
+                0x00000000        0xc ADC.o
+ .debug_info    0x00000000      0x100 ADC.o
+ .debug_abbrev  0x00000000       0xa1 ADC.o
+ .debug_loc     0x00000000       0x58 ADC.o
+ .debug_aranges
+                0x00000000       0x38 ADC.o
+ .debug_ranges  0x00000000       0x28 ADC.o
+ .debug_line    0x00000000       0xf2 ADC.o
+ .debug_str     0x00000000      0x1f3 ADC.o
+ .comment       0x00000000       0x31 ADC.o
+ .debug_frame   0x00000000       0x54 ADC.o
+ .text          0x00000000        0x0 Cheksum.o
+ .data          0x00000000        0x0 Cheksum.o
+ .bss           0x00000000        0x0 Cheksum.o
+ .text.checksumvalue
+                0x00000000       0x22 Cheksum.o
+ .text.checksum
+                0x00000000       0x16 Cheksum.o
+ .debug_info    0x00000000      0x111 Cheksum.o
+ .debug_abbrev  0x00000000       0xc5 Cheksum.o
+ .debug_loc     0x00000000      0x114 Cheksum.o
+ .debug_aranges
+                0x00000000       0x28 Cheksum.o
+ .debug_ranges  0x00000000       0x30 Cheksum.o
+ .debug_line    0x00000000       0x8e Cheksum.o
+ .debug_str     0x00000000      0x172 Cheksum.o
+ .comment       0x00000000       0x31 Cheksum.o
+ .debug_frame   0x00000000       0x3c Cheksum.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -30,6 +68,20 @@ Discarded input sections
                 0x00000000       0x16 SPI.o
  .text.SPI_read
                 0x00000000       0x12 SPI.o
+ .text          0x00000000        0x0 timerinit.o
+ .data          0x00000000        0x0 timerinit.o
+ .bss           0x00000000        0x0 timerinit.o
+ .text.timerinit
+                0x00000000       0x36 timerinit.o
+ .debug_info    0x00000000       0x94 timerinit.o
+ .debug_abbrev  0x00000000       0x4f timerinit.o
+ .debug_aranges
+                0x00000000       0x20 timerinit.o
+ .debug_ranges  0x00000000       0x10 timerinit.o
+ .debug_line    0x00000000       0xd0 timerinit.o
+ .debug_str     0x00000000      0x1a4 timerinit.o
+ .comment       0x00000000       0x31 timerinit.o
+ .debug_frame   0x00000000       0x24 timerinit.o
  .text          0x00000000        0x0 uart.o
  .data          0x00000000        0x0 uart.o
  .bss           0x00000000        0x0 uart.o
@@ -120,8 +172,11 @@ Linker script and memory map
 
 Address of section .data set to 0x800200
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
+LOAD ADC.o
+LOAD Cheksum.o
 LOAD main.o
 LOAD SPI.o
+LOAD timerinit.o
 LOAD uart.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a
@@ -544,15 +599,15 @@ END GROUP
  .debug_frame   0x00000074       0x54 SPI.o
  .debug_frame   0x000000c8       0xac uart.o
 
-.debug_str      0x00000000      0x65c
+.debug_str      0x00000000      0x6bf
  *(.debug_str)
  .debug_str     0x00000000      0x3e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .debug_str     0x000003e6      0x1d1 main.o
                                 0x21a (size before relaxing)
- .debug_str     0x000005b7       0x3a SPI.o
-                                0x1e5 (size before relaxing)
- .debug_str     0x000005f1       0x6b uart.o
-                                0x214 (size before relaxing)
+ .debug_str     0x000005b7       0x93 SPI.o
+                                0x1d4 (size before relaxing)
+ .debug_str     0x0000064a       0x75 uart.o
+                                0x20d (size before relaxing)
 
 .debug_loc      0x00000000      0x229
  *(.debug_loc)

@@ -23,11 +23,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  00000174  00000000  00000000  00002ac8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    0000065c  00000000  00000000  00002c3c  2**0
+ 10 .debug_str    000006bf  00000000  00000000  00002c3c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000229  00000000  00000000  00003298  2**0
+ 11 .debug_loc    00000229  00000000  00000000  000032fb  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000088  00000000  00000000  000034c1  2**0
+ 12 .debug_ranges 00000088  00000000  00000000  00003524  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -385,12 +385,6 @@ int main (void){
  254:	bd cf       	rjmp	.-134    	; 0x1d0 <main+0x12>
 
 00000256 <SPI_init_master>:
-	return data;
-	PORTB |= (1 << PB0);
-	
-	
-	
-}
  256:	96 2f       	mov	r25, r22
  258:	24 b1       	in	r18, 0x04	; 4
  25a:	27 60       	ori	r18, 0x07	; 7
@@ -426,35 +420,19 @@ int main (void){
  296:	08 95       	ret
 
 00000298 <SPI_write>:
-
-
-
-void SPI_write(unsigned char data){
-	
-	PORTB &= ~(1 << PB0);
  298:	95 b1       	in	r25, 0x05	; 5
  29a:	9e 7f       	andi	r25, 0xFE	; 254
  29c:	95 b9       	out	0x05, r25	; 5
-	SPDR = data;
  29e:	8e bd       	out	0x2e, r24	; 46
-	while(!(SPSR &(1<<SPIF))) ;
  2a0:	0d b4       	in	r0, 0x2d	; 45
  2a2:	07 fe       	sbrs	r0, 7
  2a4:	fd cf       	rjmp	.-6      	; 0x2a0 <SPI_write+0x8>
-	 
-	PORTB |= (1 << PB0);
  2a6:	85 b1       	in	r24, 0x05	; 5
  2a8:	81 60       	ori	r24, 0x01	; 1
  2aa:	85 b9       	out	0x05, r24	; 5
  2ac:	08 95       	ret
 
 000002ae <__vector_25>:
-char uart0_in [20];
-uint8_t i = 0;
-//volatile char char_dat;
-uint8_t uart0_full = 0;
-
-ISR(USART0_RX_vect){      //rx interrupt
  2ae:	1f 92       	push	r1
  2b0:	0f 92       	push	r0
  2b2:	0f b6       	in	r0, 0x3f	; 63
@@ -466,33 +444,22 @@ ISR(USART0_RX_vect){      //rx interrupt
  2be:	9f 93       	push	r25
  2c0:	ef 93       	push	r30
  2c2:	ff 93       	push	r31
-	if (i <=19){    //buffer not full, read data
  2c4:	80 91 0a 02 	lds	r24, 0x020A	; 0x80020a <i>
  2c8:	84 31       	cpi	r24, 0x14	; 20
  2ca:	68 f4       	brcc	.+26     	; 0x2e6 <__vector_25+0x38>
-	uart0_in[i] = UDR0;
  2cc:	e8 2f       	mov	r30, r24
  2ce:	f0 e0       	ldi	r31, 0x00	; 0
  2d0:	90 91 c6 00 	lds	r25, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7c00c6>
  2d4:	e5 5f       	subi	r30, 0xF5	; 245
  2d6:	fd 4f       	sbci	r31, 0xFD	; 253
  2d8:	90 83       	st	Z, r25
-	i++;
  2da:	8f 5f       	subi	r24, 0xFF	; 255
  2dc:	80 93 0a 02 	sts	0x020A, r24	; 0x80020a <i>
-	uart0_full = 0;
  2e0:	10 92 09 02 	sts	0x0209, r1	; 0x800209 <uart0_full>
  2e4:	05 c0       	rjmp	.+10     	; 0x2f0 <__vector_25+0x42>
-	}
-	else {  //buffer full, ignore data and set flag
-		i = 0;
  2e6:	10 92 0a 02 	sts	0x020A, r1	; 0x80020a <i>
-		uart0_full = 1;
  2ea:	81 e0       	ldi	r24, 0x01	; 1
  2ec:	80 93 09 02 	sts	0x0209, r24	; 0x800209 <uart0_full>
-	}
-	//PORTB |= (1 << PB7);
-}
  2f0:	ff 91       	pop	r31
  2f2:	ef 91       	pop	r30
  2f4:	9f 91       	pop	r25
@@ -506,25 +473,18 @@ ISR(USART0_RX_vect){      //rx interrupt
  304:	18 95       	reti
 
 00000306 <uart_init>:
-
-
-void uart_init(uint32_t baud){
  306:	cf 93       	push	r28
  308:	df 93       	push	r29
-UCSR0B |= (1 << RXEN0) | (1 << TXEN0);   //enable RX, TX
  30a:	c1 ec       	ldi	r28, 0xC1	; 193
  30c:	d0 e0       	ldi	r29, 0x00	; 0
  30e:	28 81       	ld	r18, Y
  310:	28 61       	ori	r18, 0x18	; 24
  312:	28 83       	st	Y, r18
-UCSR0A |= (1 << U2X0);              
  314:	e0 ec       	ldi	r30, 0xC0	; 192
  316:	f0 e0       	ldi	r31, 0x00	; 0
  318:	20 81       	ld	r18, Z
  31a:	22 60       	ori	r18, 0x02	; 2
  31c:	20 83       	st	Z, r18
-//baud = 115200;
-UBRR0H = (16000000/8/(baud-1)) >> 8;             //set baudrate high bits
  31e:	9b 01       	movw	r18, r22
  320:	ac 01       	movw	r20, r24
  322:	21 50       	subi	r18, 0x01	; 1
@@ -541,22 +501,16 @@ UBRR0H = (16000000/8/(baud-1)) >> 8;             //set baudrate high bits
  338:	94 2f       	mov	r25, r20
  33a:	83 2f       	mov	r24, r19
  33c:	80 93 c5 00 	sts	0x00C5, r24	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7c00c5>
-UBRR0L = 16000000/8/(baud-1);                     //set baudrate low byte
  340:	20 93 c4 00 	sts	0x00C4, r18	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7c00c4>
-UCSR0C |= (1 << UCSZ00) | (1 <<  UCSZ01);
  344:	e2 ec       	ldi	r30, 0xC2	; 194
  346:	f0 e0       	ldi	r31, 0x00	; 0
  348:	80 81       	ld	r24, Z
  34a:	86 60       	ori	r24, 0x06	; 6
  34c:	80 83       	st	Z, r24
-UCSR0B |= (1 << RXCIE0);                   //enable rx interrupt
  34e:	88 81       	ld	r24, Y
  350:	80 68       	ori	r24, 0x80	; 128
  352:	88 83       	st	Y, r24
-UDR0 = 0;
  354:	10 92 c6 00 	sts	0x00C6, r1	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7c00c6>
-	
-}
  358:	df 91       	pop	r29
  35a:	cf 91       	pop	r28
  35c:	08 95       	ret
