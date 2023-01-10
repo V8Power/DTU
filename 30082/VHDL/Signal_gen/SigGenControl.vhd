@@ -35,6 +35,7 @@ entity SigGenControl is
          Freq   : inout std_logic_vector(7 downto 0);
          SigEn  : out std_logic;
          MOSI   : in std_logic;
+         MISO   : out std_logic;
          SS     : in std_logic; 
          SCK    : in std_logic;
          SHIFTREG_out: out std_logic_vector(7 downto 0);
@@ -70,6 +71,10 @@ signal CheckSum : std_logic_vector(7 downto 0);
 signal Pack_count : std_logic_vector(5 downto 0);
 signal Check_ok : std_logic;
 signal ID_ok : std_logic;
+signal send: std_logic;
+signal tx  : std_logic;
+signal send_data : std_logic_vector(7 downto 0 );
+signal send_count : natural;
 
 begin
 
@@ -182,21 +187,39 @@ end process;
 PROCESS (SCK, MOSI, SS)
 
 BEGIN
+
+
 IF (SS = '0') THEN
-if rising_edge(SCK)then
-    SHIFTREG <= SHIFTREG(6 downto 0) & '0';
-    --shift_left(SHIFTREG,1);
-    --if (MOSI = '0') THEN
-   SHIFTREG(0) <= MOSI;
-   --END IF;
-   --SHIFTREG(7 downto 0) <= x"F9";
-   --SHIFTREG(0) <= '1';
-   --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
-END IF;
+    
+    if rising_edge(SCK)then
+       -- if (send = '1') then
+       -- SHIFTREG <= send_data;
+        --send <= '0';
+      --  else
+       
+        SHIFTREG <= SHIFTREG(6 downto 0) & MOSI;
+        --END IF;
+        
+            send_count <= send_count -1;
+        
+    END IF;
+    if falling_edge(SCK) then
+     --send_data <= SHIFTREG;
+        
+    MISO <=  not send_data(send_count);
+    
+    END IF;  
  --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
-  END IF;
-  --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
+ --MISO <=  not send_data(send_count);
+else
+MISO <= '1';
+send_count <= 7;
+END IF;
+ 
   if rising_edge (SS) then
+   SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
+  --SHIFTREG <= x"39";
+  
     if ID_ok = '1' then
         Pack_count <= Pack_count + 1;
     else 
@@ -214,6 +237,10 @@ END IF;
     Stat4 <= '0';
     Stat5 <= '0';
     
+  elsif SHIFTREG_data = x"AA" then
+    Stat4 <= '1';
+    send_data <= x"39";
+   -- send <= '1';
     
   elsif PACK_count = x"1" then
     AMP_SPI <= SHIFTREG_data;
@@ -223,7 +250,7 @@ END IF;
     Stat3 <= '1';
   elsif PACK_count = x"3" then
     Shape_stat_SPI <= SHIFTREG_data;
-    Stat4 <= '1';
+    --Stat4 <= '1';
   elsif PACK_count = x"4" then
     CheckSum <= SHIFTREG_data;
     ID_ok <= '0';
@@ -234,7 +261,7 @@ END IF;
     Stat1 <= '0';
     
   END IF;
-  SHIFTREG_out (5 downto 0)<= Pack_count;
+  --SHIFTREG_out (5 downto 0)<= Pack_count;
    END PROCESS;
        
 

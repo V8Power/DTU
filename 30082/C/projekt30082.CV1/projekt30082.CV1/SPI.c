@@ -5,7 +5,8 @@
 
 void SPI_init_master(bool CPOLc, bool CPHAc){
 	DDRB |= (1 << PB0) | (1 << PB1) | (1 << PB2);
-	PORTB &= ~(1 << PB0);
+	//PORTB &= ~(1 << PB0);
+	PORTB |= (1 << PB0);
 	PORTB |= (1<< PB3);
 	SPCR = 0;
 	SPCR|= (0 << SPIE) | ( 1 << MSTR) | ( 1 << SPR1) | (0<< SPR0) | (1 << SPE) | (CPOLc <<CPOL | CPHAc << CPHA) ;
@@ -24,7 +25,7 @@ void SPI_init_slave(){
 }
 
 
-unsigned char SPI_read(){
+char SPI_read(){
 	PORTB &= ~(1 << PB0);
 	SPDR = 0;
 	while(!(SPSR &(1<<SPIF))) ; 
@@ -35,7 +36,17 @@ unsigned char SPI_read(){
 	
 	
 }
-
+/*unsigned char SPI_read_write(char dat_in){
+	PORTB &= ~(1 << PB0);
+	SPDR = dat_in;
+	while(!(SPSR &(1<<SPIF))) ;
+	unsigned char data = SPDR;
+	return data;
+	PORTB |= (1 << PB0);
+	
+	
+	
+}*/
 
 
 void SPI_write(unsigned char data){

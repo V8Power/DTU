@@ -28,7 +28,7 @@
 uint8_t a = 0;
 uint32_t micro = 0;
 
-char test_data[20] = {0x55, 0xAA,0x14,0x00,0x02,0x20,0x23,0x56,0x78, 0x98, 0xA5, 0xE5, 0xFF, 0xC3, 0xA4, 0x99, 0x78, 0x50, 0x00, 0x00};
+char test_data[20] = {0x55, 0xAA,0x00,0x14,0x02,0x20,0x23,0x56,0x78, 0x98, 0xA5, 0xE5, 0xFF, 0xC3, 0xA4, 0x99, 0x78, 0x50, 0x00, 0x00};
 //timers
 uint16_t cycle_time = 1;
 uint32_t prev_cycle_time = 0;
@@ -68,9 +68,9 @@ int main (void){
 	uart_init(115200);
 	
 	while (1){
-		if (micros() - prev_cycle_time >= 1000){    
+		if (micros() - prev_cycle_time >= 500){    
 				prev_cycle_time = micros();
-				if (a == 20){
+				/*if (a == 20){
 				SPI_write(0x5);
 				}
 				
@@ -86,13 +86,18 @@ int main (void){
 				else if (a == 100){
 				uint8_t checksum = 0x05 ^ 0xFE ^ 0x03 ^ 0xFF;
 				SPI_write(checksum);
-				}
+				}*/
+				
+				//uart_send_char(SPI_read_write(0xC3));
+				SPI_write(0xAA);
+				//char spi_data = SPI_read();
+				//uart_send_char(spi_data);
 				a++;
-				if (a== 130){
+				if (a== 255){
 					a=0;
 				}
 				for (int v = 0; v < 20; v++){
-				uart_send_char(test_data[v]);
+				//uart_send_char(test_data[v]);
 				}
 			}
 			
