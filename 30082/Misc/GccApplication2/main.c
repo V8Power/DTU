@@ -76,27 +76,27 @@ int main(void)
 		{
 			case waitingOrder:
 			
-				if(ADC_Packet_Ready == 1) 
-				{
-					state = osciUpdate;
-					ADC_Packet_Ready = 0;
-				} if(RX_Packet_Ready == 1)
-				{
-					state = rxUpdate;
-					RX_Packet_Ready=0;
-				}
+			if(ADC_Packet_Ready == 1)
+			{
+				state = osciUpdate;
+				ADC_Packet_Ready = 0;
+			} if(RX_Packet_Ready == 1)
+			{
+				state = rxUpdate;
+				RX_Packet_Ready=0;
+			}
 			break;
-					
+			
 			case osciUpdate:
-				oscillipskopUpdate(Record_Length);
-				
-				state = waitingOrder;
+			oscillipskopUpdate(Record_Length);
+			
+			state = waitingOrder;
 			break;
 			
 			case rxUpdate:
-				receiveUpdate();
-				
-				state = waitingOrder;
+			receiveUpdate();
+			
+			state = waitingOrder;
 			break;
 			
 			default :
