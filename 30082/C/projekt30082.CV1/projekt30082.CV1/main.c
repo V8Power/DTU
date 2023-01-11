@@ -46,7 +46,7 @@ ISR(TIMER1_COMPA_vect){     //interrupt every 1ms, set through timer prescale an
 
 void init(){
 	DDRB |= (1 << PB7);  
-	
+	PORTB |= (1 << PB6);
 	
 	
 	TCNT1 = 0x0000; // timer1 counter reset
@@ -87,14 +87,16 @@ int main (void){
 				uint8_t checksum = 0x05 ^ 0xFE ^ 0x03 ^ 0xFF;
 				SPI_write(checksum);
 				}*/
-				
+				if (PINB & (1 << PB6)) {
+					SPI_write(0xAA);
+				}
 				//uart_send_char(SPI_read_write(0xC3));
 				//SPI_write(0xAA);
 				//SPI_write(a);
 				PORTB &= ~(1 << PB0);
 				//char spi_data = SPI_read();
 				
-				char spi_data = SPI_read_write(0xAA);
+				char spi_data = SPI_read_write(0xAF);
 				PORTB |= (1 << PB0);
 				uart_send_char(spi_data);
 				a++;

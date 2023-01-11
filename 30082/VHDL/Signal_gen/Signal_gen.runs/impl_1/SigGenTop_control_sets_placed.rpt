@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Jan  6 15:44:03 2023
+| Date         : Wed Jan 11 13:48:35 2023
 | Host         : DESKTOP-MKAFNHE running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file SigGenTop_control_sets_placed.rpt
 | Design       : SigGenTop
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    22 |
-|    Minimum number of control sets                        |    22 |
+| Total control sets                                       |    15 |
+|    Minimum number of control sets                        |    15 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    61 |
+| Unused register locations in slices containing registers |    39 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,14 +39,14 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    22 |
-| >= 0 to < 4        |     7 |
+| Total control sets |    15 |
+| >= 0 to < 4        |     4 |
 | >= 4 to < 6        |     0 |
-| >= 6 to < 8        |     1 |
-| >= 8 to < 10       |    10 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     6 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     1 |
-| >= 14 to < 16      |     1 |
+| >= 14 to < 16      |     2 |
 | >= 16              |     2 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              48 |           15 |
-| No           | No                    | Yes                    |             108 |           29 |
-| No           | Yes                   | No                     |              11 |            8 |
+| No           | No                    | No                     |              22 |            7 |
+| No           | No                    | Yes                    |             108 |           28 |
+| No           | Yes                   | No                     |              11 |            7 |
 | Yes          | No                    | No                     |               8 |            2 |
-| Yes          | No                    | Yes                    |              36 |           15 |
+| Yes          | No                    | Yes                    |              36 |           10 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,31 +70,24 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+-----------------+--------------------------+------------------+----------------+--------------+
-|      Clock Signal     |  Enable Signal  |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------------+-----------------+--------------------------+------------------+----------------+--------------+
-| ~SCK_IBUF_BUFG        |                 | U1/MISO_i_2_n_0          |                1 |              1 |         1.00 |
-|  U1/ID_ok             |                 | U1/ID_ok_reg_i_2_n_0     |                1 |              1 |         1.00 |
-|  U1/Stat2_reg_i_2_n_0 |                 | U1/ID_ok_reg_i_2_n_0     |                1 |              1 |         1.00 |
-|  U1/Stat3_reg_i_2_n_0 |                 | U1/ID_ok_reg_i_2_n_0     |                1 |              1 |         1.00 |
-|  U1/Stat4_reg_i_1_n_0 |                 | U1/ID_ok_reg_i_2_n_0     |                1 |              1 |         1.00 |
-|  U1/Stat5_reg_i_2_n_0 |                 | U1/ID_ok_reg_i_2_n_0     |                1 |              1 |         1.00 |
-|  SCK_IBUF_BUFG        |                 | U1/MISO_i_2_n_0          |                1 |              3 |         3.00 |
-|  SS_IBUF_BUFG         |                 | U1/Pack_count[5]_i_1_n_0 |                3 |              6 |         2.00 |
-|  SCK_IBUF_BUFG        | U1/MISO_i_2_n_0 |                          |                2 |              8 |         4.00 |
-|  Mclk_BUFG            | U1/ShapeEN      | BTN3_IBUF                |                4 |              8 |         2.00 |
-|  Mclk_BUFG            | U1/AmplEN       | BTN3_IBUF                |                4 |              8 |         2.00 |
-|  Mclk_BUFG            | U1/FreqEN       | BTN3_IBUF                |                4 |              8 |         2.00 |
-|  SS_IBUF_BUFG         |                 |                          |                2 |              8 |         4.00 |
-|  U1/Amp_SPI__0        |                 |                          |                2 |              8 |         4.00 |
-|  U1/Shape_stat_SPI__0 |                 |                          |                2 |              8 |         4.00 |
-|  U1/ID_ok_reg_i_2_n_0 |                 |                          |                3 |              8 |         2.67 |
-|  U1/CheckSum__0       |                 |                          |                3 |              8 |         2.67 |
-|  U1/Freq_SPI__0       |                 |                          |                3 |              8 |         2.67 |
-|  Mclk_BUFG            | U2/sel          | BTN3_IBUF                |                3 |             12 |         4.00 |
-|  U4/CLK               |                 | BTN3_IBUF                |                4 |             14 |         3.50 |
-|  Mclk_BUFG            |                 | BTN3_IBUF                |               11 |             38 |         3.45 |
-|  Clk_IBUF_BUFG        |                 | BTN3_IBUF                |               12 |             52 |         4.33 |
-+-----------------------+-----------------+--------------------------+------------------+----------------+--------------+
++---------------------------------+---------------------+--------------------------------+------------------+----------------+--------------+
+|           Clock Signal          |    Enable Signal    |        Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------+---------------------+--------------------------------+------------------+----------------+--------------+
+|  U1/ID_ok                       |                     | U1/ID_ok_reg_i_2_n_0           |                1 |              1 |         1.00 |
+|  SCK_IBUF_BUFG                  |                     | U1/send_state0                 |                1 |              1 |         1.00 |
+| ~SS_IBUF_BUFG                   |                     | U1/send_state0                 |                2 |              2 |         1.00 |
+| ~SCK_IBUF_BUFG                  |                     | U1/send_state0                 |                1 |              3 |         3.00 |
+|  U1/sent_packets_reg[7]_i_2_n_0 |                     | U1/sent_packets_reg[7]_i_3_n_0 |                4 |              8 |         2.00 |
+|  U1/send_data__0                |                     |                                |                3 |              8 |         2.67 |
+|  SCK_IBUF_BUFG                  | U1/MISO_reg_i_2_n_0 |                                |                2 |              8 |         4.00 |
+|  Mclk_BUFG                      | U1/AmplEN           | BTN3_IBUF                      |                3 |              8 |         2.67 |
+|  Mclk_BUFG                      | U1/FreqEN           | BTN3_IBUF                      |                2 |              8 |         4.00 |
+|  Mclk_BUFG                      | U1/ShapeEN          | BTN3_IBUF                      |                2 |              8 |         4.00 |
+|  Mclk_BUFG                      | U2/sel              | BTN3_IBUF                      |                3 |             12 |         4.00 |
+|  U1/send_state0                 |                     |                                |                4 |             14 |         3.50 |
+|  U4/CLK                         |                     | BTN3_IBUF                      |                4 |             14 |         3.50 |
+|  Mclk_BUFG                      |                     | BTN3_IBUF                      |               11 |             38 |         3.45 |
+|  Clk_IBUF_BUFG                  |                     | BTN3_IBUF                      |               11 |             52 |         4.73 |
++---------------------------------+---------------------+--------------------------------+------------------+----------------+--------------+
 
 

@@ -38,6 +38,7 @@ entity SigGenControl is
          MISO   : out std_logic;
          SS     : in std_logic; 
          SCK    : in std_logic;
+         SCK2    : in std_logic;
          SHIFTREG_out: out std_logic_vector(7 downto 0);
          Stat1 : out std_logic;
          Stat2 : out std_logic;
@@ -75,6 +76,8 @@ signal send: std_logic;
 signal tx  : std_logic;
 signal send_data : std_logic_vector(7 downto 0 );
 signal send_count : natural;
+signal sent_packets : std_logic_vector(7 downto 0 );
+signal send_state : std_logic;
 
 begin
 
@@ -184,70 +187,81 @@ end process;
 
 
 
-PROCESS (SCK, MOSI, SS)
+PROCESS (SCK, MOSI, SS, SCK2)
 
 BEGIN
 
 
-IF (SS = '0') THEN
+--IF (SS = '0') THEN
     
-    if rising_edge(SCK)then
-       -- if (send = '1') then
-       -- SHIFTREG <= send_data;
-        --send <= '0';
-      --  else
-       
+    if (SCK'event and SCK = '1') then
+        send_state <= '1';
+        IF (SS = '0') THEN
         SHIFTREG <= SHIFTREG(6 downto 0) & MOSI;
         --END IF;
         
-            send_count <= send_count -1;
-        
+            
+        END IF;
     END IF;
     if falling_edge(SCK) then
      --send_data <= SHIFTREG;
+        send_count <= send_count -1;
         
-    MISO <=  not send_data(send_count);
-    
+        IF (SS = '0') THEN    
+        
+        Stat2 <= '1';
+         
+        END IF;
     END IF;  
  --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
- --MISO <=  not send_data(send_count);
-else
+
+if SS = '0' then
+    MISO <=   send_data(send_count);
+    Stat5 <= '1';
+END IF;
+
+if (SS = '1' and send_state = '1') then
 MISO <= '1';
 send_count <= 7;
-END IF;
- 
-  if rising_edge (SS) then
-   SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
+Stat5 <= '0';
+send_state <= '0';
+--END IF;
+     if (send = '1' ) then
+            sent_packets <= sent_packets + 1;
+            
+     END IF;  
+  --if rising_edge (SS) then
+   --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
   --SHIFTREG <= x"39";
-  
+  --send_data <= SHIFTREG_data;
     if ID_ok = '1' then
         Pack_count <= Pack_count + 1;
     else 
     Pack_count <= "000000";
     END IF;
     SHIFTREG_data <= SHIFTREG; 
-    
+
   END IF;
   if SHIFTREG_data = x"05" then
     ID_ok <= '1';
     ID <= ShIFTREG_data;
     Stat1 <= '1';
-    Stat2 <= '0';
-    Stat3 <= '0';
-    Stat4 <= '0';
-    Stat5 <= '0';
+    --Stat2 <= '0';
+    --Stat3 <= '0';
+    --Stat4 <= '0';
+    --Stat5 <= '0';
     
-  elsif SHIFTREG_data = x"AA" then
+  elsif SHIFTREG_data = x"AA" and send = '0' then
     Stat4 <= '1';
-    send_data <= x"39";
-   -- send <= '1';
+    --send_data <= x"39";
+    send <= '1';
     
   elsif PACK_count = x"1" then
     AMP_SPI <= SHIFTREG_data;
-    Stat2 <= '1';
+    --Stat2 <= '1';
   elsif PACK_count = x"2" then
     FREQ_SPI <= SHIFTREG_data;
-    Stat3 <= '1';
+    --Stat3 <= '1';
   elsif PACK_count = x"3" then
     Shape_stat_SPI <= SHIFTREG_data;
     --Stat4 <= '1';
@@ -256,12 +270,37 @@ END IF;
     ID_ok <= '0';
     if (CheckSum = (ID xor AMP_SPI xor FREQ_SPI xor Shape_stat_SPI)) then
     
-        Stat5 <= '1';
+        --Stat5 <= '1';
     END IF;
     Stat1 <= '0';
     
   END IF;
+if send = '1' then
+    if sent_packets = x"00" then
+        send_data <= x"AA";
+        
+    elsif sent_packets = x"01" then
+        send_data <= x"FF";
+    elsif sent_packets = x"02" then
+        send_data <= Freq;
+    elsif sent_packets = x"03" then
+        send_data <= Ampl;
+    elsif sent_packets = x"04" then
+        send_data <= Shape;
+    elsif sent_packets = x"05" then 
+        send_data <= (x"AA" xor x"FF" xor Freq xor Ampl xor Shape);
+        --send <= '0';
+        sent_packets <= x"00";
+    else
+        --sent_packets <= x"00"; 
+        
+       
+    END IF;
+--sent_packets <= x"00"; 
+END IF;
   --SHIFTREG_out (5 downto 0)<= Pack_count;
+  SHIFTREG_out <= sent_packets;
+  stat3 <= send;
    END PROCESS;
        
 

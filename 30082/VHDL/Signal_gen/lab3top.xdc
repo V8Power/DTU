@@ -18,7 +18,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports *]
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {SS_IBUF}]
 ## Clock signal
 set_property PACKAGE_PIN W5 [get_ports {Clk}]							
---create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
+#--create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
 
 ## Switches
 set_property PACKAGE_PIN V17 [get_ports {SW[0]}]					
@@ -122,22 +122,22 @@ set_property PACKAGE_PIN G2 [get_ports {BTN3}]
 
 
 ##Pmod Header JB
-set_property PACKAGE_PIN A14 [get_ports {MOSI}]					
-set_property PACKAGE_PIN A16 [get_ports {MISO}]					
+set_property PACKAGE_PIN A14 [get_ports {PWMOut}]					
+#set_property PACKAGE_PIN A16 [get_ports {MISO}]					
 #set_property PACKAGE_PIN B15 [get_ports {SCK}]					
 #set_property PACKAGE_PIN B16 [get_ports {SS}]					
 #set_property PACKAGE_PIN A15 [get_ports {JB[4]}]					
-#set_property PACKAGE_PIN A17 [get_ports {JB[5]}]					
-set_property PACKAGE_PIN C15 [get_ports {SCK}]					
-set_property PACKAGE_PIN C16 [get_ports {SS}]					
+#set_property PACKAGE_PIN A17 [get_ports {SS}]					
+#set_property PACKAGE_PIN C15 [get_ports {SCK}]					
+#set_property PACKAGE_PIN C16 [get_ports {SS}]					
  
 
 ##Pmod Header JC
-set_property PACKAGE_PIN K17 [get_ports {PWMOut}]					
-#set_property PACKAGE_PIN M18 [get_ports {JC[1]}]					
-#set_property PACKAGE_PIN N17 [get_ports {JC[2]}]					
-#set_property PACKAGE_PIN P18 [get_ports {JC[3]}]					
-#set_property PACKAGE_PIN L17 [get_ports {JC[4]}]					
+set_property PACKAGE_PIN K17 [get_ports {MOSI}]					
+set_property PACKAGE_PIN M18 [get_ports {MISO}]					
+set_property PACKAGE_PIN N17 [get_ports {SCK}]					
+set_property PACKAGE_PIN P18 [get_ports {SS}]					
+set_property PACKAGE_PIN L17 [get_ports {SCK2}]					
 #set_property PACKAGE_PIN M19 [get_ports {JC[5]}]					
-#set_property PACKAGE_PIN P17 [get_ports {BTNin}]					
+#set_property PACKAGE_PIN P17 [get_ports {SCK2}]					
 #set_property PACKAGE_PIN R18 [get_ports {BTNout}]

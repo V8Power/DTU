@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Jan  6 15:44:21 2023
+| Date         : Wed Jan 11 13:48:53 2023
 | Host         : DESKTOP-MKAFNHE running 64-bit major release  (build 9200)
 | Command      : report_drc -file SigGenTop_drc_routed.rpt -pb SigGenTop_drc_routed.pb -rpx SigGenTop_drc_routed.rpx
 | Design       : SigGenTop
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 24
+             Violations found: 18
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153  | Warning  | Gated clock check                                   | 10         |
+| PDRC-153  | Warning  | Gated clock check                                   | 4          |
 | REQP-1839 | Warning  | RAMB36 async control check                          | 12         |
 | RPBF-3    | Warning  | IO port buffering is incomplete                     | 1          |
 +-----------+----------+-----------------------------------------------------+------------+
@@ -51,52 +51,22 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net U1/Amp_SPI__0 is a gated clock net sourced by a combinational pin U1/Amp_SPI_reg[7]_i_1/O, cell U1/Amp_SPI_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net U1/ID_ok is a gated clock net sourced by a combinational pin U1/ID_ok_reg_i_1/O, cell U1/ID_ok_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net U1/CheckSum__0 is a gated clock net sourced by a combinational pin U1/CheckSum_reg[7]_i_1/O, cell U1/CheckSum_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net U1/send_data__0 is a gated clock net sourced by a combinational pin U1/send_data_reg[7]_i_2/O, cell U1/send_data_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net U1/Freq_SPI__0 is a gated clock net sourced by a combinational pin U1/Freq_SPI_reg[7]_i_1/O, cell U1/Freq_SPI_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net U1/send_state0 is a gated clock net sourced by a combinational pin U1/MISO_reg_i_3/O, cell U1/MISO_reg_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net U1/ID_ok is a gated clock net sourced by a combinational pin U1/ID_ok_reg_i_1/O, cell U1/ID_ok_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net U1/ID_ok_reg_i_2_n_0 is a gated clock net sourced by a combinational pin U1/ID_ok_reg_i_2/O, cell U1/ID_ok_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#6 Warning
-Gated clock check  
-Net U1/Shape_stat_SPI__0 is a gated clock net sourced by a combinational pin U1/Shape_stat_SPI_reg[7]_i_1/O, cell U1/Shape_stat_SPI_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#7 Warning
-Gated clock check  
-Net U1/Stat2_reg_i_2_n_0 is a gated clock net sourced by a combinational pin U1/Stat2_reg_i_2/O, cell U1/Stat2_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#8 Warning
-Gated clock check  
-Net U1/Stat3_reg_i_2_n_0 is a gated clock net sourced by a combinational pin U1/Stat3_reg_i_2/O, cell U1/Stat3_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#9 Warning
-Gated clock check  
-Net U1/Stat4_reg_i_1_n_0 is a gated clock net sourced by a combinational pin U1/Stat4_reg_i_1/O, cell U1/Stat4_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#10 Warning
-Gated clock check  
-Net U1/Stat5_reg_i_2_n_0 is a gated clock net sourced by a combinational pin U1/Stat5_reg_i_2/O, cell U1/Stat5_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net U1/sent_packets_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin U1/sent_packets_reg[7]_i_2/O, cell U1/sent_packets_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 REQP-1839#1 Warning
