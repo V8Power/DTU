@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Wed Jan 11 10:08:27 2023
+| Date         : Thu Jan 12 00:07:01 2023
 | Host         : DESKTOP-LOLTF0F running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file SigGenTop_timing_summary_routed.rpt -pb SigGenTop_timing_summary_routed.pb -rpx SigGenTop_timing_summary_routed.rpx -warn_on_violation
 | Design       : SigGenTop
@@ -41,10 +41,9 @@ Timing Summary Report
 
 Rule       Severity          Description                       Violations  
 ---------  ----------------  --------------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell       181         
+TIMING-17  Critical Warning  Non-clocked sequential cell       170         
 HPDR-1     Warning           Port pin direction inconsistency  1           
-LUTAR-1    Warning           LUT drives async reset alert      1           
-TIMING-20  Warning           Non-clocked latch                 34          
+TIMING-20  Warning           Non-clocked latch                 10          
 LATCH-1    Advisory          Existing latches in the design    1           
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
@@ -55,10 +54,10 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (506)
+1. checking no_clock (180)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (475)
+4. checking unconstrained_internal_endpoints (407)
 5. checking no_input_delay (14)
 6. checking no_output_delay (26)
 7. checking multiple_clock (0)
@@ -66,111 +65,17 @@ Table of Contents
 9. checking loops (0)
 10. checking partial_input_delay (0)
 11. checking partial_output_delay (0)
-12. checking latch_loops (15)
+12. checking latch_loops (0)
 
-1. checking no_clock (506)
+1. checking no_clock (180)
 --------------------------
  There are 52 register/latch pins with no clock driven by root clock pin: Clk (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: SCK (HIGH)
+ There are 11 register/latch pins with no clock driven by root clock pin: SCK (HIGH)
 
- There are 22 register/latch pins with no clock driven by root clock pin: SS (HIGH)
+ There are 28 register/latch pins with no clock driven by root clock pin: SS (HIGH)
 
  There are 75 register/latch pins with no clock driven by root clock pin: U0/Clk1_D_reg/Q (HIGH)
-
- There are 2 register/latch pins with no clock driven by root clock pin: U1/Pack_count_reg[0]/Q (HIGH)
-
- There are 2 register/latch pins with no clock driven by root clock pin: U1/Pack_count_reg[1]/Q (HIGH)
-
- There are 2 register/latch pins with no clock driven by root clock pin: U1/Pack_count_reg[2]/Q (HIGH)
-
- There are 2 register/latch pins with no clock driven by root clock pin: U1/Pack_count_reg[3]/Q (HIGH)
-
- There are 2 register/latch pins with no clock driven by root clock pin: U1/Pack_count_reg[4]/Q (HIGH)
-
- There are 2 register/latch pins with no clock driven by root clock pin: U1/Pack_count_reg[5]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: U1/SHIFTREG_out_reg[0]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: U1/SHIFTREG_out_reg[1]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: U1/SHIFTREG_out_reg[2]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: U1/SHIFTREG_out_reg[3]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: U1/SHIFTREG_out_reg[4]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: U1/SHIFTREG_out_reg[5]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: U1/SHIFTREG_out_reg[6]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: U1/SHIFTREG_out_reg[7]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[0]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[11]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[12]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[13]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[14]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[17]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[19]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[1]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[20]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[21]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[22]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[23]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[24]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[25]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[28]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[29]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[2]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[3]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[4]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[5]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[6]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[7]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[8]/Q (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: U1/send_count_reg[9]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: U1/send_reg/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: U1/sent_packets_reg[0]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: U1/sent_packets_reg[1]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: U1/sent_packets_reg[2]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: U1/sent_packets_reg[3]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: U1/sent_packets_reg[4]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: U1/sent_packets_reg[5]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: U1/sent_packets_reg[6]/Q (HIGH)
-
- There are 9 register/latch pins with no clock driven by root clock pin: U1/sent_packets_reg[7]/Q (HIGH)
 
  There are 14 register/latch pins with no clock driven by root clock pin: U4/Clk1_D_reg/Q (HIGH)
 
@@ -185,9 +90,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (475)
+4. checking unconstrained_internal_endpoints (407)
 --------------------------------------------------
- There are 475 pins that are not constrained for maximum delay. (HIGH)
+ There are 407 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -233,9 +138,9 @@ Table of Contents
  There are 0 ports with partial output delay specified.
 
 
-12. checking latch_loops (15)
------------------------------
- There are 15 combinational latch loops in the design through latch input (HIGH)
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
 
 
 
