@@ -68,7 +68,7 @@ int main (void){
 	uart_init(115200);
 	
 	while (1){
-		if (micros() - prev_cycle_time >= 500){    
+		if (micros() - prev_cycle_time >= 1000){    
 				prev_cycle_time = micros();
 				/*if (a == 20){
 				SPI_write(0x5);
@@ -89,8 +89,10 @@ int main (void){
 				}*/
 				
 				//uart_send_char(SPI_read_write(0xC3));
-				SPI_write(0xAA);
+				//SPI_write(0xAA);
+				SPI_write(a);
 				//char spi_data = SPI_read();
+				//char spi_data = SPI_read_write(0x89);
 				//uart_send_char(spi_data);
 				a++;
 				if (a== 255){
