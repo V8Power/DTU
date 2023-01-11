@@ -26,17 +26,17 @@ void SPI_init_slave(){
 
 
 char SPI_read(){
-	PORTB &= ~(1 << PB0);
+	//PORTB &= ~(1 << PB0);
 	SPDR = 0;
 	while(!(SPSR &(1<<SPIF))) ; 
 	unsigned char data = SPDR;
 	return data;
-	PORTB |= (1 << PB0);
+	//PORTB |= (1 << PB0);
 	
 	
 	
 }
-/*unsigned char SPI_read_write(char dat_in){
+unsigned char SPI_read_write(char dat_in){
 	PORTB &= ~(1 << PB0);
 	SPDR = dat_in;
 	while(!(SPSR &(1<<SPIF))) ;
@@ -46,7 +46,7 @@ char SPI_read(){
 	
 	
 	
-}*/
+}
 
 
 void SPI_write(unsigned char data){

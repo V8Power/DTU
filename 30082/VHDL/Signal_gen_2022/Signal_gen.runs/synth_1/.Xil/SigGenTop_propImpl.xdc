@@ -89,3 +89,5 @@ set_property src_info {type:XDC file:1 line:138 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN N17 [get_ports {SCK}]
 set_property src_info {type:XDC file:1 line:139 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN P18 [get_ports {SS}]
+set_property src_info {type:XDC file:1 line:140 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN L17 [get_ports {SCK2}]
