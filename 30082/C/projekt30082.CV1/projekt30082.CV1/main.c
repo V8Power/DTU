@@ -32,20 +32,26 @@ char test_data[20] = {0x55, 0xAA,0x00,0x14,0x02,0x20,0x23,0x56,0x78, 0x98, 0xA5,
 //timers
 uint16_t cycle_time = 1;
 uint32_t prev_cycle_time = 0;
-char SPI_read_data[10];
+//char SPI_read_data[10];
+
+//generator
+uint8_t data_ok = 0;
+uint8_t freq = 0;
+uint8_t shape = 0;
+uint8_t ampl = 0;
 uint32_t micros(){
 	return micro;
 }
 ISR(TIMER1_COMPA_vect){     //interrupt every 1ms, set through timer prescale and counter compare
 	
-	micro++;           
+	micro++;
 	TCNT1 = 0x0000;   // reset counter for next COMPA event
 	//PORTB ^= (1 << PB7);
 }
 
 
 void init(){
-	DDRB |= (1 << PB7);  
+	DDRB |= (1 << PB7);
 	PORTB |= (1 << PB6);
 	
 	
@@ -68,84 +74,101 @@ int main (void){
 	uart_init(115200);
 	
 	while (1){
-		if (micros() - prev_cycle_time >= 1){    
-				prev_cycle_time = micros();
-				
-				
-				//char spi_data = SPI_read();
-				/*if (PINB & (1 << PB6)){
-					SPI_write(0xAA);
-				}
-				PORTB &= ~(1 << PB0);
-				char spi_data = SPI_read_write(0xA1);
-				PORTB |= (1 << PB0);
-				uart_send_char(spi_data);*/
-				
-				/*if (a== 255){
-					a=0;
-				}
-				if (a < 5) {
-					SPI_read();
-					
-				}
-				else if (a == 5) {
-					PORTB &= ~(1 << PB0);
-					
-					
-					SPI_read_data[a -5] = SPI_read_write(0xAA);
-					PORTB |= (1 << PB0);
-				}
-				else {
-					SPI_read_data[a-5] = SPI_read();
-				}
-				a++;
-				*/
-				if (a < 4){
+		if (micros() - prev_cycle_time >= 10000){
+			prev_cycle_time = micros();
+			
+			
+			//char spi_data = SPI_read();
+			/*if (PINB & (1 << PB6)){
+			SPI_write(0xAA);
+			}
+			PORTB &= ~(1 << PB0);
+			char spi_data = SPI_read_write(0xA1);
+			PORTB |= (1 << PB0);
+			uart_send_char(spi_data);*/
+			
+			/*if (a== 255){
+			a=0;
+			}
+			if (a < 5) {
+			SPI_read();
+			
+			}
+			else if (a == 5) {
+			PORTB &= ~(1 << PB0);
+			
+			
+			SPI_read_data[a -5] = SPI_read_write(0xAA);
+			PORTB |= (1 << PB0);
+			}
+			else {
+			SPI_read_data[a-5] = SPI_read();
+			}
+			a++;
+			*/
+			/*for (int d = 0; d < 14; d++){
+				if (d < 4){
 					PORTB &= ~(1 << PB0);
 					SPI_write(0xA1);
 					PORTB |= (1 << PB0);
 				}
-				else if (a == 4) {
+				else if (d == 4) {
 					PORTB &= ~(1 << PB0);
 					SPI_read_data[0] = SPI_read_write(0xAA);
 					PORTB |= (1 << PB0);
 				}
-				else if (a == 5){
-				PORTB &= ~(1 << PB0);
-				
-				SPI_read_data[2] = SPI_read_write(0xAA);
-				
-				
-				PORTB |= (1 << PB0);
-				}
-				else if (a > 4 && a < 14){
+				else if (d == 5){
 					PORTB &= ~(1 << PB0);
-				SPI_read_data[(a - 5)] = SPI_read();
-				PORTB |= (1 << PB0);
+					
+					SPI_read_data[2] = SPI_read_write(0xAA);
+					
+					
+					PORTB |= (1 << PB0);
 				}
-				a++;
-				
-				if (a > 32000){
-					a = 0;
-					for (int v = 0; v < 10 ; v++){
-					uart_send_char(SPI_read_data[v]);	
-					}  
-				
+				else if (d > 4 && d < 14){
+					PORTB &= ~(1 << PB0);
+					SPI_read_data[(d - 5)] = SPI_read();
+					PORTB |= (1 << PB0);
+				}
+			}*/
+			//a++;
+			//SPI_read_data[9] = 0xAA ^ 0xFF ^ 0x21 ^ 0x23 ^ 0x61;
+			if (a > 1){
+				a = 0;
+				for (int v = 0; v < 10 ; v++){
+					//uart_send_char(SPI_read_data[v]);
+					//uart_send_char(v);
 				}
 				
 			}
+			data_ok = 0;
+			freq = 0;
+			ampl = 0;
+			shape = 0;
+			uint32_t test = 0;
+			test = fpga_get_data();
+			data_ok |= (test >> 24) & 0xFF000000;
+			freq |= (test >> 16);
+			ampl |= (test >> 8); 
+			shape |= test & 0xFF;
+			uart_send_char(data_ok);
+			uart_send_char(freq);
+			uart_send_char(ampl);
+			uart_send_char(shape);
 			
-			
-			
+		}
+		
+		
+		
 
 		
 	}
-	}
-	
-	
-	
-	
-	
+}
+
+
+
+
+
 
 
 

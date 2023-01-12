@@ -186,10 +186,11 @@ begin
 
   end case;
 end process;
-PROCESS (SCK, MOSI, SS, SCK2, send, SS2, SHIFTREG_data, send_data, send_buffer, send_count)
+PROCESS (SCK, MOSI, SS, SCK2, send, SS2, SHIFTREG_data, send_data, send_buffer, send_count, SHIFTREG)
 
 BEGIN
 --send_data <= x"A1";
+--send_data <=x"EF";
 send_buffer <= send_data;
 if (SCK'event and SCK = '1') then
         
@@ -218,34 +219,31 @@ END IF;
 if SS = '1' then 
     --MISO <= '1';
     send_count <= 7;
-    SHIFTREG_data <= SHIFTREG; 
+    --SHIFTREG_data <= SHIFTREG; 
     --SHIFTREG_out <= Shiftreg_data;
     Stat1 <= '0';
 END IF;
 end process;
 
 
-PROCESS (SCK, MOSI, SS, SCK2,  SS2, sent_packets, send, Clk,  SHIFTREG_data, send_data, send_buffer)
+PROCESS (SCK, MOSI, SS, SCK2,  SS2, sent_packets, send, Clk,  SHIFTREG_data, send_data, send_buffer, Freq, Ampl, Shape)
 
 BEGIN
 
 
-if (SS'event and SS = '1') then
-
+--if (SS'event and SS = '1') then
+if rising_edge(SS) then
+SHIFTREG_data <= SHIFTREG;
 
 Stat5 <= '0';
-Stat2 <= '0';
+--Stat2 <= '0';
 
 --END IF;
      if (send = '1' ) then
             sent_packets <= sent_packets + "1";
-     else 
-     --sent_packets <= x"00";       
+         
      END IF;  
-  --if rising_edge (SS) then
-   --SHIFTREG_out <= SHIFTREG(7 DOWNTO 0);
-  --SHIFTREG <= x"39";
-  --send_data <= SHIFTREG_data;
+  
     if ID_ok = '1' then
         Pack_count <= Pack_count + 1;
     else 
@@ -262,10 +260,10 @@ Stat2 <= '0';
     --Stat1 <= '1';
     --Stat2 <= '0';
     --Stat3 <= '0';
-    Stat4 <= '0';
+    
     --Stat5 <= '0';
     
-  elsif (SHIFTREG_data = x"AA" and send = '0') then
+  elsif ((SHIFTREG_data = x"AA") and (send = '0')) then
     Stat4 <= '1';
     --send_data <= x"39";
     send <= '1';
@@ -293,20 +291,27 @@ if send = '1' then
     if sent_packets = x"00" then
         send_data <= x"AA";
         
+        
+ 
     elsif sent_packets = x"01" then
         send_data <= x"FF";
     elsif sent_packets = x"02" then
         send_data <= Freq;
+        --elsif sent_packets = x"03" then
+        --send_data <= Freq;
     elsif sent_packets = x"03" then
         send_data <= Ampl;
     elsif sent_packets = x"04" then
         send_data <= Shape;
+        
     elsif sent_packets = x"05" then 
         send_data <= (x"AA" xor x"FF" xor Freq xor Ampl xor Shape);
+        
+    else
         send <= '0';
         sent_packets <= x"00";
-    else
-        --sent_packets <= x"00"; 
+        send_data <= x"00";
+        Stat4 <= '0';
         
        
     END IF;
@@ -314,7 +319,8 @@ if send = '1' then
 END IF;
 END IF;
   --SHIFTREG_out (5 downto 0)<= Pack_count;
-  SHIFTREG_out <= send_data;
+  --SHIFTREG_out <= send_data;
+  SHIFTREG_out <= sent_packets;
   stat3 <= send;
  
 SS2 <= SS;
