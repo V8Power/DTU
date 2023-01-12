@@ -68,7 +68,7 @@ int main (void){
 	uart_init(115200);
 	
 	while (1){
-		if (micros() - prev_cycle_time >= 0){    
+		if (micros() - prev_cycle_time >= 1){    
 				prev_cycle_time = micros();
 				
 				
