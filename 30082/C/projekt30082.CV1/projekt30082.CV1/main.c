@@ -68,19 +68,19 @@ int main (void){
 	uart_init(115200);
 	
 	while (1){
-		if (micros() - prev_cycle_time >= 1000){    
+		if (micros() - prev_cycle_time >= 0){    
 				prev_cycle_time = micros();
 				
 				
 				//char spi_data = SPI_read();
-				if (PINB & (1 << PB6)){
+				/*if (PINB & (1 << PB6)){
 					SPI_write(0xAA);
 				}
 				PORTB &= ~(1 << PB0);
 				char spi_data = SPI_read_write(0xA1);
 				PORTB |= (1 << PB0);
-				uart_send_char(spi_data);
-				a++;
+				uart_send_char(spi_data);*/
+				
 				/*if (a== 255){
 					a=0;
 				}
@@ -99,12 +99,37 @@ int main (void){
 					SPI_read_data[a-5] = SPI_read();
 				}
 				a++;
+				*/
+				if (a < 4){
+					PORTB &= ~(1 << PB0);
+					SPI_write(0xA1);
+					PORTB |= (1 << PB0);
+				}
+				else if (a == 4) {
+					PORTB &= ~(1 << PB0);
+					SPI_read_data[0] = SPI_read_write(0xAA);
+					PORTB |= (1 << PB0);
+				}
+				else if (a == 5){
+				PORTB &= ~(1 << PB0);
 				
-				if (a > 12) {
+				SPI_read_data[2] = SPI_read_write(0xAA);
+				
+				
+				PORTB |= (1 << PB0);
+				}
+				else if (a > 4 && a < 14){
+					PORTB &= ~(1 << PB0);
+				SPI_read_data[(a - 5)] = SPI_read();
+				PORTB |= (1 << PB0);
+				}
+				a++;
+				
+				if (a > 32000){
 					a = 0;
-					for (int v = 0; v < 10; v++){
+					for (int v = 0; v < 10 ; v++){
 					uart_send_char(SPI_read_data[v]);	
-					}  */
+					}  
 				
 				}
 				
@@ -114,6 +139,7 @@ int main (void){
 			
 
 		
+	}
 	}
 	
 	
