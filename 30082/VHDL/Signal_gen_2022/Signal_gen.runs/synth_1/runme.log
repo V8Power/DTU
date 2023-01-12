@@ -22,54 +22,53 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 25380
+INFO: [Synth 8-7075] Helper process launched with PID 17564
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1822.676 ; gain = 407.129
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1820.000 ; gain = 407.406
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'SigGenTop' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenTop.vhd:54]
 INFO: [Synth 8-638] synthesizing module 'DivClk' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/DivClk.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'DivClk' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/DivClk.vhd:14]
 INFO: [Synth 8-638] synthesizing module 'SigGenControl' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:50]
-WARNING: [Synth 8-614] signal 'send_count' is read in the process but is not in the sensitivity list [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:188]
-WARNING: [Synth 8-614] signal 'SHIFTREG' is read in the process but is not in the sensitivity list [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:188]
-INFO: [Synth 8-3491] module 'BTNdb' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/BTNdb.vhd:30' bound to instance 'Deb1' of component 'BTNdb' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:328]
+WARNING: [Synth 8-614] signal 'SHIFTREG' is read in the process but is not in the sensitivity list [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:189]
+INFO: [Synth 8-3491] module 'BTNdb' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/BTNdb.vhd:30' bound to instance 'Deb1' of component 'BTNdb' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:330]
 INFO: [Synth 8-638] synthesizing module 'BTNdb' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/BTNdb.vhd:36]
 INFO: [Synth 8-256] done synthesizing module 'BTNdb' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/BTNdb.vhd:36]
-INFO: [Synth 8-3491] module 'BTNdb' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/BTNdb.vhd:30' bound to instance 'Deb2' of component 'BTNdb' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:330]
+INFO: [Synth 8-3491] module 'BTNdb' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/BTNdb.vhd:30' bound to instance 'Deb2' of component 'BTNdb' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:332]
 INFO: [Synth 8-256] done synthesizing module 'SigGenControl' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:50]
 INFO: [Synth 8-638] synthesizing module 'SigGenDatapath' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenDatapath.vhd:36]
 	Parameter PWMinc bound to: 7'b0000001 
-INFO: [Synth 8-6157] synthesizing module 'sinusLUT' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/Signal_gen.runs/synth_1/.Xil/Vivado-4876-DESKTOP-LOLTF0F/realtime/sinusLUT_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'sinusLUT' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/Signal_gen.runs/synth_1/.Xil/Vivado-4876-DESKTOP-LOLTF0F/realtime/sinusLUT_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'sinusLUT' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/Signal_gen.runs/synth_1/.Xil/Vivado-10828-DESKTOP-LOLTF0F/realtime/sinusLUT_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sinusLUT' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/Signal_gen.runs/synth_1/.Xil/Vivado-10828-DESKTOP-LOLTF0F/realtime/sinusLUT_stub.v:5]
 INFO: [Synth 8-256] done synthesizing module 'SigGenDatapath' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenDatapath.vhd:36]
 INFO: [Synth 8-638] synthesizing module 'SevenSeg5' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SevenSeg5.vhd:14]
 INFO: [Synth 8-226] default block is never used [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SevenSeg5.vhd:52]
 INFO: [Synth 8-226] default block is never used [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SevenSeg5.vhd:71]
 INFO: [Synth 8-256] done synthesizing module 'SevenSeg5' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SevenSeg5.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'SigGenTop' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenTop.vhd:54]
-WARNING: [Synth 8-6014] Unused sequential element Pack_count_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:248]
-WARNING: [Synth 8-6014] Unused sequential element ID_ok_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:247]
-WARNING: [Synth 8-6014] Unused sequential element ID_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:259]
-WARNING: [Synth 8-6014] Unused sequential element Amp_SPI_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:266]
-WARNING: [Synth 8-6014] Unused sequential element Freq_SPI_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:266]
-WARNING: [Synth 8-6014] Unused sequential element Shape_stat_SPI_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:266]
-WARNING: [Synth 8-6014] Unused sequential element CheckSum_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:266]
-WARNING: [Synth 8-6014] Unused sequential element Stat2_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:235]
+WARNING: [Synth 8-6014] Unused sequential element Pack_count_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:250]
+WARNING: [Synth 8-6014] Unused sequential element ID_ok_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:249]
+WARNING: [Synth 8-6014] Unused sequential element ID_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element Amp_SPI_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:268]
+WARNING: [Synth 8-6014] Unused sequential element Freq_SPI_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:268]
+WARNING: [Synth 8-6014] Unused sequential element Shape_stat_SPI_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:268]
+WARNING: [Synth 8-6014] Unused sequential element CheckSum_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:268]
+WARNING: [Synth 8-6014] Unused sequential element Stat2_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:237]
 WARNING: [Synth 8-7129] Port SCK2 in module SigGenControl is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1919.461 ; gain = 503.914
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1917.535 ; gain = 504.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1919.461 ; gain = 503.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1917.535 ; gain = 504.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1919.461 ; gain = 503.914
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1917.535 ; gain = 504.941
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1919.461 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1917.535 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -82,28 +81,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/SigGenTop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2004.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2003.016 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2004.836 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2003.016 ; gain = 0.000
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for U2/SinusDec. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'BTNdb'
 ---------------------------------------------------------------------------------------------------
@@ -115,11 +114,11 @@ INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'BTNdb
                 wbtndown |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'sequential' in module 'BTNdb'
-WARNING: [Synth 8-327] inferring latch for variable 'MISO_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:213]
-WARNING: [Synth 8-327] inferring latch for variable 'SHIFTREG_data_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:219]
-WARNING: [Synth 8-327] inferring latch for variable 'Stat1_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:214]
+WARNING: [Synth 8-327] inferring latch for variable 'MISO_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:215]
+WARNING: [Synth 8-327] inferring latch for variable 'SHIFTREG_data_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:221]
+WARNING: [Synth 8-327] inferring latch for variable 'Stat1_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenControl.vhd:216]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -178,25 +177,25 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port SCK2 in module SigGenTop is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -215,37 +214,37 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'PWMOut' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/SigGenTop.vhd:30]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -266,47 +265,46 @@ Report Cell Usage:
 |2     |BUFG     |     4|
 |3     |CARRY4   |    39|
 |4     |LUT1     |     8|
-|5     |LUT2     |   106|
-|6     |LUT3     |    31|
-|7     |LUT4     |    40|
-|8     |LUT5     |    60|
-|9     |LUT6     |    84|
+|5     |LUT2     |   108|
+|6     |LUT3     |    30|
+|7     |LUT4     |    41|
+|8     |LUT5     |    58|
+|9     |LUT6     |    83|
 |10    |MUXF7    |     1|
 |11    |FDCE     |   138|
 |12    |FDPE     |     5|
 |13    |FDRE     |    22|
 |14    |FDSE     |     4|
-|15    |LD       |     8|
+|15    |LD       |     9|
 |16    |LDC      |     1|
-|17    |LDP      |     1|
-|18    |IBUF     |    16|
-|19    |OBUF     |    28|
+|17    |IBUF     |    16|
+|18    |OBUF     |    28|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2003.016 ; gain = 590.422
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 1 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 2004.836 ; gain = 503.914
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2004.836 ; gain = 589.289
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2003.016 ; gain = 504.941
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2003.016 ; gain = 590.422
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2004.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2003.016 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2004.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2003.016 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   LD => LDCE: 8 instances
+  LD => LDCE (inverted pins: G): 1 instance 
   LDC => LDCE (inverted pins: G): 1 instance 
-  LDP => LDPE (inverted pins: G): 1 instance 
 
-Synth Design complete, checksum: b37e37a3
+Synth Design complete, checksum: b3f841b2
 INFO: [Common 17-83] Releasing license: Synthesis
-38 Infos, 17 Warnings, 1 Critical Warnings and 0 Errors encountered.
+38 Infos, 16 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2004.836 ; gain = 968.445
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2003.016 ; gain = 968.250
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/Signal_gen.runs/synth_1/SigGenTop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file SigGenTop_utilization_synth.rpt -pb SigGenTop_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 12 00:06:01 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 12 11:22:29 2023...

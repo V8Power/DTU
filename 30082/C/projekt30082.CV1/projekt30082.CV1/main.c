@@ -71,16 +71,19 @@ int main (void){
 		if (micros() - prev_cycle_time >= 1000){    
 				prev_cycle_time = micros();
 				
-				/*PORTB &= ~(1 << PB0);
-				//char spi_data = SPI_read();
 				
-				char spi_data = SPI_read_write(0xAB);
+				//char spi_data = SPI_read();
+				if (PINB & (1 << PB6)){
+					SPI_write(0xAA);
+				}
+				PORTB &= ~(1 << PB0);
+				char spi_data = SPI_read_write(0xA1);
 				PORTB |= (1 << PB0);
 				uart_send_char(spi_data);
 				a++;
 				/*if (a== 255){
 					a=0;
-				}*/
+				}
 				if (a < 5) {
 					SPI_read();
 					
@@ -101,7 +104,8 @@ int main (void){
 					a = 0;
 					for (int v = 0; v < 10; v++){
 					uart_send_char(SPI_read_data[v]);	
-					}
+					}  */
+				
 				}
 				
 			}
@@ -116,6 +120,6 @@ int main (void){
 	
 	
 	
-}
+
 
 

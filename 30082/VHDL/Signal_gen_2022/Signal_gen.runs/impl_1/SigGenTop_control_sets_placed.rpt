@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Jan 12 00:06:40 2023
+| Date         : Thu Jan 12 11:23:10 2023
 | Host         : DESKTOP-LOLTF0F running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file SigGenTop_control_sets_placed.rpt
 | Design       : SigGenTop
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    15 |
-|    Minimum number of control sets                        |    15 |
+| Total control sets                                       |    16 |
+|    Minimum number of control sets                        |    16 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    45 |
@@ -39,11 +39,11 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    15 |
-| >= 0 to < 4        |     3 |
-| >= 4 to < 6        |     2 |
+| Total control sets |    16 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     6 |
+| >= 8 to < 10       |     8 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     1 |
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               9 |            3 |
-| No           | No                    | Yes                    |             104 |           25 |
-| No           | Yes                   | No                     |               2 |            2 |
-| Yes          | No                    | No                     |              16 |            6 |
-| Yes          | No                    | Yes                    |              39 |           13 |
-| Yes          | Yes                   | No                     |               9 |            7 |
+| No           | No                    | No                     |              10 |            4 |
+| No           | No                    | Yes                    |             104 |           27 |
+| No           | Yes                   | No                     |               1 |            1 |
+| Yes          | No                    | No                     |              16 |            5 |
+| Yes          | No                    | Yes                    |              39 |            8 |
+| Yes          | Yes                   | No                     |              17 |            6 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,21 +73,22 @@ Table of Contents
 +----------------+-------------------------+---------------------+------------------+----------------+--------------+
 |  Clock Signal  |      Enable Signal      |   Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+-------------------------+---------------------+------------------+----------------+--------------+
-|  SS_IBUF_BUFG  | U1/Stat40               | U1/Stat4_i_1_n_0    |                1 |              1 |         1.00 |
-| ~SS_IBUF_BUFG  |                         | SS_IBUF_BUFG        |                2 |              2 |         1.00 |
+|  SS_IBUF_BUFG  | U1/Stat40               | U1/eqOp             |                1 |              1 |         1.00 |
+| ~SS_IBUF_BUFG  |                         |                     |                1 |              1 |         1.00 |
+| ~SS_IBUF_BUFG  |                         | SS_IBUF_BUFG        |                1 |              1 |         1.00 |
 | ~SCK_IBUF_BUFG | U1/MISO_reg_i_2_n_0     | SS_IBUF_BUFG        |                1 |              3 |         3.00 |
-|  SS_IBUF_BUFG  | U1/send_data            | U1/send_data0_in[1] |                3 |              4 |         1.33 |
-|  SS_IBUF_BUFG  | U1/send_data[6]_i_2_n_0 | U1/send_data0_in[0] |                3 |              4 |         1.33 |
-|  Mclk_BUFG     | U1/AmplEN               | BTN3_IBUF           |                4 |              8 |         2.00 |
-|  Mclk_BUFG     | U1/FreqEN               | BTN3_IBUF           |                3 |              8 |         2.67 |
-|  Mclk_BUFG     | U1/ShapeEN              | BTN3_IBUF           |                2 |              8 |         4.00 |
-|  SCK_IBUF_BUFG | U1/MISO_reg_i_2_n_0     |                     |                2 |              8 |         4.00 |
+|  SCK_IBUF_BUFG | U1/MISO_reg_i_2_n_0     |                     |                1 |              8 |         8.00 |
 |  SS_IBUF_BUFG  | U1/Stat3_OBUF           |                     |                4 |              8 |         2.00 |
+|  SS_IBUF_BUFG  | U1/send_data            | U1/send_data0_in[7] |                3 |              8 |         2.67 |
+|  SS_IBUF_BUFG  | U1/send_data[6]_i_2_n_0 | U1/send_data0_in[6] |                2 |              8 |         4.00 |
+|  Mclk_BUFG     | U1/FreqEN               | BTN3_IBUF           |                2 |              8 |         4.00 |
+|  Mclk_BUFG     | U1/AmplEN               | BTN3_IBUF           |                1 |              8 |         8.00 |
+|  Mclk_BUFG     | U1/ShapeEN              | BTN3_IBUF           |                1 |              8 |         8.00 |
 |  SS_IBUF_BUFG  |                         |                     |                3 |              9 |         3.00 |
 |  Mclk_BUFG     | U2/sel                  | BTN3_IBUF           |                3 |             12 |         4.00 |
-|  U4/CLK        |                         | BTN3_IBUF           |                2 |             14 |         7.00 |
-|  Mclk_BUFG     |                         | BTN3_IBUF           |               12 |             38 |         3.17 |
-|  Clk_IBUF_BUFG |                         | BTN3_IBUF           |               11 |             52 |         4.73 |
+|  U4/CLK        |                         | BTN3_IBUF           |                5 |             14 |         2.80 |
+|  Mclk_BUFG     |                         | BTN3_IBUF           |               10 |             38 |         3.80 |
+|  Clk_IBUF_BUFG |                         | BTN3_IBUF           |               12 |             52 |         4.33 |
 +----------------+-------------------------+---------------------+------------------+----------------+--------------+
 
 

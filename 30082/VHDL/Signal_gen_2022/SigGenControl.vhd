@@ -77,6 +77,7 @@ signal tx  : std_logic;
 signal send_data : std_logic_vector(7 downto 0 );
 signal send_count : natural;
 signal sent_packets : std_logic_vector(7 downto 0 );
+signal send_buffer : std_logic_vector(7 downto 0);
 
 signal SS2: std_logic;
 
@@ -185,10 +186,11 @@ begin
 
   end case;
 end process;
-PROCESS (SCK, MOSI, SS, SCK2, send, SS2, SHIFTREG_data, send_data)
+PROCESS (SCK, MOSI, SS, SCK2, send, SS2, SHIFTREG_data, send_data, send_buffer, send_count)
 
 BEGIN
 --send_data <= x"A1";
+send_buffer <= send_data;
 if (SCK'event and SCK = '1') then
         
         IF (SS = '0') THEN
@@ -210,20 +212,20 @@ if (SCK'event and SCK = '1') then
     END IF;  
 
 if SS = '0' then
-    MISO <=   send_data(send_count);
+    MISO <=   send_buffer(send_count);
     Stat1 <= '1';
 END IF;
 if SS = '1' then 
-    MISO <= '1';
+    --MISO <= '1';
     send_count <= 7;
     SHIFTREG_data <= SHIFTREG; 
-    --SHIFTREG_out <= Shiftreg;
+    --SHIFTREG_out <= Shiftreg_data;
     Stat1 <= '0';
 END IF;
 end process;
 
 
-PROCESS (SCK, MOSI, SS, SCK2, send, SS2, sent_packets, send, Clk,  SHIFTREG_data, send_data)
+PROCESS (SCK, MOSI, SS, SCK2,  SS2, sent_packets, send, Clk,  SHIFTREG_data, send_data, send_buffer)
 
 BEGIN
 
@@ -312,7 +314,7 @@ if send = '1' then
 END IF;
 END IF;
   --SHIFTREG_out (5 downto 0)<= Pack_count;
-  SHIFTREG_out <= sent_packets;
+  SHIFTREG_out <= send_data;
   stat3 <= send;
  
 SS2 <= SS;

@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Jan 12 00:05:19 2023
-# Process ID: 4876
+# Start of session at: Thu Jan 12 11:21:46 2023
+# Process ID: 10828
 # Current directory: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/Signal_gen.runs/synth_1
 # Command line: vivado.exe -log SigGenTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SigGenTop.tcl
 # Log file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/Signal_gen.runs/synth_1/SigGenTop.vds
