@@ -5,15 +5,19 @@
 
 
 
- void uart_Init(unsigned int ubrr){
+ //void uart_Init(unsigned int ubrr){
+	 void uart_Init(uint32_t baud){
 // enable receive and transmit and receive complete interrupt
+//uint32_t baud = 115200;
 UCSR0A=(1<<U2X0);    //full duplex
 UCSR0B|=(1<<RXEN0)|(1<<TXEN0);//;|(1<<TXCIE0));  //enable transmit complete interrupt by removing the //
 // frame: 1 start bit, 8 data bit, no parity:
 UCSR0C|=(1<<UCSZ10)|(1<<UCSZ11);
 //baud rate values up to 16 bit therefore to registers
-UBRR0H = (unsigned char)(ubrr>>8);
-UBRR0L = (unsigned char)ubrr;
+//UBRR0H = (unsigned char)(ubrr>>8);
+//UBRR0L = (unsigned char)ubrr;
+//UBRR0H = (16000000/8/(baud-1)) >> 8;             //set baudrate high bits
+//UBRR0L = 16000000/8/(baud-1);
 
 }
 char getchUSART0(void)

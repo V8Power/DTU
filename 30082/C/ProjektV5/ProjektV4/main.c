@@ -18,7 +18,7 @@
 
 #define F_CPU 16000000UL
 #define BAUD 115200
-#define UBRR ((F_CPU/8/BAUD)-1)
+//#define UBRR ((F_CPU/8/BAUD)-1)
 
 
 //transmit
@@ -98,7 +98,8 @@ int main(void)
 	
 	init_timer();
 	init_ADC();
-	uart_Init(MYUBRRF);
+	//uart_Init(UBRRF);
+	uart_Init(115200);
 	setRecievei();
 	calculateLRC();
 	SPI_init_master(0,0);
@@ -261,14 +262,14 @@ ISR(USART0_RX_vect)
 	
 	static unsigned int i=0;
 	array_receive[i]= UDR0;
-	
-	if ((array_receive[0] == 0x55) && (array_receive[1] == 0xAA) && (i==array_receive[3]))
+	i++;
+	if ((array_receive[0] == 0x55) && (array_receive[1] == 0xAA) && (i==(array_receive[3] )))
 	{
 		receiveflag = 1;
 		i=0;
 	}
 	
-	i++;
+	
 	}
 
 
