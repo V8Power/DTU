@@ -13,7 +13,8 @@ end DivClk;
 
 architecture DivClk_arch of DivClk is
 --constant MaxCnt1: integer:= 14;
-signal Cnt1: integer range 0 to 25000000;  -- 24 bit counter
+--signal Cnt1: integer range 0 to 25000000;  -- 24 bit counter
+signal Cnt1: integer range 0 to 50000000;
 signal Clear1: STD_LOGIC;  
 signal Clk1_D: STD_LOGIC;  
 

@@ -74,7 +74,7 @@ int main (void){
 	uart_init(115200);
 	
 	while (1){
-		if (micros() - prev_cycle_time >= 10000){
+		if (micros() - prev_cycle_time >= 1){
 			prev_cycle_time = micros();
 			
 			
@@ -133,15 +133,19 @@ int main (void){
 			}*/
 			//a++;
 			//SPI_read_data[9] = 0xAA ^ 0xFF ^ 0x21 ^ 0x23 ^ 0x61;
-			if (a > 1){
+			
+			uint8_t spi_out[8] = {0xDC, 0xCA, 0x01, 0xFF, 0xea, 0x98, 0x00};
+				
+			if (a > 8){
 				a = 0;
-				for (int v = 0; v < 10 ; v++){
-					//uart_send_char(SPI_read_data[v]);
-					//uart_send_char(v);
+				for (int v = 0; v < 8 ; v++){
+					PORTB &= ~(1 << PB0);
+					SPI_write(spi_out[v]);
+					PORTB |= (1 << PB0);
 				}
 				
 			}
-			data_ok = 0;
+			/*data_ok = 0;
 			freq = 0;
 			ampl = 0;
 			shape = 0;
@@ -154,7 +158,8 @@ int main (void){
 			uart_send_char(data_ok);
 			uart_send_char(freq);
 			uart_send_char(ampl);
-			uart_send_char(shape);
+			uart_send_char(shape);  */
+			a++;;
 			
 		}
 		
