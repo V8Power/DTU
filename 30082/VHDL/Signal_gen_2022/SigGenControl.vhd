@@ -71,7 +71,7 @@ signal Shape_stat_SPI : std_logic_vector(7 downto 0);
 signal CheckSum : std_logic_vector(7 downto 0);
 signal Pack_count : std_logic_vector(5 downto 0);
 signal Check_ok : std_logic;
-signal ID_ok : std_logic;
+signal ID_ok : std_logic_vector(7 downto 0);
 signal send: std_logic;
 signal tx  : std_logic;
 signal send_data : std_logic_vector(7 downto 0 );
@@ -244,10 +244,9 @@ Stat5 <= '0';
          
      END IF;  
   
-    if ID_ok = '1' then
+    if ID_ok = x"02" then
         Pack_count <= Pack_count + 1;
-    else 
-    Pack_count <= "000000";
+    
     END IF;
     
 
@@ -255,14 +254,14 @@ Stat5 <= '0';
  --if Clk'event and Clk = '1' then
  
   if SHIFTREG_data = x"05" then
-    ID_ok <= '1';
+    ID_ok <= x"01";
     ID <= ShIFTREG_data;
     --Stat1 <= '1';
     --Stat2 <= '0';
     --Stat3 <= '0';
     
     --Stat5 <= '0';
-    
+   
   elsif ((SHIFTREG_data = x"AA") and (send = '0')) then
     Stat4 <= '1';
     --send_data <= x"39";
@@ -279,7 +278,7 @@ Stat5 <= '0';
     --Stat4 <= '1';
   elsif PACK_count = x"4" then
     CheckSum <= SHIFTREG_data;
-    ID_ok <= '0';
+    ID_ok <= x"00";
     if (CheckSum = (ID xor AMP_SPI xor FREQ_SPI xor Shape_stat_SPI)) then
     
         --Stat5 <= '1';
