@@ -56,3 +56,36 @@ WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
 Run output will be captured here: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/project_1/project_1.runs/synth_1/runme.log
 [Wed Jan  4 10:46:59 2023] Launched impl_1...
 Run output will be captured here: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/project_1/project_1.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1225.918 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/lab3top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'test_data'. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/lab3top.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/lab3top.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN5'. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/lab3top.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/lab3top.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/SPITEST/lab3top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1307.590 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1464.281 ; gain = 440.070
+report_power -name {power_1}
+Command: report_power -name power_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+1 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 14 10:00:32 2023...

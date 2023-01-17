@@ -27,9 +27,10 @@ unsigned int length;
 uint8_t button_data;
 uint8_t sw_data;
 
-unsigned int record_length=50;
-unsigned char array_transmit[1007];
-unsigned char array_transmit2[1007]; 
+uint16_t record_length=50;
+uint16_t record_length_tmp=50;
+unsigned char array_transmit[1200];
+unsigned char array_transmit2[1200]; 
 volatile char tx_done=0;
 volatile char control=0;
 
@@ -49,10 +50,13 @@ uint8_t Freq_out = 0;
 
 
 uint16_t sample_rate_raw = 62500;
+uint16_t sample_rate_raw_tmp = 62500;
+uint16_t i=5;
+uint8_t length_raw;
 
 ISR(ADC_vect)
 {	
-	static int i=5;
+	//static int i=5;
 	
 	
 	if (i<(record_length+5) && (control==0))
@@ -117,7 +121,24 @@ int main(void)
 	while (1)
  {
 	
-  
+  if (i < 15){
+	  record_length = record_length_tmp;
+	  sample_rate_raw = sample_rate_raw_tmp;
+	  length=(record_length+7);
+	  
+	  array_transmit[2]=(length>>8);
+	  array_transmit[3]= length;
+	  array_transmit[length-2]=0x00;
+	  //array_transmit[length-1]=calculateLRC(array_receive,length);
+	  array_transmit[length-1]=0x00;
+	  
+	  
+	  array_transmit2[2]= (length>>8);
+	  array_transmit2[3]= length;
+	  array_transmit2[length-2]=0x00;
+	  //array_transmit2[length-1]=calculateLRC(array_receive,length);
+	  array_transmit2[length-1]=0x00;
+  }
 	 if (receiveflag==1 ){
 		 
 		receiveflag=0;
@@ -168,22 +189,22 @@ int main(void)
 			
 			case 0x02: // Oscilloscope data, Send pressed in osc tab, 
 			
-			record_length=((array_receive[7]<<8)|(array_receive[8]));
+			record_length_tmp=((array_receive[7]<<8)|(array_receive[8]));
 			length=(record_length+7);
 			samplerate =((array_receive[5]<<8)|(array_receive[6]));
-			sample_rate_raw = 65536-(250000/samplerate);
+			sample_rate_raw_tmp = 65536-(250000/samplerate);
 			
 				
 				array_transmit[2]=(length>>8);
 				array_transmit[3]= length;
-				array_transmit[length]=0x00;
+				array_transmit[length-2]=0x00;
 				//array_transmit[length-1]=calculateLRC(array_receive,length);
 				array_transmit[length-1]=0x00;
 				
 				
 				array_transmit2[2]= (length>>8);
 				array_transmit2[3]= length;
-				array_transmit2[length]=0x00;
+				array_transmit2[length-2]=0x00;
 				//array_transmit2[length-1]=calculateLRC(array_receive,length);
 				array_transmit2[length-1]=0x00;
 				
@@ -240,9 +261,7 @@ int main(void)
 		putchUSART0(shape);
 		putchUSART0(ampl);
 		putchUSART0(freq);
-		/*putchUSART0(shape_out);
-		putchUSART0(Ampl_out);
-		putchUSART0(Freq_out);*/
+		
 		
 		putchUSART0(0x00);
 		putchUSART0(0x00);

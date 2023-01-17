@@ -16,3 +16,5 @@ save_project_as project_1 C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/
 reset_run impl_1 -prev_step 
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
+open_run synth_1 -name synth_1
+report_power -name {power_1}
