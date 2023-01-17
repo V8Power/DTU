@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="sinusLUT_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1673421172">
+<GenRun Id="sinusLUT_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1673947312">
   <File Type="PA-TCL" Name="sinusLUT.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="sinusLUT_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="sinusLUT_reports.tcl"/>

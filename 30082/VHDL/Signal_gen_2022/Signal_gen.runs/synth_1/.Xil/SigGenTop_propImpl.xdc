@@ -1,6 +1,6 @@
 set_property SRC_FILE_INFO {cfile:C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/lab3top.xdc rfile:../../../lab3top.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W5 [get_ports {Clk}]
+set_property PACKAGE_PIN W5 [get_ports {ClkR}]
 set_property src_info {type:XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN V17 [get_ports {SW[0]}]
 set_property src_info {type:XDC file:1 line:25 export:INPUT save:INPUT read:READ} [current_design]

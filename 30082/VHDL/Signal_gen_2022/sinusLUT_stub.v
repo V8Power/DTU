@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Tue Jan 10 21:23:25 2023
+// Date        : Tue Jan 17 10:22:56 2023
 // Host        : DESKTOP-LOLTF0F running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top sinusLUT -prefix
-//               sinusLUT_ sinusLUT_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               c:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_2022/sinusLUT_stub.v
 // Design      : sinusLUT
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1

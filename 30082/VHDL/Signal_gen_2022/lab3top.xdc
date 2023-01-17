@@ -17,7 +17,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports *]
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {SCK_IBUF}]
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {SS_IBUF}]
 ## Clock signal
-set_property PACKAGE_PIN W5 [get_ports {Clk}]							
+set_property PACKAGE_PIN W5 [get_ports {ClkR}]							
 #--create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
 
 ## Switches

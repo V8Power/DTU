@@ -260,7 +260,7 @@ Stat5 <= '0';
   
  --if Clk'event and Clk = '1' then
  
-  if SHIFTREG_data = x"DC" then
+  if SHIFTREG_data = x"DC" then       --handshake byte0
     ID_ok <= x"01";
     ID <= ShIFTREG_data;
     Pack_count <= x"00";
@@ -270,28 +270,29 @@ Stat5 <= '0';
     
     --Stat5 <= '0';
    
-  elsif ((SHIFTREG_data = x"AA") and (send = '0')) then
+  elsif ((SHIFTREG_data = x"AA") and (send = '0')) then      --command to send data
     Stat4 <= '1';
     --send_data <= x"39";
     send <= '1';
-  elsif (SHIFTREG_data = x"CA") then
+  elsif (SHIFTREG_data = x"CA") then                        --handshake byte1
     ID_ok <= x"02";  
     Pack_count <= x"00";
-  elsif PACK_count = x"1" then
+  elsif PACK_count = x"1" then                      --Aplitude from SPI
     AMP_SPI <= SHIFTREG_data;
     --Stat2 <= '1';
-  elsif PACK_count = x"2" then
+  elsif PACK_count = x"2" then               --Frequency from SPI
     FREQ_SPI <= SHIFTREG_data;
     --Stat3 <= '1';
-  elsif PACK_count = x"3" then
+  elsif PACK_count = x"3" then                --Shape and status in single var
     Shape_stat_SPI <= SHIFTREG_data;
     --Stat4 <= '1';
-  elsif PACK_count = x"4" then
+  elsif PACK_count = x"4" then                   --check checksum and reset flags
     CheckSum <= SHIFTREG_data;
     ID_ok <= x"00";
     if (CheckSum = (ID xor AMP_SPI xor FREQ_SPI xor Shape_stat_SPI)) then
-    
+        Check_ok <= '1';
         --send_data <= Checksum;
+        
     END IF;
     --Stat1 <= '0';
     

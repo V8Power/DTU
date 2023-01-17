@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date                      : Thu Jan 12 23:44:22 2023
+| Date                      : Tue Jan 17 10:24:24 2023
 | Host                      : DESKTOP-LOLTF0F running 64-bit major release  (build 9200)
 | Command                   : report_io -file SigGenTop_io_placed.rpt
 | Design                    : SigGenTop
@@ -258,7 +258,7 @@ Table of Contents
 | W2         |                 | High Range | IO_L5N_T0_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W3         |                 | High Range | IO_L6N_T0_VREF_34            | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W4         | An[3]           | High Range | IO_L12N_T1_MRCC_34           | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| W5         | Clk             | High Range | IO_L12P_T1_MRCC_34           | INPUT         | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| W5         | ClkR            | High Range | IO_L12P_T1_MRCC_34           | INPUT         | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | W6         | Cat[1]          | High Range | IO_L13N_T2_MRCC_34           | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | W7         | Cat[0]          | High Range | IO_L13P_T2_MRCC_34           | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | W8         |                 | Dedicated  | TDO_0                        | Config        |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
