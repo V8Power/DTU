@@ -268,7 +268,12 @@ int main(void)
 			   putchUSART1(ampl);
 			   putchUSART1(freq);
 			   
-			   check = 0x55 ^ 0xAA ^ 0x00 ^ 0x0B ^ 0x01 ^ indicator ^ shape ^ ampl ^ freq;
+			   if (data_ok != 0x37000000){
+			   check = 0x55 ^ 0xAA ^ 0x00 ^ 0x0B ^ 0x01 ^ indicator ^ shape ^ ampl ^ freq;  //spi checksum ok, calculate correctly.
+			   }
+			   else {
+				  check = 0x55 ^ 0xAA ^ 0x00 ^ 0x0B ^ 0x01 ^ indicator & shape & ampl & freq;   //SPI Checksum not ok, miscalculate
+			   }
 			   putchUSART1(0x00);
 			   putchUSART1(check);
 			   //putchUSART1(0x00);

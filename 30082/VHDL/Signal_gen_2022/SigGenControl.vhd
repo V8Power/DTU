@@ -87,10 +87,10 @@ ShapeReg: process (Reset, Clk)
 begin
   if Reset = '1' then Shape <= "00000000";
   elsif Clk'event and Clk = '1' then
-    if ShapeEn = '1' then
+    if ShapeEn = '1' then    --enter button on FPGA pressed
       Shape <= SW(7 downto 0);
     else 
-        Shape <= "0000" & Shape_stat_SPI(3 downto 0);
+        Shape <= "0000" & Shape_stat_SPI(2 downto 0);   --4bit from shape_stat read. Corrsponds to data from arduino.
     end if;
   end if;
 end process;
@@ -191,7 +191,7 @@ begin
 		end if;
 
   end case;
-  SigEN <= shape_stat_SPI(7);
+  SigEN <= shape_stat_SPI(7);   --enable signal generator ignores button data
 end process;
 PROCESS (SCK, MOSI, SS, SCK2, send, SS2, SHIFTREG_data, send_data, send_buffer, send_count, SHIFTREG)
 
@@ -208,27 +208,19 @@ if (SCK'event and SCK = '1') then
             
         END IF;
     END IF;
-    if falling_edge(SCK) then
-     --send_data <= SHIFTREG;
-        
-        
-        IF (SS = '0') THEN    
-        
-        
-            send_count <= send_count -1;
-        END IF;
-    END IF;  
+if falling_edge(SCK) then   --falling edge, setup data here
+    IF (SS = '0') THEN    --only is SS is actually LOW
+    send_count <= send_count -1;   --count down from 7 to 0
+    END IF;
+END IF;  
 
-if SS = '0' then
-    MISO <=   send_buffer(send_count);
-    Stat1 <= '1';
+if SS = '0' then   --async when ever ss is LOW
+    MISO <=   send_buffer(send_count); --data setup
+    Stat1 <= '1';    --debug LED
 END IF;
-if SS = '1' then 
-    --MISO <= '1';
-    send_count <= 7;
-    --SHIFTREG_data <= SHIFTREG; 
-    --SHIFTREG_out <= Shiftreg_data;
-    Stat1 <= '0';
+if SS = '1' then      --SS HIGH, inactive
+    send_count <= 7;  --reset send index
+    Stat1 <= '0';     --debug LED
 END IF;
 end process;
 
@@ -334,7 +326,7 @@ END IF;
   SHIFTREG_out <= sent_packets;
   stat3 <= send;
  
-SS2 <= SS;
+
    END PROCESS;
        
 
