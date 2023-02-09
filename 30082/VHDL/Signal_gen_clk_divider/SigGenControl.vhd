@@ -39,7 +39,7 @@ entity SigGenControl is
          SS     : in std_logic; 
          SCK    : in std_logic;
          SCK2    : in std_logic;
-         SHIFTREG_out: out std_logic_vector(7 downto 0);
+         SHIFTREG_out: out std_logic_vector(7 downto 0);   --debug
          Stat1 : out std_logic;
          Stat2 : out std_logic;
          Stat3 : out std_logic;
@@ -79,7 +79,7 @@ signal send_count : natural;
 signal sent_packets : std_logic_vector(7 downto 0 );
 signal send_buffer : std_logic_vector(7 downto 0);
 
-signal SS2: std_logic;
+
 
 begin
 
@@ -193,7 +193,7 @@ begin
   end case;
   SigEN <= shape_stat_SPI(7);
 end process;
-PROCESS (SCK, MOSI, SS, SCK2, send, SS2, SHIFTREG_data, send_data, send_buffer, send_count, SHIFTREG)
+PROCESS (SCK, MOSI, SS, SCK2, send,  SHIFTREG_data, send_data, send_buffer, send_count, SHIFTREG)
 
 BEGIN
 --send_data <= x"A1";
@@ -233,7 +233,7 @@ END IF;
 end process;
 
 
-PROCESS (SCK, MOSI, SS, SCK2,  SS2, sent_packets, send, Clk,  SHIFTREG_data, send_data, send_buffer, Freq, Ampl, Shape)
+PROCESS (SCK, MOSI, SS, SCK2,   sent_packets, send, Clk,  SHIFTREG_data, send_data, send_buffer, Freq, Ampl, Shape)
 
 BEGIN
 
@@ -246,7 +246,7 @@ Stat5 <= '0';
 --Stat2 <= '0';
 
 --END IF;
-     if (send = '1' ) then
+     if (send = '1' ) then       
             sent_packets <= sent_packets + "1";
          
      END IF;  
@@ -263,19 +263,20 @@ Stat5 <= '0';
   if SHIFTREG_data = x"DC" then       --handshake byte0
     ID_ok <= x"01";
     ID <= ShIFTREG_data;
-    Pack_count <= x"00";
+    --Pack_count <= x"00";
     --Stat1 <= '1';
     --Stat2 <= '0';
     --Stat3 <= '0';
     
     --Stat5 <= '0';
    
-  elsif ((SHIFTREG_data = x"AA") and (send = '0')) then      --command to send data
+  elsif ((SHIFTREG_data = x"AA") and (send = '0') and (ID_ok = x"00")) then      --command to send data
     Stat4 <= '1';
     --send_data <= x"39";
     send <= '1';
-  elsif (SHIFTREG_data = x"CA") then                        --handshake byte1
-    ID_ok <= x"02";  
+  elsif (SHIFTREG_data = x"CA" and ID_ok = x"02") then                        --handshake byte1
+    --ID_ok <= x"02";
+    ID_ok <= ID_ok + 1;  
     Pack_count <= x"00";
   elsif PACK_count = x"1" then                      --Aplitude from SPI
     AMP_SPI <= SHIFTREG_data;
@@ -292,33 +293,34 @@ Stat5 <= '0';
     if (CheckSum = (ID xor AMP_SPI xor FREQ_SPI xor Shape_stat_SPI)) then
         Check_ok <= '1';
         --send_data <= Checksum;
-        
+    else 
+    Check_ok <= '0'; 
     END IF;
     --Stat1 <= '0';
     
   END IF;
 if send = '1' then
-    if sent_packets = x"00" then
-        send_data <= x"AA";
+    if sent_packets = x"00" then    --send byte 1
+        send_data <= x"AA";      --sync byte 1
         
         
  
-    elsif sent_packets = x"01" then
-        send_data <= x"FF";
-    elsif sent_packets = x"02" then
-        send_data <= Freq;
+    elsif sent_packets = x"01" then    --send byte 2
+        send_data <= x"FF";             --sync byte 2
+    elsif sent_packets = x"02" then   --send byte 3
+        send_data <= Freq;                --data
         --elsif sent_packets = x"03" then
         --send_data <= Freq;
-    elsif sent_packets = x"03" then
-        send_data <= Shape;
-    elsif sent_packets = x"04" then
-        send_data <= Ampl;
+    elsif sent_packets = x"03" then   --send byte 4
+        send_data <= Shape;          --data
+    elsif sent_packets = x"04" then    --send byte 5
+        send_data <= Ampl;                 --data
         
-    elsif sent_packets = x"05" then 
-        send_data <= (x"AA" xor x"FF" xor Freq xor Ampl xor Shape);
+    elsif sent_packets = x"05" then   --send byte 5
+        send_data <= (x"AA" xor x"FF" xor Freq xor Ampl xor Shape);       --calculated xor8 checksum
         
     else
-        send <= '0';
+        send <= '0';                        --reset all related flags and set data to geenric output
         sent_packets <= x"00";
         send_data <= x"00";
         Stat4 <= '0';
@@ -330,10 +332,10 @@ END IF;
 END IF;
   --SHIFTREG_out (5 downto 0)<= Pack_count;
   --SHIFTREG_out <= send_data;
-  SHIFTREG_out <= sent_packets;
-  stat3 <= send;
+  SHIFTREG_out <= sent_packets;  --debug
+  stat3 <= send;      --debug
  
-SS2 <= SS;
+
    END PROCESS;
        
 

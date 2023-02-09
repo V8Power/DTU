@@ -1631,3 +1631,238 @@ selectButton("OptionPane.button", "OK"); // JButton (v, B)
 // WARNING: HEventQueue.dispatchEvent() is taking  55201419 ms.
 // WARNING: HEventQueue.dispatchEvent() is taking  1755 ms.
 // HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/17/23, 9:39:32 AM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1338 ms.
+// Elapsed time: 63329 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (n)
+dismissDialog("Close Hardware Target"); // n (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/17/23, 12:40:50 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1434 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10910 seconds
+selectCodeEditor("SigGenControl.vhd", 979, 7); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 381, 133); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 274, 113); // bP (w, cs)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+// PAResourceOtoP.PAViews_CODE: Code: close view
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SigGenTop(Behavioral) (SigGenTop.vhd), U1 : SigGenControl(Behavioral) (SigGenControl.vhd)]", 4, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SigGenTop(Behavioral) (SigGenTop.vhd), U1 : SigGenControl(Behavioral) (SigGenControl.vhd)]", 4, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SigGenTop(Behavioral) (SigGenTop.vhd), U1 : SigGenControl(Behavioral) (SigGenControl.vhd)]", 4, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SigGenTop(Behavioral) (SigGenTop.vhd), U1 : SigGenControl(Behavioral) (SigGenControl.vhd)]", 4, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SigGenTop(Behavioral) (SigGenTop.vhd), U1 : SigGenControl(Behavioral) (SigGenControl.vhd)]", 4, true); // B (F, cs) - Node
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 43 seconds
+selectCodeEditor("SigGenControl.vhd", 645, 162); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 368, 97); // bP (w, cs)
+// PAResourceOtoP.PAViews_CODE: Code: close view
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SigGenTop(Behavioral) (SigGenTop.vhd), U1 : SigGenControl(Behavioral) (SigGenControl.vhd)]", 4, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SigGenTop(Behavioral) (SigGenTop.vhd), U1 : SigGenControl(Behavioral) (SigGenControl.vhd)]", 4, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// PAResourceOtoP.PAViews_CODE: Code: close view
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SigGenTop(Behavioral) (SigGenTop.vhd), U1 : SigGenControl(Behavioral) (SigGenControl.vhd)]", 4, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SigGenTop(Behavioral) (SigGenTop.vhd), U1 : SigGenControl(Behavioral) (SigGenControl.vhd)]", 4, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Elapsed time: 12 seconds
+selectCodeEditor("SigGenControl.vhd", 1, 219); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'c'); // bP (w, cs)
+// [GUI Memory]: 159 MB (+3845kb) [26:48:56]
+// Elapsed time: 1046 seconds
+selectCodeEditor("SigGenControl.vhd", 1509, 865); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 105 MB. Current time: 1/17/23, 1:10:54 PM CET
+// Elapsed time: 841 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ss2"); // l (au, cs)
+selectCodeEditor("SigGenControl.vhd", 358, 290); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 314, 1128); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 113, 1117); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 218, 37); // bP (w, cs)
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (am, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 104 MB. Current time: 1/17/23, 1:40:54 PM CET
+// Elapsed time: 1687 seconds
+selectCodeEditor("SigGenControl.vhd", 35, 554); // bP (w, cs)
+// Elapsed time: 351 seconds
+selectCodeEditor("SigGenControl.vhd", 39, 557); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 56, 560); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 548, 603); // bP (w, cs)
+// Elapsed time: 38 seconds
+selectCodeEditor("SigGenControl.vhd", 270, 535); // bP (w, cs)
+// Elapsed time: 38 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// A (cs): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Project"); // am (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bz (cs)
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Jan 17 13:56:33 2023] Launched synth_1... Run output will be captured here: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_clk_divider/Signal_gen.runs/synth_1/runme.log [Tue Jan 17 13:56:33 2023] Launched impl_1... Run output will be captured here: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_clk_divider/Signal_gen.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 104 MB. Current time: 1/17/23, 2:10:54 PM CET
+// Elapsed time: 1123 seconds
+selectCodeEditor("SigGenControl.vhd", 67, 941); // bP (w, cs)
+// Elapsed time: 19 seconds
+selectCodeEditor("SigGenControl.vhd", 286, 981); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 117, 962); // bP (w, cs)
+// Elapsed time: 529 seconds
+selectCodeEditor("SigGenControl.vhd", 294, 943); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 272, 967); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 267, 961); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 104 MB. Current time: 1/17/23, 2:40:55 PM CET
+// Elapsed time: 1202 seconds
+selectCodeEditor("SigGenControl.vhd", 106, 623); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 491, 770); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 32, 723); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'c'); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 104 MB. Current time: 1/17/23, 3:10:55 PM CET
+// Elapsed time: 1579 seconds
+selectCodeEditor("SigGenControl.vhd", 375, 189); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 413, 310); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 387, 194); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 355, 300); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 377, 340); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 373, 314); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 374, 312); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 409, 306); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 413, 305); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 342, 201); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 361, 350); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 345, 349); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 402, 420); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 376, 477); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 374, 534); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 463, 438); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 482, 479); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 474, 532); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("SigGenControl.vhd", 312, 226); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 292, 223); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 374, 325); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 379, 372); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 381, 373); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 374, 448); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 345, 498); // bP (w, cs)
+typeControlKey((HResource) null, "SigGenControl.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("SigGenControl.vhd", 622, 566); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("SigGenControl.vhd", 621, 623); // bP (w, cs)
+// WARNING: HEventQueue.dispatchEvent() is taking  1335 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/17/23, 3:50:02 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1493 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1667 ms. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1255 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/17/23, 4:29:36 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1235 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/17/23, 7:19:39 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1275 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1388 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/17/23, 8:06:11 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1357 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/17/23, 8:41:26 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  14324620 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 12:42:13 AM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  173953 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1342 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1742 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 83 MB. Current time: 1/18/23, 11:02:41 AM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  298806 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  7836831 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 1:26:55 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 1:56:54 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 2:26:55 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 2:56:55 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 3:26:55 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 3:56:56 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 4:26:56 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 4:56:56 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 5:26:57 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 5:56:57 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  2246360 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1335ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1359 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 6:56:21 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 7:26:25 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 7:56:25 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 8:26:25 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 8:56:25 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 9:26:26 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 9:56:26 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 10:26:26 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 10:56:31 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/18/23, 11:26:31 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 83 MB. Current time: 1/18/23, 11:56:31 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/19/23, 12:26:32 AM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  35086410 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 2844ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2846 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2837 ms. Increasing delay to 5000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/19/23, 10:33:58 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/19/23, 11:04:01 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/19/23, 11:34:01 AM CET
+// Elapsed time: 159768 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // K (aI, cs)
+floatFrame(PAResourceOtoP.PAViews_CODE, "SigGenControl.vhd *"); // aA (aL, cs)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "SigGenControl.vhd *"); // aA (aL, aN)
+// Elapsed time: 17 seconds
+selectCodeEditor("SigGenControl.vhd", 551, 574); // bP (w, aN)
+// Elapsed time: 827 seconds
+selectCodeEditor("SigGenControl.vhd", 1127, 360); // bP (w, aN)
+// WARNING: HEventQueue.dispatchEvent() is taking  81969543 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 83 MB. Current time: 1/20/23, 10:43:33 AM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  4734100 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/20/23, 12:03:19 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1744 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  10277196 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/20/23, 2:58:30 PM CET
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6918 ms. Increasing delay to 20754 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6 ms. Decreasing delay to 2006 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 9584 ms. Increasing delay to 28752 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 17 ms. Decreasing delay to 2017 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 82 MB. Current time: 1/20/23, 3:28:31 PM CET
+// Elapsed time: 100650 seconds
+closeMainWindow("Signal_gen - [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_clk_divider/Signal_gen.xpr] - Vivado 2020.1"); // cs
+// Run Command: PAResourceCommand.PACommandNames_EXIT
+// am (aN): Save Project: addNotify

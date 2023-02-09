@@ -269,3 +269,10 @@ INFO: [Labtoolstcl 44-377] Flash programming completed successfully
 program_hw_cfgmem: Time (s): cpu = 00:00:00 ; elapsed = 00:00:52 . Memory (MB): peak = 2915.082 ; gain = 0.000
 endgroup
 ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AFD02DA
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Jan 17 13:56:33 2023] Launched synth_1...
+Run output will be captured here: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_clk_divider/Signal_gen.runs/synth_1/runme.log
+[Tue Jan 17 13:56:33 2023] Launched impl_1...
+Run output will be captured here: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/30082/VHDL/Signal_gen_clk_divider/Signal_gen.runs/impl_1/runme.log
+exit
