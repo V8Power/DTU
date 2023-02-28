@@ -1,0 +1,15 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.srcs/sim_1/new/alu_tb.v,1677165361,vhdl,,,,alu_tb,,,,,,,,
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.srcs/sim_1/new/mux4Testbench.vhd,1677159659,vhdl,,,,mux_16x1_rev2_tb,,,,,,,,
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.srcs/sim_1/new/testbaench_adder.vhd,1677154859,vhdl,,,,full_adder_tb,,,,,,,,
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.srcs/sources_1/new/2_input_mux.vhd,1676539006,vhdl,,,,mux_2x1,,,,,,,,
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.srcs/sources_1/new/ALU.vhd,1677165325,vhdl,,,,alu,,,,,,,,
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.srcs/sources_1/new/MUX16to1.vhd,1677160001,vhdl,,,,mux_16x1_rev2,,,,,,,,
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.srcs/sources_1/new/Top_project1.v,1675332338,verilog,,,,Top_project1,,,,,,,,
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.srcs/sources_1/new/full_add.vhd,1677144292,vhdl,,,,full_add,,,,,,,,
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.srcs/sources_1/new/full_adder.vhd,1677163606,vhdl,,,,full_adder,,,,,,,,
+C:/Users/felix/Documents/DTU/62711_Digital_systems_design/project1/project_1/project_1.srcs/sources_1/new/mux4to1.vhd,1677158494,vhdl,,,,input_4mux,,,,,,,,
