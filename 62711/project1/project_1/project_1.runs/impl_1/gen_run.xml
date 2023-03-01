@@ -15,7 +15,6 @@
   <File Type="BITSTR-SYSDEF" Name="full_adder.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="full_adder.ltx"/>
-  <File Type="RCFI_FILE" Name="full_adder.rcfi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-HWDEF" Name="full_adder.hwdef"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="full_adder_incremental_reuse_pre_placed.rpt"/>
@@ -31,6 +30,7 @@
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="full_adder_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="full_adder_postroute_physopt_bb.dcp"/>
   <File Type="PDI-FILE" Name="full_adder.pdi"/>
+  <File Type="RCFI_FILE" Name="full_adder.rcfi"/>
   <File Type="CFI_FILE" Name="full_adder.cfi"/>
   <File Type="RNPI_FILE" Name="full_adder.rnpi"/>
   <File Type="NPI_FILE" Name="full_adder.npi"/>
