@@ -3,86 +3,53 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="ALU_tb_behav.wdb" id="1">
+      <db_ref path="FU_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="ALU_tb" />
+            <top_module name="FU_tb" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="146.048 ns"></ZoomEndTime>
-      <Cursor1Time time="46.571 ns"></Cursor1Time>
+      <ZoomEndTime time="271.608 ns"></ZoomEndTime>
+      <Cursor1Time time="44.400 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="340"></NameColumnWidth>
-      <ValueColumnWidth column_width="115"></ValueColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
-   <wvobject fp_name="/ALU_tb/FS" type="array">
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/FU_tb/FS" type="array">
       <obj_property name="ElementShortName">FS[3:0]</obj_property>
       <obj_property name="ObjectShortName">FS[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/ALU_tb/A" type="array">
+   <wvobject fp_name="/FU_tb/A" type="array">
       <obj_property name="ElementShortName">A[7:0]</obj_property>
       <obj_property name="ObjectShortName">A[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/ALU_tb/B" type="array">
+   <wvobject fp_name="/FU_tb/B" type="array">
       <obj_property name="ElementShortName">B[7:0]</obj_property>
       <obj_property name="ObjectShortName">B[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/ALU_tb/R" type="array">
+   <wvobject fp_name="/FU_tb/R" type="array">
       <obj_property name="ElementShortName">R[7:0]</obj_property>
       <obj_property name="ObjectShortName">R[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/ALU_tb/V" type="logic">
+   <wvobject fp_name="/FU_tb/V" type="logic">
       <obj_property name="ElementShortName">V</obj_property>
       <obj_property name="ObjectShortName">V</obj_property>
    </wvobject>
-   <wvobject fp_name="/ALU_tb/C" type="logic">
+   <wvobject fp_name="/FU_tb/C" type="logic">
       <obj_property name="ElementShortName">C</obj_property>
       <obj_property name="ObjectShortName">C</obj_property>
    </wvobject>
-   <wvobject fp_name="/ALU_tb/N" type="logic">
+   <wvobject fp_name="/FU_tb/N" type="logic">
       <obj_property name="ElementShortName">N</obj_property>
       <obj_property name="ObjectShortName">N</obj_property>
    </wvobject>
-   <wvobject fp_name="/ALU_tb/Z" type="logic">
+   <wvobject fp_name="/FU_tb/Z" type="logic">
       <obj_property name="ElementShortName">Z</obj_property>
       <obj_property name="ObjectShortName">Z</obj_property>
-   </wvobject>
-   <wvobject fp_name="/ALU_tb/uut/B_enable" type="logic">
-      <obj_property name="ElementShortName">B_enable</obj_property>
-      <obj_property name="ObjectShortName">B_enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/ALU_tb/uut/Sub" type="logic">
-      <obj_property name="ElementShortName">Sub</obj_property>
-      <obj_property name="ObjectShortName">Sub</obj_property>
-   </wvobject>
-   <wvobject fp_name="/ALU_tb/uut/Carry_in" type="logic">
-      <obj_property name="ElementShortName">Carry_in</obj_property>
-      <obj_property name="ObjectShortName">Carry_in</obj_property>
-   </wvobject>
-   <wvobject fp_name="/ALU_tb/uut/A0/cc" type="array">
-      <obj_property name="ElementShortName">cc[7:0]</obj_property>
-      <obj_property name="ObjectShortName">cc[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/ALU_tb/uut/A0/A_in" type="array">
-      <obj_property name="ElementShortName">A_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">A_in[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/ALU_tb/uut/A0/B_in" type="array">
-      <obj_property name="ElementShortName">B_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">B_in[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/ALU_tb/uut/A0/D_out" type="array">
-      <obj_property name="ElementShortName">D_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">D_out[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/ALU_tb/uut/A0/C_in" type="logic">
-      <obj_property name="ElementShortName">C_in</obj_property>
-      <obj_property name="ObjectShortName">C_in</obj_property>
    </wvobject>
 </wave_config>

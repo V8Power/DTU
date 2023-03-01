@@ -52,13 +52,7 @@ Port (
         Sub : in std_logic );
 end component;
 
-component mux_2x1_8bit is
-    
-    Port ( Ad, Bd : in STD_LOGIC_VECTOR (7 downto 0);
-       
-           Y : out STD_LOGIC_VECTOR (7 downto 0);
-           S : in std_logic );
-end component;
+
 
 signal B_enable, Carry_in, C_out1, Sub: std_logic; 
 signal alu_B, alu_out: std_logic_vector(7 downto 0);
@@ -68,13 +62,15 @@ A0: full_adder port map(A,alu_B, alu_out, Carry_in, C_out1, Sub );
 
 E: for i in 0 to 7 generate
 D: alu_B(i) <= B(i) and B_enable;
-E: R(i) <= alu_out(i) and (not FS(3));
+    --ALU is output                                  --instruction 8   or                                                 --instruction 9  and                                                --instruction 10   xor                                       -- instruction 11    not A
+E: R(i) <= (alu_out(i) and (not FS(3)))        or     (FS(3) and (not FS(1)) and (not FS(0)) and (A(i) or B(i)))       or      (FS(3) and (not  FS(1)) and FS(0) and (A(i) and B(i)))       or     (FS(3) and  FS(1) and (not FS(0)) and (A(i) xor B(i)))      or      (FS(3) and FS(1) and FS(0) and  (not A(i)));
+
 end generate;
 
 
 
---Carry_in <= ((not FS(3)) and (not FS(2))); -- and FS(0)) or FS(2);  --and (not FS(1))
-Carry_in <= ((not FS(2)) and FS(0)) or (FS(2) and (not FS(0)));
+Carry_in <=FS(0);
+--Carry_in <= ((not FS(2)) and FS(0)) or (FS(2) and (not FS(0)));
 B_enable <=  ((not FS(2)) and FS(1)) or (FS(2) and (not FS(1)));
 Sub <= FS(2);
 

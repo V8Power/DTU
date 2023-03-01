@@ -6,12 +6,12 @@ library IEEE;
 use IEEE.Std_logic_1164.all;
 use IEEE.Numeric_Std.all;
 
-entity ALU_tb is
+entity FU_tb is
 end;
 
-architecture bench of ALU_tb is
+architecture bench of FU_tb is
 
-  component ALU
+  component FU
   Port (
       FS: in std_logic_vector(3 downto 0);
       A, B: in std_logic_vector(7 downto 0);
@@ -27,21 +27,21 @@ architecture bench of ALU_tb is
 
 begin
 
-  uut: ALU port map ( FS => FS,
-                      A  => A,
-                      B  => B,
-                      R  => R,
-                      V  => V,
-                      C  => C,
-                      N  => N,
-                      Z  => Z );
+  uut: FU port map ( FS => FS,
+                     A  => A,
+                     B  => B,
+                     R  => R,
+                     V  => V,
+                     C  => C,
+                     N  => N,
+                     Z  => Z );
 
   stimulus: process
   begin
   
     -- Put initialisation code here
 
-A<= x"A3";
+        A<= x"33";
     B<= x"A0";
     FS <= x"0";
     wait for 10ns;
@@ -60,7 +60,21 @@ A<= x"A3";
     FS<= x"7";
     wait for 10ns;  
     FS<= x"8";
-    wait for 10ns;   
+    wait for 10ns; 
+    FS<= x"9";
+    wait for 10ns; 
+    FS<= x"A";
+    wait for 10ns; 
+    FS<= x"B";
+    wait for 10ns; 
+    FS<= x"C";
+    wait for 10ns; 
+    FS<= x"D";
+    wait for 10ns; 
+    FS<= x"E";
+    wait for 10ns; 
+    FS<= x"F";
+    wait for 10ns;
     -- Put test bench stimulus code here
 
     wait;
