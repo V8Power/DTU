@@ -71,6 +71,6 @@ MUX : for i in 0 to 7 generate
  A122:   mux_16x1_rev2 port map(R0(i),R1(i), R2(i), R3(i), R4(i), R5(i), R6(i), R7(i), R8(i), R9(i), R10(i), R11(i), R12(i), R13(i), R14(i),R15(i), BA , B_data(i));
     
 end generate;
-    Reg: registerR16 port map (Reset, clk, load, D_data, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15);
+    Reg: registerR16 port map (Reset, clk, load, D_data, R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15);
     Dec: Decoder_4to16 port map (DA, RW, load);
 end Behavioral;
