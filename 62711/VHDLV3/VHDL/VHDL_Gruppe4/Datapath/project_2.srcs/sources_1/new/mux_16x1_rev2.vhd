@@ -24,7 +24,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity mux_16x1_rev2 is
 
-    Port ( M0, M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15 : in STD_LOGIC;
+    Port ( 
+    M0, M1, M2, M3, M4, M5, M6, M7: in STD_LOGIC;
+    M8, M9, M10, M11, M12, M13, M14, M15 : in STD_LOGIC;
            S : in STD_LOGIC_VECTOR (3 downto 0);
            Y : out STD_LOGIC);
 end mux_16x1_rev2;
