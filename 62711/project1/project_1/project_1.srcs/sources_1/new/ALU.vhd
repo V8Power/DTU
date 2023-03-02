@@ -58,7 +58,7 @@ signal B_enable, Carry_in, C_out1, Sub: std_logic;
 signal alu_B, alu_out: std_logic_vector(7 downto 0);
 begin
 A0: full_adder port map(A,alu_B, alu_out, Carry_in, C_out1, Sub );
---M11: mux_2x1_8bit port map(x"00", B, alu_B, B_enable);
+
 
 E: for i in 0 to 7 generate
 D: alu_B(i) <= B(i) and B_enable;
