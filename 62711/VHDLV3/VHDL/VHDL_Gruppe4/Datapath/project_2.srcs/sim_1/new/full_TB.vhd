@@ -26,9 +26,6 @@ architecture bench of Black_box_datapath_tb is
   signal Reset, clk, RW, MB, MD: std_logic;
   signal ADDR_out, D_out: std_logic_vector(7 downto 0 );
   signal V, C, N, Z: std_logic ;
-  
-   constant clk_period : time:= 10 ns;
-  signal endtest: std_logic:= '0';
 
 begin
 
@@ -50,22 +47,12 @@ begin
                                      N        => N,
                                      Z        => Z );
 
-
-clock: process
-        begin
-        while endtest='0'  loop
-            clk<='0';
-            wait for clk_period/2;
-            clk<='1';
-            wait for clk_period/2;
-            end loop;
-            wait;
-        end process;
   stimulus: process
   begin
   
     -- Put initialisation code here
-    Reset <= '1';
+
+Reset <= '1';
     wait for 10ns;
     Reset <= '0';
     wait for 10ns;
@@ -89,7 +76,6 @@ clock: process
     RW <= '1';
     wait for 10ns;
     RW <= '0';
-
     -- Put test bench stimulus code here
 
     wait;
@@ -97,4 +83,3 @@ clock: process
 
 
 end;
-  

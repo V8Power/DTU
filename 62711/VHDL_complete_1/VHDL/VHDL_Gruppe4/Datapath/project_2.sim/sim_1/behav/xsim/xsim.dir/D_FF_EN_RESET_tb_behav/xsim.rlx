@@ -1,0 +1,12 @@
+
+{ 
+    crc :  6641500842570736710  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot D_FF_EN_RESET_tb_behav xil_defaultlib.D_FF_EN_RESET_tb" , 
+    buildDate : "Jun 14 2018" , 
+    buildTime : "20:07:38" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/D_FF_EN_RESET_tb_behav/xsimk\"   \"xsim.dir/D_FF_EN_RESET_tb_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/D_FF_EN_RESET_tb_behav/obj/xsim_1.lnx64.o\" \"/opt/Xilinx/Vivado/2018.2/lib/lnx64.o/librdi_simulator_kernel.so\"  \"/opt/Xilinx/Vivado/2018.2/lib/lnx64.o/librdi_simbridge_kernel.so\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

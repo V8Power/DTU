@@ -1,0 +1,58 @@
+
+*** Running vivado
+    with args -log Black_box_datapath.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Black_box_datapath.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Black_box_datapath.tcl -notrace
+Command: synth_design -top Black_box_datapath -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16696
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1829.227 ; gain = 408.750
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-9871] overwriting existing primary unit 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13]
+INFO: [Synth 8-638] synthesizing module 'Black_box_datapath' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Black_box_datapath.vhd:44]
+INFO: [Synth 8-3491] module 'top_module_RF' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:25' bound to instance 'Reg16' of component 'top_module_RF' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Black_box_datapath.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'top_module_RF' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:36]
+WARNING: [Synth 8-5640] Port 'i' is missing in component declaration [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:38]
+WARNING: [Synth 8-5640] Port 'debug' is missing in component declaration [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:38]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm0' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm1' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm3' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm4' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm5' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm6' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm7' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm8' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm9' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm10' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm11' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm12' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm13' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm14' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-3493] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13' does not have matching formal port for component port 'm15' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:72]
+ERROR: [Synth 8-285] failed synthesizing module 'top_module_RF' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:36]
+ERROR: [Synth 8-285] failed synthesizing module 'Black_box_datapath' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Black_box_datapath.vhd:44]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1921.074 ; gain = 500.598
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 2 Warnings, 1 Critical Warnings and 19 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  2 21:22:13 2023...

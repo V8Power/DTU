@@ -1,0 +1,14 @@
+<<<<<<< HEAD:62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xsim.dir/Black_box_datapath_tb_behav/xsimkernel.log
+Running: xsim.dir/Black_box_datapath_tb_behav/xsimk.exe -simmode gui -wdb Black_box_datapath_tb_behav.wdb -simrunnum 0 -socket 55846
+Design successfully loaded
+Design Loading Memory Usage: 6320 KB (Peak: 6320 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 7112 KB (Peak: 7112 KB)
+Simulation CPU Usage: 62 ms
+=======
+Running: xsim.dir/Black_box_datapath_tb_behav/xsimk.exe -simmode gui -wdb Black_box_datapath_tb_behav.wdb -simrunnum 0 -socket 57161
+Design successfully loaded
+Design Loading Memory Usage: 7420 KB (Peak: 7420 KB)
+Design Loading CPU Usage: 15 ms
+>>>>>>> a440d7e963381e3b003136e4899446b3c35b2521:62711/PWA_final/PWA_final.sim/sim_1/behav/xsim/xsim.dir/Black_box_datapath_tb_behav/xsimkernel.log

@@ -1,281 +1,260 @@
 #-----------------------------------------------------------
-# Vivado v2020.1 (64-bit)
-# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Mar  2 13:59:31 2023
-# Process ID: 15604
-# Current directory: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26792 C:\Users\felix\Documents\DTU\62711_Digital_systems_design\Git\DTU\62711\VHDLV3\VHDL\VHDL_Gruppe4\Datapath\project_2.xpr
-# Log file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/vivado.log
-# Journal file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath\vivado.jou
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Mar  2 20:56:01 2023
+# Process ID: 34508
+# Current directory: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32048 C:\Users\felix\Documents\DTU\30082_project_jan_23\Git\DTU\62711\VHDLV3\VHDL\VHDL_Gruppe4\Datapath\project_2.xpr
+# Log file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/vivado.log
+# Journal file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath\vivado.jou
+# Running On: DESKTOP-LOLTF0F, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 16, Host memory: 34018 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.xpr
+open_project C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.xpr
 INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
-Current project path is 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath'
-INFO: [Project 1-313] Project file moved from '/home/mcgregor/Documents/DTU/3_semester/Digitale_systemer/GitHub_repo/DTU/62711/VHDL/VHDL_Gruppe4/Datapath' since last save.
+Current project path is 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath'
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [Project 1-230] Project 'project_2.xpr' upgraded for this version of Vivado.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2020.1/data/ip'.
-open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1034.746 ; gain = 0.000
-set_property top top_module_RF [current_fileset]
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 1775.645 ; gain = 315.508
+upgrade_project -migrate_output_products
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'mux_16x1_rev2_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj mux_16x1_rev2_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_2to4.vhd" into library xil_defaultlib
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/Top_project1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_2to4.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Decoder_2to4'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Decoder_4to16'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'D_FF_EN_RESET'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/registerR16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/registerR16.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'registerR16'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_input_mux.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'mux_2x1'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1_rev2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1_rev2.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'mux_16x1_rev2'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/4_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/4_input_mux.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'top_module_RF'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/MUX16_1_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/function_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/2_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux2to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_2mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/Shifter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Shifter'
+INFO: [VRFC 10-3107] analyzing entity 'Shift_R'
+INFO: [VRFC 10-3107] analyzing entity 'Shift_L'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_16x1_rev2'
+WARNING: [VRFC 10-3607] overwriting existing primary unit 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/full_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux4to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux2to1_n-bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1_8bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/full_add.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_add'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Black_box_datapath.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/MUX16_1_testbench.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'top_module_RF_tb'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_4to16_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_4to16_testbench.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Decoder_4to16_tb'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_2to4_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_2to4_testbench.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Decoder_2to4_tb'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/D_FF_testbench1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/D_FF_testbench1.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'D_FF_EN_RESET_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/full_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath_tb'
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1820.637 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-"xelab -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot mux_16x1_rev2_tb_behav xil_defaultlib.mux_16x1_rev2_tb -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot mux_16x1_rev2_tb_behav xil_defaultlib.mux_16x1_rev2_tb -log elaborate.log 
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
-ERROR: [VRFC 10-3006] 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/mux_16x1_rev2_tb.vdb' needs to be re-saved since 'std.standard' changed
-ERROR: [VRFC 10-3032] 'xil_defaultlib.mux_16x1_rev2_tb' failed to restore
-ERROR: [XSIM 43-3225] Cannot find design unit xil_defaultlib.mux_16x1_rev2_tb in library work located at xsim.dir/work.
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'mux_16x1_rev2_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj mux_16x1_rev2_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/4_input_mux.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-"xelab -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot mux_16x1_rev2_tb_behav xil_defaultlib.mux_16x1_rev2_tb -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot mux_16x1_rev2_tb_behav xil_defaultlib.mux_16x1_rev2_tb -log elaborate.log 
-Using 2 slave threads.
-ERROR: [VRFC 10-3006] 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/mux_16x1_rev2_tb.vdb' needs to be re-saved since 'std.standard' changed
-ERROR: [VRFC 10-3032] 'xil_defaultlib.mux_16x1_rev2_tb' failed to restore
-ERROR: [XSIM 43-3225] Cannot find design unit xil_defaultlib.mux_16x1_rev2_tb in library work located at xsim.dir/work.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:40]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1820.637 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:40]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
 ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
 ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-set_property top top_module_RF_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'top_module_RF_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj top_module_RF_tb_vhdl.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-"xelab -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_module_RF_tb_behav xil_defaultlib.top_module_RF_tb -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_module_RF_tb_behav xil_defaultlib.top_module_RF_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.input_4mux [input_4mux_default]
-Compiling architecture behavioral of entity xil_defaultlib.mux_16x1_rev2 [mux_16x1_rev2_default]
-Compiling architecture behavioral of entity xil_defaultlib.D_FF_EN_RESET [d_ff_en_reset_default]
-Compiling architecture behavioral of entity xil_defaultlib.registerR16 [registerr16_default]
-Compiling architecture behavioral of entity xil_defaultlib.top_module_RF [top_module_rf_default]
-Compiling architecture bench of entity xil_defaultlib.top_module_rf_tb
-Built simulation snapshot top_module_RF_tb_behav
-
-****** Webtalk v2020.1 (64-bit)
-  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-source C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xsim.dir/top_module_RF_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xsim.dir/top_module_RF_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Mar  2 14:16:07 2023. For additional details about this file, please refer to the WebTalk help file at D:/Vivado/2020.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Thu Mar  2 14:16:07 2023...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1034.746 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "top_module_RF_tb_behav -key {Behavioral:sim_1:Functional:top_module_RF_tb} -tclbatch {top_module_RF_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source top_module_RF_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_module_RF_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1034.746 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1034.746 ; gain = 0.000
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'top_module_RF_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj top_module_RF_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/MUX16_1_testbench.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top_module_RF_tb'
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-"xelab -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_module_RF_tb_behav xil_defaultlib.top_module_RF_tb -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_module_RF_tb_behav xil_defaultlib.top_module_RF_tb -log elaborate.log 
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.input_4mux [input_4mux_default]
-Compiling architecture behavioral of entity xil_defaultlib.mux_16x1_rev2 [mux_16x1_rev2_default]
-Compiling architecture behavioral of entity xil_defaultlib.D_FF_EN_RESET [d_ff_en_reset_default]
-Compiling architecture behavioral of entity xil_defaultlib.registerR16 [registerr16_default]
-Compiling architecture behavioral of entity xil_defaultlib.top_module_RF [top_module_rf_default]
-Compiling architecture bench of entity xil_defaultlib.top_module_rf_tb
-Built simulation snapshot top_module_RF_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "top_module_RF_tb_behav -key {Behavioral:sim_1:Functional:top_module_RF_tb} -tclbatch {top_module_RF_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source top_module_RF_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_module_RF_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1034.746 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:40]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'top_module_RF_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj top_module_RF_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:40]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'top_module_RF'
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
-"xelab -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_module_RF_tb_behav xil_defaultlib.top_module_RF_tb -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d13b35b9ea6f40b3bb5ca034a9d85326 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_module_RF_tb_behav xil_defaultlib.top_module_RF_tb -log elaborate.log 
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.input_4mux [input_4mux_default]
-Compiling architecture behavioral of entity xil_defaultlib.mux_16x1_rev2 [mux_16x1_rev2_default]
-Compiling architecture behavioral of entity xil_defaultlib.D_FF_EN_RESET [d_ff_en_reset_default]
-Compiling architecture behavioral of entity xil_defaultlib.registerR16 [registerr16_default]
-Compiling architecture behavioral of entity xil_defaultlib.Decoder_2to4 [decoder_2to4_default]
-Compiling architecture behavioral of entity xil_defaultlib.Decoder_4to16 [decoder_4to16_default]
-Compiling architecture behavioral of entity xil_defaultlib.top_module_RF [top_module_rf_default]
-Compiling architecture bench of entity xil_defaultlib.top_module_rf_tb
-Built simulation snapshot top_module_RF_tb_behav
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:41]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+<<<<<<< HEAD
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -308,10 +287,26 @@ Command: launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-54] Inspecting design source files for 'top_module_RF_tb' in fileset 'sim_1'...
+=======
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+>>>>>>> a440d7e963381e3b003136e4899446b3c35b2521
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
+<<<<<<< HEAD
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj top_module_RF_tb_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/Top_project1.v" into library xil_defaultlib
@@ -479,10 +474,95 @@ Command: launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-54] Inspecting design source files for 'full_TB' in fileset 'sim_1'...
+=======
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_2to4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_2to4'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_4to16'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'D_FF_EN_RESET'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/registerR16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'registerR16'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1_rev2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_16x1_rev2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/4_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/function_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/2_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux2to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_2mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/Shifter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Shifter'
+INFO: [VRFC 10-3107] analyzing entity 'Shift_R'
+INFO: [VRFC 10-3107] analyzing entity 'Shift_L'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_16x1_rev2'
+WARNING: [VRFC 10-3607] overwriting existing primary unit 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/full_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux4to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux2to1_n-bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1_8bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/full_add.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_add'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Black_box_datapath.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/MUX16_1_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_4to16_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_4to16_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_2to4_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_2to4_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/D_FF_testbench1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'D_FF_EN_RESET_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/full_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:41]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1841.234 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+>>>>>>> a440d7e963381e3b003136e4899446b3c35b2521
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
+<<<<<<< HEAD
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj full_TB_vlog.prj"
 "xvhdl --incr --relax -prj full_TB_vhdl.prj"
@@ -1752,11 +1832,94 @@ launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
+=======
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_2to4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_2to4'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_4to16'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'D_FF_EN_RESET'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/registerR16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'registerR16'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1_rev2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_16x1_rev2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/4_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/function_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/2_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux2to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_2mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/Shifter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Shifter'
+INFO: [VRFC 10-3107] analyzing entity 'Shift_R'
+INFO: [VRFC 10-3107] analyzing entity 'Shift_L'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_16x1_rev2'
+WARNING: [VRFC 10-3607] overwriting existing primary unit 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/full_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux4to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux2to1_n-bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1_8bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/full_add.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_add'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Black_box_datapath.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/MUX16_1_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_4to16_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_4to16_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_2to4_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_2to4_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/D_FF_testbench1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'D_FF_EN_RESET_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/full_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:41]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+>>>>>>> a440d7e963381e3b003136e4899446b3c35b2521
 INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
+<<<<<<< HEAD
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
 "xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
@@ -1805,3 +1968,511 @@ close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
 INFO: [Common 17-206] Exiting Vivado at Thu Mar  2 21:42:12 2023...
+=======
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/full_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:41]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_2to4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_2to4'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_4to16'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'D_FF_EN_RESET'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/registerR16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'registerR16'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1_rev2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_16x1_rev2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/4_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/function_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/2_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux2to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_2mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/Shifter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Shifter'
+INFO: [VRFC 10-3107] analyzing entity 'Shift_R'
+INFO: [VRFC 10-3107] analyzing entity 'Shift_L'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_16x1_rev2'
+WARNING: [VRFC 10-3607] overwriting existing primary unit 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/full_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux4to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux2to1_n-bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1_8bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/full_add.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_add'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Black_box_datapath.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/MUX16_1_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_4to16_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_4to16_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_2to4_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_2to4_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/D_FF_testbench1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'D_FF_EN_RESET_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/full_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:41]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:41]
+ERROR: [VRFC 10-718] formal port <M8> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:42]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_2to4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_2to4'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_4to16'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'D_FF_EN_RESET'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/registerR16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'registerR16'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1_rev2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_16x1_rev2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/4_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/function_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/2_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux2to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_2mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/Shifter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Shifter'
+INFO: [VRFC 10-3107] analyzing entity 'Shift_R'
+INFO: [VRFC 10-3107] analyzing entity 'Shift_L'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_16x1_rev2'
+WARNING: [VRFC 10-3607] overwriting existing primary unit 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd:13]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/full_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux4to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_4mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/mux2to1_n-bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_2x1_8bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/full_add.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_add'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Black_box_datapath.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/MUX16_1_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_module_RF_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_4to16_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_4to16_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/Decoder_2to4_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_2to4_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/D_FF_testbench1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'D_FF_EN_RESET_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sim_1/new/full_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Black_box_datapath_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:41]
+ERROR: [VRFC 10-718] formal port <M8> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:42]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_runs synth_1 -jobs 18
+[Thu Mar  2 21:21:46 2023] Launched synth_1...
+Run output will be captured here: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.runs/synth_1/runme.log
+create_bd_design "design_1"
+Wrote  : <C:\Users\felix\Documents\DTU\30082_project_jan_23\Git\DTU\62711\VHDLV3\VHDL\VHDL_Gruppe4\Datapath\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+export_ip_user_files -of_objects  [get_files C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd
+file delete -force C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/MUX16to1.vhd
+generate_target Simulation [get_files C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <C:\Users\felix\Documents\DTU\30082_project_jan_23\Git\DTU\62711\VHDLV3\VHDL\VHDL_Gruppe4\Datapath\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.gen/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+Exporting to file C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.gen/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.ip_user_files -ipstatic_source_dir C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.cache/compile_simlib/modelsim} {questa=C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.cache/compile_simlib/questa} {riviera=C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.cache/compile_simlib/riviera} {activehdl=C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.ip_user_files/bd/design_1/sim/design_1.vhd" into library xil_defaultlib
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:41]
+ERROR: [VRFC 10-718] formal port <M8> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:42]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+export_ip_user_files -of_objects  [get_files C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/bd/design_1/design_1.bd
+file delete -force C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/bd/design_1
+file delete -force c:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.gen/sources_1/bd/design_1
+export_ip_user_files -of_objects  [get_files C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:41]
+ERROR: [VRFC 10-718] formal port <M8> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:42]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Black_box_datapath_tb_behav xil_defaultlib.Black_box_datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <M0> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:41]
+ERROR: [VRFC 10-718] formal port <M8> does not exist in entity <mux_16x1_rev2>.  Please compare the definition of block <mux_16x1_rev2> to its component declaration and its instantion to detect the mismatch. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/top_module_RF.vhd:42]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/Top_project1.v
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/function_unit.vhd
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/Top_project1.v
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/function_unit.vhd
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/Top_project1.v
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/function_unit.vhd
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/Top_project1.v
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/function_unit.vhd
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/Top_project1.v
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/function_unit.vhd
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Black_box_datapath_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Black_box_datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Black_box_datapath_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/Top_project1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj Black_box_datapath_tb_vhdl.prj"
+ERROR: [XSIM 43-4316] Can not find file: ../../../../project_2.srcs/sources_1/imports/new/function_unit.vhd
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+export_ip_user_files -of_objects  [get_files C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/function_unit.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/imports/new/function_unit.vhd
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  2 21:37:29 2023...
+>>>>>>> a440d7e963381e3b003136e4899446b3c35b2521

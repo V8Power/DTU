@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Black_box_datapath_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Black_box_datapath_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="458.337 ns"></ZoomEndTime>
+      <Cursor1Time time="193.501 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="323"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/Black_box_datapath_tb/const_in" type="array">
+      <obj_property name="ElementShortName">const_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">const_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/Data_in" type="array">
+      <obj_property name="ElementShortName">Data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/DA" type="array">
+      <obj_property name="ElementShortName">DA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DA[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/AA" type="array">
+      <obj_property name="ElementShortName">AA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AA[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/BA" type="array">
+      <obj_property name="ElementShortName">BA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">BA[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/FS" type="array">
+      <obj_property name="ElementShortName">FS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">FS[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/Reset" type="logic">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/RW" type="logic">
+      <obj_property name="ElementShortName">RW</obj_property>
+      <obj_property name="ObjectShortName">RW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/MB" type="logic">
+      <obj_property name="ElementShortName">MB</obj_property>
+      <obj_property name="ObjectShortName">MB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/MD" type="logic">
+      <obj_property name="ElementShortName">MD</obj_property>
+      <obj_property name="ObjectShortName">MD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/ADDR_out" type="array">
+      <obj_property name="ElementShortName">ADDR_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/D_out" type="array">
+      <obj_property name="ElementShortName">D_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">D_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/V" type="logic">
+      <obj_property name="ElementShortName">V</obj_property>
+      <obj_property name="ObjectShortName">V</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/C" type="logic">
+      <obj_property name="ElementShortName">C</obj_property>
+      <obj_property name="ObjectShortName">C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/N" type="logic">
+      <obj_property name="ElementShortName">N</obj_property>
+      <obj_property name="ObjectShortName">N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/Z" type="logic">
+      <obj_property name="ElementShortName">Z</obj_property>
+      <obj_property name="ObjectShortName">Z</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/uut/Reg16/R5" type="array">
+      <obj_property name="ElementShortName">R5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R5[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/uut/Reg16/R6" type="array">
+      <obj_property name="ElementShortName">R6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R6[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/uut/Reg16/R7" type="array">
+      <obj_property name="ElementShortName">R7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R7[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/uut/Reg16/R8" type="array">
+      <obj_property name="ElementShortName">R8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R8[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/uut/Reg16/R9" type="array">
+      <obj_property name="ElementShortName">R9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R9[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/uut/Reg16/R10" type="array">
+      <obj_property name="ElementShortName">R10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R10[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Black_box_datapath_tb/uut/Reg16/D_data" type="array">
+      <obj_property name="ElementShortName">D_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">D_data[7:0]</obj_property>
+   </wvobject>
+</wave_config>
