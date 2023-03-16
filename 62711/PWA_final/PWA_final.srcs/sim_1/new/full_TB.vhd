@@ -107,7 +107,38 @@ Reset <= '1';
     RW <= '1';
     wait for clk_period;
     RW <= '0';
+    wait for clk_period;
+    AA <= x"a";
+    FS <= x"6";
+    DA <= x"B";
+    RW <= '1';
+    wait for clk_period;
+    RW <= '1';
+    const_in <= x"10";
+    MB <= '1';
     
+    FS <= x"F";
+    DA <= x"C";
+    wait for clk_period;
+    
+    MB <= '0';
+    RW <= '0';
+    wait for clk_period;
+    AA <= x"C";
+    BA <= x"A";
+    FS <= x"4";
+    RW <= '1';
+    DA <= x"D";
+    wait for clk_period;
+    RW <= '0';
+    wait for clk_period;
+    AA <= x"A";
+    BA <= x"A";
+    FS <= x"5";
+    DA <= x"E";
+    RW <= '1';
+    wait for clk_period;
+    RW <= '0';
     -- Put test bench stimulus code here
 
     wait;

@@ -55,7 +55,7 @@ end component;
 
 
 
-signal B_enable, Carry_in, C_out1, Sub: std_logic; 
+signal B_enable, Carry_in, C_out1, Sub, tmp: std_logic; 
 signal alu_B, alu_out: std_logic_vector(7 downto 0);
 begin
 A0: full_adder port map(A,alu_B, alu_out, Carry_in, C_out1, Sub, V );
@@ -67,7 +67,7 @@ D: alu_B(i) <= B(i) and B_enable;
 E: R(i) <= (alu_out(i) and (not FS(3)))        or     (FS(3) and (not FS(1)) and (not FS(0)) and (A(i) or B(i)))       or      (FS(3) and (not  FS(1)) and FS(0) and (A(i) and B(i)))       or     (FS(3) and  FS(1) and (not FS(0)) and (A(i) xor B(i)))      or      (FS(3) and FS(1) and FS(0) and  (not A(i)));
 
 end generate;
-
+--V <= '1';
  
 
 Carry_in <=FS(0);

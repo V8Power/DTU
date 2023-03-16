@@ -75,6 +75,7 @@ end component;
 
 signal D_Data, A_Data, B_data, ALU_data, B : std_logic_vector(7 downto 0);
 begin
+
 Reg16: top_module_RF port map( clk, reset, RW, Da, AA, BA, D_data, A_data, B_data);
 MUXB: mux_2x1_8bit port map (B_Data, const_in, B, MB);
 FUA: FU port map (FS, A_data, B, ALU_data, V, C, N, Z);

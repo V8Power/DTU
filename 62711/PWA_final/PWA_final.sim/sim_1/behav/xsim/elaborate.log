@@ -4,9 +4,6 @@ Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-<<<<<<< HEAD:62711/VHDLV3/VHDL/VHDL_Gruppe4/Datapath/project_2.sim/sim_1/behav/xsim/elaborate.log
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-=======
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
@@ -33,4 +30,3 @@ Compiling architecture behavioral of entity xil_defaultlib.FU [fu_default]
 Compiling architecture behavioral of entity xil_defaultlib.Black_box_datapath [black_box_datapath_default]
 Compiling architecture bench of entity xil_defaultlib.black_box_datapath_tb
 Built simulation snapshot Black_box_datapath_tb_behav
->>>>>>> a440d7e963381e3b003136e4899446b3c35b2521:62711/PWA_final/PWA_final.sim/sim_1/behav/xsim/elaborate.log
