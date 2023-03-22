@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../project_B.srcs/sources_1/new/ZeroFiller.vhd" \
-"../../../../project_B.srcs/sim_1/new/zero_filler_testbench.vhd" \
-
-# Do not sort compile order
-nosort
