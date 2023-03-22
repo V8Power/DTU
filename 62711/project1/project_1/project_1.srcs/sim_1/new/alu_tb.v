@@ -6,75 +6,50 @@ library IEEE;
 use IEEE.Std_logic_1164.all;
 use IEEE.Numeric_Std.all;
 
-entity FU_tb is
+entity full_adder_tb is
 end;
 
-architecture bench of FU_tb is
+architecture bench of full_adder_tb is
 
-  component FU
-  Port (
-      FS: in std_logic_vector(3 downto 0);
-      A, B: in std_logic_vector(7 downto 0);
-      R: out std_logic_vector(7 downto 0);
-      V,C,N,Z : out std_logic
-  );
+  component full_adder
+  generic(width : integer:=8);
+    Port ( 
+          A_in, B_in : in std_logic_vector(7 downto 0);
+          D_out : out std_logic_vector(7 downto 0);
+          C_in : in std_logic; 
+          C_out : out std_logic;
+          Sub : in std_logic;
+          V: out std_logic );
   end component;
 
-  signal FS: std_logic_vector(3 downto 0);
-  signal A, B: std_logic_vector(7 downto 0);
-  signal R: std_logic_vector(7 downto 0);
-  signal V,C,N,Z: std_logic ;
+  signal A_in, B_in: std_logic_vector(7 downto 0);
+  signal D_out: std_logic_vector(7 downto 0);
+  signal C_in: std_logic;
+  signal C_out: std_logic;
+  signal Sub: std_logic;
+  signal V: std_logic ;
 
 begin
 
-  uut: FU port map ( FS => FS,
-                     A  => A,
-                     B  => B,
-                     R  => R,
-                     V  => V,
-                     C  => C,
-                     N  => N,
-                     Z  => Z );
+  -- Insert values for generic parameters !!
+  uut: full_adder 
+                     port map ( A_in  => A_in,
+                                B_in  => B_in,
+                                D_out => D_out,
+                                C_in  => C_in,
+                                C_out => C_out,
+                                Sub   => Sub,
+                                V     => V );
 
   stimulus: process
   begin
   
     -- Put initialisation code here
+A_in <= x"1f";
+B_in <= x"F0";
+C_in <= '1';
+Sub <= '1';
 
-        A<= x"33";
-    B<= x"A0";
-    FS <= x"0";
-    wait for 10ns;
-    FS <= x"1";
-    wait for 10ns;
-    FS<= x"2";
-    wait for 10ns;  
-    FS<= x"3";
-    wait for 10ns;  
-    FS<= x"4";
-    wait for 10ns;  
-    FS<= x"5";
-    wait for 10ns;  
-    FS<= x"6";
-    wait for 10ns;  
-    FS<= x"7";
-    wait for 10ns;  
-    FS<= x"8";
-    wait for 10ns; 
-    FS<= x"9";
-    wait for 10ns; 
-    FS<= x"A";
-    wait for 10ns; 
-    FS<= x"B";
-    wait for 10ns; 
-    FS<= x"C";
-    wait for 10ns; 
-    FS<= x"D";
-    wait for 10ns; 
-    FS<= x"E";
-    wait for 10ns; 
-    FS<= x"F";
-    wait for 10ns;
     -- Put test bench stimulus code here
 
     wait;
@@ -82,4 +57,3 @@ begin
 
 
 end;
-  

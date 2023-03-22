@@ -37,7 +37,7 @@ Port (
     FS: in std_logic_vector(3 downto 0);
     A, B: in std_logic_vector(7 downto 0);
     R: out std_logic_vector(7 downto 0);
-    V,C,N,Z : out std_logic
+    V,C : out std_logic
 );
 end ALU;
 
@@ -49,7 +49,8 @@ Port (
         D_out : out std_logic_vector(7 downto 0);
         C_in : in std_logic; 
         C_out : out std_logic;
-        Sub : in std_logic );
+        Sub : in std_logic;
+        V: out std_logic );
 end component;
 
 
@@ -57,7 +58,7 @@ end component;
 signal B_enable, Carry_in, C_out1, Sub: std_logic; 
 signal alu_B, alu_out: std_logic_vector(7 downto 0);
 begin
-A0: full_adder port map(A,alu_B, alu_out, Carry_in, C_out1, Sub );
+A0: full_adder port map(A,alu_B, alu_out, Carry_in, C_out1, Sub, V );
 
 
 E: for i in 0 to 7 generate

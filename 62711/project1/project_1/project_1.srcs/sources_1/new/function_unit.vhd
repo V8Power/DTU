@@ -48,7 +48,7 @@ Port (
     FS: in std_logic_vector(3 downto 0);
     A, B: in std_logic_vector(7 downto 0);
     R: out std_logic_vector(7 downto 0);
-    V,C,N,Z : out std_logic
+    V, C : out std_logic
 );
 end component;
 
@@ -70,18 +70,19 @@ component mux_2x1_8bit is
            S : in std_logic );
 end component;
 
-signal data_alu, data_shift : std_logic_vector(7 downto 0);
+signal data_alu, data_shift, R_int : std_logic_vector(7 downto 0);
 signal MF : std_logic;
 begin
-L: ALU port map (FS, A, B, data_alu, V,C,N,Z);
+L: ALU port map (FS, A, B, data_alu, V, C);
 S: Shifter port map (FS, B, data_shift);
-M: mux_2x1_8bit port map (data_alu, data_shift,  R, MF);
+M: mux_2x1_8bit port map (data_alu, data_shift,  R_int, MF);
 
 --E: for i in 0 to 7 generate
 
 --end generate;
-
-
+R <= R_int;
+N <= R_int(7);
+Z <= not (data_alu(0) or data_alu(1) or data_alu(2) or data_alu(3) or data_alu(4) or data_alu(5) or data_alu(6) or data_alu(7));
 MF<= FS(3) and FS(2);
 
 end Behavioral;

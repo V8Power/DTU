@@ -1,0 +1,4 @@
+Running: xsim.dir/ZeroFiller_tb_behav/xsimk -simmode gui -wdb ZeroFiller_tb_behav.wdb -simrunnum 0 -socket 60567
+Design successfully loaded
+Design Loading Memory Usage: 32352 KB (Peak: 32936 KB)
+Design Loading CPU Usage: 10 ms

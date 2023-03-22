@@ -53,6 +53,8 @@ signal C_int: std_logic;
 begin
 CC(7) <= '1';
 C_out <= C_int;
+V <=  (C_int xor cc(6));
+--V <= '1';
 n_width_adder: for i in 0 to width - 1 generate
 Low_bit: if i=0 generate
 U0: full_add port map
@@ -68,7 +70,7 @@ end generate mid_bits;
 high_bit: if i=width-1 generate
 UH: full_add port map
 (A_in(i), B_in(i), cc(i-1), Sub, D_out(i), C_int);
-V <= C_int xor cc(i-1);
+
 end generate high_bit;
 end generate n_width_adder;
 end Behavioral;

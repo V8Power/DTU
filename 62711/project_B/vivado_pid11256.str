@@ -1,0 +1,648 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 11256
+License: Customer
+
+Current time: 	Thu Mar 16 08:57:34 CET 2023
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 40 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	chris
+User home directory: C:/Users/chris
+User working directory: C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B
+User country: 	DK
+User language: 	da
+User locale: 	da_DK
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/chris/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/chris/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/chris/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/vivado.log
+Vivado journal file location: 	C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/vivado.jou
+Engine tmp dir: 	C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/.Xil/Vivado-11256-LAPTOP-0FV3528O
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	158 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 501 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 57 MB (+57533kb) [00:00:12]
+// [Engine Memory]: 465 MB (+335800kb) [00:00:12]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B' 
+// [GUI Memory]: 66 MB (+6478kb) [00:00:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 556 MB. GUI used memory: 36 MB. Current time: 3/16/23 8:57:36 AM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// [Engine Memory]: 574 MB (+90310kb) [00:00:19]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 650 MB (+49878kb) [00:00:29]
+// HMemoryUtils.trashcanNow. Engine heap size: 650 MB. GUI used memory: 39 MB. Current time: 3/16/23 8:57:54 AM CET
+// Project name: project_B; location: C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 832.688 ; gain = 169.266 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// PAPropertyPanels.initPanels (InstructionDecoderController.vhd) elapsed time: 0.4s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, InstructionDecoderController.vhd]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, InstructionDecoderController.vhd]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+// [GUI Memory]: 71 MB (+1074kb) [00:01:26]
+// Elapsed time: 82 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 175, 297); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 178, 247); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 246, 249); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 176, 250); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 243, 248); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 181, 251); // ce (w, ck)
+// [GUI Memory]: 75 MB (+517kb) [00:02:44]
+selectCodeEditor("InstructionDecoderController.vhd", 245, 245); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 180, 254); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 241, 250); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 184, 201); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 245, 198); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 179, 191); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 244, 197); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 179, 251); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 246, 251); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 181, 198); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 241, 202); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 177, 199); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 245, 201); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 177, 247); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 244, 249); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 183, 301); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 245, 303); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 176, 299); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 245, 299); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 179, 200); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 244, 201); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 180, 150); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 244, 149); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 182, 249); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 245, 250); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 181, 195); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 245, 200); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 174, 189); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 238, 200); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 189, 198); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 251, 195); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 185, 250); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 253, 251); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 185, 199); // ce (w, ck)
+// [GUI Memory]: 82 MB (+3447kb) [00:04:54]
+selectCodeEditor("InstructionDecoderController.vhd", 251, 198); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 202, 315); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 202, 315); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 202, 315); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 249, 319); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 281, 368); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "6"); // h (f, ck)
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// HOptionPane Error: 'There are no HDL sources in file set 'sources_1'. Please use the Add Sources command. (Run Synthesis)'
+// 'k' command handler elapsed time: 4 seconds
+selectButton("PAResourceOtoP.PABaseTab_THERE_NO_SOURCES_DEFINED_IN_OK", "OK"); // JButton (A, G)
+// [GUI Memory]: 87 MB (+736kb) [00:06:09]
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near ;. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:47]. ]", 2, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.srcs\sources_1\new\InstructionDecoderController.vhd;-;;-;16;-;line;-;47;-;;-;16;-;"); // ah (O, ck)
+// Elapsed time: 18 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near ;. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:47]. ]", 4, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.srcs\sources_1\new\InstructionDecoderController.vhd;-;;-;16;-;line;-;47;-;;-;16;-;"); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near ;. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:47]. ]", 2, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.srcs\sources_1\new\InstructionDecoderController.vhd;-;;-;16;-;line;-;47;-;;-;16;-;"); // ah (O, ck)
+// [Engine Memory]: 686 MB (+2775kb) [00:06:43]
+// Elapsed time: 11 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near ;. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:47]. ]", 2); // ah (O, ck)
+// Elapsed time: 16 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near ;. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:47]. , [HDL 9-806] Syntax error near (. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:57]. ]", 3, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.srcs\sources_1\new\InstructionDecoderController.vhd;-;;-;16;-;line;-;57;-;;-;16;-;"); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near ;. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:47]. , [HDL 9-806] Syntax error near (. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:57]. ]", 3, false, false, false, false, false, true); // ah (O, ck) - Double Click
+// Elapsed time: 11 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1]", 5); // ah (O, ck)
+// Elapsed time: 33 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 49, 271); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 50, 277); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 17 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 50, 277); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 299, 268); // ce (w, ck)
+// Elapsed time: 42 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 238, 78); // ce (w, ck)
+// [GUI Memory]: 93 MB (+1789kb) [00:08:54]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 47 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 457, 199); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 255, 235); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 65, 208); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 40, 64); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 58, 98); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 250, 145); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 178, 231); // ce (w, ck)
+typeControlKey((HResource) null, "InstructionDecoderController.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 220, 247); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 181, 231); // ce (w, ck)
+typeControlKey((HResource) null, "InstructionDecoderController.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 1, 213); // ce (w, ck)
+typeControlKey((HResource) null, "InstructionDecoderController.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 353, 243); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 52, 215); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 120, 236); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 346, 236); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 302, 307); // ce (w, ck)
+// Elapsed time: 59 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 159, 85); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 157, 83); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 364, 78); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 254, 61); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 33, 75); // ce (w, ck)
+typeControlKey((HResource) null, "InstructionDecoderController.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 259, 147); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 693 MB. GUI used memory: 41 MB. Current time: 3/16/23 9:10:11 AM CET
+// Elapsed time: 91 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 277, 179); // ce (w, ck)
+// Elapsed time: 118 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 211, 131); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 361, 137); // ce (w, ck)
+// Elapsed time: 141 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 315, 183); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 256, 184); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 229, 183); // ce (w, ck)
+typeControlKey((HResource) null, "InstructionDecoderController.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 343, 180); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 234, 183); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 253, 182); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near ;. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:47]. ]", 2); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near ;. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:47]. , [HDL 9-806] Syntax error near ). [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:56]. ]", 3, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.srcs\sources_1\new\InstructionDecoderController.vhd;-;;-;16;-;line;-;56;-;;-;16;-;"); // ah (O, ck)
+// Elapsed time: 598 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 357, 23); // ce (w, ck)
+// Elapsed time: 88 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 257, 267); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 9, 316); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 161, 339); // ce (w, ck)
+// Elapsed time: 21 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 265, 326); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 353, 315); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 281, 303); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 16 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 205, 282); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 423, 339); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 358, 200); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 45, 59); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 48, 115); // ce (w, ck)
+// Elapsed time: 21 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 337, 268); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 125, 298); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 36, 297); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 169, 315); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 49, 282); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 160, 320); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:51]. ]", 2, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.srcs\sources_1\new\InstructionDecoderController.vhd;-;;-;16;-;line;-;51;-;;-;16;-;"); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:51]. ]", 2, false, false, false, false, false, true); // ah (O, ck) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near IR. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:65]. ]", 2, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.srcs\sources_1\new\InstructionDecoderController.vhd;-;;-;16;-;line;-;65;-;;-;16;-;"); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near IR. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:65]. , [HDL 9-806] Syntax error near MB. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:478]. ]", 4, false, false, false, false, false, true); // ah (O, ck) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 131, 314); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 169, 316); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 77, 319); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 250, 181); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near MB. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:478]. ]", 2, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.srcs\sources_1\new\InstructionDecoderController.vhd;-;;-;16;-;line;-;478;-;;-;16;-;"); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near MB. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:478]. ]", 2, true, false, false, false, false, true); // ah (O, ck) - Double Click - Node
+selectCodeEditor("InstructionDecoderController.vhd", 221, 168); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 98 MB (+1169kb) [00:33:55]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near MB. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:493]. ]", 2, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.srcs\sources_1\new\InstructionDecoderController.vhd;-;;-;16;-;line;-;493;-;;-;16;-;"); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near MB. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:493]. ]", 2, true, false, false, false, false, true); // ah (O, ck) - Double Click - Node
+selectCodeEditor("InstructionDecoderController.vhd", 229, 159); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near process. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:597]. ]", 2, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.srcs\sources_1\new\InstructionDecoderController.vhd;-;;-;16;-;line;-;597;-;;-;16;-;"); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near process. [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd:597]. ]", 2, false, false, false, false, false, true); // ah (O, ck) - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 138, 331); // ce (w, ck)
+selectCodeEditor("InstructionDecoderController.vhd", 289, 332); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("InstructionDecoderController.vhd", 145, 319); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 37 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+// HMemoryUtils.trashcanNow. Engine heap size: 715 MB. GUI used memory: 44 MB. Current time: 3/16/23 9:32:44 AM CET
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 15 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "InstructionRegister"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 23 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionRegister.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionRegister.vhd}} 
+// I (ck): Define Module: addNotify
+setText(PAResourceAtoD.DefineModulesDialog_ENTITY_NAME, "InstructionRegister"); // X (Q, I)
+// Elapsed time: 43 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, (String) null, 0); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "RESET", 0, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 1, (String) null, 0); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "CLK", 1, "Port Name", 0); // ab (O, I)
+// Elapsed time: 22 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Instruction_In", 2, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Instruction_In ; in ; false ; 0 ; 0", 2, "false", 2); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Instruction_In ; in ; true ; 0 ; 0", 2, "0", 3); // ab (O, I)
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "15", 2, "MSB", 3); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 3, (String) null, 0); // ab (O, I)
+// Elapsed time: 31 seconds
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IL", 3, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 4, (String) null, 0); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR", 4, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR ; in ; false ; 0 ; 0", 4, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 4, "Direction", 1); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR ; out ; false ; 0 ; 0", 4, "false", 2); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR ; out ; true ; 0 ; 0", 4, "0", 3); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "15", 4, "MSB", 3); // ab (O, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 44 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, InstructionRegister(Behavioral) (InstructionRegister.vhd)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, InstructionRegister(Behavioral) (InstructionRegister.vhd)]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 29 seconds
+selectCodeEditor("InstructionRegister.vhd", 66, 263); // ce (w, ck)
+// [Engine Memory]: 728 MB (+8078kb) [00:39:21]
+// Elapsed time: 156 seconds
+selectCodeEditor("InstructionRegister.vhd", 24, 298); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, InstructionDecoderController(Behavioral) (InstructionDecoderController.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, InstructionDecoderController(Behavioral) (InstructionDecoderController.vhd)]", 1, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionRegister.vhd", 1); // k (j, ck)
+// [GUI Memory]: 105 MB (+1881kb) [00:42:37]
+// Elapsed time: 147 seconds
+selectCodeEditor("InstructionRegister.vhd", 22, 298); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 198, 315); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 198, 315); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 263, 301); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 296, 302); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 259, 301); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionDecoderController.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionRegister.vhd", 1); // k (j, ck)
+selectCodeEditor("InstructionRegister.vhd", 208, 317); // ce (w, ck)
+// [GUI Memory]: 113 MB (+3015kb) [00:45:22]
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionDecoderController.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionRegister.vhd", 1); // k (j, ck)
+selectCodeEditor("InstructionRegister.vhd", 48, 280); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionDecoderController.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionRegister.vhd", 1); // k (j, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("InstructionRegister.vhd", 162, 319); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 196, 342); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionDecoderController.vhd", 2); // k (j, ck)
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionRegister.vhd", 1); // k (j, ck)
+// [GUI Memory]: 121 MB (+1713kb) [00:46:47]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionDecoderController.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionRegister.vhd", 1); // k (j, ck)
+selectCodeEditor("InstructionRegister.vhd", 120, 300); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 25, 339); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 25, 350); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 29, 315); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 132, 319); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 178, 359); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionDecoderController.vhd", 2); // k (j, ck)
+// Elapsed time: 46 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionRegister.vhd", 1); // k (j, ck)
+selectCodeEditor("InstructionRegister.vhd", 99, 339); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionDecoderController.vhd", 2); // k (j, ck)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionRegister.vhd", 1); // k (j, ck)
+// Elapsed time: 98 seconds
+selectCodeEditor("InstructionRegister.vhd", 116, 279); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectCodeEditor("InstructionRegister.vhd", 116, 279); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 116, 279); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 142, 332); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 124, 319); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 128, 334); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 255, 347); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 144, 299); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 177, 295); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 164, 295); // ce (w, ck)
+// Elapsed time: 71 seconds
+selectCodeEditor("InstructionRegister.vhd", 120, 235); // ce (w, ck)
+// [GUI Memory]: 127 MB (+406kb) [00:52:57]
+// Elapsed time: 15 seconds
+selectCodeEditor("InstructionRegister.vhd", 347, 266); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 368, 279); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 184, 248); // ce (w, ck)
+// Elapsed time: 56 seconds
+selectCodeEditor("InstructionRegister.vhd", 161, 292); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 114 seconds
+selectCodeEditor("InstructionRegister.vhd", 139, 280); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 30 seconds
+selectCodeEditor("InstructionRegister.vhd", 176, 306); // ce (w, ck)
+selectCodeEditor("InstructionRegister.vhd", 207, 301); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 20 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Sign"); // X (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "SignExtender"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 23 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/SignExtender.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/SignExtender.vhd}} 
+// I (ck): Define Module: addNotify
+setText(PAResourceAtoD.DefineModulesDialog_ENTITY_NAME, "SignExtender"); // X (Q, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, (String) null, 0); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR", 0, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR ; in ; false ; 0 ; 0", 0, "false", 2); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR ; in ; true ; 0 ; 0", 0, "0", 3); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "15", 0, "MSB", 3); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 1, (String) null, 0); // ab (O, I)
+// Elapsed time: 10 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Extended_8", 1, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Extended_8 ; in ; false ; 0 ; 0", 1, "false", 2); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Extended_8 ; in ; true ; 0 ; 0", 1, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 1, "Direction", 1); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Extended_8 ; out ; true ; 0 ; 0", 1, "0", 3); // ab (O, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "7", 1, "MSB", 3); // ab (O, I)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SignExtender(Behavioral) (SignExtender.vhd)]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SignExtender(Behavioral) (SignExtender.vhd)]", 3, false, false, false, false, false, true); // B (D, ck) - Double Click
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 71 seconds
+selectCodeEditor("SignExtender.vhd", 56, 291); // ce (w, ck)
+// Elapsed time: 35 seconds
+selectCodeEditor("SignExtender.vhd", 96, 282); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstructionRegister.vhd", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SignExtender.vhd", 3); // k (j, ck)
+selectCodeEditor("SignExtender.vhd", 60, 335); // ce (w, ck)
+selectCodeEditor("SignExtender.vhd", 80, 275); // ce (w, ck)
+selectCodeEditor("SignExtender.vhd", 88, 267); // ce (w, ck)
+selectCodeEditor("SignExtender.vhd", 52, 295); // ce (w, ck)
+// Elapsed time: 69 seconds
+selectCodeEditor("SignExtender.vhd", 294, 315); // ce (w, ck)
+selectCodeEditor("SignExtender.vhd", 318, 317); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("SignExtender.vhd", 290, 315); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("SignExtender.vhd", 335, 319); // ce (w, ck)
+selectCodeEditor("SignExtender.vhd", 440, 319); // ce (w, ck)
+// [GUI Memory]: 134 MB (+192kb) [01:02:07]
+// Elapsed time: 57 seconds
+selectCodeEditor("SignExtender.vhd", 156, 335); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("SignExtender.vhd", 53, 314); // ce (w, ck)
+typeControlKey((HResource) null, "SignExtender.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("SignExtender.vhd", 81, 341); // ce (w, ck)
+typeControlKey((HResource) null, "SignExtender.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("SignExtender.vhd", 76, 345); // ce (w, ck)
+selectCodeEditor("SignExtender.vhd", 180, 347); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("SignExtender.vhd", 407, 318); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 23 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, (String) null); // X (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Zerofi"); // X (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "ZeroFiller"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 19 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/ZeroFiller.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/ZeroFiller.vhd}} 
+// I (ck): Define Module: addNotify
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, (String) null, 0); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR", 0, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR ; in ; false ; 0 ; 0", 0, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "in", 0, "Direction", 1); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR ; in ; false ; 0 ; 0", 0, "false", 2); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "IR ; in ; true ; 0 ; 0", 0, "0", 3); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "15", 0, "MSB", 3); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 1, (String) null, 0); // ab (O, I)
+// Elapsed time: 10 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "ZeroFilled_8", 1, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "ZeroFilled_8 ; in ; false ; 0 ; 0", 1, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 1, "Direction", 1); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "ZeroFilled_8 ; out ; false ; 0 ; 0", 1, "0", 3); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "ZeroFilled_8 ; out ; false ; 0 ; 0", 1, "false", 2); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "ZeroFilled_8 ; out ; true ; 0 ; 0", 1, "0", 3); // ab (O, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "7", 1, "MSB", 3); // ab (O, I)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ZeroFiller(Behavioral) (ZeroFiller.vhd)]", 4, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ZeroFiller(Behavioral) (ZeroFiller.vhd)]", 4, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("ZeroFiller.vhd", 28, 292); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 732 MB. GUI used memory: 54 MB. Current time: 3/16/23 10:02:44 AM CET
+// Elapsed time: 39 seconds
+selectCodeEditor("ZeroFiller.vhd", 64, 352); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 51 seconds
+selectCodeEditor("ZeroFiller.vhd", 315, 263); // ce (w, ck)
+selectCodeEditor("ZeroFiller.vhd", 296, 318); // ce (w, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+closeMainWindow("project_B - [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.xpr] - Vivado 2018.2"); // ck
+// A (ck): Exit Vivado: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+dismissDialog("Exit Vivado"); // A (ck)

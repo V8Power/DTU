@@ -65,7 +65,7 @@ L: Shift_L port map (B, DL);
 
 shifters: for i in 0 to 7 generate
           --command 14 shift left                   --command 14 shift right
-R(i) <= (FS(1) and (not FS(0)) and DL(i))     or    ((not FS(1)) and FS(0) and DR(i))     or   ((FS(1) xnor FS(0)) and B(i));
+R(i) <= (FS(1) and (not FS(0)) and DR(i))     or    ((not FS(1)) and FS(0) and DL(i))     or   ((FS(1) xnor FS(0)) and B(i));
 end generate shifters;
 end Behavioral;
 

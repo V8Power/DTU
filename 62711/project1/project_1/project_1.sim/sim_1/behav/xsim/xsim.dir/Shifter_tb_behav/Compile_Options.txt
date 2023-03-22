@@ -1,1 +1,1 @@
---incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "Shifter_tb_behav" "xil_defaultlib.Shifter_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "shifter_TB_behav" "xil_defaultlib.shifter_TB" -log "elaborate.log" 

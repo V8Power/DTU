@@ -6,54 +6,54 @@ library IEEE;
 use IEEE.Std_logic_1164.all;
 use IEEE.Numeric_Std.all;
 
-entity full_adder_tb is
+entity FU_tb is
 end;
 
-architecture bench of full_adder_tb is
+architecture bench of FU_tb is
 
-  component full_adder
-  generic(width : integer:=8);
-    Port ( 
-          A_in, B_in : in std_logic_vector(8 -1 downto 0);
-          D_out : out std_logic_vector(8 - 1 downto 0);
-          C_in : in std_logic; 
-          C_out : out std_logic;
-          Sub : in std_logic );
+  component FU
+  Port (
+      FS: in std_logic_vector(3 downto 0);
+      A, B: in std_logic_vector(7 downto 0);
+      R: out std_logic_vector(7 downto 0);
+      V,C,N,Z : out std_logic
+  );
   end component;
 
-  signal A_in, B_in: std_logic_vector(8 -1 downto 0);
-  signal D_out: std_logic_vector(8 - 1 downto 0);
-  signal C_in: std_logic;
-  signal C_out: std_logic;
-  signal Sub: std_logic ;
+  signal FS: std_logic_vector(3 downto 0);
+  signal A, B: std_logic_vector(7 downto 0);
+  signal R: std_logic_vector(7 downto 0);
+  signal V,C,N,Z: std_logic ;
 
 begin
 
-  -- Insert values for generic parameters !!
-  uut: full_adder 
-                     port map ( A_in  => A_in,
-                                B_in  => B_in,
-                                D_out => D_out,
-                                C_in  => C_in,
-                                C_out => C_out,
-                                Sub   => Sub );
+  uut: FU port map ( FS => FS,
+                     A  => A,
+                     B  => B,
+                     R  => R,
+                     V  => V,
+                     C  => C,
+                     N  => N,
+                     Z  => Z );
 
   stimulus: process
   begin
   
     -- Put initialisation code here
-    A_in <= x"0A";
-    B_in <= x"0F";
-    Sub <= '0';
-    wait for 500 ns;
-    A_in <= x"02";
-    B_in <= x"02";
-    Sub <= '0';
-   
 
+A <= x"90";
+B <= x"B4";
+for k in 0 to 15 loop
+    
+   FS <= STD_LOGIC_VECTOR(to_unsigned(k,4));
+   
+   wait for 10ns;
+  
+end loop;
     -- Put test bench stimulus code here
 
     wait;
   end process;
-  
-  end;
+
+
+end;

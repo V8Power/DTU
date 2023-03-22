@@ -12,6 +12,7 @@ vhdl xil_defaultlib  \
 "../../../../project_1.srcs/sim_1/new/alu_tb.v" \
 "../../../../project_1.srcs/sim_1/new/mux4Testbench.vhd" \
 "../../../../project_1.srcs/sim_1/new/testbaench_adder.vhd" \
+"../../../../project_1.srcs/sim_1/new/shifter_TB.vhd" \
 
 # Do not sort compile order
 nosort

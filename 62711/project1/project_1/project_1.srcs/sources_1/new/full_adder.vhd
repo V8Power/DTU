@@ -38,7 +38,8 @@ generic(width : integer:=8);
         D_out : out std_logic_vector(width - 1 downto 0);
         C_in : in std_logic; 
         C_out : out std_logic;
-        Sub : in std_logic );
+        Sub : in std_logic;
+        V: out std_logic );
 end full_adder;
 
 architecture Behavioral of full_adder is
@@ -48,8 +49,12 @@ component full_add
   D_out, C_out : out std_logic  );
 end component;
 signal cc : std_logic_vector (width - 1 downto 0);
+signal C_int: std_logic;
 begin
-
+CC(7) <= '1';
+C_out <= C_int;
+V <=  (C_int xor cc(6));
+--V <= '1';
 n_width_adder: for i in 0 to width - 1 generate
 Low_bit: if i=0 generate
 U0: full_add port map
@@ -59,11 +64,13 @@ end generate Low_bit;
 mid_bits: if (i>0 and i<(width - 1)) generate
 Ux: full_add port map
 (A_in(i), B_in(i), cc(i-1), Sub, D_out(i), cc(i)); 
+
 end generate mid_bits;
 
 high_bit: if i=width-1 generate
 UH: full_add port map
-(A_in(i), B_in(i), cc(i-1), Sub, D_out(i), C_out);
+(A_in(i), B_in(i), cc(i-1), Sub, D_out(i), C_int);
+
 end generate high_bit;
 end generate n_width_adder;
 end Behavioral;
