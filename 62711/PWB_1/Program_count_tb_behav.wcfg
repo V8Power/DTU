@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Program_count_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Program_count_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="171677fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="169"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/Program_count_tb/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/PS" type="array">
+      <obj_property name="ElementShortName">PS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/ADDR_in" type="array">
+      <obj_property name="ElementShortName">ADDR_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/Offset" type="array">
+      <obj_property name="ElementShortName">Offset[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Offset[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/PC" type="array">
+      <obj_property name="ElementShortName">PC[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/stop_the_clock" type="other">
+      <obj_property name="ElementShortName">stop_the_clock</obj_property>
+      <obj_property name="ObjectShortName">stop_the_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/clock_period" type="other">
+      <obj_property name="ElementShortName">clock_period</obj_property>
+      <obj_property name="ObjectShortName">clock_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/uut/D/A_in" type="array">
+      <obj_property name="ElementShortName">A_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/uut/D/B_in" type="array">
+      <obj_property name="ElementShortName">B_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">B_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/uut/D/D_out" type="array">
+      <obj_property name="ElementShortName">D_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">D_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/uut/D/C_int" type="logic">
+      <obj_property name="ElementShortName">C_int</obj_property>
+      <obj_property name="ObjectShortName">C_int</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/uut/count1" type="array">
+      <obj_property name="ElementShortName">count1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">count1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Program_count_tb/uut/count" type="array">
+      <obj_property name="ElementShortName">count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">count[7:0]</obj_property>
+   </wvobject>
+</wave_config>
