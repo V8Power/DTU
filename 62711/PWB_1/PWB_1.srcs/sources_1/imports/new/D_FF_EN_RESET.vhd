@@ -31,16 +31,26 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity mux_2x1 is
-    Port ( I : in STD_LOGIC_VECTOR(1 downto 0);
-           s : in STD_LOGIC;
-           Y : out STD_LOGIC);
-end mux_2x1;
+entity D_FF_EN_RESET is
+    Port ( D : in STD_LOGIC;
+           RESET : in STD_LOGIC;
+           LOAD : in STD_LOGIC;
+           CLK : in STD_LOGIC;
+           Q : out STD_LOGIC);
+end D_FF_EN_RESET;
 
-architecture Behavioral of mux_2x1 is
+architecture Behavioral of D_FF_EN_RESET is
 
 begin
 
-y<=(NOT s and I(0)) or (S AND I(1));    --truth table p. 140
-
+process(CLK,reset,load) is
+    begin
+    if reset = '1' then
+        q<='0';
+    elsif rising_edge(clk) then
+        if load = '1' then
+            q<=d;
+        end if;
+     end if;
+end process;
 end Behavioral;

@@ -67,64 +67,64 @@ lock: process
 Reset <= '1';
     wait for 10ns;
     Reset <= '0';
-    wait for clk_period;   --reset
+    wait for clk_period;
     
     Data_in <= x"78";
     MD<= '1';
     RW <= '1';
-    DA<= x"5";          --load 0x78 to reg 0x5
+    DA<= x"5";
     wait for clk_period;
-    Data_in <= x"56";     
-    DA <= x"6";      --load 0x56 to reg 0x6
+    Data_in <= x"56";
+    DA <= x"6";
     
     wait for clk_period;
     RW <= '0';
     MD <= '0';
     AA <= x"5";
     BA <= x"6";
-    MB <= '0';       -- nothing happens here. Data A, B are selectd to red reg 5,6
+    MB <= '0';
     wait for clk_period;
-    FS <= x"2";                  -- add reg 0x5 and 0x6
-    DA <= x"7";                      --store to reg 0x7
-    RW <= '1';                    
+    FS <= x"2";
+    DA <= x"7";
+    RW <= '1';
     wait for clk_period;
     RW <= '0';
     wait for clk_period;
-    BA <= x"7";          --sr
+    BA <= x"7";
     FS <= x"D";
     DA <= x"8";
     RW <= '1';
     wait for clk_period;
-    BA <= x"8";       --sl
+    BA <= x"8";
     FS <= x"E";
     DA <= x"9";
     RW <= '1';
     wait for clk_period;
-    AA <= x"7";        --substract  reg 0x7 and 0x6
+    AA <= x"7";
     BA <= x"6";
     FS <= x"5";
-    DA <= x"a";      --store result in reg 0xA
+    DA <= x"a";
     RW <= '1';
     wait for clk_period;
     RW <= '0';
     wait for clk_period;
-    AA <= x"a";       -- Reg 0xA -1
+    AA <= x"a";
     FS <= x"6";
     DA <= x"B";
     RW <= '1';
     wait for clk_period;
     RW <= '1';
-    const_in <= x"10";     --load data from const in. 
-    MB <= '1';               --MUXB set
+    const_in <= x"10";
+    MB <= '1';
     
-    FS <= x"F";        --ALU passthrough
-    DA <= x"C";            --store to reg 0xC
+    FS <= x"F";
+    DA <= x"C";
     wait for clk_period;
     
     MB <= '0';
     RW <= '0';
     wait for clk_period;
-    AA <= x"C";           -- reg 0xC - 0xA
+    AA <= x"C";
     BA <= x"A";
     FS <= x"4";
     RW <= '1';
@@ -132,10 +132,10 @@ Reset <= '1';
     wait for clk_period;
     RW <= '0';
     wait for clk_period;
-    AA <= x"A";         --reg 0xA -0xA
+    AA <= x"A";
     BA <= x"A";
     FS <= x"5";
-    DA <= x"E";        --store to reg 0xE                used to test 0 flag
+    DA <= x"E";
     RW <= '1';
     wait for clk_period;
     RW <= '0';
