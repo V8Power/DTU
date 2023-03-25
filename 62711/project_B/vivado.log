@@ -31,3 +31,234 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/dat
 open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 1781.191 ; gain = 323.926
 upgrade_project -migrate_output_products
 update_compile_order -fileset sources_1
+close [ open C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/PWB_full.vhd w ]
+add_files C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/PWB_full.vhd
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/Program_count.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/PWB_TB.vhd w ]
+add_files -fileset sim_1 C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/PWB_TB.vhd
+update_compile_order -fileset sim_1
+set_property top PWB_full [current_fileset]
+update_compile_order -fileset sources_1
+set_property top PWB_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'PWB_TB'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'PWB_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj PWB_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/InstructionDecoderController.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'InstructionDecoderController'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/InstructionDecoder_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'InstructionDecoderController_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/InstructionRegister.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'InstructionRegister'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/Instruction_register_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'InstructionRegister_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/PWB_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PWB_full_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/PWB_full.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PWB_full'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/Program_count.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Program_count'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/SignExtender.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SignExtender'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/SignExtender_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SignExtender_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/ZeroFiller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ZeroFiller'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/zero_filler_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ZeroFiller_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_TB_behav xil_defaultlib.PWB_TB -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_TB_behav xil_defaultlib.PWB_TB -log elaborate.log 
+Using 2 slave threads.
+ERROR: [XSIM 43-3225] Cannot find design unit xil_defaultlib.PWB_TB in library work located at xsim.dir/work.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1828.230 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sim_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'PWB_TB'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'PWB_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj PWB_TB_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_TB_behav xil_defaultlib.PWB_TB -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_TB_behav xil_defaultlib.PWB_TB -log elaborate.log 
+Using 2 slave threads.
+ERROR: [XSIM 43-3225] Cannot find design unit xil_defaultlib.PWB_TB in library work located at xsim.dir/work.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+set_property top PWB_full_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'PWB_full_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'PWB_full_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj PWB_full_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_full_tb_behav xil_defaultlib.PWB_full_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_full_tb_behav xil_defaultlib.PWB_full_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-666] expression has 8 elements; expected 16 [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/PWB_full.vhd:94]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit pwb_full_tb in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'PWB_full_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'PWB_full_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj PWB_full_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/PWB_full.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PWB_full'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_full_tb_behav xil_defaultlib.PWB_full_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_full_tb_behav xil_defaultlib.PWB_full_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-666] expression has 8 elements; expected 16 [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/PWB_TB.vhd:17]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit pwb_full_tb in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'PWB_full_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'PWB_full_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj PWB_full_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/PWB_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PWB_full_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_full_tb_behav xil_defaultlib.PWB_full_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_full_tb_behav xil_defaultlib.PWB_full_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.InstructionDecoderController [instructiondecodercontroller_def...]
+Compiling architecture behavioral of entity xil_defaultlib.InstructionRegister [instructionregister_default]
+Compiling architecture behavioral of entity xil_defaultlib.Program_count [program_count_default]
+Compiling architecture behavioral of entity xil_defaultlib.SignExtender [signextender_default]
+Compiling architecture behavioral of entity xil_defaultlib.ZeroFiller [zerofiller_default]
+Compiling architecture behavioral of entity xil_defaultlib.PWB_full [pwb_full_default]
+Compiling architecture bench of entity xil_defaultlib.pwb_full_tb
+Built simulation snapshot PWB_full_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PWB_full_tb_behav -key {Behavioral:sim_1:Functional:PWB_full_tb} -tclbatch {PWB_full_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source PWB_full_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PWB_full_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1887.613 ; gain = 29.699
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 22 22:38:12 2023...

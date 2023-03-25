@@ -14,3 +14,40 @@ start_gui
 open_project C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.xpr
 upgrade_project -migrate_output_products
 update_compile_order -fileset sources_1
+close [ open C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/PWB_full.vhd w ]
+add_files C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/PWB_full.vhd
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sources_1/new/Program_count.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/PWB_TB.vhd w ]
+add_files -fileset sim_1 C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/project_B/project_B.srcs/sim_1/new/PWB_TB.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top PWB_full [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top PWB_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sim_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top PWB_full_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+launch_simulation
+launch_simulation
+source PWB_full_tb.tcl
+close_sim
