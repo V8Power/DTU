@@ -32,3 +32,5 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/dat
 open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1803.645 ; gain = 129.953
 upgrade_project -migrate_output_products
 update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 22 22:38:06 2023...
