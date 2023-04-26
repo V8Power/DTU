@@ -70,6 +70,9 @@ process(CLK, reset) is
         elsif (PS = "11") then
         PC <= ADDR_in;
         
+        elsif (PS = "XX") then
+        
+        
         end if;
         
        

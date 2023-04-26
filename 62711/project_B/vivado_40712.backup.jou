@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Mar 23 09:10:11 2023
+# Process ID: 40712
+# Current directory: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/project_B
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18600 C:\Users\felix\Documents\DTU\62711_Digital_systems_design\Git\DTU\62711\project_B\project_B.xpr
+# Log file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/project_B/vivado.log
+# Journal file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/project_B\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/project_B/project_B.xpr
+save_project_as PWB_2020 C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWB_2020 -force
+import_files
+launch_simulation
+source PWB_full_tb.tcl
+close_sim
+launch_simulation
+source PWB_full_tb.tcl
+close_sim
+launch_simulation
+source PWB_full_tb.tcl
+close_sim
+launch_simulation
+source PWB_full_tb.tcl
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWB_2020/PWB_full_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWB_2020/PWB_full_tb_behav.wcfg
+set_property xsim.view C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWB_2020/PWB_full_tb_behav.wcfg [get_filesets sim_1]
+relaunch_sim
+save_wave_config {C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWB_2020/PWB_full_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWB_2020/PWB_full_tb_behav.wcfg
+source PWB_full_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWB_2020/PWB_full_tb_behav.wcfg
+source PWB_full_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWB_2020/PWB_full_tb_behav.wcfg
+source PWB_full_tb.tcl
+relaunch_sim

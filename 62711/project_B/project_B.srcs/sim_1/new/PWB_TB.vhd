@@ -63,7 +63,72 @@ begin
     reset <= '0';
     wait for 5 ns;
 
-    -- Put test bench stimulus code here
+    address_in <= x"A3";
+  
+   V <= '-';
+  C <= '-';
+  N <= '-';
+  Z <= '-';
+  Instrcution_in<="0000000001010000"; --MOVA
+  wait for clock_period*2;
+  --------------------
+  
+  V <= '-';
+  C <= '-';
+  N <= '-';
+  Z <= '-';
+  Instrcution_in<="0000010100010001"; --ADD
+  wait for clock_period*2;
+  --------------------
+  
+  V <= '-';
+  C <= '-';
+  N <= '-';
+  Z <= '-';
+  Instrcution_in<="0000101101010001"; --SUB
+  wait for clock_period*2;
+  --------------------
+  
+  V <= '-';
+  C <= '-';
+  N <= '-';
+  Z <= '-';
+  Instrcution_in<="0000110101101000"; --DEC
+  wait for clock_period*2;
+  --------------------
+  V <= '-';
+  C <= '-';
+  N <= '-';
+  Z <= '-';
+  Instrcution_in<="0001000110101111"; --OR
+  wait for clock_period*2;
+  --------------------
+
+ 
+  --------------------
+  V <= '-';
+  C <= '-';
+  N <= '-';
+  Z <= '-';
+  Instrcution_in<="1110000000000001"; --JMP
+  wait for clock_period*2;
+  --------------------
+  V <= '-';
+  C <= '-';
+  N <= '-';
+  Z <= '0';
+  Instrcution_in<="0001110000000000"; --SRM  0001101010011010
+  wait for clock_period*2;
+  Z <= '1';
+    wait for clock_period;
+  --------------------
+  V <= '-';
+  C <= '-';
+  N <= '-';
+  Z <= '0';
+  Instrcution_in<="0001101000000000"; --SLM   --0001110010011010
+  wait for clock_period*2;
+  
 
     stop_the_clock <= true;
     wait;

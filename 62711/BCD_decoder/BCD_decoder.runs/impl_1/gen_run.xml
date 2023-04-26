@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1682329604">
-  <File Type="BITSTR-BMM" Name="Decoder_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="Decoder_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="Decoder_timing_summary_init.rpt"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1682532287">
   <File Type="ROUTE-PWR" Name="Decoder_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Decoder.tcl"/>
-  <File Type="OPT-TIMING" Name="Decoder_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="Decoder_opt.dcp"/>
+  <File Type="BITSTR-MMI" Name="Decoder.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Decoder_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Decoder_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="Decoder_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Decoder_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="Decoder_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Decoder_opt.dcp"/>
   <File Type="OPT-DRC" Name="Decoder_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="Decoder.hwdef"/>
   <File Type="PWROPT-DCP" Name="Decoder_pwropt.dcp"/>
@@ -22,13 +22,14 @@
   <File Type="PLACE-CTRL" Name="Decoder_control_sets_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="Decoder_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Decoder_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="Decoder.bin"/>
   <File Type="PLACE-TIMING" Name="Decoder_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="Decoder_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="Decoder.bin"/>
+  <File Type="BITSTR-MSK" Name="Decoder.msk"/>
   <File Type="POSTPLACE-PWROPT-TIMING" Name="Decoder_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="Decoder_physopt.dcp"/>
   <File Type="PHYSOPT-DRC" Name="Decoder_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="Decoder.msk"/>
+  <File Type="BITSTR-RBT" Name="Decoder.rbt"/>
   <File Type="PHYSOPT-TIMING" Name="Decoder_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="Decoder_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="Decoder_routed.dcp"/>
@@ -36,7 +37,6 @@
   <File Type="ROUTE-DRC" Name="Decoder_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Decoder_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="Decoder_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="Decoder.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="Decoder_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Decoder_methodology_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Decoder_methodology_drc_routed.pb"/>
@@ -57,11 +57,11 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Decoder_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Decoder_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Decoder_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Decoder_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="Decoder.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Decoder_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Decoder_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="Decoder.rbt"/>
   <File Type="BITSTR-NKY" Name="Decoder.nky"/>
+  <File Type="BITSTR-BMM" Name="Decoder_bd.bmm"/>
   <File Type="PDI-FILE" Name="Decoder.pdi"/>
   <File Type="RCFI_FILE" Name="Decoder.rcfi"/>
   <File Type="CFI_FILE" Name="Decoder.cfi"/>
@@ -75,7 +75,11 @@
   <File Type="BG-DRC" Name="Decoder.drc"/>
   <File Type="RDI-RDI" Name="Decoder.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+  <File Type="ROUTE-RQS" Name="Decoder_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="Decoder_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Decoder.vhd">
       <FileInfo>
@@ -121,6 +125,9 @@
     <Step Id="phys_opt_design"/>
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
-    <Step Id="write_bitstream"/>
+    <Step Id="write_bitstream">
+      <Option Id="RawbitFileBool">1</Option>
+      <Option Id="BinFile">1</Option>
+    </Step>
   </Strategy>
 </GenRun>

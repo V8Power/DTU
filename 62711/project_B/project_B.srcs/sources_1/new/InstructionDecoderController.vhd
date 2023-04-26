@@ -60,7 +60,7 @@ begin
     end if;
 end process;
 
-StateDec: process(IR(15 downto 9), V, C, N, Z)
+StateDec: process(state,IR(15 downto 9), V, C, N, Z)
 begin
 case state is
     when INF => 
@@ -91,9 +91,9 @@ case state is
            MMs <= '-';
            MWs <= '0';
            Nextstate <= INF;
-          end if;
+          
       -------------------------------------     
-         if IR(15 downto 9) = "0000001" then  
+         elsif IR(15 downto 9) = "0000001" then  
            ILs <= '0';
            PSs <= "01";
            DXs <= '0'&IR(8 downto 6);
@@ -106,9 +106,9 @@ case state is
            MMs <= '-';
            MWs <= '0';
            Nextstate <= INF;
-          end if;
+         
        ------------------------------------- 
-          if IR(15 downto 9) = "0000010" then  
+          elsif IR(15 downto 9) = "0000010" then  
            ILs <= '0';
            PSs <= "01";
            DXs <= '0'&IR(8 downto 6);
@@ -121,9 +121,9 @@ case state is
            MMs <= '-';
            MWs <= '0';
            Nextstate <= INF;
-          end if;
+         
       -------------------------------------
-         if IR(15 downto 9) = "0000101" then  
+         elsif IR(15 downto 9) = "0000101" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
@@ -136,9 +136,9 @@ case state is
             MMs <= '-';
             MWs <= '0'; 
             Nextstate <= INF;
-           end if;
+          
 -------------------------------------
-         if IR(15 downto 9) = "0000110" then  
+         elsif IR(15 downto 9) = "0000110" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
@@ -151,9 +151,9 @@ case state is
             MMs <= '-';
             MWs <= '0'; 
             Nextstate <= INF;
-           end if;
+           
 -------------------------------------
-         if IR(15 downto 9) = "0001000" then  
+         elsif IR(15 downto 9) = "0001000" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
@@ -166,9 +166,9 @@ case state is
             MMs <= '-';
             MWs <= '0'; 
             Nextstate <= INF;
-           end if;   
+             
 -------------------------------------
-         if IR(15 downto 9) = "0001001" then  
+         elsif IR(15 downto 9) = "0001001" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
@@ -181,9 +181,9 @@ case state is
             MMs <= '-';
             MWs <= '0';   
             Nextstate <= INF;
-           end if;      
+               
 -------------------------------------
-        if IR(15 downto 9) = "0001010" then  
+        elsif IR(15 downto 9) = "0001010" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
@@ -196,9 +196,9 @@ case state is
             MMs <= '-';
             MWs <= '0';  
             Nextstate <= INF;
-           end if;         
+                
 -------------------------------------
-        if IR(15 downto 9) = "0001011" then  
+        elsif IR(15 downto 9) = "0001011" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
@@ -211,9 +211,9 @@ case state is
             MMs <= '-';
             MWs <= '0';
             Nextstate <= INF;
-           end if;
+          
 -------------------------------------
-        if IR(15 downto 9) = "0001100" then  
+        elsif IR(15 downto 9) = "0001100" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
@@ -226,9 +226,9 @@ case state is
             MMs <= '-';
             MWs <= '0';
             Nextstate <= INF;
-           end if;
+          
 -------------------------------------
-        if IR(15 downto 9) = "0010000" then  
+        elsif IR(15 downto 9) = "0010000" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
@@ -241,9 +241,9 @@ case state is
             MMs <= '0';
             MWs <= '0';
             Nextstate <= INF;
-           end if;
+          
 -------------------------------------
-        if IR(15 downto 9) = "0100000" then  
+        elsif IR(15 downto 9) = "0100000" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '-'&IR(8 downto 6);
@@ -256,9 +256,9 @@ case state is
             MMs <= '0';
             MWs <= '1';
             Nextstate <= INF;
-           end if;
+       
 -------------------------------------
-        if IR(15 downto 9) = "1001100" then  
+        elsif IR(15 downto 9) = "1001100" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
@@ -271,9 +271,9 @@ case state is
             MMs <= '0';
             MWs <= '0';
             Nextstate <= INF;
-           end if;
--------------------------------------
-        if IR(15 downto 9) = "1000010" then  
+          
+------------------------------------
+        elsif IR(15 downto 9) = "1000010" then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
@@ -286,9 +286,9 @@ case state is
             MMs <= '0';
             MWs <= '0';
             Nextstate <= INF;
-           end if;
+          
 -------------------------------------
-        if IR(15 downto 9) = "1100000" and Z = '1' then  
+        elsif IR(15 downto 9) = "1100000" and Z = '1' then  
             ILs <= '0';
             PSs <= "10";
             DXs <= '-'&IR(8 downto 6);
@@ -301,9 +301,9 @@ case state is
             MMs <= '0';
             MWs <= '0';
             Nextstate <= INF;
-           end if;
+          
 -------------------------------------
-        if IR(15 downto 9) = "1100000" and Z = '0' then  
+        elsif IR(15 downto 9) = "1100000" and Z = '0' then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '-'&IR(8 downto 6);
@@ -316,9 +316,9 @@ case state is
             MMs <= '0';
             MWs <= '0';
             Nextstate <= INF;
-           end if;
+           
 -------------------------------------
-        if IR(15 downto 9) = "1100001" and N = '1' then  
+        elsif IR(15 downto 9) = "1100001" and N = '1' then  
             ILs <= '0';
             PSs <= "10";
             DXs <= '-'&IR(8 downto 6);
@@ -331,9 +331,9 @@ case state is
             MMs <= '0';
             MWs <= '0';
             Nextstate <= INF;
-           end if;
+          
 -------------------------------------
-        if IR(15 downto 9) = "1100001" and N = '0' then  
+        elsif IR(15 downto 9) = "1100001" and N = '0' then  
             ILs <= '0';
             PSs <= "01";
             DXs <= '-'&IR(8 downto 6);
@@ -346,9 +346,9 @@ case state is
             MMs <= '0';
             MWs <= '0';
             Nextstate <= INF;
-           end if;
+          
 -------------------------------------
-        if IR(15 downto 9) = "1110000" then  
+        elsif IR(15 downto 9) = "1110000" then  
             ILs <= '0';
             PSs <= "11";
             DXs <= '-'&IR(8 downto 6);
@@ -361,9 +361,9 @@ case state is
             MMs <= '0';
             MWs <= '0';
             Nextstate <= INF;
-           end if;
--------------------------------------
-       if IR(15 downto 9) = "0010001" then  
+           
+------------------------------------
+       elsif IR(15 downto 9) = "0010001" then  
            ILs <= '0';
            PSs <= "00";
            DXs <= "1000";
@@ -376,9 +376,9 @@ case state is
            MMs <= '0';
            MWs <= '0';
            Nextstate <= EX1;
-          end if;
+         
 -------------------------------------
-         if IR(15 downto 9) = "0001101" and Z <= '0' then  
+         elsif IR(15 downto 9) = "0001101" and Z <= '0' then  
              ILs <= '0';
              PSs <= "00";
              DXs <= "1000";
@@ -391,9 +391,9 @@ case state is
              MMs <= '-';
              MWs <= '0';
              Nextstate <= EX1;
-            end if;
+           
 -------------------------------------
-         if IR(15 downto 9) = "0001101" and Z <= '1' then  
+         elsif IR(15 downto 9) = "0001101" and Z <= '1' then  
              ILs <= '0';
              PSs <= "01";
              DXs <= "1000";
@@ -406,9 +406,9 @@ case state is
              MMs <= '-';
              MWs <= '0';
              Nextstate <= INF;
-            end if;
+           
 -------------------------------------
-         if IR(15 downto 9) = "0001110" and Z <= '0' then  
+         elsif IR(15 downto 9) = "0001110" and Z <= '0' then  
              ILs <= '0';
              PSs <= "00";
              DXs <= "1000";
@@ -439,9 +439,9 @@ case state is
                MMs <= '0';
                MWs <= '0';
                Nextstate <= INF;
-              end if; 
+             
 ------------------------------------
-            if IR(15 downto 9) = "0001101" and Z <= '0' then  
+            elsif IR(15 downto 9) = "0001101" and Z <= '0' then  
                ILs <= '0';
                PSs <= "00";
                DXs <= "1001";
@@ -454,9 +454,9 @@ case state is
                MMs <= '-';
                MWs <= '0';
                Nextstate <= EX2;
-              end if;
+             
 ------------------------------------
-          if IR(15 downto 9) = "0001101" and Z <= '1' then  
+          elsif IR(15 downto 9) = "0001101" and Z <= '1' then  
              ILs <= '0';
              PSs <= "01";
              DXs <= "1001";
@@ -469,6 +469,36 @@ case state is
              MMs <= '-';
              MWs <= '0';
              Nextstate <= INF;
+
+------------------------------------
+            elsif IR(15 downto 9) = "0001110" and Z <= '0' then  
+               ILs <= '0';
+               PSs <= "00";
+               DXs <= "1001";
+               AXs <= '-'&IR(5 downto 3);
+               BXs <= '-'&IR(2 downto 0);
+               MBs <= '1';
+               FSs <= "1100";
+               MDs <= '0';
+               RWs <= '1';
+               MMs <= '-';
+               MWs <= '0';
+               Nextstate <= EX2;
+               
+------------------------------------
+           elsif IR(15 downto 9) = "0001110" and Z <= '1' then  
+              ILs <= '0';
+              PSs <= "01";
+              DXs <= "1001";
+              AXs <= '-'&IR(5 downto 3);
+              BXs <= '-'&IR(2 downto 0);
+              MBs <= '1';
+              FSs <= "1100";
+              MDs <= '0';
+              RWs <= '1';
+              MMs <= '-';
+              MWs <= '0';
+              Nextstate <= INF ;
             end if; 
 ------------------------------------
     when EX2 =>
@@ -487,9 +517,9 @@ case state is
                  MMs <= '-';
                  MWs <= '0';
                  Nextstate <= EX3;
-                end if;
+               
 ---------------------------------------
-            if IR(15 downto 9) = "0001110" then  
+            elsif IR(15 downto 9) = "0001110" then  
                  ILs <= '0';
                  PSs <= "00";
                  DXs <= "1000";
@@ -519,9 +549,9 @@ when EX3 =>
                  MMs <= '-';
                  MWs <= '0';
                  Nextstate <= EX2;
-                end if;
+               
 --------------------------------------- 
-                if IR(15 downto 9) = "0001101" and Z <= '1' then  
+                elsif IR(15 downto 9) = "0001101" and Z <= '1' then  
                  ILs <= '0';
                  PSs <= "00";
                  DXs <= "1001";
@@ -534,9 +564,9 @@ when EX3 =>
                  MMs <= '-';
                  MWs <= '0';
                  Nextstate <= EX4;
-                end if;
+               
 --------------------------------------- 
-             if IR(15 downto 9) = "0001110" and Z <= '0' then  
+             elsif IR(15 downto 9) = "0001110" and Z <= '0' then  
                 ILs <= '0';
                 PSs <= "00";
                 DXs <= "1001";
@@ -549,9 +579,9 @@ when EX3 =>
                 MMs <= '-';
                 MWs <= '0';
                 Nextstate <= EX2;
-               end if;
+             
 --------------------------------------- 
-              if IR(15 downto 9) = "0001110" and Z <= '1' then  
+              elsif IR(15 downto 9) = "0001110" and Z <= '1' then  
                 ILs <= '0';
                 PSs <= "00";
                 DXs <= "1001";
@@ -582,9 +612,9 @@ when EX4 =>
                 MMs <= '-';
                 MWs <= '0';
                 Nextstate <= INF;
-               end if;
+              
 --------------------------------------- 
-            if IR(15 downto 9) = "0001110"  then  
+            elsif IR(15 downto 9) = "0001110"  then  
                 ILs <= '0';
                 PSs <= "01";
                 DXs <= '0'&IR(8 downto 6);
