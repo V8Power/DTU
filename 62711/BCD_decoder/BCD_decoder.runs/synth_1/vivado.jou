@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Apr 24 11:46:47 2023
+# Process ID: 11692
+# Current directory: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/BCD_decoder/BCD_decoder.runs/synth_1
+# Command line: vivado.exe -log Decoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Decoder.tcl
+# Log file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/BCD_decoder/BCD_decoder.runs/synth_1/Decoder.vds
+# Journal file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/BCD_decoder/BCD_decoder.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Decoder.tcl -notrace

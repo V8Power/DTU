@@ -1,23 +1,7 @@
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto e3e12533662440999f95679bc0e6346f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_full_tb_behav xil_defaultlib.PWB_full_tb -log elaborate.log 
+Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto e3e12533662440999f95679bc0e6346f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Ram16x256_tb_behav xil_defaultlib.Ram16x256_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.InstructionDecoderController [instructiondecodercontroller_def...]
-Compiling architecture behavioral of entity xil_defaultlib.InstructionRegister [instructionregister_default]
-Compiling architecture behavioral of entity xil_defaultlib.Program_count [program_count_default]
-Compiling architecture behavioral of entity xil_defaultlib.SignExtender [signextender_default]
-Compiling architecture behavioral of entity xil_defaultlib.ZeroFiller [zerofiller_default]
-Compiling architecture behavioral of entity xil_defaultlib.PWB_full [pwb_full_default]
-Compiling architecture bench of entity xil_defaultlib.pwb_full_tb
-Built simulation snapshot PWB_full_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

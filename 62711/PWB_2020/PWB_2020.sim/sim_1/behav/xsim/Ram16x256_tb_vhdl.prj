@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../PWB_2020.srcs/sources_1/imports/new/Ram_test_tb.vhd" \
+"../../../../PWB_2020.srcs/sources_1/new/Ram16x256.vhd" \
+"../../../../PWB_2020.srcs/sim_1/new/Instruction_register_testbench.vhd" \
+"../../../../PWB_2020.srcs/sim_1/new/SignExtender_testbench.vhd" \
+"../../../../PWB_2020.srcs/sim_1/new/zero_filler_testbench.vhd" \
+"../../../../PWB_2020.srcs/sim_1/new/InstructionDecoder_testbench.vhd" \
+"../../../../PWB_2020.srcs/sim_1/new/PWB_TB.vhd" \
+
+# Do not sort compile order
+nosort
