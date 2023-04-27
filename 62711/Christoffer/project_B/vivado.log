@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Mar 16 08:57:03 2023
+# Process ID: 11256
+# Current directory: C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16076 C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_B\project_B.xpr
+# Log file: C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/vivado.log
+# Journal file: C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 832.688 ; gain = 169.266
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionRegister.vhd} w ]
+add_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/InstructionRegister.vhd}}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/SignExtender.vhd} w ]
+add_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/SignExtender.vhd}}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/ZeroFiller.vhd} w ]
+add_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sources_1/new/ZeroFiller.vhd}}
+update_compile_order -fileset sources_1
+set_property top SignExtender [current_fileset]
+update_compile_order -fileset sources_1
+file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sim_1/new
+file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sim_1/new
+file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sim_1/new
+file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sim_1/new
+file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sim_1/new
+file mkdir {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sim_1/new}
+close [ open {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sim_1/new/SignExtender_tb.vhd} w ]
+add_files -fileset sim_1 {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_B/project_B.srcs/sim_1/new/SignExtender_tb.vhd}}
+update_compile_order -fileset sim_1
+set_property top SignExtender_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1

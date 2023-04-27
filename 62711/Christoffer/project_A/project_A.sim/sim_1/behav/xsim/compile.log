@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_2to4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Decoder_2to4
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Decoder_4to16
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new/Decoder_4to16_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Decoder_4to16_tb

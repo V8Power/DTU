@@ -1,0 +1,680 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 1832
+License: Customer
+
+Current time: 	Thu Mar 02 10:21:33 CET 2023
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 37 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	chris
+User home directory: C:/Users/chris
+User working directory: C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A
+User country: 	DK
+User language: 	da
+User locale: 	da_DK
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/chris/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/chris/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/chris/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/vivado.log
+Vivado journal file location: 	C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/vivado.jou
+Engine tmp dir: 	C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/.Xil/Vivado-1832-LAPTOP-0FV3528O
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	209 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 539 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 65 MB (+66128kb) [00:00:09]
+// [Engine Memory]: 488 MB (+359860kb) [00:00:09]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\chris\OneDrive\Skrivebord\3. semester\Digital\DTU\62711\Christoffer\project_A\project_A.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A' 
+// [Engine Memory]: 542 MB (+30956kb) [00:00:12]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 35 MB. Current time: 3/2/23 10:21:35 AM CET
+// Tcl Message: open_project {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A' INFO: [Project 1-313] Project file moved from 'C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/projectA/project_A' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// [Engine Memory]: 597 MB (+29357kb) [00:00:17]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 630 MB (+3531kb) [00:00:20]
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 874.953 ; gain = 134.793 
+// Project name: project_A; location: C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 665 MB (+3452kb) [00:00:25]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+// Elapsed time: 43 seconds
+String[] filenames31467 = {"C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_input_mux.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/4_input_mux.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_2to4.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1_rev2.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/registerR16.vhd"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 52 seconds
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// bx (ck):  Add Sources  : addNotify
+dismissDialog("Add Sources"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 74 MB (+5203kb) [00:01:25]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (D, ck)
+// PAPropertyPanels.initPanels (4in_mux.vhd) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, 4in_mux.vhd]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (Decoder_2to4.vhd)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (Decoder_2to4.vhd)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (Decoder_2to4.vhd)]", 11, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (4_input_mux.vhd)]", 10, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (4_input_mux.vhd)]", 10, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (Decoder_2to4.vhd)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (4_input_mux.vhd)]", 10, false); // B (D, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder_2to4.vhd", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "4_input_mux.vhd", 2); // k (j, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 692 MB. GUI used memory: 71 MB. Current time: 3/2/23 10:23:30 AM CET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder_2to4.vhd", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "4_input_mux.vhd", 2); // k (j, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 12, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 12, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 13, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 13, false, false, false, false, false, true); // B (D, ck) - Double Click
+// [Engine Memory]: 699 MB (+1155kb) [00:02:17]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "2_input_mux.vhd", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "2_input_mux.vhd (2)", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "2_input_mux.vhd", 3); // k (j, ck)
+// [GUI Memory]: 84 MB (+6807kb) [00:02:25]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 13, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_input_mux.vhd] -no_script -reset -force -quiet 
+// aE (ck): Remove Sources: addNotify
+// TclEventType: DG_GRAPH_STALE
+// bx (aE):  Remove Sources : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_input_mux.vhd 
+dismissDialog("Remove Sources"); // bx (aE)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 13, false); // B (D, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 13, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, Popup.HeavyWeightWindow)
+// [GUI Memory]: 88 MB (+202kb) [00:02:43]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (4_input_mux.vhd)]", 10, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_project1 (Top_project1.v)]", 9, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (4_input_mux.vhd)]", 10, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (Decoder_2to4.vhd)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (Decoder_2to4.vhd)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (Decoder_2to4.vhd)]", 11, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 23 seconds
+selectCodeEditor("Decoder_2to4.vhd", 126, 215); // ce (w, ck)
+// [GUI Memory]: 94 MB (+1665kb) [00:05:15]
+// Elapsed time: 135 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("mux_16x1_rev2.vhd", 352, 306); // ce (w, ck)
+selectCodeEditor("mux_16x1_rev2.vhd", 352, 303); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd), M0 : input_4mux(Behavioral) (mux4to1.vhd)]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd), M0 : input_4mux(Behavioral) (mux4to1.vhd)]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd), M0 : input_4mux(Behavioral) (mux4to1.vhd)]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+// [GUI Memory]: 99 MB (+320kb) [00:05:46]
+// Elapsed time: 45 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5); // B (D, ck)
+// Elapsed time: 55 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5); // B (D, ck)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 12, false); // B (D, ck)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+dismissDialog("Add Sources"); // c (ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 12, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 12, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (Decoder_2to4.vhd)]", 11, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1(Behavioral) (2_input_mux.vhd)]", 12, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (4_input_mux.vhd)]", 10, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_project1 (Top_project1.v)]", 9, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (MUX16to1.vhd)]", 8, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FU(Behavioral) (function_unit.vhd)]", 7, true, false, true, false, false, false); // B (D, ck) - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registerR16(Behavioral) (registerR16.vhd)]", 6, true, false, true, false, false, false); // B (D, ck) - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true, false, true, false, false, false); // B (D, ck) - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/2_input_mux.vhd}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_2to4.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/4_input_mux.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/Top_project1.v}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/MUX16to1.vhd}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/function_unit.vhd}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/registerR16.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1_rev2.vhd] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// aE (ck): Remove Sources: addNotify
+// bx (aE):  Remove Sources : addNotify
+dismissDialog("Remove Sources"); // bx (aE)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 4, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, 4in_mux.vhd]", 2, false); // B (D, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, 4in_mux.vhd]", 2, false, false, true, false, false, false); // B (D, ck) - Control Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Decoder_4to16.vhd]", 3, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, 4in_mux.vhd]", 2, false, false, true, false, false, false); // B (D, ck) - Control Key
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, 4in_mux.vhd]", 2, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/4in_mux.vhd}}] -no_script -reset -force -quiet 
+// aE (ck): Remove Sources: addNotify
+// TclEventType: DG_GRAPH_STALE
+// bx (aE):  Remove Sources : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/4in_mux.vhd}} 
+dismissDialog("Remove Sources"); // bx (aE)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Decoder_4to16.vhd]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Decoder_4to16.vhd]", 2, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1_8bit(Behavioral) (mux2to1_n-bit.vhd)]", 2, true, false, true, false, false, false); // B (D, ck) - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Shifter(Behavioral) (Shifter.vhd)]", 3, true, false, true, false, false, false); // B (D, ck) - Control Key - Node
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU(Behavioral) (ALU.vhd)]", 4, true, false, true, false, false, false); // B (D, ck) - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, D_FF_EN_RESET(Behavioral) (D_FF_EN_RESET.vhd)]", 5, false, false, true, false, false, false); // B (D, ck) - Control Key
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (mux4to1.vhd)]", 6, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Shifter(Behavioral) (Shifter.vhd)]", 3, true, false, true, false, false, false); // B (D, ck) - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1_8bit(Behavioral) (mux2to1_n-bit.vhd)]", 2, true, false, true, false, false, false); // B (D, ck) - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_2x1_8bit(Behavioral) (mux2to1_n-bit.vhd)]", 2, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 712 MB. GUI used memory: 45 MB. Current time: 3/2/23 10:29:51 AM CET
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/ALU.vhd}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/Shifter.vhd}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/mux2to1_n-bit.vhd}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// aE (ck): Remove Sources: addNotify
+// bx (aE):  Remove Sources : addNotify
+// Tcl Message: remove_files  {C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/ALU.vhd} {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/Shifter.vhd} {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/mux2to1_n-bit.vhd}} 
+dismissDialog("Remove Sources"); // bx (aE)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (mux4to1.vhd)]", 6, false); // B (D, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (mux4to1.vhd)]", 6, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, full_adder(Behavioral) (full_adder.vhd)]", 2, true, false, true, false, false, false); // B (D, ck) - Control Key - Node
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_2mux(Behavioral) (mux2to1.vhd)]", 3, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (mux4to1.vhd)]", 4, false, false, true, false, false, false); // B (D, ck) - Control Key
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (D, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (mux4to1.vhd)]", 6, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, mux_16x1.vhd]", 3, false, false, true, false, false, false); // B (D, ck) - Control Key
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, 2_to_4_decoder.vhd]", 2, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, 2_to_4_decoder.vhd]", 2, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+// TclEventType: DG_GRAPH_GENERATED
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/full_adder.vhd}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/full_adder.vhd} C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1.vhd C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, full_add(Behavioral) (full_add.vhd)]", 1, false, false, true, false, false, false); // B (D, ck) - Control Key
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_2mux(Behavioral) (mux2to1.vhd)]", 2, false, false, true, false, false, false); // B (D, ck) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, input_4mux(Behavioral) (mux4to1.vhd)]", 3, false, false, true, false, false, false); // B (D, ck) - Control Key
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, full_add(Behavioral) (full_add.vhd)]", 1, false, false, true, false, false, false); // B (D, ck) - Control Key
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, full_add(Behavioral) (full_add.vhd)]", 1, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/mux4to1.vhd}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/mux2to1.vhd}}] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/full_add.vhd}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/mux4to1.vhd} {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/mux2to1.vhd} {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_1.srcs/sources_1/new/full_add.vhd}} 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 42 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+// Elapsed time: 47 seconds
+String[] filenames16706 = {"C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_input_mux.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/2_to_4_decoder.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/4_input_mux.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_2to4.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/Decoder_4to16.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/mux_16x1_rev2.vhd", "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/registerR16.vhd"};
+setFileChooser(filenames16706);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 52 seconds
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// bx (ck):  Add Sources  : addNotify
+dismissDialog("Add Sources"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (D, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Decoder_4to16.vhd]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Decoder_4to16.vhd]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Decoder_4to16.vhd", 477, 324); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 305, 303); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 493, 315); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd), M0 : input_4mux(Behavioral) (4_input_mux.vhd)]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd), M0 : input_4mux(Behavioral) (4_input_mux.vhd)]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_16x1_rev2.vhd", 2); // k (j, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("mux_16x1_rev2.vhd", 478, 262); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("mux_16x1_rev2.vhd", 357, 230); // ce (w, ck)
+selectCodeEditor("mux_16x1_rev2.vhd", 429, 243); // ce (w, ck)
+selectCodeEditor("mux_16x1_rev2.vhd", 465, 246); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder_4to16.vhd", 1); // k (j, ck)
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_16x1_rev2.vhd", 2); // k (j, ck)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder_4to16.vhd", 1); // k (j, ck)
+// Elapsed time: 230 seconds
+selectCodeEditor("Decoder_4to16.vhd", 76, 113); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("Decoder_4to16.vhd", 107, 249); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("Decoder_4to16.vhd", 320, 200); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 336, 199); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 278, 351); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 391, 356); // ce (w, ck)
+// Elapsed time: 82 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_16x1_rev2.vhd", 2); // k (j, ck)
+selectCodeEditor("mux_16x1_rev2.vhd", 190, 334); // ce (w, ck)
+// Elapsed time: 99 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder_4to16.vhd", 1); // k (j, ck)
+selectCodeEditor("Decoder_4to16.vhd", 364, 249); // ce (w, ck)
+// Elapsed time: 50 seconds
+selectCodeEditor("Decoder_4to16.vhd", 189, 249); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 11, 308); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 448, 317); // ce (w, ck)
+// Elapsed time: 63 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd), M1 : input_4mux(Behavioral) (4_input_mux.vhd)]", 7, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd), M1 : input_4mux(Behavioral) (4_input_mux.vhd)]", 7, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 24 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder_2to4(Behavioral) (Decoder_2to4.vhd)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder_2to4(Behavioral) (Decoder_2to4.vhd)]", 11, false, false, false, false, false, true); // B (D, ck) - Double Click
+// [GUI Memory]: 105 MB (+592kb) [00:23:29]
+// Elapsed time: 48 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder_4to16.vhd", 1); // k (j, ck)
+selectCodeEditor("Decoder_4to16.vhd", 104, 135); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 223, 154); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 236, 148); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 178, 133); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 157, 134); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 165, 116); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 176, 136); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 144, 158); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("Decoder_4to16.vhd", 207, 313); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("Decoder_4to16.vhd", 229, 172); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 118, 218); // ce (w, ck)
+// Elapsed time: 122 seconds
+selectCodeEditor("Decoder_4to16.vhd", 13, 335); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 190, 296); // ce (w, ck)
+// Elapsed time: 35 seconds
+selectCodeEditor("Decoder_4to16.vhd", 189, 318); // ce (w, ck)
+// Elapsed time: 34 seconds
+selectCodeEditor("Decoder_4to16.vhd", 187, 316); // ce (w, ck)
+typeControlKey((HResource) null, "Decoder_4to16.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 190, 331); // ce (w, ck)
+typeControlKey((HResource) null, "Decoder_4to16.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 192, 349); // ce (w, ck)
+typeControlKey((HResource) null, "Decoder_4to16.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 386, 301); // ce (w, ck)
+// [GUI Memory]: 112 MB (+2211kb) [00:28:50]
+selectCodeEditor("Decoder_4to16.vhd", 402, 337); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("Decoder_4to16.vhd", 189, 368); // ce (w, ck)
+typeControlKey((HResource) null, "Decoder_4to16.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 361, 330); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("Decoder_4to16.vhd", 520, 362); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 21 seconds
+selectCodeEditor("Decoder_4to16.vhd", 435, 319); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 473, 316); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 565, 366); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 458, 390); // ce (w, ck)
+// Elapsed time: 15 seconds
+typeControlKey((HResource) null, "Decoder_4to16.vhd", 'c'); // ce (w, ck)
+// Elapsed time: 35 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 14 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 12 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Decoder_4to16_test"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new 
+// Tcl Command: 'file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new'
+// Tcl Message: file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new 
+// Tcl Command: 'file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new'
+// Tcl Command: 'file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new'
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 42 seconds
+// Tcl Command: 'file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new'
+// Tcl Message: file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new 
+// Tcl Message: file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new 
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// bx (ck):  Add Simulation Sources  : addNotify
+// Tcl Command: 'file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new'
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// Tcl Message: file mkdir C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new 
+// Tcl Message: file mkdir {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new} 
+// Tcl Message: close [ open {C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new/Decoder_4to16_test.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 {{C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.srcs/sim_1/new/Decoder_4to16_test.vhd}} 
+// I (ck): Define Module: addNotify
+dismissDialog("Add Simulation Sources"); // bx (ck)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Decoder_4to16.vhd", 189, 261); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 15); // B (D, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Decoder_4to16_test(Behavioral) (Decoder_4to16_test.vhd)]", 21, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Decoder_4to16(Behavioral) (Decoder_4to16.vhd)]", 20, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Decoder_4to16_test(Behavioral) (Decoder_4to16_test.vhd)]", 21, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Decoder_4to16_test(Behavioral) (Decoder_4to16_test.vhd)]", 21, false, false, false, false, false, true); // B (D, ck) - Double Click
+typeControlKey((HResource) null, "Decoder_4to16_test.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 305, 289); // ce (w, ck)
+// Elapsed time: 68 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder_4to16(Behavioral) (Decoder_4to16.vhd)]", 6, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder_4to16(Behavioral) (Decoder_4to16.vhd)]", 6, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder_4to16(Behavioral) (Decoder_4to16.vhd)]", 6, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("Decoder_4to16.vhd", 278, 256); // ce (w, ck)
+typeControlKey((HResource) null, "Decoder_4to16.vhd", 'c'); // ce (w, ck)
+// Elapsed time: 193 seconds
+selectCodeEditor("Decoder_4to16.vhd", 126, 345); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder_4to16_test.vhd", 3); // k (j, ck)
+typeControlKey((HResource) null, "Decoder_4to16_test.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 2, 205); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 200, 227); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 18, 217); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 334, 273); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 93, 312); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 6, 218); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 40, 260); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 294, 266); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 93, 319); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Decoder_4to16.vhd]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Decoder_4to16.vhd]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("Decoder_4to16.vhd", 137, 353); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 326, 335); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 323, 305); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 466, 255); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 416, 243); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (aj)
+// bx (ck):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// e (ck):  Run Simulation : addNotify
+dismissDialog("Save Project"); // aj (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: launch_simulation 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' 
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: INFO: [SIM-utils-54] Inspecting design source files for 'registerR16' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// HMemoryUtils.trashcanNow. Engine heap size: 718 MB. GUI used memory: 51 MB. Current time: 3/2/23 10:59:51 AM CET
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj registerR16_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/D_FF_EN_RESET.vhd" into library xil_defaultlib INFO: [VRFC 10-307] analyzing entity D_FF_EN_RESET INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/chris/OneDrive/Skrivebord/VHDL/VHDL/VHDL_Gruppe4/Datapath/project_2.srcs/sources_1/new/registerR16.vhd" into library xil_defaultlib INFO: [VRFC 10-307] analyzing entity registerR16 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.sim/sim_1/behav/xsim' 
+// Tcl Message: Built simulation snapshot registerR16_behav 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message:  ****** Webtalk v2018.2 (64-bit)   **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018   **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source C:/Users/chris/OneDrive/Skrivebord/3. -notrace couldn't read file "C:/Users/chris/OneDrive/Skrivebord/3.": permission denied INFO: [Common 17-206] Exiting Webtalk at Thu Mar  2 11:00:02 2023... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 938.656 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "registerR16_behav -key {Behavioral:sim_1:Functional:registerR16} -tclbatch {registerR16.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.2 
+// Elapsed time: 146 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (e)
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// Elapsed time: 183 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (e)
+// 'd' command handler elapsed time: 333 seconds
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux_16x1_rev2(Behavioral) (mux_16x1_rev2.vhd)]", 5, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder_4to16.vhd", 1); // k (j, ck)
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder_2to4.vhd", 2); // k (j, ck)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder_4to16.vhd", 1); // k (j, ck)
+// Elapsed time: 73 seconds
+selectCodeEditor("Decoder_4to16.vhd", 206, 349); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 421, 343); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Decoder_4to16.vhd", 273, 347); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("Decoder_4to16.vhd", 447, 349); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Decoder_4to16.vhd", 510, 366); // ce (w, ck)
+selectCodeEditor("Decoder_4to16.vhd", 502, 347); // ce (w, ck)
+// Elapsed time: 70 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Decoder_4to16_test(Behavioral) (Decoder_4to16_test.vhd)]", 23, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Decoder_4to16_test(Behavioral) (Decoder_4to16_test.vhd)]", 23, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 12 seconds
+selectButton((HResource) null, "Sources_settings"); // u (f, ck): TRUE
+selectCodeEditor("Decoder_4to16_test.vhd", 90, 314); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 68, 211); // ce (w, ck)
+selectCodeEditor("Decoder_4to16_test.vhd", 55, 303); // ce (w, ck)
+// Elapsed time: 24 seconds
+closeMainWindow("project_A - [C:/Users/chris/OneDrive/Skrivebord/3. semester/Digital/DTU/62711/Christoffer/project_A/project_A.xpr] - Vivado 2018.2"); // ck
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'
