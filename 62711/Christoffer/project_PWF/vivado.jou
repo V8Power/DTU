@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Apr 27 09:20:44 2023
+# Process ID: 27404
+# Current directory: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/Christoffer/project_PWF
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10508 C:\Users\felix\Documents\DTU\62711_Digital_systems_design\Git\DTU\62711\Christoffer\project_PWF\project_PWF.xpr
+# Log file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/Christoffer/project_PWF/vivado.log
+# Journal file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/Christoffer/project_PWF\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/Christoffer/project_PWF/project_PWF.xpr
+update_compile_order -fileset sources_1
+ sources_1
+save_project_as Port_reg_new1 C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/Christoffer/Port_reg_new1 -force
+import_files
