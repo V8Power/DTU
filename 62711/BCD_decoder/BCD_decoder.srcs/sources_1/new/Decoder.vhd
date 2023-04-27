@@ -108,25 +108,27 @@ if reset = '1' then
         
          elsif clock_count < 70000 then
         AN(6) <= '0';
-        AN(7) <= '1';
+        
         AN(0) <= '1';
         AN(1) <= '1';
         AN(2) <= '1';
         AN(3) <= '1';
         AN(4) <= '1';
         AN(5) <= '1';
+		AN(7) <= '1';
         segment_val <= va2( 11 downto 8);
         
         
         elsif clock_count < 80000 then
         AN(7) <= '0';
-        AN(6) <= '1';
+       
         AN(0) <= '1';
         AN(1) <= '1';
         AN(2) <= '1';
         AN(3) <= '1';
         AN(4) <= '1';
         AN(5) <= '1';
+		AN(6) <= '1';
         segment_val <= va2( 15 downto 12);
        
         
