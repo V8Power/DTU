@@ -43,6 +43,8 @@ end PWB_full;
 
 architecture Behavioral of PWB_full is
 
+
+
 component InstructionDecoderController is
     Port ( RESET : in STD_LOGIC;
            CLK : in STD_LOGIC;
@@ -96,6 +98,9 @@ B: InstructionRegister port map (reset, clk, Instrcution_in, IL, IR);
 K: Program_count port map (clk, reset, PS, Address_in, Offset, PC_std);
 D: SignExtender port map (IR, Offset);
 E: ZeroFiller port map (IR, Constant_out);
+
+
+
 
 Address_out <= PC_std;
 
