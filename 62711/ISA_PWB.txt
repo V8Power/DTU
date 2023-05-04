@@ -6,7 +6,7 @@ DEC D5 A5
 OR D6 A5 B7
 
 
-LD D3 A9
+LD D3 A6
 
 
 

@@ -33,9 +33,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity PWF_complete is
   Port (
-  Reset, clk, btnL, btnV, btnR, btnD, btnC : in std_logic; 
+  Reset1, clk, BNTC, BTNU, BTNL, BTNR, BTND : in std_logic; 
   SW : in std_logic_vector(7 downto 0);
   AN, D, LED : out std_logic_vector( 7 downto 0)
+  
+
+
   
    );
 end PWF_complete;
@@ -75,7 +78,7 @@ component Decoder is
  Port (
  clk, reset : in std_logic;
  AN, D : out std_logic_vector( 7 downto 0);
- va1 : in std_logic_vector( 15 downto 0)
+ va1, va2 : in std_logic_vector( 15 downto 0)
   );
 end component;
 
@@ -87,12 +90,47 @@ component mux_2x1_16bit is
            S : in std_logic );
 end component;
 
+component PortReg8x8 is --port names are as default in the user constraint file!
 
-signal cconstant_in, adress_in, adress_out, data_out, adress: std_logic_vector(7 downto 0);
+Port (clk,MW, reset : in STD_LOGIC;
+Data_In : STD_LOGIC_VECTOR ( 7 downto 0);
+Address_in : in STD_LOGIC_VECTOR (7 downto 0);
+SW : in STD_LOGIC_VECTOR (7 downto 0);
+BTNC : in STD_LOGIC; --BTN1
+BTNU : in STD_LOGIC; --BTN2
+BTNL : in STD_LOGIC; --BTN3
+BTNR : in STD_LOGIC; --BTN4
+BTND : in STD_LOGIC;--BTN5
+MMR: out STD_LOGIC;
+D_word: out STD_LOGIC_Vector(15 downto 0);
+Data_outR : out std_logic_vector(15 downto 0);
+LED: out STD_LOGIC_VECTOR (7 downto 0));
+end component;
+
+component mux_2x1_8bit is
+    
+    Port ( Ad, Bd : in STD_LOGIC_VECTOR (7 downto 0);
+       
+           Y : out STD_LOGIC_VECTOR (7 downto 0);
+           S : in std_logic );
+end component;
+
+
+signal cconstant, adress_in, adress_out, data_out, adress, data_in, address_out_PC: std_logic_vector(7 downto 0);
 signal DX, AX, BX, FS: std_logic_vector(3 downto 0);
-signal MB, MD, MM, MW, V, C, N, Z, MMR: std_logic;
+signal MB, MD, RW, MM, MW, V, C, N, Z, MMR, reset : std_logic;
+signal data_bus, ram_in, ram_out, reg_out, d_word: std_logic_vector(15 downto 0);
 begin
 
-A1: Black_box_datapath port map();
-
+A1: Black_box_datapath port map(cconstant, data_in, DX, AX, BX, FS, Reset, clk, RW, MB, MD, adress_out, data_out, V, C, N, Z );
+A2: PWB_full port map(reset, clk, V, C, N, Z, Adress_in, Address_out_PC, cconstant, data_bus, DX, AX, BX, FS, MB, MD, RW, MM, MW);
+A3: Ram16x256 port map(ram_in, adress, ram_out, MW, clk, reset);
+A4: PortReg8x8 port map(clk, MW, reset, data_out, adress, SW, BNTC, BTNU, BTNL, BTNR, BTND, MMR, D_word, reg_out, LED);
+MUX_M:  mux_2x1_8bit port map(adress_out, address_out_PC, adress, MM);
+MUX_MR: mux_2x1_16bit port map(ram_out, reg_out, data_bus, MMR);
+seg7: Decoder port map(clk, reset, AN, D, d_word, data_bus);
+ram_in( 15 downto 8) <= x"00"; 
+ram_in( 7 downto 0) <= data_out;
+data_in <= data_bus(7 downto 0);
+reset <= not Reset1;
 end Behavioral;

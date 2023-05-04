@@ -1,0 +1,109 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Mon May  1 21:03:41 2023
+| Host         : DESKTOP-LOLTF0F running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file PWF_complete_control_sets_placed.rpt
+| Design       : PWF_complete
+| Device       : xc7a100t
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    31 |
+|    Minimum number of control sets                        |    31 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    45 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    31 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |    20 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              33 |           17 |
+| No           | No                    | Yes                    |               6 |            4 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              35 |           11 |
+| Yes          | No                    | Yes                    |             160 |           53 |
+| Yes          | Yes                   | No                     |              17 |            5 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+-------------------------+-----------------------------------------+------------------+----------------+--------------+
+|            Clock Signal            |      Enable Signal      |             Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------+-------------------------+-----------------------------------------+------------------+----------------+--------------+
+|  A2/B/FSM_onehot_State_reg[2]      |                         |                                         |                1 |              1 |         1.00 |
+|  A2/B/FSM_onehot_State_reg[1]_1    |                         |                                         |                1 |              1 |         1.00 |
+|  A2/A/MBs_reg_i_2_n_0              |                         |                                         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                     |                         |                                         |                3 |              3 |         1.00 |
+|  A2/B/FSM_onehot_State_reg[1]_2[0] |                         |                                         |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG                     |                         | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG                     | Reset1_IBUF             |                                         |                1 |              7 |         7.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D2/load[3] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D3/load[2] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D3/load[3] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D3/load[1] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D0/load[0] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D1/load[3] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D2/load[0] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D0/load[1] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D2/load[1] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D2/load[2] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D0/load[2] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D1/load[0] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D1/load[1] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D1/load[2] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D3/load[0] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                     | A1/Reg16/Dec/D0/load[3] | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                     | A2/A/PSs_reg[1]_0[0]    | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                     | A4/load_reg[2]_0        | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                     | A4/load_reg[0]_0        | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                     | A4/LOAD                 | A1/Reg16/Reg/RegisterR15[7].UR15/Reset1 |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                     | seg7/AN0                |                                         |                5 |             12 |         2.40 |
+|  clk_IBUF_BUFG                     | A2/A/E[0]               |                                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                     | Reset1_IBUF             | seg7/clock_count[0]_i_1_n_0             |                5 |             17 |         3.40 |
+|  A2/B/FSM_onehot_State_reg[1]_0[0] |                         |                                         |                8 |             23 |         2.88 |
++------------------------------------+-------------------------+-----------------------------------------+------------------+----------------+--------------+
+
+
