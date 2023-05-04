@@ -3,125 +3,122 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="PWB_full_tb_behav.wdb" id="1">
+      <db_ref path="PWF_complete_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="PWB_full_tb" />
+            <top_module name="PWF_complete_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="459.001 ns"></ZoomEndTime>
-      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="845001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="141"></NameColumnWidth>
+      <NameColumnWidth column_width="106"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="26" />
-   <wvobject fp_name="/PWB_full_tb/Reset" type="logic">
-      <obj_property name="ElementShortName">Reset</obj_property>
-      <obj_property name="ObjectShortName">Reset</obj_property>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/PWF_complete_tb/uut/A1/DA" type="array">
+      <obj_property name="ElementShortName">DA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DA[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/CLK" type="logic">
-      <obj_property name="ElementShortName">CLK</obj_property>
-      <obj_property name="ObjectShortName">CLK</obj_property>
+   <wvobject fp_name="/PWF_complete_tb/uut/A1/AA" type="array">
+      <obj_property name="ElementShortName">AA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AA[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/V" type="logic">
-      <obj_property name="ElementShortName">V</obj_property>
-      <obj_property name="ObjectShortName">V</obj_property>
+   <wvobject fp_name="/PWF_complete_tb/uut/A1/BA" type="array">
+      <obj_property name="ElementShortName">BA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">BA[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/C" type="logic">
-      <obj_property name="ElementShortName">C</obj_property>
-      <obj_property name="ObjectShortName">C</obj_property>
+   <wvobject fp_name="/PWF_complete_tb/uut/A3/Data_out" type="array">
+      <obj_property name="ElementShortName">Data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_out[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/N" type="logic">
-      <obj_property name="ElementShortName">N</obj_property>
-      <obj_property name="ObjectShortName">N</obj_property>
+   <wvobject fp_name="/PWF_complete_tb/uut/ram_in" type="array">
+      <obj_property name="ElementShortName">ram_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_in[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/Z" type="logic">
-      <obj_property name="ElementShortName">Z</obj_property>
-      <obj_property name="ObjectShortName">Z</obj_property>
+   <wvobject fp_name="/PWF_complete_tb/uut/ram_out" type="array">
+      <obj_property name="ElementShortName">ram_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_out[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/Address_in" type="array">
-      <obj_property name="ElementShortName">Address_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Address_in[7:0]</obj_property>
+   <wvobject fp_name="/PWF_complete_tb/uut/reg_out" type="array">
+      <obj_property name="ElementShortName">reg_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_out[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/Address_out" type="array">
-      <obj_property name="ElementShortName">Address_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Address_out[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWB_full_tb/Constant_out" type="array">
-      <obj_property name="ElementShortName">Constant_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Constant_out[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWB_full_tb/Instrcution_in" type="array">
-      <obj_property name="ElementShortName">Instrcution_in[15:0]</obj_property>
-      <obj_property name="ObjectShortName">Instrcution_in[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWB_full_tb/DX" type="array">
-      <obj_property name="ElementShortName">DX[3:0]</obj_property>
-      <obj_property name="ObjectShortName">DX[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWB_full_tb/AX" type="array">
-      <obj_property name="ElementShortName">AX[3:0]</obj_property>
-      <obj_property name="ObjectShortName">AX[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWB_full_tb/BX" type="array">
-      <obj_property name="ElementShortName">BX[3:0]</obj_property>
-      <obj_property name="ObjectShortName">BX[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWB_full_tb/FS" type="array">
-      <obj_property name="ElementShortName">FS[3:0]</obj_property>
-      <obj_property name="ObjectShortName">FS[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWB_full_tb/MB" type="logic">
-      <obj_property name="ElementShortName">MB</obj_property>
-      <obj_property name="ObjectShortName">MB</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWB_full_tb/MD" type="logic">
-      <obj_property name="ElementShortName">MD</obj_property>
-      <obj_property name="ObjectShortName">MD</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWB_full_tb/RW" type="logic">
-      <obj_property name="ElementShortName">RW</obj_property>
-      <obj_property name="ObjectShortName">RW</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWB_full_tb/MM" type="logic">
+   <wvobject fp_name="/PWF_complete_tb/uut/MM" type="logic">
       <obj_property name="ElementShortName">MM</obj_property>
       <obj_property name="ObjectShortName">MM</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/MW" type="logic">
+   <wvobject fp_name="/PWF_complete_tb/uut/A3/MW" type="logic">
       <obj_property name="ElementShortName">MW</obj_property>
       <obj_property name="ObjectShortName">MW</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/clock_period" type="other">
-      <obj_property name="ElementShortName">clock_period</obj_property>
-      <obj_property name="ObjectShortName">clock_period</obj_property>
+   <wvobject fp_name="/PWF_complete_tb/uut/A1/RW" type="logic">
+      <obj_property name="ElementShortName">RW</obj_property>
+      <obj_property name="ObjectShortName">RW</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/uut/PS" type="array">
-      <obj_property name="ElementShortName">PS[1:0]</obj_property>
-      <obj_property name="ObjectShortName">PS[1:0]</obj_property>
+   <wvobject fp_name="/PWF_complete_tb/uut/A2/A/PSs" type="array">
+      <obj_property name="ElementShortName">PSs[1:0]</obj_property>
+      <obj_property name="ObjectShortName">PSs[1:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/uut/Offset" type="array">
-      <obj_property name="ElementShortName">Offset[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Offset[7:0]</obj_property>
+   <wvobject fp_name="/PWF_complete_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/uut/IR" type="array">
-      <obj_property name="ElementShortName">IR[15:0]</obj_property>
-      <obj_property name="ObjectShortName">IR[15:0]</obj_property>
+   <wvobject fp_name="/PWF_complete_tb/uut/data_bus" type="array">
+      <obj_property name="ElementShortName">data_bus[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_bus[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/uut/IL" type="logic">
+   <wvobject fp_name="/PWF_complete_tb/uut/clk_s" type="logic">
+      <obj_property name="ElementShortName">clk_s</obj_property>
+      <obj_property name="ObjectShortName">clk_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A2/IL" type="logic">
       <obj_property name="ElementShortName">IL</obj_property>
       <obj_property name="ObjectShortName">IL</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/uut/A/State" type="other">
+   <wvobject fp_name="/PWF_complete_tb/uut/A1/FUA/FS" type="array">
+      <obj_property name="ElementShortName">FS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">FS[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/MMR" type="logic">
+      <obj_property name="ElementShortName">MMR</obj_property>
+      <obj_property name="ObjectShortName">MMR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/d_word" type="array">
+      <obj_property name="ElementShortName">d_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">d_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A2/A/State" type="other">
       <obj_property name="ElementShortName">State</obj_property>
       <obj_property name="ObjectShortName">State</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWB_full_tb/uut/A/NextState" type="other">
+   <wvobject fp_name="/PWF_complete_tb/uut/A2/A/NextState" type="other">
       <obj_property name="ElementShortName">NextState</obj_property>
       <obj_property name="ObjectShortName">NextState</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A1/ADDR_out" type="array">
+      <obj_property name="ElementShortName">ADDR_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/adress" type="array">
+      <obj_property name="ElementShortName">adress[7:0]</obj_property>
+      <obj_property name="ObjectShortName">adress[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A1/D_out" type="array">
+      <obj_property name="ElementShortName">D_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">D_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A1/FUA/B" type="array">
+      <obj_property name="ElementShortName">B[7:0]</obj_property>
+      <obj_property name="ObjectShortName">B[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A1/FUA/A" type="array">
+      <obj_property name="ElementShortName">A[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A[7:0]</obj_property>
    </wvobject>
 </wave_config>

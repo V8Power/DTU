@@ -1,6 +1,6 @@
-Vivado Simulator v2022.2
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWB_full_tb_behav xil_defaultlib.PWB_full_tb -log elaborate.log 
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 9a325b10e6a143ba9ce88b978dbd4806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PWF_complete_tb_behav xil_defaultlib.PWF_complete_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -13,11 +13,43 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package unimacro.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.std_logic_textio
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture behavioral of entity xil_defaultlib.input_4mux [input_4mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.mux_16x1_rev2 [mux_16x1_rev2_default]
+Compiling architecture behavioral of entity xil_defaultlib.D_FF_EN_RESET [d_ff_en_reset_default]
+Compiling architecture behavioral of entity xil_defaultlib.registerR16 [registerr16_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_2to4 [decoder_2to4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_4to16 [decoder_4to16_default]
+Compiling architecture behavioral of entity xil_defaultlib.top_module_RF [top_module_rf_default]
+Compiling architecture behavioral of entity xil_defaultlib.input_2mux [input_2mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.mux_2x1_8bit [mux_2x1_8bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.full_add [full_add_default]
+Compiling architecture behavioral of entity xil_defaultlib.full_adder [full_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.Shift_R [shift_r_default]
+Compiling architecture behavioral of entity xil_defaultlib.Shift_L [shift_l_default]
+Compiling architecture behavioral of entity xil_defaultlib.Shifter [shifter_default]
+Compiling architecture behavioral of entity xil_defaultlib.FU [fu_default]
+Compiling architecture behavioral of entity xil_defaultlib.Black_box_datapath [black_box_datapath_default]
 Compiling architecture behavioral of entity xil_defaultlib.InstructionDecoderController [instructiondecodercontroller_def...]
 Compiling architecture behavioral of entity xil_defaultlib.InstructionRegister [instructionregister_default]
 Compiling architecture behavioral of entity xil_defaultlib.Program_count [program_count_default]
 Compiling architecture behavioral of entity xil_defaultlib.SignExtender [signextender_default]
 Compiling architecture behavioral of entity xil_defaultlib.ZeroFiller [zerofiller_default]
 Compiling architecture behavioral of entity xil_defaultlib.PWB_full [pwb_full_default]
-Compiling architecture bench of entity xil_defaultlib.pwb_full_tb
-Built simulation snapshot PWB_full_tb_behav
+Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
+Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(init_00="0000000000000...]
+Compiling architecture bram_v of entity unimacro.BRAM_SINGLE_MACRO [\BRAM_SINGLE_MACRO(device="7SERI...]
+Compiling architecture behavioral of entity xil_defaultlib.Ram16x256 [ram16x256_default]
+Compiling architecture behavorial of entity xil_defaultlib.PortReg8x8 [portreg8x8_default]
+Compiling architecture behavioral of entity xil_defaultlib.mux_2x1_16bit [mux_2x1_16bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder [decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.PWF_complete [pwf_complete_default]
+Compiling architecture bench of entity xil_defaultlib.pwf_complete_tb
+Built simulation snapshot PWF_complete_tb_behav

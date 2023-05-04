@@ -642,7 +642,7 @@ when EX4 =>
  MD <= MDs;
  RW <= RWs;
  MM <= MMs;
- MW <= Mws;
+ MW <= MWs;
        
 end Behavioral;
 
