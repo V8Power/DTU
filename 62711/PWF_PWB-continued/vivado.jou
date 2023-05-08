@@ -1,0 +1,144 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat May  6 12:32:59 2023
+# Process ID: 36484
+# Current directory: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28972 C:\Users\felix\Documents\DTU\30082_project_jan_23\Git\DTU\62711\PWF_PWB-continued\PWF_PWB-continued.xpr
+# Log file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/vivado.log
+# Journal file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued\vivado.jou
+# Running On: DESKTOP-LOLTF0F, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 16, Host memory: 34018 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.xpr
+upgrade_project -migrate_output_products
+launch_simulation
+open_wave_config C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sim_1/imports/project_B/PWB_full_tb_behav.wcfg
+source PWF_complete_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sim_1/imports/project_B/PWB_full_tb_behav.wcfg
+source PWF_complete_tb.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+close_sim
+launch_simulation
+reset_run impl_1
+launch_simulation
+open_wave_config C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sim_1/imports/project_B/PWB_full_tb_behav.wcfg
+source PWF_complete_tb.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+save_wave_config {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sim_1/imports/project_B/PWB_full_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sim_1/imports/project_B/PWB_full_tb_behav.wcfg
+source PWF_complete_tb.tcl
+relaunch_sim
+save_wave_config {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sim_1/imports/project_B/PWB_full_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sim_1/imports/project_B/PWB_full_tb_behav.wcfg
+source PWF_complete_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+relaunch_sim
+relaunch_sim
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+reset_run synth_1
+relaunch_sim
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+reset_run synth_1
+relaunch_sim
+relaunch_sim
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+save_wave_config {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sim_1/imports/project_B/PWB_full_tb_behav.wcfg}
+set_property -name {xsim.simulate.runtime} -value {3000ns} -objects [get_filesets sim_1]
+set_property dataflow_viewer_settings "min_width=16"   [current_fileset]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sim_1/imports/project_B/PWB_full_tb_behav.wcfg
+source PWF_complete_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+reset_run synth_1
+relaunch_sim
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sim_1/imports/project_B/PWB_full_tb_behav.wcfg}
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 18
+wait_on_run impl_1
+close_sim

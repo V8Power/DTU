@@ -1,0 +1,6 @@
+LDI D2 B5
+LDI D3 B7
+NOT D4 A3
+
+
+ST A4 B2

@@ -40,16 +40,20 @@ entity D_FF_EN_RESET is
 end D_FF_EN_RESET;
 
 architecture Behavioral of D_FF_EN_RESET is
-
+signal q1 : std_logic;
 begin
 
 process(CLK,reset,load) is
     begin
     if reset = '1' then
         q<='0';
+        q1<= '0';
     elsif rising_edge(clk) then
         if load = '1' then
             q<=d;
+            q1<=d;
+            else 
+           q<=q1;
         end if;
      end if;
 end process;

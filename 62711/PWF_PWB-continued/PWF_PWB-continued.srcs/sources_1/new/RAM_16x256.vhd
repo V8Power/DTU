@@ -83,7 +83,7 @@ addr10(7 downto 0) <= addr_in;
    --       1     |  "36Kb"   |    32768    |   15-bit   |    1-bit   --
    --       1     |  "18Kb"   |    16384    |   14-bit   |    1-bit   --
    ---------------------------------------------------------------------
-
+--BRZ D6 A5 B0
    BRAM_SINGLE_MACRO_inst : BRAM_SINGLE_MACRO
    generic map (
       BRAM_SIZE => "18Kb", -- Target BRAM, "18Kb" or "36Kb" 
@@ -94,9 +94,9 @@ addr10(7 downto 0) <= addr_in;
       WRITE_WIDTH => 16,   -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
       READ_WIDTH => 16,   -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
       SRVAL => X"000000000000000000",   -- Set/Reset value for port output
-      WRITE_MODE => "WRITE_FIRST", -- "WRITE_FIRST", "READ_FIRST" or "NO_CHANGE" 
+      WRITE_MODE => "READ_FIRST", -- "WRITE_FIRST", "READ_FIRST" or "NO_CHANGE" 
       -- The following INIT_xx declarations specify the initial contents of the RAM
-      INIT_00 => X"0000000000000000000000000000000000000000000000000000401A16D09887",
+      INIT_00 => X"0000000000000000000000000000000000000000000000004022171898C79885",
       INIT_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_03 => X"0000000000000000000000000000000000000000000000000000000000000000",

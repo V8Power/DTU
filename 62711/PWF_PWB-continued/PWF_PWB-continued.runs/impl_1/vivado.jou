@@ -1,12 +1,13 @@
 #-----------------------------------------------------------
-# Vivado v2020.1 (64-bit)
-# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu May  4 15:24:22 2023
-# Process ID: 28904
-# Current directory: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat May  6 21:29:43 2023
+# Process ID: 44960
+# Current directory: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1
 # Command line: vivado.exe -log PWF_complete.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source PWF_complete.tcl -notrace
-# Log file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.vdi
-# Journal file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1\vivado.jou
+# Log file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.vdi
+# Journal file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1\vivado.jou
+# Running On: DESKTOP-LOLTF0F, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 16, Host memory: 34018 MB
 #-----------------------------------------------------------
 source PWF_complete.tcl -notrace

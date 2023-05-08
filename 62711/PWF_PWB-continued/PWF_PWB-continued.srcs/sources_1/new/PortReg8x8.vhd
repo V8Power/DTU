@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity PortReg8x8 is --port names are as default in the user constraint file!
 
-Port (clk,MW, reset : in STD_LOGIC;
+Port (clk, clks, MW, reset : in STD_LOGIC;
 Data_In : STD_LOGIC_VECTOR ( 7 downto 0);
 Address_in : in STD_LOGIC_VECTOR (7 downto 0);
 SW : in STD_LOGIC_VECTOR (7 downto 0);
@@ -52,79 +52,90 @@ Begin
 
 process(Address_in, MW, clk)
     begin
-    if clk'event and clk = '1' then
-    
-    if (Address_in = "11111000" and MW = '1' ) then 
-    load <= "001";
-    MMR <= '1';
-    elsif Address_in = "11111001" and MW = '1'  then 
-    load <= "010";
-    MMR <= '1';
-    elsif Address_in = "11111010" and MW = '1'  then 
-    load <= "100";
-    MMR <= '1';
-    elsif Address_in = "11111011" and MW = '0'  then 
-    Data_outR(7 downto 0) <= R3;
-    MMR <= '1';
-    elsif Address_in = "11111100" and MW = '0'  then 
-    Data_outR(7 downto 0) <= R4;
-    MMR <= '1';
-    elsif Address_in = "11111101" and MW = '0'  then 
-    Data_outR(7 downto 0) <= R5;
-    MMR <= '1';
-    elsif Address_in = "11111110" and MW = '0'  then 
-    Data_outR(7 downto 0) <= R6;
-    MMR <= '1';
-    elsif Address_in = "11111111" and MW = '0'  then 
-    Data_outR(7 downto 0) <= R7;
-    MMR <= '1';
-    
-    else 
+    if reset = '1' then
     load <= "000";
-    MMR <= '0';
-    end if;
-    else 
+    
+    elsif clk'event and clk = '1' then
+    
+        if (Address_in = "11111000" and MW = '1' ) then 
+        load <= "001";
+        MMR <= '1';
+        D_word(7 downto 0) <= data_in;
+        elsif Address_in = "11111001" and MW = '1'  then 
+        load <= "010";
+        MMR <= '1';
+        D_word(15 downto 8) <= data_in;
+        elsif Address_in = "11111010" and MW = '1'  then 
+        load <= "100";
+        MMR <= '1';
+        LED <= data_in;
+        elsif Address_in = "11111011" and MW = '0'  then 
+        Data_outR(7 downto 0) <= R3;
+        load <= "000";
+        MMR <= '1';
+        elsif Address_in = "11111100" and MW = '0'  then 
+        Data_outR(7 downto 0) <= R4;
+        load <= "000";
+        MMR <= '1';
+        elsif Address_in = "11111101" and MW = '0'  then 
+        Data_outR(7 downto 0) <= R5;
+        load <= "000";
+        MMR <= '1';
+        elsif Address_in = "11111110" and MW = '0'  then 
+        Data_outR(7 downto 0) <= R6;
+        load <= "000";
+        MMR <= '1';
+        elsif Address_in = "11111111" and MW = '0'  then 
+        Data_outR(7 downto 0) <= R7;
+        load <= "000";
+        MMR <= '1';
+        
+        else 
+        load <= "000";
+        MMR <= '0';
+        end if;
+        else 
     
     end if;
 end process;
 
-
-RegisterR0 : for i in 0 to (7) generate
-MR0: component d_ff_en_reset
-port map (data_in(i),Reset,load(0),clk,D_word(i));   --in, reset, load, clk, out
-end generate RegisterR0;
+Data_outR(15 downto 8) <= x"00";
+--RegisterR0 : for i in 0 to 7 generate
+--MR0: component d_ff_en_reset
+--port map (data_in(i),Reset,load(0),clk,D_word(i));   --in, reset, load, clk, out
+--end generate RegisterR0;
+--------
+--RegisterR1 : for i in 0 to 7 generate
+--MR1: component d_ff_en_reset
+--port map (data_in(i),Reset,load(1),clk,D_word(i+8));
+--end generate RegisterR1;
+--------
+--RegisterR2 : for i in 0 to 7 generate
+--MR2: component d_ff_en_reset
+--port map (data_in(i),Reset,load(2),clk,LED(i));
+--end generate RegisterR2;
 ------
-RegisterR1 : for i in 0 to (7) generate
-MR1: component d_ff_en_reset
-port map (data_in(i),Reset,load(1),clk,D_word(i+8));
-end generate RegisterR1;
-------
-RegisterR2 : for i in 0 to (7) generate
-MR2: component d_ff_en_reset
-port map (data_in(i),Reset,load(2),clk,LED(i));
-end generate RegisterR2;
-------
-RegisterR3 : for i in 0 to (7) generate
+RegisterR3 : for i in 0 to 7 generate
 MR3: component d_ff_en_reset
 port map (SW(i),Reset,BTNR,clk,R3(i));
 end generate RegisterR3;
 ------
-RegisterR4 : for i in 0 to (7) generate
+RegisterR4 : for i in 0 to 7 generate
 MR4: component d_ff_en_reset
 port map (SW(i),Reset,BTNL,clk,R4(i));
 end generate RegisterR4;
 ------
-RegisterR5 : for i in 0 to (7) generate
+RegisterR5 : for i in 0 to 7 generate
 MR5: component d_ff_en_reset
 port map (SW(i) ,Reset,BTND,clk,R5(i));
 end generate RegisterR5;
 ------
-RegisterR6 : for i in 0 to (7) generate
+RegisterR6 : for i in 0 to 7 generate
 MR6: component d_ff_en_reset
 port map (SW(i),Reset,BTNU,clk,R6(i));
 end generate RegisterR6;
 ------
-RegisterR7 : for i in 0 to (7) generate
+RegisterR7 : for i in 0 to 7 generate
 MR7: component d_ff_en_reset
 port map (SW(i),Reset,BTNC,clk,R7(i));
 end generate RegisterR7;

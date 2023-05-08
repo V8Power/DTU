@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.tcl"
+  variable script "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/impl_1/PWF_complete.tcl"
   variable category "vivado_impl"
 }
 
@@ -112,38 +112,39 @@ proc step_failed { step } {
   set endFile ".$step.error.rst"
   set ch [open $endFile w]
   close $ch
+OPTRACE "impl_1" END { }
 }
 
 
-OPTRACE "Implementation" START { ROLLUP_1 }
+OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
+  set_param chipscope.maxJobs 9
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
-  set_property board_part_repo_paths {C:/Users/felix/AppData/Roaming/Xilinx/Vivado/2020.1/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part_repo_paths {C:/Users/felix/AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.cache/wt [current_project]
-  set_property parent.project_path C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.xpr [current_project]
-  set_property ip_output_repo C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.cache/wt [current_project]
+  set_property parent.project_path C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.xpr [current_project]
+  set_property ip_output_repo C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1/PWF_complete.dcp
+  add_files -quiet C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1/PWF_complete.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc
+  read_xdc C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top PWF_complete -part xc7a100tcsg324-1
+  link_design -top PWF_complete -part xc7a100tcsg324-1 
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }
@@ -254,10 +255,10 @@ OPTRACE "route_design reports" START { REPORT }
 OPTRACE "route_design reports" END { }
 OPTRACE "route_design misc" START { }
   close_msg_db -file route_design.pb
-OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
-OPTRACE "route_design write_checkpoint" END { }
 } RESULT]
 if {$rc} {
+OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
+OPTRACE "route_design write_checkpoint" END { }
   write_checkpoint -force PWF_complete_routed_error.dcp
   step_failed route_design
   return -code error $RESULT
@@ -276,10 +277,10 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  catch { write_mem_info -force PWF_complete.mmi }
+  catch { write_mem_info -force -no_partial_mmi PWF_complete.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
-  write_bitstream -force PWF_complete.bit 
+  write_bitstream -force PWF_complete.bit -bin_file
 OPTRACE "write_bitstream" END { }
 OPTRACE "write_bitstream misc" START { }
 OPTRACE "read constraints: write_bitstream_post" START { }
@@ -298,4 +299,4 @@ if {$rc} {
 
 OPTRACE "write_bitstream misc" END { }
 OPTRACE "Phase: Write Bitstream" END { }
-OPTRACE "Implementation" END { }
+OPTRACE "impl_1" END { }

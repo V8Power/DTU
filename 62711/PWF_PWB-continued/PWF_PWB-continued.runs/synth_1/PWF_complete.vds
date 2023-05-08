@@ -1,178 +1,183 @@
 #-----------------------------------------------------------
-# Vivado v2020.1 (64-bit)
-# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu May  4 15:23:23 2023
-# Process ID: 20448
-# Current directory: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat May  6 21:28:36 2023
+# Process ID: 32220
+# Current directory: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1
 # Command line: vivado.exe -log PWF_complete.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PWF_complete.tcl
-# Log file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1/PWF_complete.vds
-# Journal file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1\vivado.jou
+# Log file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1/PWF_complete.vds
+# Journal file: C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1\vivado.jou
+# Running On: DESKTOP-LOLTF0F, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 16, Host memory: 34018 MB
 #-----------------------------------------------------------
 source PWF_complete.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/utils_1/imports/synth_1/PWF_complete.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/utils_1/imports/synth_1/PWF_complete.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top PWF_complete -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 15304
+INFO: [Synth 8-7075] Helper process launched with PID 28128
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1038.750 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1834.992 ; gain = 409.078
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'PWF_complete' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWF_complete.vhd:46]
-INFO: [Synth 8-3491] module 'Black_box_datapath' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Black_box_datapath.vhd:34' bound to instance 'A1' of component 'Black_box_datapath' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWF_complete.vhd:126]
-INFO: [Synth 8-638] synthesizing module 'Black_box_datapath' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Black_box_datapath.vhd:44]
-INFO: [Synth 8-3491] module 'top_module_RF' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:25' bound to instance 'Reg16' of component 'top_module_RF' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Black_box_datapath.vhd:79]
-INFO: [Synth 8-638] synthesizing module 'top_module_RF' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:36]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
-INFO: [Synth 8-638] synthesizing module 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:33]
-INFO: [Synth 8-3491] module 'input_4mux' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:7' bound to instance 'Mux0' of component 'input_4mux' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:67]
-INFO: [Synth 8-638] synthesizing module 'input_4mux' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'input_4mux' (1#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:15]
-INFO: [Synth 8-3491] module 'input_4mux' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:7' bound to instance 'Mux1' of component 'input_4mux' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:68]
-INFO: [Synth 8-3491] module 'input_4mux' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:7' bound to instance 'Mux2' of component 'input_4mux' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:69]
-INFO: [Synth 8-3491] module 'input_4mux' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:7' bound to instance 'Mux3' of component 'input_4mux' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:70]
-INFO: [Synth 8-3491] module 'input_4mux' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:7' bound to instance 'MuxF' of component 'input_4mux' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:71]
-INFO: [Synth 8-256] done synthesizing module 'mux_16x1_rev2' (2#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:33]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
-INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'PWF_complete' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWF_complete.vhd:46]
+INFO: [Synth 8-3491] module 'Black_box_datapath' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Black_box_datapath.vhd:34' bound to instance 'A1' of component 'Black_box_datapath' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWF_complete.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'Black_box_datapath' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Black_box_datapath.vhd:44]
+INFO: [Synth 8-3491] module 'top_module_RF' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:25' bound to instance 'Reg16' of component 'top_module_RF' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Black_box_datapath.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'top_module_RF' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:36]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:33]
+INFO: [Synth 8-3491] module 'input_4mux' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:7' bound to instance 'Mux0' of component 'input_4mux' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'input_4mux' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'input_4mux' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:15]
+INFO: [Synth 8-3491] module 'input_4mux' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:7' bound to instance 'Mux1' of component 'input_4mux' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:68]
+INFO: [Synth 8-3491] module 'input_4mux' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:7' bound to instance 'Mux2' of component 'input_4mux' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:69]
+INFO: [Synth 8-3491] module 'input_4mux' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:7' bound to instance 'Mux3' of component 'input_4mux' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:70]
+INFO: [Synth 8-3491] module 'input_4mux' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd:7' bound to instance 'MuxF' of component 'input_4mux' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'mux_16x1_rev2' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:33]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A123' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:70]
+INFO: [Synth 8-3491] module 'mux_16x1_rev2' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd:25' bound to instance 'A122' of component 'mux_16x1_rev2' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:71]
+INFO: [Synth 8-3491] module 'registerR16' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:34' bound to instance 'Reg' of component 'registerR16' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'registerR16' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:45]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'registerR16' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:34' bound to instance 'Reg' of component 'registerR16' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:74]
-INFO: [Synth 8-638] synthesizing module 'registerR16' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:45]
-	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
-INFO: [Synth 8-638] synthesizing module 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'D_FF_EN_RESET' (3#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:42]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR9' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:99]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR9' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:99]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR9' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:99]
-INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR9' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:99]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'D_FF_EN_RESET' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:42]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR0' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:54]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR1' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:59]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR2' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:64]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR3' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:69]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR4' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:74]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR5' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:79]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR6' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:84]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR7' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:89]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR8' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:94]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR9' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:99]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR9' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:99]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR9' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:99]
+INFO: [Synth 8-3491] module 'D_FF_EN_RESET' declared at 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd:34' bound to instance 'UR9' of component 'D_FF_EN_RESET' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:99]
 INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'registerR16' (4#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'Decoder_4to16' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_4to16.vhd:31]
-INFO: [Synth 8-638] synthesizing module 'Decoder_2to4' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_2to4.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'Decoder_2to4' (5#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_2to4.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'Decoder_4to16' (6#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_4to16.vhd:31]
-INFO: [Synth 8-256] done synthesizing module 'top_module_RF' (7#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:36]
-INFO: [Synth 8-638] synthesizing module 'mux_2x1_8bit' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1_n-bit.vhd:21]
-INFO: [Synth 8-638] synthesizing module 'input_2mux' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'input_2mux' (8#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'mux_2x1_8bit' (9#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1_n-bit.vhd:21]
-INFO: [Synth 8-638] synthesizing module 'FU' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/function_unit.vhd:44]
-INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ALU.vhd:44]
-INFO: [Synth 8-638] synthesizing module 'full_adder' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_adder.vhd:45]
-	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'full_add' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_add.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'full_add' (10#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_add.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'full_adder' (11#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_adder.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (12#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ALU.vhd:44]
-INFO: [Synth 8-638] synthesizing module 'Shifter' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:44]
-INFO: [Synth 8-638] synthesizing module 'Shift_R' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:91]
-INFO: [Synth 8-256] done synthesizing module 'Shift_R' (13#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:91]
-INFO: [Synth 8-638] synthesizing module 'Shift_L' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:128]
-INFO: [Synth 8-256] done synthesizing module 'Shift_L' (14#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:128]
-INFO: [Synth 8-256] done synthesizing module 'Shifter' (15#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'FU' (16#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/function_unit.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'Black_box_datapath' (17#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Black_box_datapath.vhd:44]
-INFO: [Synth 8-638] synthesizing module 'PWB_full' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWB_full.vhd:44]
-INFO: [Synth 8-638] synthesizing module 'InstructionDecoderController' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'InstructionDecoderController' (18#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'InstructionRegister' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionRegister.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'InstructionRegister' (19#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionRegister.vhd:42]
-INFO: [Synth 8-638] synthesizing module 'Program_count' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Program_count.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'Program_count' (20#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Program_count.vhd:46]
-INFO: [Synth 8-638] synthesizing module 'SignExtender' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/SignExtender.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'SignExtender' (21#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/SignExtender.vhd:39]
-INFO: [Synth 8-638] synthesizing module 'ZeroFiller' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ZeroFiller.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'ZeroFiller' (22#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ZeroFiller.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'PWB_full' (23#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWB_full.vhd:44]
-INFO: [Synth 8-638] synthesizing module 'Ram16x256' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/RAM_16x256.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'registerR16' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'Decoder_4to16' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_4to16.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'Decoder_2to4' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_2to4.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_2to4' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_2to4.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_4to16' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_4to16.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'top_module_RF' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'mux_2x1_8bit' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1_n-bit.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'input_2mux' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'input_2mux' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'mux_2x1_8bit' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1_n-bit.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'FU' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/function_unit.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ALU.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'full_adder' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_adder.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'full_add' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_add.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'full_add' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_add.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'full_adder' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_adder.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ALU.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'Shifter' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'Shift_R' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'Shift_R' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'Shift_L' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:128]
+INFO: [Synth 8-256] done synthesizing module 'Shift_L' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:128]
+INFO: [Synth 8-256] done synthesizing module 'Shifter' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'FU' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/function_unit.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'Black_box_datapath' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Black_box_datapath.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'PWB_full' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWB_full.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'InstructionDecoderController' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'InstructionDecoderController' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'InstructionRegister' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionRegister.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'InstructionRegister' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionRegister.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'Program_count' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Program_count.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'Program_count' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Program_count.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'SignExtender' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/SignExtender.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'SignExtender' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/SignExtender.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'ZeroFiller' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ZeroFiller.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'ZeroFiller' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ZeroFiller.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'PWB_full' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWB_full.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'Ram16x256' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/RAM_16x256.vhd:48]
 	Parameter BRAM_SIZE bound to: 18Kb - type: string 
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter DO_REG bound to: 0 - type: integer 
@@ -193,7 +198,7 @@ INFO: [Synth 8-638] synthesizing module 'Ram16x256' [C:/Users/felix/Documents/DT
 	Parameter INITP_0D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_0E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_0F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000001101000010110110100001001100010000111 
+	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000100010000101110001100010011000110001111001100010000101 
 	Parameter INIT_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -323,11 +328,10 @@ INFO: [Synth 8-638] synthesizing module 'Ram16x256' [C:/Users/felix/Documents/DT
 	Parameter INIT_7F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_FILE bound to: NONE - type: string 
 	Parameter READ_WIDTH bound to: 16 - type: integer 
-	Parameter SIM_MODE bound to: SAFE - type: string 
 	Parameter SRVAL bound to: 72'b000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter WRITE_MODE bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_MODE bound to: READ_FIRST - type: string 
 	Parameter WRITE_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'unimacro_BRAM_SINGLE_MACRO' [D:/Vivado/2020.1/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:211]
+INFO: [Synth 8-638] synthesizing module 'unimacro_BRAM_SINGLE_MACRO' [C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:211]
 	Parameter BRAM_SIZE bound to: 18Kb - type: string 
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter DO_REG bound to: 0 - type: integer 
@@ -347,7 +351,7 @@ INFO: [Synth 8-638] synthesizing module 'unimacro_BRAM_SINGLE_MACRO' [D:/Vivado/
 	Parameter INITP_0D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_0E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_0F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000001101000010110110100001001100010000111 
+	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000100010000101110001100010011000110001111001100010000101 
 	Parameter INIT_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -480,10 +484,9 @@ INFO: [Synth 8-638] synthesizing module 'unimacro_BRAM_SINGLE_MACRO' [D:/Vivado/
 	Parameter READ_WIDTH bound to: 16 - type: integer 
 	Parameter SIM_MODE bound to: SAFE - type: string 
 	Parameter SRVAL bound to: 72'b000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter WRITE_MODE bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_MODE bound to: READ_FIRST - type: string 
 	Parameter WRITE_WIDTH bound to: 16 - type: integer 
 	Parameter DOA_REG bound to: 0 - type: integer 
-	Parameter DOB_REG bound to: 0 - type: integer 
 	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -492,7 +495,7 @@ INFO: [Synth 8-638] synthesizing module 'unimacro_BRAM_SINGLE_MACRO' [D:/Vivado/
 	Parameter INITP_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000001101000010110110100001001100010000111 
+	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000100010000101110001100010011000110001111001100010000101 
 	Parameter INIT_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -557,91 +560,113 @@ INFO: [Synth 8-638] synthesizing module 'unimacro_BRAM_SINGLE_MACRO' [D:/Vivado/
 	Parameter INIT_3E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_3F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_A bound to: 20'b00000000000000000000 
-	Parameter INIT_B bound to: 20'b00000000000000000000 
 	Parameter INIT_FILE bound to: NONE - type: string 
-	Parameter IS_CLKARDCLK_INVERTED bound to: 1'b0 
-	Parameter IS_CLKBWRCLK_INVERTED bound to: 1'b0 
-	Parameter IS_ENARDEN_INVERTED bound to: 1'b0 
-	Parameter IS_ENBWREN_INVERTED bound to: 1'b0 
-	Parameter IS_RSTRAMARSTRAM_INVERTED bound to: 1'b0 
-	Parameter IS_RSTRAMB_INVERTED bound to: 1'b0 
-	Parameter IS_RSTREGARSTREG_INVERTED bound to: 1'b0 
-	Parameter IS_RSTREGB_INVERTED bound to: 1'b0 
 	Parameter RAM_MODE bound to: TDP - type: string 
 	Parameter RDADDR_COLLISION_HWCONFIG bound to: PERFORMANCE - type: string 
 	Parameter READ_WIDTH_A bound to: 18 - type: integer 
-	Parameter READ_WIDTH_B bound to: 0 - type: integer 
-	Parameter RSTREG_PRIORITY_A bound to: RSTREG - type: string 
-	Parameter RSTREG_PRIORITY_B bound to: RSTREG - type: string 
 	Parameter SIM_COLLISION_CHECK bound to: NONE - type: string 
 	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter SRVAL_A bound to: 20'b00000000000000000000 
-	Parameter SRVAL_B bound to: 20'b00000000000000000000 
-	Parameter WRITE_MODE_A bound to: WRITE_FIRST - type: string 
-	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_MODE_A bound to: READ_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 18 - type: integer 
-	Parameter WRITE_WIDTH_B bound to: 0 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram18_bl' to cell 'RAMB18E1' [D:/Vivado/2020.1/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:2294]
-INFO: [Synth 8-256] done synthesizing module 'unimacro_BRAM_SINGLE_MACRO' (24#1) [D:/Vivado/2020.1/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:211]
-INFO: [Synth 8-256] done synthesizing module 'Ram16x256' (25#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/RAM_16x256.vhd:48]
-INFO: [Synth 8-638] synthesizing module 'PortReg8x8' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PortReg8x8.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'PortReg8x8' (26#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PortReg8x8.vhd:42]
-INFO: [Synth 8-638] synthesizing module 'mux_2x1_16bit' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/MUX_MR.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'mux_2x1_16bit' (27#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/MUX_MR.vhd:21]
-INFO: [Synth 8-638] synthesizing module 'Decoder' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder.vhd:42]
-INFO: [Synth 8-226] default block is never used [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder.vhd:140]
-INFO: [Synth 8-256] done synthesizing module 'Decoder' (28#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'PWF_complete' (29#1) [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWF_complete.vhd:46]
+INFO: [Synth 8-113] binding component instance 'ram18_bl' to cell 'RAMB18E1' [C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:2294]
+INFO: [Synth 8-256] done synthesizing module 'unimacro_BRAM_SINGLE_MACRO' (0#1) [C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:211]
+INFO: [Synth 8-256] done synthesizing module 'Ram16x256' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/RAM_16x256.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'PortReg8x8' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PortReg8x8.vhd:42]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PortReg8x8.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'PortReg8x8' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PortReg8x8.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'mux_2x1_16bit' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/MUX_MR.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'mux_2x1_16bit' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/MUX_MR.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'Decoder' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder.vhd:42]
+INFO: [Synth 8-226] default block is never used [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'Decoder' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'PWF_complete' (0#1) [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWF_complete.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element load_reg was removed.  [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PortReg8x8.vhd:56]
+WARNING: [Synth 8-3848] Net adress_in in module/entity PWF_complete does not have driver. [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWF_complete.vhd:119]
+WARNING: [Synth 8-7129] Port clks in module PortReg8x8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[15] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[14] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[13] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[12] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[11] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[10] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[9] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[8] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[7] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[6] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[5] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[4] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[3] in module ZeroFiller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[15] in module SignExtender is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[14] in module SignExtender is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[13] in module SignExtender is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[12] in module SignExtender is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[11] in module SignExtender is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[10] in module SignExtender is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[9] in module SignExtender is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[5] in module SignExtender is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[4] in module SignExtender is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[3] in module SignExtender is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RESET in module InstructionRegister is either unconnected or has no load
+WARNING: [Synth 8-7129] Port V in module InstructionDecoderController is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C in module InstructionDecoderController is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[0] in module Shift_L is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[7] in module Shift_R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FS[3] in module Shifter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FS[2] in module Shifter is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1083.574 ; gain = 44.824
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1947.016 ; gain = 521.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1083.574 ; gain = 44.824
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1947.016 ; gain = 521.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1083.574 ; gain = 44.824
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1947.016 ; gain = 521.102
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1089.543 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1947.016 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc]
-Finished Parsing XDC File [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/PWF_complete_propImpl.xdc].
+Parsing XDC File [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/PWF_complete_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/PWF_complete_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1210.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2017.418 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1210.652 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2017.418 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'InstructionDecoderController'
-WARNING: [Synth 8-327] inferring latch for variable 'PSs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:68]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_NextState_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:59]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NextState_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'PSs_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:68]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_NextState_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NextState_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:59]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -653,20 +678,19 @@ WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NextState_reg' [
                      ex4 |                           100000 |                              101
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'one-hot' in module 'InstructionDecoderController'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NextState_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:59]
-WARNING: [Synth 8-327] inferring latch for variable 'ILs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:67]
-WARNING: [Synth 8-327] inferring latch for variable 'DXs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:69]
-WARNING: [Synth 8-327] inferring latch for variable 'AXs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:70]
-WARNING: [Synth 8-327] inferring latch for variable 'BXs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:71]
-WARNING: [Synth 8-327] inferring latch for variable 'FSs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:73]
-WARNING: [Synth 8-327] inferring latch for variable 'MBs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:72]
-WARNING: [Synth 8-327] inferring latch for variable 'MDs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:74]
-WARNING: [Synth 8-327] inferring latch for variable 'RWs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:75]
-WARNING: [Synth 8-327] inferring latch for variable 'MMs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:76]
-WARNING: [Synth 8-327] inferring latch for variable 'MWs_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:77]
-WARNING: [Synth 8-327] inferring latch for variable 'Extended_8_reg' [C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/SignExtender.vhd:46]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NextState_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'ILs_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:67]
+WARNING: [Synth 8-327] inferring latch for variable 'DXs_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:69]
+WARNING: [Synth 8-327] inferring latch for variable 'AXs_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:70]
+WARNING: [Synth 8-327] inferring latch for variable 'BXs_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:71]
+WARNING: [Synth 8-327] inferring latch for variable 'FSs_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:73]
+WARNING: [Synth 8-327] inferring latch for variable 'MBs_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:72]
+WARNING: [Synth 8-327] inferring latch for variable 'MDs_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:74]
+WARNING: [Synth 8-327] inferring latch for variable 'RWs_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:75]
+WARNING: [Synth 8-327] inferring latch for variable 'MWs_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd:77]
+WARNING: [Synth 8-327] inferring latch for variable 'Extended_8_reg' [C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/SignExtender.vhd:46]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -678,38 +702,33 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 42    
 +---Registers : 
-	               16 Bit    Registers := 2     
-	                8 Bit    Registers := 3     
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 4     
 	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 195   
+	                1 Bit    Registers := 171   
 +---Muxes : 
-	   2 Input    8 Bit        Muxes := 4     
-	   8 Input    8 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 5     
+	   9 Input    8 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
 	  36 Input    6 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 10    
-	   3 Input    4 Bit        Muxes := 1     
-	  14 Input    4 Bit        Muxes := 1     
-	  13 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 9     
+	  15 Input    4 Bit        Muxes := 2     
 	   6 Input    4 Bit        Muxes := 4     
 	   6 Input    3 Bit        Muxes := 1     
-	   4 Input    3 Bit        Muxes := 1     
 	   5 Input    2 Bit        Muxes := 1     
 	  15 Input    2 Bit        Muxes := 2     
-	  14 Input    2 Bit        Muxes := 1     
 	   6 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 95    
-	   5 Input    1 Bit        Muxes := 7     
-	  15 Input    1 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 256   
+	   5 Input    1 Bit        Muxes := 6     
+	  15 Input    1 Bit        Muxes := 9     
 	   3 Input    1 Bit        Muxes := 3     
 	   4 Input    1 Bit        Muxes := 1     
-	   8 Input    1 Bit        Muxes := 2     
-	  10 Input    1 Bit        Muxes := 1     
-	  13 Input    1 Bit        Muxes := 2     
-	  14 Input    1 Bit        Muxes := 1     
-	   6 Input    1 Bit        Muxes := 15    
+	  13 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 12    
 	   7 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -725,26 +744,36 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port clks in module PortReg8x8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port V in module PWB_full is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C in module PWB_full is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (A2/D/Extended_8_reg[5]) is unused and will be removed from module PWF_complete.
+WARNING: [Synth 8-3332] Sequential element (A2/D/Extended_8_reg[4]) is unused and will be removed from module PWF_complete.
+WARNING: [Synth 8-3332] Sequential element (A2/D/Extended_8_reg[3]) is unused and will be removed from module PWF_complete.
+WARNING: [Synth 8-3332] Sequential element (A2/D/Extended_8_reg[2]) is unused and will be removed from module PWF_complete.
+WARNING: [Synth 8-3332] Sequential element (A2/D/Extended_8_reg[1]) is unused and will be removed from module PWF_complete.
+WARNING: [Synth 8-3332] Sequential element (A2/D/Extended_8_reg[0]) is unused and will be removed from module PWF_complete.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -762,37 +791,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -810,42 +839,43 @@ Report Cell Usage:
 +------+---------+------+
 |1     |BUFG     |     3|
 |2     |CARRY4   |     7|
-|3     |LUT1     |     4|
-|4     |LUT2     |    53|
-|5     |LUT3     |    39|
-|6     |LUT4     |    37|
-|7     |LUT5     |    69|
+|3     |LUT1     |     5|
+|4     |LUT2     |    52|
+|5     |LUT3     |    37|
+|6     |LUT4     |    30|
+|7     |LUT5     |    67|
 |8     |LUT6     |   190|
 |9     |RAMB18E1 |     1|
-|10    |FDCE     |   205|
+|10    |FDCE     |   181|
 |11    |FDPE     |     1|
-|12    |FDRE     |    67|
+|12    |FDRE     |    88|
 |13    |FDSE     |     1|
-|14    |LD       |    30|
+|14    |LD       |    29|
 |15    |IBUF     |    15|
 |16    |OBUF     |    24|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2017.418 ; gain = 591.504
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1210.652 ; gain = 44.824
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1210.652 ; gain = 171.902
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 2017.418 ; gain = 521.102
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2017.418 ; gain = 591.504
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1210.770 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2017.418 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1217.602 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2017.418 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 30 instances were transformed.
-  LD => LDCE: 30 instances
+  A total of 29 instances were transformed.
+  LD => LDCE: 29 instances
 
+Synth Design complete, checksum: 57ed1554
 INFO: [Common 17-83] Releasing license: Synthesis
-180 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+188 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1217.602 ; gain = 178.852
-INFO: [Common 17-1381] The checkpoint 'C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1/PWF_complete.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2017.418 ; gain = 986.062
+INFO: [Common 17-1381] The checkpoint 'C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1/PWF_complete.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file PWF_complete_utilization_synth.rpt -pb PWF_complete_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu May  4 15:24:14 2023...
+INFO: [Common 17-206] Exiting Vivado at Sat May  6 21:29:35 2023...

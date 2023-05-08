@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1/PWF_complete.tcl"
+  variable script "C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.runs/synth_1/PWF_complete.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
+set_param chipscope.maxJobs 9
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
@@ -78,43 +78,43 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.cache/wt [current_project]
-set_property parent.project_path C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.cache/wt [current_project]
+set_property parent.project_path C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {C:/Users/felix/AppData/Roaming/Xilinx/Vivado/2020.1/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part_repo_paths {C:/Users/felix/AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.cache/ip [current_project]
+set_property ip_output_repo c:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/RAM_16x256.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Black_box_datapath.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWF_complete.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1_n-bit.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_adder.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/function_unit.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/SignExtender.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_2to4.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ZeroFiller.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ALU.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_add.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionRegister.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/MUX_MR.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Program_count.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWB_full.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PortReg8x8.vhd
-  C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_4to16.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/top_module_RF.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionDecoderController.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/D_FF_EN_RESET.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Shifter.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/RAM_16x256.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/registerR16.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Black_box_datapath.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/4_input_mux.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWF_complete.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1_n-bit.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux2to1.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_adder.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/function_unit.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/SignExtender.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_2to4.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ZeroFiller.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/ALU.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/mux_16x1_rev2.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/full_add.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/InstructionRegister.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/MUX_MR.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Program_count.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PWB_full.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/PortReg8x8.vhd
+  C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/sources_1/new/Decoder_4to16.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -125,15 +125,20 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc]
+read_xdc C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/constrs_1/Nexys-4-DDR-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/felix/Documents/DTU/30082_project_jan_23/Git/DTU/62711/PWF_PWB-continued/PWF_PWB-continued.srcs/utils_1/imports/synth_1/PWF_complete.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
 synth_design -top PWF_complete -part xc7a100tcsg324-1
 OPTRACE "synth_design" END { }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }

@@ -66,12 +66,12 @@ case state is
     when INF => 
         ILs <= '1';
         PSs <= "00";
-        DXs <= '-'&IR(8 downto 6);
-        AXs <= '-'&IR(5 downto 3);
-        BXs <= '-'&IR(2 downto 0);
-        MBs <= '-';
-        FSs <= "----";
-        MDs <= '-';
+        DXs <= '0'&IR(8 downto 6);
+        AXs <= '0'&IR(5 downto 3);
+        BXs <= '0'&IR(2 downto 0);
+        MBs <= '0';
+        FSs <= "0000";
+        MDs <= '0';
         RWs <= '0';
         MMs <= '1';
         MWs <= '0';
@@ -83,12 +83,12 @@ case state is
            PSs <= "01";
            DXs <= '0'&IR(8 downto 6);
            AXs <= '0'&IR(5 downto 3);
-           BXs <= '-'&IR(2 downto 0);
-           MBs <= '-';
+           BXs <= '0'&IR(2 downto 0);
+           MBs <= '0';
            FSs <= "0000";
            MDs <= '0';
            RWs <= '1';
-           MMs <= '-';
+           MMs <= '0';
            MWs <= '0';
            Nextstate <= INF;
           
@@ -98,12 +98,12 @@ case state is
            PSs <= "01";
            DXs <= '0'&IR(8 downto 6);
            AXs <= '0'&IR(5 downto 3);
-           BXs <= '-'&IR(2 downto 0);
-           MBs <= '-';
+           BXs <= '0'&IR(2 downto 0);
+           MBs <= '0';
            FSs <= "0001";
            MDs <= '0';
            RWs <= '1';
-           MMs <= '-';
+           MMs <= '0';
            MWs <= '0';
            Nextstate <= INF;
          
@@ -118,7 +118,7 @@ case state is
            FSs <= "0010";
            MDs <= '0';
            RWs <= '1';
-           MMs <= '-';
+           MMs <= '0';
            MWs <= '0';
            Nextstate <= INF;
          
@@ -133,7 +133,7 @@ case state is
             FSs <= "0101";
             MDs <= '0';
             RWs <= '1';
-            MMs <= '-';
+            MMs <= '0';
             MWs <= '0'; 
             Nextstate <= INF;
           
@@ -143,12 +143,12 @@ case state is
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
             AXs <= '0'&IR(5 downto 3);
-            BXs <= '-'&IR(2 downto 0);
-            MBs <= '-';
+            BXs <= '0'&IR(2 downto 0);
+            MBs <= '0';
             FSs <= "0110";
             MDs <= '0';
             RWs <= '1';
-            MMs <= '-';
+            MMs <= '0';
             MWs <= '0'; 
             Nextstate <= INF;
            
@@ -163,7 +163,7 @@ case state is
             FSs <= "1000";
             MDs <= '0';
             RWs <= '1';
-            MMs <= '-';
+            MMs <= '0';
             MWs <= '0'; 
             Nextstate <= INF;
              
@@ -178,7 +178,7 @@ case state is
             FSs <= "1001";
             MDs <= '0';
             RWs <= '1';
-            MMs <= '-';
+            MMs <= '0';
             MWs <= '0';   
             Nextstate <= INF;
                
@@ -193,7 +193,7 @@ case state is
             FSs <= "1010";
             MDs <= '0';
             RWs <= '1';
-            MMs <= '-';
+            MMs <= '0';
             MWs <= '0';  
             Nextstate <= INF;
                 
@@ -203,12 +203,12 @@ case state is
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
             AXs <= '0'&IR(5 downto 3);
-            BXs <= '-'&IR(2 downto 0);
-            MBs <= '-';
+            BXs <= '0'&IR(2 downto 0);
+            MBs <= '0';
             FSs <= "1011";
             MDs <= '0';
             RWs <= '1';
-            MMs <= '-';
+            MMs <= '0';
             MWs <= '0';
             Nextstate <= INF;
           
@@ -217,13 +217,13 @@ case state is
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
-            AXs <= '-'&IR(5 downto 3);
+            AXs <= '0'&IR(5 downto 3);
             BXs <= '0'&IR(2 downto 0);
             MBs <= '0';
             FSs <= "1100";
             MDs <= '0';
             RWs <= '1';
-            MMs <= '-';
+            MMs <= '0';
             MWs <= '0';
             Nextstate <= INF;
           
@@ -233,9 +233,9 @@ case state is
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
             AXs <= '0'&IR(5 downto 3);
-            BXs <= '-'&IR(2 downto 0);
-            MBs <= '-';
-            FSs <= "----";
+            BXs <= '0'&IR(2 downto 0);
+            MBs <= '0';
+            FSs <= "0000";
             MDs <= '1';
             RWs <= '1';
             MMs <= '0';
@@ -246,12 +246,12 @@ case state is
         elsif IR(15 downto 9) = "0100000" then  
             ILs <= '0';
             PSs <= "01";
-            DXs <= '-'&IR(8 downto 6);
+            DXs <= '0'&IR(8 downto 6);
             AXs <= '0'&IR(5 downto 3);
             BXs <= '0'&IR(2 downto 0);
             MBs <= '0';
-            FSs <= "----";
-            MDs <= '-';
+            FSs <= "0000";
+            MDs <= '0';
             RWs <= '0';
             MMs <= '0';
             MWs <= '1';
@@ -262,8 +262,8 @@ case state is
             ILs <= '0';
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
-            AXs <= '-'&IR(5 downto 3);
-            BXs <= '-'&IR(2 downto 0);
+            AXs <= '0'&IR(5 downto 3);
+            BXs <= '0'&IR(2 downto 0);
             MBs <= '1';
             FSs <= "1100";
             MDs <= '0';
@@ -278,7 +278,7 @@ case state is
             PSs <= "01";
             DXs <= '0'&IR(8 downto 6);
             AXs <= '0'&IR(5 downto 3);
-            BXs <= '-'&IR(2 downto 0);
+            BXs <= '0'&IR(2 downto 0);
             MBs <= '1';
             FSs <= "0010";
             MDs <= '0';
@@ -291,12 +291,12 @@ case state is
         elsif IR(15 downto 9) = "1100000" and Z = '1' then  
             ILs <= '0';
             PSs <= "10";
-            DXs <= '-'&IR(8 downto 6);
+            DXs <= '0'&IR(8 downto 6);
             AXs <= '0'&IR(5 downto 3);
-            BXs <= '-'&IR(2 downto 0);
-            MBs <= '-';
+            BXs <= '0'&IR(2 downto 0);
+            MBs <= '0';
             FSs <= "0000";
-            MDs <= '-';
+            MDs <= '0';
             RWs <= '0';
             MMs <= '0';
             MWs <= '0';
@@ -306,12 +306,12 @@ case state is
         elsif IR(15 downto 9) = "1100000" and Z = '0' then  
             ILs <= '0';
             PSs <= "01";
-            DXs <= '-'&IR(8 downto 6);
+            DXs <= '0'&IR(8 downto 6);
             AXs <= '0'&IR(5 downto 3);
-            BXs <= '-'&IR(2 downto 0);
-            MBs <= '-';
+            BXs <= '0'&IR(2 downto 0);
+            MBs <= '0';
             FSs <= "0000";
-            MDs <= '-';
+            MDs <= '0';
             RWs <= '0';
             MMs <= '0';
             MWs <= '0';
@@ -321,12 +321,12 @@ case state is
         elsif IR(15 downto 9) = "1100001" and N = '1' then  
             ILs <= '0';
             PSs <= "10";
-            DXs <= '-'&IR(8 downto 6);
+            DXs <= '0'&IR(8 downto 6);
             AXs <= '0'&IR(5 downto 3);
-            BXs <= '-'&IR(2 downto 0);
-            MBs <= '-';
+            BXs <= '0'&IR(2 downto 0);
+            MBs <= '0';
             FSs <= "0000";
-            MDs <= '-';
+            MDs <= '0';
             RWs <= '0';
             MMs <= '0';
             MWs <= '0';
@@ -336,12 +336,12 @@ case state is
         elsif IR(15 downto 9) = "1100001" and N = '0' then  
             ILs <= '0';
             PSs <= "01";
-            DXs <= '-'&IR(8 downto 6);
+            DXs <= '0'&IR(8 downto 6);
             AXs <= '0'&IR(5 downto 3);
-            BXs <= '-'&IR(2 downto 0);
-            MBs <= '-';
+            BXs <= '0'&IR(2 downto 0);
+            MBs <= '0';
             FSs <= "0000";
-            MDs <= '-';
+            MDs <= '0';
             RWs <= '0';
             MMs <= '0';
             MWs <= '0';
@@ -351,12 +351,12 @@ case state is
         elsif IR(15 downto 9) = "1110000" then  
             ILs <= '0';
             PSs <= "11";
-            DXs <= '-'&IR(8 downto 6);
+            DXs <= '0'&IR(8 downto 6);
             AXs <= '0'&IR(5 downto 3);
-            BXs <= '-'&IR(2 downto 0);
-            MBs <= '-';
+            BXs <= '0'&IR(2 downto 0);
+            MBs <= '0';
             FSs <= "0000";
-            MDs <= '-';
+            MDs <= '0';
             RWs <= '0';
             MMs <= '0';
             MWs <= '0';
@@ -368,8 +368,8 @@ case state is
            PSs <= "00";
            DXs <= "1000";
            AXs <= '0'&IR(5 downto 3);
-           BXs <= '-'&IR(2 downto 0);
-           MBs <= '-';
+           BXs <= '0'&IR(2 downto 0);
+           MBs <= '0';
            FSs <= "0000";
            MDs <= '1';
            RWs <= '1';
@@ -383,12 +383,12 @@ case state is
              PSs <= "00";
              DXs <= "1000";
              AXs <= '0'&IR(5 downto 3);
-             BXs <= '-'&IR(2 downto 0);
-             MBs <= '-';
+             BXs <= '0'&IR(2 downto 0);
+             MBs <= '0';
              FSs <= "0000";
              MDs <= '0';
              RWs <= '1';
-             MMs <= '-';
+             MMs <= '0';
              MWs <= '0';
              Nextstate <= EX1;
            
@@ -398,12 +398,12 @@ case state is
              PSs <= "01";
              DXs <= "1000";
              AXs <= '0'&IR(5 downto 3);
-             BXs <= '-'&IR(2 downto 0);
-             MBs <= '-';
+             BXs <= '0'&IR(2 downto 0);
+             MBs <= '0';
              FSs <= "0000";
              MDs <= '0';
              RWs <= '1';
-             MMs <= '-';
+             MMs <= '0';
              MWs <= '0';
              Nextstate <= INF;
            
@@ -413,12 +413,12 @@ case state is
              PSs <= "00";
              DXs <= "1000";
              AXs <= '0'&IR(5 downto 3);
-             BXs <= '-'&IR(2 downto 0);
-             MBs <= '-';
+             BXs <= '0'&IR(2 downto 0);
+             MBs <= '0';
              FSs <= "0000";
              MDs <= '0';
              RWs <= '1';
-             MMs <= '-';
+             MMs <= '0';
              MWs <= '0';
              Nextstate <= EX1;
             end if;
@@ -431,8 +431,8 @@ case state is
                PSs <= "01";
                DXs <= '0'&IR(8 downto 6);
                AXs <= "1000";
-               BXs <= '-'&IR(2 downto 0);
-               MBs <= '-';
+               BXs <= '0'&IR(2 downto 0);
+               MBs <= '0';
                FSs <= "0000";
                MDs <= '1';
                RWs <= '1';
@@ -445,13 +445,13 @@ case state is
                ILs <= '0';
                PSs <= "00";
                DXs <= "1001";
-               AXs <= '-'&IR(5 downto 3);
-               BXs <= '-'&IR(2 downto 0);
+               AXs <= '0'&IR(5 downto 3);
+               BXs <= '0'&IR(2 downto 0);
                MBs <= '1';
                FSs <= "1100";
                MDs <= '0';
                RWs <= '1';
-               MMs <= '-';
+               MMs <= '0';
                MWs <= '0';
                Nextstate <= EX2;
              
@@ -460,13 +460,13 @@ case state is
              ILs <= '0';
              PSs <= "01";
              DXs <= "1001";
-             AXs <= '-'&IR(5 downto 3);
-             BXs <= '-'&IR(2 downto 0);
+             AXs <= '0'&IR(5 downto 3);
+             BXs <= '0'&IR(2 downto 0);
              MBs <= '1';
              FSs <= "1100";
              MDs <= '0';
              RWs <= '1';
-             MMs <= '-';
+             MMs <= '0';
              MWs <= '0';
              Nextstate <= INF;
 
@@ -475,13 +475,13 @@ case state is
                ILs <= '0';
                PSs <= "00";
                DXs <= "1001";
-               AXs <= '-'&IR(5 downto 3);
-               BXs <= '-'&IR(2 downto 0);
+               AXs <= '0'&IR(5 downto 3);
+               BXs <= '0'&IR(2 downto 0);
                MBs <= '1';
                FSs <= "1100";
                MDs <= '0';
                RWs <= '1';
-               MMs <= '-';
+               MMs <= '0';
                MWs <= '0';
                Nextstate <= EX2;
                
@@ -490,13 +490,13 @@ case state is
               ILs <= '0';
               PSs <= "01";
               DXs <= "1001";
-              AXs <= '-'&IR(5 downto 3);
-              BXs <= '-'&IR(2 downto 0);
+              AXs <= '0'&IR(5 downto 3);
+              BXs <= '0'&IR(2 downto 0);
               MBs <= '1';
               FSs <= "1100";
               MDs <= '0';
               RWs <= '1';
-              MMs <= '-';
+              MMs <= '0';
               MWs <= '0';
               Nextstate <= INF ;
             end if; 
@@ -508,13 +508,13 @@ case state is
                  ILs <= '0';
                  PSs <= "00";
                  DXs <= "1000";
-                 AXs <= '-'&IR(5 downto 3);
+                 AXs <= '0'&IR(5 downto 3);
                  BXs <= "1000";
                  MBs <= '0';
                  FSs <= "1101";
                  MDs <= '0';
                  RWs <= '1';
-                 MMs <= '-';
+                 MMs <= '0';
                  MWs <= '0';
                  Nextstate <= EX3;
                
@@ -523,13 +523,13 @@ case state is
                  ILs <= '0';
                  PSs <= "00";
                  DXs <= "1000";
-                 AXs <= '-'&IR(5 downto 3);
+                 AXs <= '0'&IR(5 downto 3);
                  BXs <= "1000";
                  MBs <= '0';
                  FSs <= "1110";
                  MDs <= '0';
                  RWs <= '1';
-                 MMs <= '-';
+                 MMs <= '0';
                  MWs <= '0';
                  Nextstate <= EX3;
                 end if;
@@ -541,12 +541,12 @@ when EX3 =>
                  PSs <= "00";
                  DXs <= "1001";
                  AXs <= "1001";
-                 BXs <= '-'&IR(2 downto 0);
-                 MBs <= '-';
+                 BXs <= '0'&IR(2 downto 0);
+                 MBs <= '0';
                  FSs <= "0110";
                  MDs <= '0';
                  RWs <= '1';
-                 MMs <= '-';
+                 MMs <= '0';
                  MWs <= '0';
                  Nextstate <= EX2;
                
@@ -556,12 +556,12 @@ when EX3 =>
                  PSs <= "00";
                  DXs <= "1001";
                  AXs <= "1001";
-                 BXs <= '-'&IR(2 downto 0);
-                 MBs <= '-';
+                 BXs <= '0'&IR(2 downto 0);
+                 MBs <= '0';
                  FSs <= "0110";
                  MDs <= '0';
                  RWs <= '1';
-                 MMs <= '-';
+                 MMs <= '0';
                  MWs <= '0';
                  Nextstate <= EX4;
                
@@ -571,12 +571,12 @@ when EX3 =>
                 PSs <= "00";
                 DXs <= "1001";
                 AXs <= "1001";
-                BXs <= '-'&IR(2 downto 0);
-                MBs <= '-';
+                BXs <= '0'&IR(2 downto 0);
+                MBs <= '0';
                 FSs <= "0110";
                 MDs <= '0';
                 RWs <= '1';
-                MMs <= '-';
+                MMs <= '0';
                 MWs <= '0';
                 Nextstate <= EX2;
              
@@ -586,12 +586,12 @@ when EX3 =>
                 PSs <= "00";
                 DXs <= "1001";
                 AXs <= "1001";
-                BXs <= '-'&IR(2 downto 0);
-                MBs <= '-';
+                BXs <= '0'&IR(2 downto 0);
+                MBs <= '0';
                 FSs <= "0110";
                 MDs <= '0';
                 RWs <= '1';
-                MMs <= '-';
+                MMs <= '0';
                 MWs <= '0';
                 Nextstate <= EX4;
                end if;
@@ -604,12 +604,12 @@ when EX4 =>
                 PSs <= "01";
                 DXs <= '0'&IR(8 downto 6);
                 AXs <= "1000";
-                BXs <= '-'&IR(2 downto 0);
-                MBs <= '-';
+                BXs <= '0'&IR(2 downto 0);
+                MBs <= '0';
                 FSs <= "0000";
                 MDs <= '0';
                 RWs <= '1';
-                MMs <= '-';
+                MMs <= '0';
                 MWs <= '0';
                 Nextstate <= INF;
               
@@ -619,12 +619,12 @@ when EX4 =>
                 PSs <= "01";
                 DXs <= '0'&IR(8 downto 6);
                 AXs <= "1000";
-                BXs <= '-'&IR(2 downto 0);
-                MBs <= '-';
+                BXs <= '0'&IR(2 downto 0);
+                MBs <= '0';
                 FSs <= "0000";
                 MDs <= '0';
                 RWs <= '1';
-                MMs <= '-';
+                MMs <= '0';
                 MWs <= '0';
                 Nextstate <= INF;
                end if;

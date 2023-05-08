@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="845001fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,561.232 ns"></ZoomEndTime>
+      <Cursor1Time time="3,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="106"></NameColumnWidth>
+      <NameColumnWidth column_width="203"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="25" />
+   <WVObjectSize size="34" />
    <wvobject fp_name="/PWF_complete_tb/uut/A1/DA" type="array">
       <obj_property name="ElementShortName">DA[3:0]</obj_property>
       <obj_property name="ObjectShortName">DA[3:0]</obj_property>
@@ -64,14 +64,18 @@
       <obj_property name="ElementShortName">PSs[1:0]</obj_property>
       <obj_property name="ObjectShortName">PSs[1:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/PWF_complete_tb/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
    <wvobject fp_name="/PWF_complete_tb/uut/data_bus" type="array">
       <obj_property name="ElementShortName">data_bus[15:0]</obj_property>
       <obj_property name="ObjectShortName">data_bus[15:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/clk_100" type="logic">
+      <obj_property name="ElementShortName">clk_100</obj_property>
+      <obj_property name="ObjectShortName">clk_100</obj_property>
    </wvobject>
    <wvobject fp_name="/PWF_complete_tb/uut/clk_s" type="logic">
       <obj_property name="ElementShortName">clk_s</obj_property>
@@ -80,10 +84,6 @@
    <wvobject fp_name="/PWF_complete_tb/uut/A2/IL" type="logic">
       <obj_property name="ElementShortName">IL</obj_property>
       <obj_property name="ObjectShortName">IL</obj_property>
-   </wvobject>
-   <wvobject fp_name="/PWF_complete_tb/uut/A1/FUA/FS" type="array">
-      <obj_property name="ElementShortName">FS[3:0]</obj_property>
-      <obj_property name="ObjectShortName">FS[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/PWF_complete_tb/uut/MMR" type="logic">
       <obj_property name="ElementShortName">MMR</obj_property>
@@ -120,5 +120,42 @@
    <wvobject fp_name="/PWF_complete_tb/uut/A1/FUA/A" type="array">
       <obj_property name="ElementShortName">A[7:0]</obj_property>
       <obj_property name="ObjectShortName">A[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A4/load" type="array">
+      <obj_property name="ElementShortName">load[2:0]</obj_property>
+      <obj_property name="ObjectShortName">load[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A1/FUA/FS" type="array">
+      <obj_property name="ElementShortName">FS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">FS[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A2/A/ILs" type="logic">
+      <obj_property name="ElementShortName">ILs</obj_property>
+      <obj_property name="ObjectShortName">ILs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A2/K/PC" type="array">
+      <obj_property name="ElementShortName">PC[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A2/K/Offset" type="array">
+      <obj_property name="ElementShortName">Offset[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Offset[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A4/R3" type="array">
+      <obj_property name="ElementShortName">R3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A4/BTNR" type="logic">
+      <obj_property name="ElementShortName">BTNR</obj_property>
+      <obj_property name="ObjectShortName">BTNR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A4/R4" type="array">
+      <obj_property name="ElementShortName">R4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R4[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A4/BTNL" type="logic">
+      <obj_property name="ElementShortName">BTNL</obj_property>
+      <obj_property name="ObjectShortName">BTNL</obj_property>
    </wvobject>
 </wave_config>

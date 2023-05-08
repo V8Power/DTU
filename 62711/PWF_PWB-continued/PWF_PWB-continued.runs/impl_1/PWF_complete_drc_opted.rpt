@@ -1,8 +1,8 @@
-Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu May  4 15:24:49 2023
-| Host         : DESKTOP-MKAFNHE running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sat May  6 21:30:11 2023
+| Host         : DESKTOP-LOLTF0F running 64-bit major release  (build 9200)
 | Command      : report_drc -file PWF_complete_drc_opted.rpt -pb PWF_complete_drc_opted.pb -rpx PWF_complete_drc_opted.rpx
 | Design       : PWF_complete
 | Device       : xc7a100tcsg324-1
@@ -55,17 +55,17 @@ Related violations: <none>
 
 REQP-1840#1 Warning
 RAMB18 async control check  
-The RAMB18E1 A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: A3/BRAM_SINGLE_MACRO_inst/adress[6]) which is driven by a register (A1/Reg16/Reg/RegisterR10[6].UR10/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: A3/BRAM_SINGLE_MACRO_inst/adress[6]) which is driven by a register (A1/Reg16/Reg/RegisterR7[6].UR7/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#2 Warning
 RAMB18 async control check  
-The RAMB18E1 A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: A3/BRAM_SINGLE_MACRO_inst/adress[6]) which is driven by a register (A1/Reg16/Reg/RegisterR15[6].UR15/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: A3/BRAM_SINGLE_MACRO_inst/adress[6]) which is driven by a register (A1/Reg16/Reg/RegisterR8[6].UR8/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#3 Warning
 RAMB18 async control check  
-The RAMB18E1 A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: A3/BRAM_SINGLE_MACRO_inst/adress[6]) which is driven by a register (A1/Reg16/Reg/RegisterR1[6].UR1/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin A3/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: A3/BRAM_SINGLE_MACRO_inst/adress[6]) which is driven by a register (A1/Reg16/Reg/RegisterR9[6].UR9/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#4 Warning

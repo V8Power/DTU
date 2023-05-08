@@ -1,8 +1,8 @@
-Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Thu May  4 15:25:23 2023
-| Host             : DESKTOP-MKAFNHE running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date             : Sat May  6 21:30:45 2023
+| Host             : DESKTOP-LOLTF0F running 64-bit major release  (build 9200)
 | Command          : report_power -file PWF_complete_power_routed.rpt -pb PWF_complete_power_summary_routed.pb -rpx PWF_complete_power_routed.rpx
 | Design           : PWF_complete
 | Device           : xc7a100tcsg324-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 25.063 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 24.327 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 24.266                           |
+| Dynamic (W)              | 23.530                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     1.287 |      717 |       --- |             --- |
-|   LUT as Logic |     1.161 |      329 |     63400 |            0.52 |
+| Slice Logic    |     0.971 |      701 |       --- |             --- |
+|   LUT as Logic |     0.847 |      319 |     63400 |            0.50 |
 |   BUFG         |     0.063 |        3 |        32 |            9.38 |
-|   Register     |     0.040 |      304 |    126800 |            0.24 |
-|   CARRY4       |     0.022 |        7 |     15850 |            0.04 |
+|   Register     |     0.037 |      300 |    126800 |            0.24 |
+|   CARRY4       |     0.023 |        7 |     15850 |            0.04 |
 |   Others       |     0.000 |       13 |       --- |             --- |
-| Signals        |     1.956 |      688 |       --- |             --- |
-| Block RAM      |     0.506 |      0.5 |       135 |            0.37 |
-| I/O            |    20.517 |       39 |       210 |           18.57 |
+| Signals        |     1.608 |      673 |       --- |             --- |
+| Block RAM      |     0.531 |      0.5 |       135 |            0.37 |
+| I/O            |    20.420 |       39 |       210 |           18.57 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    25.063 |          |           |                 |
+| Total          |    24.327 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     4.311 |       3.748 |      0.563 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.843 |       0.750 |      0.093 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     5.801 |       5.797 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     3.674 |       3.112 |      0.563 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.840 |       0.747 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     5.773 |       5.769 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.056 |       0.038 |      0.018 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.054 |       0.036 |      0.018 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -139,67 +139,53 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| PWF_complete               |    24.266 |
-|   A1                       |     0.263 |
-|     Reg16                  |     0.263 |
-|       Dec                  |     0.015 |
-|       Reg                  |     0.248 |
-|   A2                       |     1.444 |
-|     A                      |     0.951 |
-|     B                      |     0.300 |
-|     K                      |     0.193 |
-|   A3                       |     0.651 |
-|     BRAM_SINGLE_MACRO_inst |     0.651 |
-|   A4                       |     0.506 |
-|     RegisterR0[4].MR0      |     0.007 |
-|     RegisterR0[5].MR0      |     0.007 |
-|     RegisterR0[6].MR0      |     0.007 |
-|     RegisterR0[7].MR0      |     0.007 |
-|     RegisterR1[0].MR1      |     0.009 |
-|     RegisterR1[1].MR1      |     0.007 |
-|     RegisterR1[2].MR1      |     0.010 |
-|     RegisterR1[3].MR1      |     0.009 |
+| PWF_complete               |    23.530 |
+|   A1                       |     0.116 |
+|     Reg16                  |     0.116 |
+|       Reg                  |     0.116 |
+|   A2                       |     0.960 |
+|     A                      |     0.540 |
+|     B                      |     0.066 |
+|     K                      |     0.354 |
+|   A3                       |     0.721 |
+|     BRAM_SINGLE_MACRO_inst |     0.721 |
+|   A4                       |     0.374 |
 |     RegisterR3[0].MR3      |     0.001 |
-|     RegisterR3[1].MR3      |     0.002 |
-|     RegisterR3[2].MR3      |     0.001 |
-|     RegisterR3[3].MR3      |     0.003 |
-|     RegisterR3[4].MR3      |     0.003 |
+|     RegisterR3[1].MR3      |     0.001 |
+|     RegisterR3[2].MR3      |     0.002 |
+|     RegisterR3[3].MR3      |     0.001 |
+|     RegisterR3[4].MR3      |     0.001 |
 |     RegisterR3[5].MR3      |     0.001 |
 |     RegisterR3[6].MR3      |     0.001 |
-|     RegisterR3[7].MR3      |     0.002 |
+|     RegisterR3[7].MR3      |     0.003 |
 |     RegisterR4[0].MR4      |     0.001 |
-|     RegisterR4[1].MR4      |     0.002 |
+|     RegisterR4[1].MR4      |     0.001 |
 |     RegisterR4[2].MR4      |     0.001 |
-|     RegisterR4[3].MR4      |     0.001 |
-|     RegisterR4[4].MR4      |     0.001 |
-|     RegisterR4[5].MR4      |     0.001 |
-|     RegisterR4[6].MR4      |     0.019 |
+|     RegisterR4[3].MR4      |     0.003 |
+|     RegisterR4[4].MR4      |     0.002 |
+|     RegisterR4[5].MR4      |     0.002 |
+|     RegisterR4[6].MR4      |     0.003 |
 |     RegisterR4[7].MR4      |     0.002 |
-|     RegisterR5[0].MR5      |     0.014 |
-|     RegisterR5[1].MR5      |     0.009 |
-|     RegisterR5[2].MR5      |     0.017 |
-|     RegisterR5[3].MR5      |     0.014 |
-|     RegisterR5[4].MR5      |     0.011 |
-|     RegisterR5[5].MR5      |     0.012 |
-|     RegisterR5[6].MR5      |     0.001 |
-|     RegisterR5[7].MR5      |     0.012 |
+|     RegisterR5[1].MR5      |     0.003 |
+|     RegisterR5[3].MR5      |     0.002 |
+|     RegisterR5[4].MR5      |     0.001 |
+|     RegisterR5[5].MR5      |     0.002 |
+|     RegisterR5[6].MR5      |     0.002 |
+|     RegisterR5[7].MR5      |     0.001 |
 |     RegisterR6[0].MR6      |     0.001 |
-|     RegisterR6[1].MR6      |     0.001 |
-|     RegisterR6[2].MR6      |     0.002 |
-|     RegisterR6[3].MR6      |     0.002 |
-|     RegisterR6[4].MR6      |     0.001 |
-|     RegisterR6[5].MR6      |     0.002 |
+|     RegisterR6[1].MR6      |     0.002 |
+|     RegisterR6[2].MR6      |     0.003 |
+|     RegisterR6[3].MR6      |     0.003 |
+|     RegisterR6[5].MR6      |     0.001 |
 |     RegisterR6[6].MR6      |     0.001 |
-|     RegisterR6[7].MR6      |     0.001 |
-|     RegisterR7[0].MR7      |     0.006 |
-|     RegisterR7[1].MR7      |     0.006 |
-|     RegisterR7[2].MR7      |     0.008 |
-|     RegisterR7[3].MR7      |     0.006 |
-|     RegisterR7[4].MR7      |     0.006 |
-|     RegisterR7[5].MR7      |     0.008 |
-|     RegisterR7[6].MR7      |     0.009 |
-|     RegisterR7[7].MR7      |     0.009 |
-|   seg7                     |     0.618 |
+|     RegisterR7[0].MR7      |     0.001 |
+|     RegisterR7[2].MR7      |     0.001 |
+|     RegisterR7[3].MR7      |     0.003 |
+|     RegisterR7[4].MR7      |     0.003 |
+|     RegisterR7[5].MR7      |     0.002 |
+|     RegisterR7[6].MR7      |     0.001 |
+|     RegisterR7[7].MR7      |     0.002 |
+|   seg7                     |     0.661 |
 +----------------------------+-----------+
 
 
