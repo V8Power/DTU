@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue May  9 11:39:25 2023
+# Process ID: 16752
+# Current directory: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_2020/PWF_2020.runs/synth_1
+# Command line: vivado.exe -log PWF_complete.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PWF_complete.tcl
+# Log file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_2020/PWF_2020.runs/synth_1/PWF_complete.vds
+# Journal file: C:/Users/felix/Documents/DTU/62711_Digital_systems_design/Git/DTU/62711/PWF_2020/PWF_2020.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source PWF_complete.tcl -notrace

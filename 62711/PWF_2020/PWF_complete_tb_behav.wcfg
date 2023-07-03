@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="PWF_complete_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="PWF_complete_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="330001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="96"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="27" />
+   <wvobject fp_name="/PWF_complete_tb/Reset1" type="logic">
+      <obj_property name="ElementShortName">Reset1</obj_property>
+      <obj_property name="ObjectShortName">Reset1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/clk_100" type="logic">
+      <obj_property name="ElementShortName">clk_100</obj_property>
+      <obj_property name="ObjectShortName">clk_100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/clk_s" type="logic">
+      <obj_property name="ElementShortName">clk_s</obj_property>
+      <obj_property name="ObjectShortName">clk_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/data_bus" type="array">
+      <obj_property name="ElementShortName">data_bus[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_bus[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/adress_out" type="array">
+      <obj_property name="ElementShortName">adress_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">adress_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/adress" type="array">
+      <obj_property name="ElementShortName">adress[7:0]</obj_property>
+      <obj_property name="ObjectShortName">adress[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/Z" type="logic">
+      <obj_property name="ElementShortName">Z</obj_property>
+      <obj_property name="ObjectShortName">Z</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/MMR" type="logic">
+      <obj_property name="ElementShortName">MMR</obj_property>
+      <obj_property name="ObjectShortName">MMR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A2/A/State" type="other">
+      <obj_property name="ElementShortName">State</obj_property>
+      <obj_property name="ObjectShortName">State</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A2/A/NextState" type="other">
+      <obj_property name="ElementShortName">NextState</obj_property>
+      <obj_property name="ObjectShortName">NextState</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/DX" type="array">
+      <obj_property name="ElementShortName">DX[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DX[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/AX" type="array">
+      <obj_property name="ElementShortName">AX[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AX[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/BX" type="array">
+      <obj_property name="ElementShortName">BX[3:0]</obj_property>
+      <obj_property name="ObjectShortName">BX[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/FS" type="array">
+      <obj_property name="ElementShortName">FS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">FS[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/BNTC" type="logic">
+      <obj_property name="ElementShortName">BNTC</obj_property>
+      <obj_property name="ObjectShortName">BNTC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/BTNU" type="logic">
+      <obj_property name="ElementShortName">BTNU</obj_property>
+      <obj_property name="ObjectShortName">BTNU</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/BTNL" type="logic">
+      <obj_property name="ElementShortName">BTNL</obj_property>
+      <obj_property name="ObjectShortName">BTNL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/BTNR" type="logic">
+      <obj_property name="ElementShortName">BTNR</obj_property>
+      <obj_property name="ObjectShortName">BTNR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/BTND" type="logic">
+      <obj_property name="ElementShortName">BTND</obj_property>
+      <obj_property name="ObjectShortName">BTND</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/SW" type="array">
+      <obj_property name="ElementShortName">SW[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/LED" type="array">
+      <obj_property name="ElementShortName">LED[7:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A4/R3" type="array">
+      <obj_property name="ElementShortName">R3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A4/R4" type="array">
+      <obj_property name="ElementShortName">R4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R4[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/stop_the_clock" type="other">
+      <obj_property name="ElementShortName">stop_the_clock</obj_property>
+      <obj_property name="ObjectShortName">stop_the_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/clock_period" type="other">
+      <obj_property name="ElementShortName">clock_period</obj_property>
+      <obj_property name="ObjectShortName">clock_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PWF_complete_tb/uut/A4/D_word" type="array">
+      <obj_property name="ElementShortName">D_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">D_word[15:0]</obj_property>
+   </wvobject>
+</wave_config>
